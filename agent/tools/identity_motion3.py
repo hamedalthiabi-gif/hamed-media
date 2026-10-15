@@ -5,7 +5,7 @@ T=os.path.dirname(os.path.abspath(__file__)); B=os.path.join(T,'..','brand')+'/'
 W,H=int(sys.argv[1]),int(sys.argv[2]); OUT=sys.argv[3]; A=sys.argv[4] if len(sys.argv)>4 else '/home/claude/x'
 FPS=30; DUR=60
 NAVY=(0,37,68); CORAL=(187,104,65); CREAM=(248,245,239); INK=(27,36,51); MUT=(170,182,198); GUIDE=(40,74,112); SAND=(232,224,210)
-OLD=(44,47,52); OLDT=(150,152,156)
+OLD=(246,247,246); OLDT=(92,112,115); TEAL=(15,103,111)
 F=lambda w,s: ImageFont.truetype(B+f'plex-{w}.ttf',int(s),layout_engine=ImageFont.Layout.RAQM)
 FL=lambda s: ImageFont.truetype(B+'plex-latin-400.ttf',int(s))
 S=min(W,H)/1080; cx,cy=W/2,H/2; TALL=H>W
@@ -58,6 +58,7 @@ def browser(img,top,bw,bh):
         pad_=Image.new('RGB',(img.width,bh),(247,245,240)); pad_.paste(img,(0,0)); img=pad_
     top=int(max(0,min(img.height-bh,top))); fr.paste(img.crop((0,top,bw,top+bh)),(0,bar)); return shadow(rnd(fr,int(14*S)),int(14*S))
 # ---------- الأصول ----------
+OLDL=Image.open(B+'old_logo.png').convert('RGBA')
 LW=Image.open(B+'logo_white.png').convert('RGBA'); LN=Image.open(B+'logo_navy.png').convert('RGBA')
 big=sc(LW,620*S/LW.width); ox,oy=cx-big.width/2,cy-big.height/2-int(20*S)
 FT=F(600,140*S)
@@ -109,8 +110,6 @@ for n in range(FPS*DUR):
     # الخلفية
     if t<8.6:
         fr=Image.new('RGBA',(W,H),OLD+(255,))
-        if t>7.9:  # مسح باللون الكحلي من اليمين
-            k=eio((t-7.9)/0.7); xw=int(W*(1-k)); d0=ImageDraw.Draw(fr); d0.rectangle([xw,0,W,H],fill=NAVY); d0.rectangle([xw-int(8*S),0,xw,H],fill=CORAL)
     else:
         light=win(t,33.6,34.2,41.6,42.2)+win(t,48.6,49.2,53.6,54.2)
         bg=tuple(int(NAVY[i]+(CREAM[i]-NAVY[i])*light) for i in range(3)); fr=Image.new('RGBA',(W,H),bg+(255,))
@@ -118,18 +117,22 @@ for n in range(FPS*DUR):
     # أ) الهوية السابقة والأرقام
     if t<8.4:
         fo=1-e((t-7.6)/0.5)
-        for gx in range(0,W,int(90*S)): d.line([gx,0,gx,H],fill=(52,55,61))
-        for gy in range(0,H,int(90*S)): d.line([0,gy,W,gy],fill=(52,55,61))
-        put(fr,txt('قبل الإطلاق',F(400,34*S),OLDT),cx,int((140 if not TALL else 360)*S),win(t,0.2,0.8)*fo)
-        put(fr,txt('خبرة تراكمت في الميدان',F(600,60*S),(205,206,208)),cx,int((210 if not TALL else 440)*S),win(t,0.4,1.1)*fo)
+        for gx in range(0,W,int(90*S)): d.line([gx,0,gx,H],fill=(232,238,238))
+        for gy in range(0,H,int(90*S)): d.line([0,gy,W,gy],fill=(232,238,238))
+        lgw=int((430 if not TALL else 640)*S); ol=sc(OLDL,lgw/OLDL.width)
+        ly=int((190 if not TALL else 380)*S)
+        put(fr,ol,cx,ly+int((1-e(t/0.9))*30*S),win(t,0.0,0.8)*fo)
+        put(fr,txt('الهوية السابقة',F(400,30*S),OLDT),cx,ly+ol.height/2+int(40*S),win(t,0.4,1.0)*fo)
         for i,(v,lab) in enumerate(STATS):
             r_,c_=divmod(i,2)
-            if TALL: x=cx; y=int((640+i*270)*S)
-            else: x=cx+(1 if c_==0 else -1)*int(230*S); y=cy+int((-20+r_*240)*S)
+            if TALL: x=cx; y=int((820+i*240)*S)
+            else: x=cx+(1 if c_==0 else -1)*int(230*S); y=cy+int((60+r_*210)*S)
             k=(t-1.2-i*0.45)/1.3; a=win(t,1.2+i*0.45,1.7+i*0.45)*fo
-            put(fr,stat(count(v,k),(225,226,228)),x,y,a)
-            put(fr,txt(lab,F(400,32*S),OLDT),x,y+int(80*S),a)
-        put(fr,txt('وتستحق هوية تليق بها',F(600,56*S),CORAL),cx,H-int((150 if not TALL else 330)*S),win(t,5.6,6.4)*fo)
+            put(fr,stat(count(v,k),TEAL),x,y,a)
+            put(fr,txt(lab,F(400,30*S),OLDT),x,y+int(78*S),a)
+        put(fr,txt('وتستحق هوية تليق بها',F(600,52*S),CORAL),cx,H-int((80 if not TALL else 150)*S),win(t,5.6,6.4)*fo)
+        if t>7.9:  # مسح باللون الكحلي من اليمين
+            k=eio((t-7.9)/0.7); xw=int(W*(1-k)); d.rectangle([xw,0,W,H],fill=NAVY); d.rectangle([xw-int(8*S),0,xw,H],fill=CORAL)
     # ب+ج) قطرة ودوائر تكشف الشعار
     if 8.4<t<13.6:
         fo=1-e((t-13.0)/0.6); lt=t-8.6
