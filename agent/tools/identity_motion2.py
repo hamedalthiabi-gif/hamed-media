@@ -54,7 +54,7 @@ def two_tone(s,a=1.):
     w1=txt('وأثرٌ',FT,CREAM); w2=txt(s.split(' ',1)[1],FT,CORAL); g=int(34*S)
     im=Image.new('RGBA',(w1.width+g+w2.width,max(w1.height,w2.height)),(0,0,0,0))
     im.alpha_composite(w1,(w2.width+g,im.height-w1.height)); im.alpha_composite(w2,(0,im.height-w2.height)); return im
-TXT0=two_tone(LINE); tx0,ty0=cx-TXT0.width/2,cy-TXT0.height/2+int(40*S)
+TXT0=txt('استدامة العطاء',F(600,130*S)); tx0,ty0=cx-TXT0.width/2,cy-TXT0.height/2-int(90*S)
 random.seed(11)
 def sample(im,ox,oy,n,step):
     m=im.getchannel('A').load(); pts=[(ox+x,oy+y) for y in range(0,im.height,step) for x in range(0,im.width,step) if m[x,y]>150]
@@ -124,10 +124,10 @@ for n in range(FPS*DUR):
         if la>0:
             for i,j in LK: d.line([PB[i],PB[j]],fill=MUT+(int(150*la),),width=1)
         if t>10.4:
-            k=int(min(7,max(0,(t-11.6)*5)))
-            im=two_tone(stretched(k)); fo=1-e((t-15.4)/0.8)
-            put(fr,im,cx,cy+int(40*S),win(t,10.4,11.2)*fo)
-            put(fr,txt('استدامة العطاء',F(600,110*S)),cx,cy-int(150*S),win(t,13.0,14.0)*fo,)
+            fo=1-e((t-15.4)/0.8)
+            put(fr,TXT0,tx0,ty0,win(t,10.4,11.2)*fo,anchor='tl')
+            k=int(min(7,max(0,(t-13.0)*5)))
+            put(fr,two_tone(stretched(k)),cx,cy+int(110*S),win(t,11.6,12.6)*fo)
     # ٣) ألوان الهوية ونقوشها (بلا نصوص)
     if 15.6<t<20.4:
         fo=1-e((t-19.6)/0.8); g=int(18*S); cs=int(150*S)
