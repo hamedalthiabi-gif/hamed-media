@@ -202,7 +202,7 @@ for n in range(FPS*DUR):
             r_,c_=divmod(i,cols); k=e((t-34.3-i*0.12)/0.7)
             x=cx+((cols-1)/2-c_)*gw; y=hy+int(200*S)+r_*gh+cv.height/2-drift
             put(fr,shadow(cv,int(10*S)),x,y+int((1-k)*120*S),k*fo)
-        nb=txt('نشرة «الاستدامة المالية» على لينكدإن، أكثر من ٦٤٠٠ مشترك',F(600,30*S),CREAM,pad=int(18*S),bg=NAVY,r=12)
+        nb=txt('نشرة «الاستدامة المالية» على لينكدإن، أكثر من ٢٨٠٠ مشترك',F(600,30*S),CREAM,pad=int(18*S),bg=NAVY,r=12)
         put(fr,nb,cx,H-int((90 if not TALL else 200)*S),win(t,38.5,39.2,41.6,42.2))
     # ح) التقويم
     if 41.6<t<49.2:
