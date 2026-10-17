@@ -25,7 +25,8 @@
   "summary": "مفاهيم ونماذج وممارسات في تسويق المنظمات غير الربحية.",
   "topics": [
    "التسويق الخيري"
-  ]
+  ],
+  "file": "agent/sources/marketing-guide.md"
  },
  {
   "id": "fintech",
@@ -35,7 +36,8 @@
   "topics": [
    "التقنية المالية",
    "الاستدامة المالية"
-  ]
+  ],
+  "file": "agent/sources/fintech.md"
  },
  {
   "id": "donor-journey",
@@ -46,7 +48,8 @@
    "رحلة المتبرع",
    "الثقة",
    "الولاء"
-  ]
+  ],
+  "file": "agent/sources/donor-journey.md"
  },
  {
   "id": "ramadan-1446",
@@ -57,7 +60,8 @@
    "الحملات",
    "رمضان"
   ],
-  "season_only": "الاستعداد لرمضان ورمضان فقط"
+  "season_only": "الاستعداد لرمضان ورمضان فقط",
+  "file": "agent/sources/ramadan-1446.md"
  },
  {
   "id": "t-immersive-ask",
@@ -67,7 +71,8 @@
   "topics": [
    "السرد القصصي",
    "طلب التبرع"
-  ]
+  ],
+  "file": "agent/sources/t-immersive-ask.md"
  },
  {
   "id": "t-storytelling-action",
@@ -76,7 +81,8 @@
   "summary": "كيف تحوّل القصة الصحيحة، في التوقيت الصحيح، تبرع المانح إلى فعل.",
   "topics": [
    "السرد القصصي"
-  ]
+  ],
+  "file": "agent/sources/t-storytelling-action.md"
  },
  {
   "id": "t-details",
@@ -85,7 +91,8 @@
   "summary": "كيف تجد التفاصيل الصغيرة القوية وتوظّفها لتبث الحياة في قصص منظمتك.",
   "topics": [
    "السرد القصصي"
-  ]
+  ],
+  "file": "agent/sources/t-details.md"
  },
  {
   "id": "t-discover-stories",
@@ -94,7 +101,8 @@
   "summary": "دليل الممارس في القطاع غير الربحي للعثور على القصص المؤثرة وتوظيفها.",
   "topics": [
    "السرد القصصي"
-  ]
+  ],
+  "file": "agent/sources/t-discover-stories.md"
  },
  {
   "id": "t-openers",
@@ -104,7 +112,8 @@
   "topics": [
    "السرد القصصي",
    "الرسائل"
-  ]
+  ],
+  "file": "agent/sources/t-openers.md"
  },
  {
   "id": "t-short-story",
@@ -114,7 +123,8 @@
   "topics": [
    "السرد القصصي",
    "طلب التبرع"
-  ]
+  ],
+  "file": "agent/sources/t-short-story.md"
  },
  {
   "id": "t-emotion-first",
@@ -123,7 +133,8 @@
   "summary": "دليل في السرد القصصي: كيف تأسر قلوب المتبرعين وتلهمهم للعطاء.",
   "topics": [
    "السرد القصصي"
-  ]
+  ],
+  "file": "agent/sources/t-emotion-first.md"
  },
  {
   "id": "t-tail-wagging",
@@ -132,7 +143,8 @@
   "summary": "قائمة فحص تضمن أن قصتك تلامس القلوب وتُلهم المتبرعين للعطاء.",
   "topics": [
    "السرد القصصي"
-  ]
+  ],
+  "file": "agent/sources/t-tail-wagging.md"
  },
  {
   "id": "t-monthly",
@@ -142,7 +154,8 @@
   "topics": [
    "المتبرع الشهري",
    "الاستدامة المالية"
-  ]
+  ],
+  "file": "agent/sources/t-monthly.md"
  },
  {
   "id": "g-bawsala",
@@ -151,7 +164,8 @@
   "summary": "خارطة موجهة للمنضمين حديثًا إلى القطاع غير الربحي.",
   "topics": [
    "القطاع غير الربحي"
-  ]
+  ],
+  "file": "agent/sources/g-bawsala.md"
  },
  {
   "id": "g-new-sector",
