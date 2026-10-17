@@ -9,8 +9,13 @@ TEAL = (15, 104, 111); BG = (246, 247, 246); INK = (36, 52, 56); MUT = (110, 128
 F = lambda w, s: ImageFont.truetype(B + f'plex-{w}.ttf', int(s), layout_engine=ImageFont.Layout.RAQM)
 
 
+def clean(t):  # الخط العربي لا يدعم « » : . فتُحذف من التصميم (تبقى في نص المنشور)
+    for c in '«»:.': t = t.replace(c, '')
+    return ' '.join(t.split())
+
+
 def wrap(d, t, f, mw):
-    out, cur = [], ''
+    t = clean(t); out, cur = [], ''
     for w in t.split():
         c = (cur + ' ' + w).strip()
         if d.textlength(c, font=f, direction='rtl') <= mw: cur = c
@@ -37,8 +42,7 @@ def base(W, H):
     dd.ellipse([W - 260, -260, W + 260, 260], fill=TEAL + (18,)); dd.ellipse([-300, H - 520, 300, H + 80], fill=TEAL + (14,))
     dd.ellipse([W - 170, H - 330, W - 90, H - 250], fill=TEAL + (28,))
     im.paste(deco, (0, 0), deco); d = ImageDraw.Draw(im)
-    d.rectangle([0, 0, W, 14], fill=TEAL); d.rectangle([0, H - 110, W, H], fill=TEAL)
-    d.text((W // 2, H - 55), 'استدامة العطاء وأثرٌ يمتد', font=F(400, 34), fill=WHITE, anchor='mm', direction='rtl')
+    d.rectangle([0, 0, W, 14], fill=TEAL); d.rectangle([0, H - 40, W, H], fill=TEAL)
     lg = logo(380); im.paste(lg, ((W - 380) // 2, 110), lg)
     return im, d
 
@@ -50,6 +54,7 @@ def card(title, tag, out, W=1080, H=1350):
     d.rectangle([W // 2 - 40, y0 - 60, W // 2 + 40, y0 - 54], fill=TEAL)
     for i, l in enumerate(L):
         d.text((W // 2, y0 + i * lh), l, font=f, fill=TEAL, anchor='mt', direction='rtl')
+    tag = clean(tag)
     if tag:
         ft = F(600, 38); tw = d.textlength(tag, font=ft, direction='rtl'); by = y0 + total + 50
         d.rounded_rectangle([W // 2 - tw / 2 - 34, by, W // 2 + tw / 2 + 34, by + 74], radius=37, fill=TEAL)
@@ -73,7 +78,7 @@ def motion(out, slides, tag='', W=1080, H=1920, FPS=30, SEC=5.0):
             for j, l in enumerate(L):
                 d.text((W // 2, y0 + j * lh + dy), l, font=f, fill=TEAL + (int(255 * a),), anchor='mt', direction='rtl')
             if tag:
-                ft = F(600, 36); tw = d.textlength(tag, font=ft, direction='rtl'); by = H - 330
+                tag = clean(tag); ft = F(600, 36); tw = d.textlength(tag, font=ft, direction='rtl'); by = H - 330
                 d.rounded_rectangle([W // 2 - tw / 2 - 30, by, W // 2 + tw / 2 + 30, by + 70], radius=35, fill=TEAL)
                 d.text((W // 2, by + 35), tag, font=ft, fill=WHITE, anchor='mm', direction='rtl')
             n_ = len(slides); gx = W // 2 + (n_ - 1) * 15
