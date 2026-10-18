@@ -82,7 +82,8 @@
 5. إن لم تجد فعاليات معتمدة للشهر، فصمّم بالأيام العالمية فقط واذكر ذلك في الملخص.
 
 ## مسار النشر
-queue.json → مهمة «جدولة المنشورات في Buffer» (٦:٢٠ص و٦:٢٠م) → Buffer مباشرة عبر موصل Zapier (إجراء Add to Queue، طريقة Schedule Post)
+queue.json → GitHub Actions (.github/workflows/buffer.yml: عند كل رفع لـqueue.json، و٦:٢٥ص و٦:٢٥م) → agent/buffer_publish.py → Buffer API بالمفتاح المحفوظ في سر المستودع BUFFER_API_KEY.
+احتياطي: مهمة «جدولة المنشورات في Buffer» (٦:٢٠ص و٦:٢٠م) عبر موصل Zapier (إجراء Add to Queue، طريقة Schedule Post)، ولا تكرر ما سُجّل
 → المنصات في موعد كل منشور. المجدول يُسجَّل في agent/buffer_scheduled.json حتى لا يتكرر.
 قنوات Buffer (المنظمة 6a4bdb54a23c84347c8879d3): لينكدإن 6a4bdb7040483446287754cf، إكس 6a4bdb9c4048344628775568، تيك توك 6a4bdc5f404834462877580e.
 الوسائط تُرسل برابط raw.githubusercontent.com/hamedalthiabi-gif/hamed-media/main/<media>. خلاصات RSS لم تعد مستخدمة.
