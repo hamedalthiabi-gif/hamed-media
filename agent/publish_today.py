@@ -11,7 +11,8 @@ q = json.load(open('agent/queue.json', encoding='utf-8'))
 posts = json.load(open('posts.json', encoding='utf-8'))
 ids = {p['id'] for p in posts}
 new = [dict(p, date=today + 'T' + p.get('time', '09:00') + ':00') for p in q
-       if p['date'] == today and p['id'] not in ids and p.get('time', '09:00') <= limit]
+       if p['date'] == today and p['id'] not in ids and p.get('time', '09:00') <= limit
+       and p.get('status') != 'draft']
 posts += new
 json.dump(posts, open('posts.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 subprocess.run([sys.executable, 'build_feeds.py'], check=True)

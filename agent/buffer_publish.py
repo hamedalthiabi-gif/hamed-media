@@ -61,7 +61,8 @@ def main():
     days = {riyadh.date().isoformat(), (riyadh.date() + datetime.timedelta(days=1)).isoformat()}
     queue = json.load(open(QUEUE, encoding='utf-8'))
     done = json.load(open(DONE, encoding='utf-8')) if os.path.exists(DONE) else {}
-    todo = [p for p in queue if p.get('date') in days and p.get('platform') in SERVICE and p['id'] not in done]
+    todo = [p for p in queue if p.get('date') in days and p.get('platform') in SERVICE and p['id'] not in done
+            and p.get('status') != 'draft']  # المسودة لا تُجدول حتى تعتمدها تغريد
     if not todo:
         print('لا منشورات جديدة للجدولة.')
         return
