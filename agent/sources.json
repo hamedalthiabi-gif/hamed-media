@@ -7,7 +7,8 @@
   "topics": [
    "الاستدامة المالية",
    "تجربة المتبرع"
-  ]
+  ],
+  "darb_url": "https://darb-hub.com/ar/pdf-files/%d8%a7%d8%b3%d8%aa%d8%af%d8%a7%d9%85%d8%a9-%d8%a7%d9%84%d8%b9%d8%b7%d8%a7%d8%a1/"
  },
  {
   "id": "newsletter",
@@ -26,7 +27,8 @@
   "topics": [
    "التسويق الخيري"
   ],
-  "file": "agent/sources/marketing-guide.md"
+  "file": "agent/sources/marketing-guide.md",
+  "darb_url": "https://darb-hub.com/ar/pdf-files/%d8%af%d9%84%d9%8a%d9%84-%d8%a7%d9%84%d8%aa%d8%b3%d9%88%d9%8a%d9%82-%d9%84%d9%84%d9%85%d9%86%d8%b8%d9%85%d8%a7%d8%aa-%d8%ba%d9%8a%d8%b1-%d8%a7%d9%84%d8%b1%d8%a8%d8%ad%d9%8a%d8%a9/"
  },
  {
   "id": "fintech",
@@ -37,7 +39,8 @@
    "التقنية المالية",
    "الاستدامة المالية"
   ],
-  "file": "agent/sources/fintech.md"
+  "file": "agent/sources/fintech.md",
+  "darb_url": "https://darb-hub.com/ar/pdf-files/%d9%81%d9%86%d8%aa%d9%83-%d8%a7%d9%84%d8%aa%d8%a8%d8%b1%d8%b9%d8%a7%d8%aa/"
  },
  {
   "id": "donor-journey",
@@ -49,7 +52,8 @@
    "الثقة",
    "الولاء"
   ],
-  "file": "agent/sources/donor-journey.md"
+  "file": "agent/sources/donor-journey.md",
+  "darb_url": "https://darb-hub.com/ar/pdf-files/%d8%b1%d8%ad%d9%84%d8%a9-%d8%a7%d9%84%d9%85%d8%aa%d8%a8%d8%b1%d8%b9/"
  },
  {
   "id": "ramadan-1446",
@@ -72,7 +76,8 @@
    "السرد القصصي",
    "طلب التبرع"
   ],
-  "file": "agent/sources/t-immersive-ask.md"
+  "file": "agent/sources/t-immersive-ask.md",
+  "darb_url": "https://darb-hub.com/ar/pdf-files/%d8%af%d9%84%d9%8a%d9%84-%d8%a7%d9%84%d8%b7%d9%84%d8%a8-%d8%a7%d9%84%d8%ba%d8%a7%d9%85%d8%b1/"
  },
  {
   "id": "t-storytelling-action",
@@ -82,7 +87,8 @@
   "topics": [
    "السرد القصصي"
   ],
-  "file": "agent/sources/t-storytelling-action.md"
+  "file": "agent/sources/t-storytelling-action.md",
+  "darb_url": "https://darb-hub.com/ar/pdf-files/%d9%85%d9%84%d8%ae%d8%b5-%d8%aa%d8%ad%d9%84%d9%8a%d9%84%d9%8a-%d8%b3%d8%b1%d8%af-%d8%a7%d9%84%d9%82%d8%b5%d8%b5-%d9%85%d9%86-%d8%a3%d8%ac%d9%84-%d8%a7%d9%84%d8%b9%d9%85%d9%84/"
  },
  {
   "id": "t-details",
@@ -92,7 +98,8 @@
   "topics": [
    "السرد القصصي"
   ],
-  "file": "agent/sources/t-details.md"
+  "file": "agent/sources/t-details.md",
+  "darb_url": "https://darb-hub.com/ar/pdf-files/%d8%a7%d9%84%d8%aa%d9%81%d8%a7%d8%b5%d9%8a%d9%84-%d8%a7%d9%84%d9%85%d8%a4%d8%ab%d8%b1%d8%a9-%d8%a7%d9%84%d8%aa%d9%8a-%d8%aa%d8%ac%d8%b9%d9%84-%d9%82%d8%b5%d8%b5-%d8%a7%d9%84%d9%85%d9%86%d8%b8%d9%85/"
  },
  {
   "id": "t-discover-stories",
@@ -102,7 +109,8 @@
   "topics": [
    "السرد القصصي"
   ],
-  "file": "agent/sources/t-discover-stories.md"
+  "file": "agent/sources/t-discover-stories.md",
+  "darb_url": "https://darb-hub.com/ar/pdf-files/%d8%a7%d9%83%d8%aa%d8%b4%d8%a7%d9%81-%d8%a7%d9%84%d9%82%d8%b5%d8%b5-%d8%a7%d9%84%d8%aa%d9%8a-%d8%aa%d8%ac%d9%85%d8%b9-%d8%aa%d8%a8%d8%b1%d8%b9%d8%a7%d8%aa-%d8%a3%d9%83%d8%ab%d8%b1/"
  },
  {
   "id": "t-openers",
@@ -113,7 +121,8 @@
    "السرد القصصي",
    "الرسائل"
   ],
-  "file": "agent/sources/t-openers.md"
+  "file": "agent/sources/t-openers.md",
+  "darb_url": "https://darb-hub.com/ar/pdf-files/%d8%a7%d9%81%d8%aa%d8%aa%d8%a7%d8%ad%d9%8a%d8%a7%d8%aa-%d8%a7%d9%84%d8%b3%d8%b1%d8%af-%d8%a7%d9%84%d9%82%d8%b5%d8%b5%d9%8a/"
  },
  {
   "id": "t-short-story",
@@ -124,7 +133,8 @@
    "السرد القصصي",
    "طلب التبرع"
   ],
-  "file": "agent/sources/t-short-story.md"
+  "file": "agent/sources/t-short-story.md",
+  "darb_url": "https://darb-hub.com/ar/pdf-files/%d8%a5%d8%b7%d8%a7%d8%b1-%d8%a7%d9%84%d9%82%d8%b5%d8%a9-%d8%a7%d9%84%d9%82%d8%b5%d9%8a%d8%b1%d8%a9-%d9%84%d8%ac%d9%85%d8%b9-%d8%a7%d9%84%d8%aa%d8%a8%d8%b1%d8%b9%d8%a7%d8%aa/"
  },
  {
   "id": "t-emotion-first",
@@ -134,7 +144,8 @@
   "topics": [
    "السرد القصصي"
   ],
-  "file": "agent/sources/t-emotion-first.md"
+  "file": "agent/sources/t-emotion-first.md",
+  "darb_url": "https://darb-hub.com/ar/pdf-files/%d9%82%d8%b5%d8%b5-%d8%ac%d9%85%d8%b9-%d8%a7%d9%84%d8%aa%d8%a8%d8%b1%d8%b9%d8%a7%d8%aa-%d8%a7%d9%84%d8%aa%d9%8a-%d8%aa%d8%a8%d8%af%d8%a3-%d8%a8%d8%a7%d9%84%d8%b9%d8%a7%d8%b7%d9%81%d8%a9/"
  },
  {
   "id": "t-tail-wagging",
@@ -144,7 +155,8 @@
   "topics": [
    "السرد القصصي"
   ],
-  "file": "agent/sources/t-tail-wagging.md"
+  "file": "agent/sources/t-tail-wagging.md",
+  "darb_url": "https://darb-hub.com/ar/pdf-files/%d8%a7%d8%ae%d8%aa%d8%a8%d8%a7%d8%b1-%d9%86%d8%a8%d8%b6-%d8%a7%d9%84%d9%82%d8%b5%d8%a9/"
  },
  {
   "id": "t-monthly",
@@ -155,7 +167,8 @@
    "المتبرع الشهري",
    "الاستدامة المالية"
   ],
-  "file": "agent/sources/t-monthly.md"
+  "file": "agent/sources/t-monthly.md",
+  "darb_url": "https://darb-hub.com/ar/pdf-files/%d9%83%d9%8a%d9%81-%d8%aa%d9%86%d9%85%d9%91%d9%8a-%d9%82%d8%a7%d8%b9%d8%af%d8%a9-%d9%85%d8%aa%d8%a8%d8%b1%d8%b9%d9%8a%d9%83-%d8%a7%d9%84%d8%b4%d9%87%d8%b1%d9%8a%d9%8a%d9%86/"
  },
  {
   "id": "g-bawsala",
@@ -165,7 +178,8 @@
   "topics": [
    "القطاع غير الربحي"
   ],
-  "file": "agent/sources/g-bawsala.md"
+  "file": "agent/sources/g-bawsala.md",
+  "darb_url": "https://darb-hub.com/ar/pdf-files/%d8%a8%d9%88%d8%b5%d9%84%d8%a9-%d8%a7%d9%84%d8%a8%d8%af%d8%a7%d9%8a%d8%a9/"
  },
  {
   "id": "g-new-sector",
@@ -174,7 +188,8 @@
   "summary": "تعريف بالقطاع غير الربحي وأشكاله المختلفة والمتنوعة.",
   "topics": [
    "القطاع غير الربحي"
-  ]
+  ],
+  "darb_url": "https://darb-hub.com/ar/pdf-files/%d8%b3%d9%84%d8%b3%d9%84%d8%a9-%d8%a7%d9%84%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%ac%d8%af%d9%8a%d8%af/"
  },
  {
   "id": "p-ektifaa",
