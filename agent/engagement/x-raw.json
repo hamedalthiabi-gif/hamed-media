@@ -1,0 +1,184 @@
+{
+ "results": [
+  {
+   "status": "sent",
+   "sent_at": 1792661867,
+   "type": "picture",
+   "text": "الشكر ليس سطرًا",
+   "statistics": {
+    "retweets": 4,
+    "clicks": 27,
+    "reach": 1830,
+    "likes": 19
+   }
+  },
+  {
+   "status": "sent",
+   "sent_at": 1792605706,
+   "type": "picture",
+   "text": "سؤال لكل منظمة",
+   "statistics": {
+    "retweets": 0,
+    "clicks": 0,
+    "reach": 0,
+    "likes": 0
+   }
+  },
+  {
+   "status": "sent",
+   "sent_at": 1792577686,
+   "type": "link",
+   "text": "مقال Hive Mind",
+   "statistics": {
+    "retweets": 1,
+    "clicks": 0,
+    "reach": 1001,
+    "likes": 7
+   }
+  },
+  {
+   "status": "sent",
+   "sent_at": 1792486006,
+   "type": "picture",
+   "text": "المتبرع الشهري",
+   "statistics": {
+    "retweets": 2,
+    "clicks": 7,
+    "reach": 836,
+    "likes": 8
+   }
+  },
+  {
+   "status": "sent",
+   "sent_at": 1792346431,
+   "type": "picture",
+   "text": "حملتك تظهر أثر التبرع",
+   "statistics": {
+    "retweets": 1,
+    "clicks": 0,
+    "reach": 652,
+    "likes": 2
+   }
+  },
+  {
+   "status": "sent",
+   "sent_at": 1791871812,
+   "type": "link",
+   "text": "دليل المسؤولية الاجتماعية",
+   "statistics": {
+    "retweets": 8,
+    "clicks": 0,
+    "reach": 4126,
+    "likes": 21
+   }
+  },
+  {
+   "status": "sent",
+   "sent_at": 1791871268,
+   "type": "video",
+   "text": "دليل الطلب الغامر",
+   "statistics": {
+    "retweets": 3,
+    "clicks": 13,
+    "reach": 1439,
+    "likes": 12
+   }
+  },
+  {
+   "status": "sent",
+   "sent_at": 1791700220,
+   "type": "picture",
+   "text": "منهجية نمو",
+   "statistics": {
+    "retweets": 7,
+    "clicks": 0,
+    "reach": 2968,
+    "likes": 42
+   }
+  },
+  {
+   "status": "sent",
+   "sent_at": 1791444826,
+   "type": "picture",
+   "text": "قبل اختيار قصة",
+   "statistics": {
+    "retweets": 1,
+    "clicks": 13,
+    "reach": 1155,
+    "likes": 4
+   }
+  },
+  {
+   "status": "sent",
+   "sent_at": 1791269615,
+   "type": "video",
+   "text": "فنتك التبرعات",
+   "statistics": {
+    "retweets": 3,
+    "clicks": 23,
+    "reach": 2498,
+    "likes": 18
+   }
+  },
+  {
+   "status": "sent",
+   "sent_at": 1791269497,
+   "type": "video",
+   "text": "فنتك (نسخة مكررة)",
+   "statistics": {
+    "retweets": 0,
+    "clicks": 0,
+    "reach": 161,
+    "likes": 0
+   }
+  },
+  {
+   "status": "sent",
+   "sent_at": 1791093614,
+   "type": "video",
+   "text": "رحلة المتبرع",
+   "statistics": {
+    "retweets": 0,
+    "clicks": 7,
+    "reach": 912,
+    "likes": 3
+   }
+  },
+  {
+   "status": "sent",
+   "sent_at": 1790836207,
+   "type": "picture",
+   "text": "أجندة أكتوبر",
+   "statistics": {
+    "retweets": 23,
+    "clicks": 1,
+    "reach": 10619,
+    "likes": 61
+   }
+  },
+  {
+   "status": "sent",
+   "sent_at": 1790665227,
+   "type": "video",
+   "text": "موشن دليل التسويق",
+   "statistics": {
+    "retweets": 21,
+    "clicks": 179,
+    "reach": 12969,
+    "likes": 137
+   }
+  },
+  {
+   "status": "sent",
+   "sent_at": 1790494206,
+   "type": "picture",
+   "text": "إعلان دورة",
+   "statistics": {
+    "retweets": 1,
+    "clicks": 17,
+    "reach": 1642,
+    "likes": 7
+   }
+  }
+ ]
+}
