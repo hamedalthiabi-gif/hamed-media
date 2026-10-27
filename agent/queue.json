@@ -511,5 +511,27 @@
   "campaign": "تمويل يدوم",
   "media": "img/study-10-closing.png",
   "text": "شكرًا لتفاعلكم مع نتائج دراستنا مع @omaralkhairi خلال أسبوعين.\nالاستدامة المالية ليست ترفًا، بل شرط لبقاء الجمعيات.\n#تمويل_يدوم"
+ },
+ {
+  "id": "linkedin-2026-10-31-study-poll-result",
+  "platform": "linkedin",
+  "date": "2026-10-31",
+  "time": "13:00",
+  "identity": "old",
+  "source": "study-ncss-2026",
+  "campaign": "تمويل يدوم",
+  "media": "img/study-03-poll.png",
+  "text": "نتيجة الاستطلاع (مجدولة مباشرة في Buffer)"
+ },
+ {
+  "id": "x-2026-10-31-study-poll-result",
+  "platform": "x",
+  "date": "2026-10-31",
+  "time": "13:00",
+  "identity": "old",
+  "source": "study-ncss-2026",
+  "campaign": "تمويل يدوم",
+  "media": "img/study-03-poll.png",
+  "text": "نتيجة الاستطلاع (مجدولة مباشرة في Buffer)"
  }
 ]
