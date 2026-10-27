@@ -39,11 +39,14 @@ def channels():
     return data['channels'], {p: found.get(svc, FALLBACK[p]) for p, svc in SERVICE.items()}
 
 
-def asset(media):
-    url = f'https://raw.githubusercontent.com/{REPO}/{REF}/{media}'
-    if media.lower().endswith('.mp4'):
-        return 'assets: [{ video: { url: %s } }]' % s(url)
-    return 'assets: [{ image: { url: %s } }]' % s(url)
+def asset(media):  # ملف واحد أو قائمة صور (كاروسيل بترتيبها)
+    items = media if isinstance(media, list) else [media]
+    out = []
+    for m in items:
+        url = f'https://raw.githubusercontent.com/{REPO}/{REF}/{m}'
+        kind = 'video' if m.lower().endswith('.mp4') else 'image'
+        out.append('{ %s: { url: %s } }' % (kind, s(url)))
+    return 'assets: [%s]' % ', '.join(out)
 
 
 def main():
