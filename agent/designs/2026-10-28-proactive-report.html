@@ -1,0 +1,58 @@
+<!doctype html><html dir="rtl" lang="ar"><head><meta charset="utf-8"><style>
+@font-face{font-family:Ar;src:url(../brand/plex-600.ttf);font-weight:600}
+@font-face{font-family:Ar;src:url(../brand/plex-400.ttf);font-weight:400}
+@font-face{font-family:La;src:url(../brand/plex-latin-400.ttf)}
+:root{--t:#0F686F;--t2:#13858d;--ink:#243438;--mut:#5f7275;--bg:#f4f6f5}
+*{margin:0;box-sizing:border-box}html{width:1080px;height:1350px;overflow:hidden}
+body{width:1080px;height:1350px;font-family:Ar,La;background:var(--bg);overflow:hidden;position:relative;color:var(--ink)}
+.blob{position:absolute;border-radius:50%}
+.b1{width:700px;height:700px;right:-300px;top:-280px;background:radial-gradient(circle,#0F686F22,#0F686F00 70%)}
+.b2{width:760px;height:760px;left:-340px;bottom:-320px;background:radial-gradient(circle,#0F686F24,#0F686F00 70%)}
+.dots{position:absolute;inset:0;background-image:radial-gradient(#0F686F18 1.6px,transparent 1.6px);background-size:28px 28px;mask-image:linear-gradient(180deg,#000 0,#0000 30%,#0000 78%,#000)}
+.top{position:absolute;top:0;left:0;right:0;height:12px;background:linear-gradient(90deg,var(--t),var(--t2))}
+.bot{position:absolute;bottom:0;left:0;right:0;height:26px;background:linear-gradient(90deg,var(--t),var(--t2))}
+.logo{position:absolute;top:56px;left:50%;transform:translateX(-50%);width:210px}
+.eyebrow{position:absolute;top:200px;width:100%;text-align:center;font-weight:600;font-size:28px;color:var(--t2);letter-spacing:.5px}
+.title{position:absolute;top:244px;width:100%;text-align:center;font-weight:600;font-size:64px;color:var(--t);line-height:1.3}
+.cols{position:absolute;top:480px;left:70px;right:70px;height:560px;display:flex;gap:40px}
+.col{flex:1;border-radius:36px;padding:56px 40px 40px;position:relative;text-align:center}
+.wait{background:#fff;border:2px dashed #0F686F40;box-shadow:0 18px 40px -26px #0F686F55}
+.act{background:linear-gradient(150deg,#13858d,#0F686F 55%,#0b5257);box-shadow:0 30px 60px -24px #0F686Faa,0 0 0 14px #0F686F12}
+.ic{width:150px;height:150px;border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center}
+.wait .ic{background:#eef4f4;border:3px solid #0F686F22}
+.act .ic{background:#ffffff1f;border:3px solid #ffffff55}
+.ic svg{width:72px;height:72px}
+.nm{font-weight:600;font-size:48px;margin-top:34px;line-height:1.2}
+.wait .nm{color:#6d8285}.act .nm{color:#fff}
+.sep{width:70px;height:5px;border-radius:5px;margin:26px auto}
+.wait .sep{background:#0F686F30}.act .sep{background:#ffffffaa}
+.row{display:flex;align-items:center;justify-content:center;gap:14px;font-size:31px;margin-top:20px}
+.wait .row{color:var(--mut)}.act .row{color:#eaf6f6;font-weight:600}
+.row svg{width:30px;height:30px;flex:none}
+.vs{position:absolute;top:760px;left:50%;transform:translate(-50%,-50%);width:104px;height:104px;border-radius:50%;background:#fff;
+ display:flex;align-items:center;justify-content:center;font-size:56px;font-weight:600;color:var(--t);box-shadow:0 14px 30px -12px #0F686F88;border:3px solid #0F686F33;z-index:2}
+.pill{position:absolute;bottom:96px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:18px;background:#fff;border-radius:999px;padding:18px 40px;box-shadow:0 14px 30px -18px #0F686F66;border:1.5px solid #0F686F1a;white-space:nowrap;font-size:32px;font-weight:600;color:var(--t)}
+.pill svg{width:38px;height:38px}
+</style></head><body>
+<div class="blob b1"></div><div class="blob b2"></div><div class="dots"></div><div class="top"></div>
+<img class="logo" src="../brand/old_logo.png">
+<div class="eyebrow">سؤال اليوم</div>
+<div class="title">تنتظر الطلب<br>أم تبادر بالتقرير؟</div>
+<div class="cols">
+ <div class="col wait">
+  <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7d9497" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h12M6 22h12"/><path d="M7 2v4a5 5 0 0 0 10 0V2"/><path d="M7 22v-4a5 5 0 0 1 10 0v4"/></svg></div>
+  <div class="nm">تنتظر</div><div class="sep"></div>
+  <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="#9aacae" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>يصل متأخرًا</span></div>
+  <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="#9aacae" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span>قائمة أنشطة</span></div>
+ </div>
+ <div class="col act">
+  <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg></div>
+  <div class="nm">تبادر</div><div class="sep"></div>
+  <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 7h6"/></svg><span>قصة مكتملة</span></div>
+  <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-9.3-9A5.2 5.2 0 0 1 12 6.3 5.2 5.2 0 0 1 21.3 12C19 16.6 12 21 12 21z"/></svg><span>«بفضل دعمك»</span></div>
+ </div>
+</div>
+<div class="vs">؟</div>
+<div class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="#0F686F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>ليرى الداعم أثر مساهمته</span></div>
+<div class="bot"></div>
+</body></html>
