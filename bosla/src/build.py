@@ -26,6 +26,14 @@ head = '''<!doctype html>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="بوصلة: المرجع التعليمي للعاملين في القطاع غير الربحي">
 <style>:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#0F3557">
+<link rel="icon" type="image/png" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="بوصلة">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script src="config.js"></script>
 <script>
@@ -33,7 +41,7 @@ head = '''<!doctype html>
 </script>
 </head><body>
 '''
-(out_dir / "index.html").write_text(head + p + "\n</body></html>\n")
+(out_dir / "index.html").write_text(head + p + (here / "pwa" / "install.html").read_text() + "\n</body></html>\n")
 cfg = out_dir / "config.js"
 if not cfg.exists():
     cfg.write_text('// Supabase project settings (public values). Leave empty to run the site in read-only mode.\nwindow.BOSLA_CONFIG = { url: "", anonKey: "" };\n')
