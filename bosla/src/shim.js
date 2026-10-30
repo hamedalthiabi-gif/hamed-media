@@ -46,7 +46,7 @@
 
   async function isAdmin(){
     if (!uid) return false;
-    if (!adminP) adminP = sb.from("admins").select("user_id").eq("user_id", uid).maybeSingle().then(function(r){ return !!(r.data); }, function(){ return false; });
+    if (!adminP) adminP = sb.rpc("is_admin").then(function(r){ return r.data === true; }, function(){ return false; });
     return adminP;
   }
   var user = sb && {

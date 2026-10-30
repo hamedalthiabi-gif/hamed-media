@@ -13,10 +13,18 @@ create table if not exists public.admins (
 alter table public.docs enable row level security;
 alter table public.admins enable row level security;
 
+create table if not exists public.admin_emails (
+  email text primary key
+);
+alter table public.admin_emails enable row level security;
+
 create or replace function public.is_admin() returns boolean
 language sql stable security definer set search_path = public as $$
   select exists (select 1 from public.admins where user_id = auth.uid())
+      or exists (select 1 from public.admin_emails where lower(email) = lower(coalesce(auth.jwt() ->> 'email', '')))
 $$;
+
+insert into public.admin_emails (email) values ('albdrtghryd@gmail.com') on conflict do nothing;
 
 create or replace function public.can_write(c text, i text) returns boolean
 language sql stable as $$

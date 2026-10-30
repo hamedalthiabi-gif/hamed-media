@@ -54,7 +54,7 @@
 
   async function isAdmin(){
     if (!uid) return false;
-    if (!adminP) adminP = sb.from("admins").select("user_id").eq("user_id", uid).maybeSingle().then(function(r){ return !!(r.data); }, function(){ return false; });
+    if (!adminP) adminP = sb.rpc("is_admin").then(function(r){ return r.data === true; }, function(){ return false; });
     return adminP;
   }
   var user = sb && {
@@ -842,7 +842,7 @@ async function reviewSuggestion(id,act){
  const s=(R.suggest||[]).find(x=>x.id===id);if(!s||!R.db)return;
  try{
   if(act==="ok"){const {id:_,version:__,...data}=s;await R.db.collection("catalog").add({...data,at:Date.now()});toast(t("sgAdded"))}
-  await R.db.doc("suggest/"+id).delete();if(act!=="ok")toast(t("sgDropped"));
+  await R.db.doc("suggest/"+id).set({done:act,at:Date.now()});if(act!=="ok")toast(t("sgDropped"));
  }catch(_){toast(t("vErr"))}
 }
 function adminForm(){
@@ -1154,7 +1154,7 @@ render();
  db.collection("ratings").onSnapshot(keep(x=>{R.ratings=x;soft()}));
  db.collection("members").onSnapshot(keep(x=>{R.members=x;soft()}));
  db.collection("needs").onSnapshot(keep(x=>{R.needs=x.sort((a,b)=>(b.at||0)-(a.at||0));soft()}));
- if(R.owner)db.collection("suggest").onSnapshot(keep(x=>{R.suggest=x.filter(y=>y.name&&y.url).sort((a,b)=>(b.at||0)-(a.at||0));soft()}));
+ if(R.owner){let SG=[],DONE={};const upd=()=>{R.suggest=SG.filter(y=>y&&y.id&&y.name&&y.url&&!DONE[y.id]).sort((a,b)=>(b.at||0)-(a.at||0));soft()};fetch("suggestions.json",{cache:"no-store"}).then(r=>r.ok?r.json():[]).then(x=>{SG=Array.isArray(x)?x:[];upd()}).catch(()=>{});db.collection("suggest").onSnapshot(keep(x=>{DONE={};x.forEach(d=>{DONE[d.id]=1});upd()}))}
  db.collection("catalog").onSnapshot(keep(x=>{R.extra=x.filter(y=>y.name&&y.url);soft()}));
  if(R.uid){
   R.prefsRef=db.collection("data/users/"+R.uid).doc("prefs");

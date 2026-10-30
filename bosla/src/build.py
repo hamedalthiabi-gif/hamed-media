@@ -16,6 +16,11 @@ p = rep(p, 'if(!R.uid)return `<h2>${t("acT")}</h2><p class="lead">${t("acLogin")
 p = rep(p, 'return `<h2>${t("acT")}</h2><div class="kpi" id="acKpi">',
            'return `<div class="cmhead"><h2>${t("acT")}</h2>${window.BOSLA_AUTH?window.BOSLA_AUTH.logout(S.lang):""}</div><div class="kpi" id="acKpi">')
 
+p = rep(p, 'if(R.owner)db.collection("suggest").onSnapshot(keep(x=>{R.suggest=x.filter(y=>y.name&&y.url).sort((a,b)=>(b.at||0)-(a.at||0));soft()}));',
+  'if(R.owner){let SG=[],DONE={};const upd=()=>{R.suggest=SG.filter(y=>y&&y.id&&y.name&&y.url&&!DONE[y.id]).sort((a,b)=>(b.at||0)-(a.at||0));soft()};fetch("suggestions.json",{cache:"no-store"}).then(r=>r.ok?r.json():[]).then(x=>{SG=Array.isArray(x)?x:[];upd()}).catch(()=>{});db.collection("suggest").onSnapshot(keep(x=>{DONE={};x.forEach(d=>{DONE[d.id]=1});upd()}))}')
+p = rep(p, 'await R.db.doc("suggest/"+id).delete();if(act!=="ok")toast(t("sgDropped"));',
+  'await R.db.doc("suggest/"+id).set({done:act,at:Date.now()});if(act!=="ok")toast(t("sgDropped"));')
+
 head = '''<!doctype html>
 <html lang="ar" dir="rtl"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
