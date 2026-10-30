@@ -1,0 +1,1167 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="بوصلة: المرجع التعليمي للعاملين في القطاع غير الربحي">
+<style>:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="config.js"></script>
+<script>
+/* Bosla standalone runtime: provides the same window.claude.use() surface the page expects,
+   backed by Supabase (docs table + auth). Without config, the site runs read-only with its built-in content. */
+(function(){
+  var cfg = window.BOSLA_CONFIG || {};
+  var sb = (cfg.url && cfg.anonKey && window.supabase) ? window.supabase.createClient(cfg.url, cfg.anonKey) : null;
+  var session = null, uid = null, adminP = null;
+  var listeners = {}; // collection -> [{id|null, fn}]
+
+  function snapOf(rows){ return { docs: rows.map(function(r){ return { id: r.id, data: function(){ return r.data; } }; }) }; }
+  async function fetchCol(c){ var r = await sb.from("docs").select("id,data").eq("collection", c); if (r.error) throw r.error; return r.data || []; }
+  async function notify(c){
+    var ls = listeners[c]; if (!ls || !ls.length) return;
+    var rows; try { rows = await fetchCol(c); } catch(e) { ls.forEach(function(l){ l.err && l.err(e); }); return; }
+    ls.forEach(function(l){
+      if (l.id == null) l.fn(snapOf(rows));
+      else { var row = rows.find(function(r){ return r.id === l.id; }); l.fn({ id: l.id, exists: !!row, data: function(){ return row ? row.data : undefined; } }); }
+    });
+  }
+  function listen(c, id, fn, err){
+    (listeners[c] = listeners[c] || []).push({ id: id, fn: fn, err: err });
+    notify(c);
+    return function(){ listeners[c] = (listeners[c] || []).filter(function(l){ return l.fn !== fn; }); };
+  }
+  function split(p){ var i = p.lastIndexOf("/"); return [p.slice(0, i), p.slice(i + 1)]; }
+  function docRef(c, id){
+    return {
+      id: id,
+      set: async function(data){ var r = await sb.from("docs").upsert({ collection: c, id: id, data: data, updated_at: new Date().toISOString() }); if (r.error) throw r.error; notify(c); },
+      update: async function(data){ var cur = await sb.from("docs").select("data").eq("collection", c).eq("id", id).maybeSingle(); var r = await sb.from("docs").upsert({ collection: c, id: id, data: Object.assign({}, cur.data && cur.data.data, data) }); if (r.error) throw r.error; notify(c); },
+      delete: async function(){ var r = await sb.from("docs").delete().eq("collection", c).eq("id", id); if (r.error) throw r.error; notify(c); },
+      onSnapshot: function(fn, err){ return listen(c, id, fn, err); }
+    };
+  }
+  function colRef(c){
+    return {
+      path: c,
+      doc: function(id){ return docRef(c, id || (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + Math.random().toString(36).slice(2))); },
+      add: async function(data){ var d = this.doc(); await d.set(data); return d; },
+      onSnapshot: function(fn, err){ return listen(c, null, fn, err); }
+    };
+  }
+  var db = sb && {
+    doc: function(p){ var s = split(p); return docRef(s[0], s[1]); },
+    collection: function(p){ return colRef(p); }
+  };
+
+  async function isAdmin(){
+    if (!uid) return false;
+    if (!adminP) adminP = sb.from("admins").select("user_id").eq("user_id", uid).maybeSingle().then(function(r){ return !!(r.data); }, function(){ return false; });
+    return adminP;
+  }
+  var user = sb && {
+    id: async function(){ return uid; },
+    isOwner: isAdmin,
+    canEdit: isAdmin,
+    me: async function(){ return { id: uid, email: session && session.user && session.user.email, name: "" }; },
+    profiles: async function(ids){
+      var out = {}; if (!ids || !ids.length) return out;
+      var r = await sb.from("docs").select("id,data").eq("collection", "points").in("id", ids);
+      (r.data || []).forEach(function(x){ out[x.id] = { id: x.id, name: (x.data && x.data.name) || "" }; });
+      return out;
+    }
+  };
+  var downloads = {
+    save: async function(req){
+      var blob = req.data instanceof Blob ? req.data : new Blob([req.data]);
+      var a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = req.filename || "file";
+      document.body.appendChild(a); a.click(); setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 1500);
+      return { status: "saved" };
+    }
+  };
+
+  var ready = (async function(){
+    if (!sb) return;
+    var s = await sb.auth.getSession(); session = s.data.session; uid = session ? session.user.id : null;
+    sb.auth.onAuthStateChange(function(ev, sess){
+      var nid = sess ? sess.user.id : null;
+      if (nid !== uid) location.reload();
+    });
+    try {
+      sb.channel("docs-changes").on("postgres_changes", { event: "*", schema: "public", table: "docs" }, function(p){
+        var c = (p.new && p.new.collection) || (p.old && p.old.collection); if (c) notify(c);
+      }).subscribe();
+    } catch(e) {}
+    setInterval(function(){ Object.keys(listeners).forEach(notify); }, 60000);
+  })();
+
+  window.claude = {
+    use: async function(name){
+      await ready;
+      if (name === "db") return db || null;
+      if (name === "user") return user || null;
+      if (name === "downloads") return downloads;
+      return null; // sample (AI advisor) is not available outside Claude
+    }
+  };
+
+  /* ---- sign in / sign out ---- */
+  var TX = {
+    ar: { t: "تسجيل الدخول", p: "أدخل بريدك الإلكتروني ليصلك رابط الدخول.", e: "البريد الإلكتروني", b: "أرسل رابط الدخول", ok: "أرسلنا رابط الدخول إلى بريدك.", err: "تعذّر الإرسال، حاول بعد قليل.", out: "تسجيل الخروج", off: "تسجيل الدخول غير مفعّل بعد." },
+    en: { t: "Sign in", p: "Enter your email to receive a sign-in link.", e: "Email", b: "Send sign-in link", ok: "We sent a sign-in link to your email.", err: "Couldn't send, please try again shortly.", out: "Sign out", off: "Sign-in isn't enabled yet." }
+  };
+  window.BOSLA_AUTH = {
+    form: function(lang){
+      var x = TX[lang] || TX.ar;
+      if (!sb) return '<p class="note">' + x.off + "</p>";
+      return '<div class="panel" style="max-width:460px"><h3>' + x.t + '</h3><p class="note" style="margin-top:4px">' + x.p + '</p><form class="form" id="loginForm" style="margin-top:10px"><label>' + x.e + '<input id="loginEmail" type="email" required dir="ltr" autocomplete="email"></label><div><button class="btn" type="submit">' + x.b + '</button></div></form></div>';
+    },
+    logout: function(lang){ var x = TX[lang] || TX.ar; return sb && uid ? '<button class="btn line" type="button" id="logoutBtn" style="font-size:13px;padding:5px 12px">' + x.out + "</button>" : ""; }
+  };
+  document.addEventListener("submit", async function(e){
+    if (e.target.id !== "loginForm") return; e.preventDefault();
+    var lang = document.documentElement.lang === "en" ? "en" : "ar", x = TX[lang];
+    var email = document.getElementById("loginEmail").value.trim(); if (!email) return;
+    var r = await sb.auth.signInWithOtp({ email: email, options: { emailRedirectTo: location.origin + location.pathname } });
+    var tEl = document.getElementById("toast"); if (tEl) { tEl.textContent = r.error ? x.err : x.ok; tEl.classList.add("on"); setTimeout(function(){ tEl.classList.remove("on"); }, 3500); }
+  });
+  document.addEventListener("click", async function(e){
+    if (e.target.closest && e.target.closest("#logoutBtn")) { await sb.auth.signOut(); location.reload(); }
+  });
+})();
+
+</script>
+</head><body>
+<title>بوصلة القطاع غير الربحي</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap">
+<style>
+/* Layout: light sticky header with section tabs; hero carries a ripple motif: concentric rings spreading from a seed point. Single light look by design. Palette: cream / navy / copper / sage */
+:root{
+  color-scheme:light;
+  --bg:#FAF8F2; --surface:#FFFFFF; --fg:#2A2F3A; --muted:#676B74; --line:#EAE4D6;
+  --navy:#0F3557; --copper:#BA6740; --copper-soft:#F6E9DF; --navy-soft:#E8EEF4;
+  --sage:#5E8B6E; --sage-soft:#E6F0E8; --sand:#F1E7D6;
+  --ok:#2F7D55; --ok-soft:#E1F0E7; --warn:#A86A12; --warn-soft:#F8EDD8;
+  --head:#FFFFFF; --head-fg:#0F3557; --head-muted:#7A7F88;
+  --font:"IBM Plex Sans Arabic",Tahoma,"Segoe UI",sans-serif;
+  --latin:"Montserrat","IBM Plex Sans Arabic",sans-serif;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:15px;line-height:1.65;margin:0;
+  background-image:radial-gradient(circle at 1px 1px,rgba(186,103,64,.10) 1px,transparent 0);background-size:22px 22px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--head)}
+[lang="en"] body,[dir="ltr"]{font-family:var(--latin)}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{background:rgba(255,255,255,.94);backdrop-filter:blur(8px);color:var(--head-fg);position:sticky;top:env(safe-area-inset-top,0px);z-index:5;border-bottom:1px solid var(--line)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:14px 4px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand svg{flex:none}
+.brand b{font-size:22px;font-weight:700;line-height:1.1}
+.brand small{display:block;font-size:12px;color:var(--head-muted);font-weight:400}
+.lang{font:inherit;font-size:13px;font-weight:600;background:transparent;color:var(--head-fg);border:1px solid var(--line);border-radius:999px;padding:5px 14px;cursor:pointer}
+.lang:hover{border-color:var(--copper);color:var(--copper)}
+.lang:focus-visible,nav button:focus-visible{outline:2px solid #BA6740;outline-offset:2px}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav button{font:inherit;font-size:14px;background:none;border:0;color:var(--head-fg);opacity:.7;padding:10px 12px;border-bottom:3px solid transparent;cursor:pointer;white-space:nowrap}
+nav button:hover{opacity:1}
+nav button[aria-selected="true"]{opacity:1;border-bottom-color:#BA6740;font-weight:600}
+main{padding-block:26px 120px}
+h1{font-size:28px;line-height:1.3;margin:0 0 10px;text-wrap:balance}
+h2{font-size:20px;margin:0 0 6px;color:var(--navy);text-wrap:balance;display:flex;align-items:center;gap:10px}
+h2::before{content:"";flex:none;width:18px;height:18px;border-radius:50%;background:radial-gradient(circle,var(--copper) 0 3px,transparent 3.5px),radial-gradient(circle,transparent 5px,rgba(186,103,64,.45) 5.5px 6.5px,transparent 7px),radial-gradient(circle,transparent 8px,rgba(94,139,110,.4) 8.5px 9px,transparent 9.5px)}
+h3{font-size:16px;margin:0;text-wrap:balance}
+.lead{color:var(--muted);max-width:65ch;margin:0 0 18px}
+.section{margin-bottom:34px}
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#FFFFFF 0%,var(--sand) 55%,var(--copper-soft) 100%);color:var(--navy);border:1px solid var(--line);border-radius:20px;padding:34px 28px;display:grid;gap:16px;margin-bottom:34px}
+.hero>*{position:relative;z-index:1;max-width:560px}
+.hero .eyebrow{font-size:13px;font-weight:600;color:var(--sage);letter-spacing:.02em;display:inline-flex;align-items:center;gap:8px}
+.hero .eyebrow::before{content:"";width:22px;height:2px;background:var(--sage);border-radius:2px}
+.hero h1{font-size:32px}
+.hero h1 em{font-style:normal;color:var(--copper)}
+.hero p{color:var(--muted);margin:0;max-width:56ch}
+.hero .row{display:flex;gap:10px;flex-wrap:wrap}
+.ripple{position:absolute;z-index:0;inset-block:-40px;inset-inline-end:-80px;width:440px;max-width:none;pointer-events:none;opacity:.9}
+.ripple circle.r{fill:none;stroke-width:1.5;transform-origin:220px 220px;animation:pulse 6s ease-out infinite}
+.ripple circle.r:nth-child(2){animation-delay:1.5s}.ripple circle.r:nth-child(3){animation-delay:3s}.ripple circle.r:nth-child(4){animation-delay:4.5s}
+@keyframes pulse{0%{transform:scale(.25);opacity:.9}100%{transform:scale(1);opacity:0}}
+.stats{display:flex;gap:22px;flex-wrap:wrap;margin-top:4px}
+.stats div{display:flex;flex-direction:column}
+.stats b{font-size:24px;color:var(--navy);font-variant-numeric:tabular-nums;line-height:1.2}
+.stats span{font-size:12px;color:var(--muted)}
+@media (max-width:600px){.ripple{width:300px;inset-inline-end:-120px;opacity:.45}.hero h1{font-size:24px}.hero{padding:26px 20px}}
+.btn{font:inherit;font-size:14px;font-weight:600;background:var(--copper);color:#fff;border:0;border-radius:8px;padding:8px 18px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.btn.line{background:transparent;color:inherit;border:1px solid currentColor}
+.btn:focus-visible{outline:2px solid var(--navy);outline-offset:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:10px;min-width:0;transition:transform .2s,box-shadow .2s,border-color .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(15,53,87,.08);border-color:rgba(186,103,64,.45)}
+.card.soon{background:linear-gradient(160deg,var(--surface),var(--sage-soft))}
+.card p{margin:0;color:var(--muted);font-size:14px}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:12px;padding:2px 10px;border-radius:999px;background:var(--navy-soft);color:var(--navy);font-weight:600;white-space:nowrap}
+.tag.cu{background:var(--copper-soft);color:var(--copper)}
+.tag.ok{background:var(--ok-soft);color:var(--ok)}
+.meta{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.meta div{background:var(--bg);border-radius:8px;padding:6px 8px;font-size:12px;text-align:center}
+.meta span{display:block;color:var(--muted);font-size:11px}
+.cardfoot{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:auto;flex-wrap:wrap}
+.link{color:var(--copper);font-weight:600;text-decoration:none;font-size:14px}
+.link:hover{text-decoration:underline}
+.chk{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);cursor:pointer}
+.chk input{accent-color:var(--copper);width:16px;height:16px}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.chip{font:inherit;font-size:13px;background:var(--surface);border:1px solid var(--line);color:var(--fg);padding:4px 14px;border-radius:999px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--navy);color:var(--bg);border-color:var(--navy)}
+.chip:focus-visible{outline:2px solid var(--copper);outline-offset:2px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;counter-reset:s}
+@media (max-width:820px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;counter-increment:s}
+.step::before{content:counter(s);display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--copper-soft);color:var(--copper);font-weight:700;font-size:13px;margin-bottom:6px;box-shadow:0 0 0 4px var(--surface),0 0 0 5px rgba(186,103,64,.3)}
+.step:nth-child(even)::before{background:var(--sage-soft);color:var(--sage);box-shadow:0 0 0 4px var(--surface),0 0 0 5px rgba(94,139,110,.35)}
+.step p{margin:4px 0 0;font-size:14px;color:var(--muted)}
+.soon{border-style:dashed}
+.tray{position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(0,0,0,.08);padding-bottom:env(safe-area-inset-bottom,0px);z-index:6}
+.tray .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-block:10px;flex-wrap:wrap}
+.cmp{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:24px}
+.cmp table{width:100%;border-collapse:collapse;min-width:560px}
+.cmp th,.cmp td{padding:10px 12px;border-top:1px solid var(--line);text-align:start;vertical-align:top;font-size:14px}
+.cmp tr:first-child th,.cmp tr:first-child td{border-top:0}
+.cmp th{color:var(--muted);font-weight:600;width:130px;background:var(--bg)}
+details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+details+details{margin-top:10px}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--copper);font-weight:700}
+details[open] summary::after{content:"−"}
+details p,details li{color:var(--muted);font-size:14px}
+pre.tpl{white-space:pre-wrap;direction:ltr;text-align:left;font-family:var(--latin);font-size:13px;background:var(--bg);border-radius:8px;padding:14px;margin:12px 0 8px;line-height:1.7;overflow-x:auto}
+.search{font:inherit;width:100%;max-width:420px;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--fg);margin-bottom:14px}
+.search:focus{outline:2px solid var(--copper);outline-offset:1px}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
+.term{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.term b{display:block}
+.term .en{font-family:var(--latin);color:var(--copper);font-weight:600;direction:ltr;text-align:start;display:block}
+.term p{margin:4px 0 0;font-size:13px;color:var(--muted)}
+.q{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.q+.q{margin-top:8px}
+.q span{flex:1;min-width:200px}
+.yn{display:flex;gap:6px}
+.result{background:linear-gradient(135deg,var(--sage-soft),var(--surface));border:1px solid var(--line);color:var(--navy);border-radius:16px;padding:22px;margin-top:18px}
+.result .score{font-size:44px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.1;color:var(--sage)}
+.result ul{margin:10px 0 0;padding-inline-start:20px;color:var(--fg)}
+@media (prefers-reduced-motion:reduce){.ripple circle.r{animation:none;transform:scale(.6);opacity:.5}.card:hover{transform:none}}
+.note{font-size:13px;color:var(--muted);margin-top:14px}
+.voices{background:linear-gradient(160deg,var(--surface),var(--sand));border:1px solid var(--line);border-radius:20px;padding:24px}
+.vhead{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:16px}
+.avg{display:flex;align-items:center;gap:10px}
+.avg b{font-size:34px;color:var(--navy);font-variant-numeric:tabular-nums;line-height:1}
+.avg small{color:var(--muted);font-size:13px;display:block}
+.stars{color:#D9A441;letter-spacing:2px;font-size:16px;white-space:nowrap}
+.stars .off{color:#E2DCCB}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.review{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:10px;position:relative}
+.review::before{content:"”";position:absolute;inset-inline-end:14px;top:2px;font-size:54px;line-height:1;color:var(--copper-soft);font-family:Georgia,serif}
+.review p{margin:0;color:var(--fg);font-size:14px;position:relative}
+.who{display:flex;align-items:center;gap:10px;margin-top:auto}
+.av{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-weight:700;background:var(--sage-soft);color:var(--sage);flex:none}
+.review:nth-child(even) .av{background:var(--copper-soft);color:var(--copper)}
+.who b{display:block;font-size:14px}
+.who small{color:var(--muted);font-size:12px}
+.mine{font-size:11px;color:var(--sage);font-weight:600}
+.rform{margin-top:18px;background:var(--surface);border:1px dashed rgba(186,103,64,.5);border-radius:14px;padding:16px;display:grid;gap:10px}
+.rform .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.rform input,.rform textarea{font:inherit;font-size:14px;width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg)}
+.rform textarea{min-height:80px;resize:vertical}
+.rform input:focus,.rform textarea:focus{outline:2px solid var(--copper);outline-offset:1px}
+.rate{display:flex;gap:2px;align-items:center;flex-wrap:wrap}
+.rate button{font-size:26px;line-height:1;background:none;border:0;cursor:pointer;color:#E2DCCB;padding:2px}
+.rate button.on{color:#D9A441}
+.rate button:focus-visible{outline:2px solid var(--copper);border-radius:4px}
+@media (max-width:520px){.rform .two{grid-template-columns:1fr}.voices{padding:18px}}
+.toast{position:fixed;top:calc(80px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);background:var(--navy);color:var(--bg);padding:8px 16px;border-radius:8px;font-size:13px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:9}
+.toast.on{opacity:1}
+@media (max-width:600px){h1{font-size:23px}.hero{padding:20px 18px}.meta{grid-template-columns:1fr 1fr 1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<style>
+.hicons{display:flex;align-items:center;gap:8px}
+.hbtn{position:relative;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--surface);border:1px solid var(--line);color:var(--navy);cursor:pointer;font:inherit;font-weight:700}
+.hbtn:hover{border-color:var(--copper)}
+.hbtn:focus-visible{outline:2px solid var(--copper);outline-offset:2px}
+.hbtn.av{background:var(--sand)}
+.dot{position:absolute;top:-3px;inset-inline-end:-3px;min-width:18px;height:18px;border-radius:9px;background:var(--copper);color:#fff;font-size:11px;display:grid;place-items:center;padding:0 4px;font-weight:700}
+.pop{position:absolute;top:calc(100% + 6px);inset-inline-start:max(16px,env(safe-area-inset-left,0px));width:min(340px,calc(100vw - 32px));background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:0 14px 34px rgba(15,53,87,.14);padding:14px;z-index:8;color:var(--fg)}
+.pop h3{margin-bottom:8px}
+.pop .it{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-top:1px solid var(--line);font-size:14px}
+.pop .it:first-of-type{border-top:0}
+.pop small{color:var(--muted)}
+.top{position:relative}
+.fieldbox{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:16px}
+.fieldbox b{display:flex;align-items:center;gap:6px;font-size:14px;margin-bottom:8px;color:var(--navy)}
+.fieldbox .opts{display:flex;flex-wrap:wrap;gap:6px 16px}
+.row2{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+.row2 .sep{width:1px;height:22px;background:var(--line);margin-inline:4px}
+.ev{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start}
+.date{width:62px;border-radius:12px;overflow:hidden;text-align:center;border:1px solid var(--line);background:var(--surface);flex:none}
+.date span{display:block;background:var(--copper);color:#fff;font-size:12px;font-weight:600;padding:2px 0}
+.date b{display:block;font-size:22px;color:var(--navy);line-height:1.5;font-variant-numeric:tabular-nums}
+.date.past span{background:var(--muted)}
+.tag.end{background:#EFEDE7;color:var(--muted)}
+.tag.soonT{background:var(--warn-soft);color:var(--warn)}
+.follow{font:inherit;font-size:13px;background:none;border:1px solid var(--line);color:var(--navy);padding:4px 12px;border-radius:999px;cursor:pointer}
+.follow[aria-pressed="true"]{background:var(--sage-soft);border-color:var(--sage);color:var(--sage);font-weight:600}
+.follow:focus-visible{outline:2px solid var(--copper);outline-offset:2px}
+.ctype{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:var(--copper-soft);color:var(--copper);flex:none}
+.ctype.b{background:var(--navy-soft);color:var(--navy)}
+.ctype.g{background:var(--sage-soft);color:var(--sage)}
+.chead{display:flex;gap:12px;align-items:flex-start}
+.lb{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.lb .r{display:flex;align-items:center;gap:12px;padding:10px 14px;border-top:1px solid var(--line)}
+.lb .r:first-child{border-top:0}
+.lb .rk{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:13px;background:var(--bg);color:var(--muted);flex:none}
+.lb .r:nth-child(1) .rk{background:#F6E7C4;color:#9A6B12}.lb .r:nth-child(2) .rk{background:#E7EAEE;color:#56606C}.lb .r:nth-child(3) .rk{background:var(--copper-soft);color:var(--copper)}
+.lb .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lb .pt{font-weight:700;color:var(--navy);font-variant-numeric:tabular-nums}
+.lb .me{background:var(--sage-soft)}
+.two-col{display:grid;grid-template-columns:1.3fr 1fr;gap:18px;align-items:start}
+@media (max-width:820px){.two-col{grid-template-columns:1fr}}
+.earn{display:grid;gap:6px;margin:0;padding:0;list-style:none}
+.earn li{display:flex;justify-content:space-between;gap:10px;font-size:14px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+.earn li b{color:var(--sage)}
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:18px}
+.kpi div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.kpi b{display:block;font-size:26px;color:var(--navy);font-variant-numeric:tabular-nums}
+.kpi span{font-size:12px;color:var(--muted)}
+.apply{display:inline-flex}
+</style>
+
+<style>
+.jgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.jcard{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:8px;cursor:pointer;text-align:start;font:inherit;color:inherit;transition:transform .2s,border-color .2s,box-shadow .2s}
+.jcard:hover,.jcard:focus-visible{transform:translateY(-3px);border-color:var(--copper);box-shadow:0 10px 24px rgba(15,53,87,.08);outline:none}
+.jcard[aria-pressed="true"]{border-color:var(--copper);background:linear-gradient(160deg,var(--surface),var(--copper-soft))}
+.jicon{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:var(--sage-soft);color:var(--sage)}
+.jcard:nth-child(2n) .jicon{background:var(--copper-soft);color:var(--copper)}
+.jcard:nth-child(3n) .jicon{background:var(--navy-soft);color:var(--navy)}
+.jcard p{margin:0;font-size:13px;color:var(--muted)}
+.bar{height:6px;border-radius:3px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--sage);border-radius:3px}
+.jdetail{margin-top:20px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px}
+.stages{display:grid;gap:14px;margin-top:14px}
+.stage{display:grid;grid-template-columns:34px 1fr;gap:12px}
+.stage .num{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-weight:700;background:var(--copper-soft);color:var(--copper);position:relative}
+.stage:not(:last-child) .num::after{content:"";position:absolute;top:36px;left:50%;width:2px;height:calc(100% + 40px);background:var(--line);transform:translateX(-50%)}
+.stage h3{margin:5px 0 8px}
+.titem{display:flex;align-items:center;gap:10px;justify-content:space-between;background:var(--bg);border-radius:10px;padding:8px 12px;margin-bottom:6px;flex-wrap:wrap}
+.titem .nm{flex:1;min-width:180px;font-size:14px}
+.titem small{color:var(--muted);display:block;font-size:12px}
+.titem.done{background:var(--sage-soft)}
+.done-btn{font:inherit;font-size:12px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:3px 10px;cursor:pointer;color:var(--navy)}
+.done-btn[aria-pressed="true"]{background:var(--sage);border-color:var(--sage);color:#fff}
+.statusbar{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin-bottom:14px}
+.sbtn{font:inherit;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px;cursor:pointer;text-align:start;color:var(--fg)}
+.sbtn b{display:block;font-size:22px;color:var(--navy);font-variant-numeric:tabular-nums}
+.sbtn span{font-size:12px;color:var(--muted)}
+.sbtn[aria-pressed="true"]{border-color:var(--navy);box-shadow:inset 0 0 0 1px var(--navy)}
+.sbtn:focus-visible{outline:2px solid var(--copper);outline-offset:2px}
+.myrate{display:flex;align-items:center;gap:2px}
+.myrate button{font-size:18px;line-height:1;background:none;border:0;cursor:pointer;color:#E2DCCB;padding:0 1px}
+.myrate button.on{color:#D9A441}
+.rsum{font-size:12px;color:var(--muted)}
+.path{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;margin:10px 0 6px}
+.path::before{content:"";position:absolute;top:21px;inset-inline:12%;height:3px;background:var(--line)}
+.pstep{display:flex;flex-direction:column;align-items:center;gap:6px;position:relative;font:inherit;background:none;border:0;cursor:pointer;color:var(--muted);padding:0}
+.pstep i{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--surface);border:2px solid var(--line);font-style:normal;font-weight:700;color:var(--muted)}
+.pstep.reached i{border-color:var(--sage);color:var(--sage)}
+.pstep.now i{background:var(--copper);border-color:var(--copper);color:#fff;box-shadow:0 0 0 6px var(--copper-soft)}
+.pstep.now{color:var(--navy);font-weight:600}
+.pstep small{font-size:11px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px}
+.panel+.panel{margin-top:14px}
+.form{display:grid;gap:10px}
+.form .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.form label{font-size:13px;color:var(--muted);display:grid;gap:4px}
+.form input,.form select,.form textarea{font:inherit;font-size:14px;width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg)}
+.form textarea{min-height:70px;resize:vertical}
+.form input:focus,.form select:focus,.form textarea:focus{outline:2px solid var(--copper);outline-offset:1px}
+@media (max-width:520px){.form .two{grid-template-columns:1fr}}
+.cvhead{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.cvav{width:64px;height:64px;border-radius:18px;background:var(--sand);display:grid;place-items:center;font-size:26px;font-weight:700;color:var(--navy)}
+.gap{display:grid;grid-template-columns:1fr auto;gap:8px 12px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
+.gap:first-child{border-top:0}
+.gap .bar{grid-column:1/-1}
+.gap b{font-variant-numeric:tabular-nums}
+.adv{background:linear-gradient(135deg,var(--navy-soft),var(--surface));border:1px solid var(--line);border-radius:16px;padding:18px}
+.adv ul{margin:8px 0 0;padding-inline-start:20px}
+.adv li{margin-bottom:6px}
+.cmhead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.members{font-size:12px;color:var(--muted)}
+.planrow{display:grid;grid-template-columns:1fr 1fr auto;gap:8px;align-items:center;margin-bottom:8px}
+@media (max-width:520px){.planrow{grid-template-columns:1fr}}
+.planout{margin-top:12px}
+.planout .emp{border-top:1px solid var(--line);padding:10px 0}
+.planout .emp:first-child{border-top:0}
+.planout ul{margin:6px 0 0;padding-inline-start:20px;font-size:14px;color:var(--muted)}
+.admin{border:1px dashed var(--copper)}
+.sub{font-size:16px;margin:26px 0 10px;color:var(--navy)}
+</style>
+
+<div id="app" dir="rtl" lang="ar">
+<header><div class="wrap">
+  <div class="top">
+    <div class="brand">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="none" stroke="#BA6740" stroke-width="2"/><circle cx="17" cy="17" r="9" fill="none" stroke="#5E8B6E" stroke-width="1.5" opacity=".7"/><path d="M17 6 L20 17 L17 28 L14 17 Z" fill="#0F3557"/><path d="M17 6 L20 17 L14 17 Z" fill="#BA6740"/></svg>
+      <div><b data-t="brand"></b><small data-t="tagline"></small></div>
+    </div>
+    <div class="hicons">
+      <button class="lang" id="langBtn" type="button">English</button>
+      <button class="hbtn" id="bellBtn" type="button" aria-label="الإشعارات"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10 21a2 2 0 0 0 4 0"/></svg><span class="dot" id="bellDot" hidden></span></button>
+      <button class="hbtn av" id="meBtn" type="button" aria-label="حسابي"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></button>
+    </div>
+    <div class="pop" id="bellPop" hidden></div>
+  </div>
+  <nav id="tabs" role="tablist"></nav>
+</div></header>
+<main><div class="wrap" id="view"></div></main>
+<div class="tray" id="tray" hidden><div class="wrap"><span id="trayText"></span><div style="display:flex;gap:8px"><button class="btn line" id="clearCmp" type="button"></button><button class="btn" id="goCmp" type="button"></button></div></div></div>
+<div class="toast" id="toast" role="status"></div>
+</div>
+
+<script>
+const TODAY=new Date();TODAY.setHours(0,0,0,0);
+const T={
+ar:{brand:"بوصلة",tagline:"المرجع التعليمي للعاملين في القطاع غير الربحي",
+ home:"الرئيسية",journeys:"الرحلات التعليمية",programs:"تقويم التعليم",calendar:"الفعاليات والمواعيد",communities:"المجتمعات المهنية",content:"المحتوى الإثرائي",elearn:"التعلم عن بعد",funders:"للممولين",orgs:"للجمعيات",account:"حسابي",
+ heroT:"رحلتك التعليمية في القطاع غير الربحي تبدأ من هنا",
+ heroP:"بوصلة تجمع البرامج التأهيلية المتفرقة في مكان واحد، وترسم لك رحلة تعليمية تناسب موقعك في القطاع، وتوجّه دعم المانحين إلى البرامج التي يحتاجها القطاع فعلًا.",
+ startJ:"اختر رحلتك",exploreP:"تصفح البرامج",
+ visionT:"الرؤية",visionP:"أن تكون بوصلة المرجع التعليمي للعاملين بالقطاع غير الربحي.",missionT:"الرسالة",missionP:"تمكين العاملين بالقطاع غير الربحي مهاريًا وعلميًا.",valuesT:"القيم",valuesP:"الشراكة · المصداقية · التأثير · الابتكار",
+ forWhom:"ماذا تقدم بوصلة؟",fw_w:"للعاملين بالقطاع",fw_wp:"حساب موحد وسيرة ذاتية، ورحلات تعليمية متكاملة، وبرامج موثوقة.",fw_f:"للممولين",fw_fp:"توجيه الدعم نحو البرامج التي يحتاجها القطاع دون تكرار.",fw_o:"للجمعيات",fw_op:"خطط تعليمية للموظفين والوصول إلى كفاءات أفضل.",fw_e:"للجهات التعليمية",fw_ep:"الوصول للعاملين أسرع، وتقييم حقيقي للبرامج من المتعلمين.",
+ jT:"الرحلات التعليمية",jP:"خمس رحلات مرتبة حسب موقعك في القطاع. ابدأ رحلتك وعلّم كل خطوة تنجزها.",jStart:"ابدأ هذه الرحلة",jStarted:"رحلتك الحالية",jFor:"لمن هذه الرحلة؟",jDone:"أنجزت",jMark:"علّم كمنجز",jProgress:"التقدم",
+ pT:"تقويم التعليم",pP:"كل البرامج التأهيلية في القطاع مصنفة حسب حالتها. تحقق من مواعيد التقديم والرسوم في موقع كل برنامج.",
+ st_all:"كل البرامج",st_existing:"البرامج القائمة",st_current:"البرامج الحالية",st_new:"البرامج الجديدة",st_future:"البرامج المستقبلية",
+ st_existing_d:"متاحة باستمرار",st_current_d:"مفتوحة للتسجيل الآن",st_new_d:"أُضيفت حديثًا",st_future_d:"قادمة قريبًا",
+ masters:"ماجستير",certificate:"شهادة مهنية",course:"دورات",fellowship:"زمالة",directory:"دليل برامج",award:"جائزة",academy:"أكاديمية",all:"الكل",
+ local:"محلي",intl:"دولي",allScope:"محلي ودولي",region:"النطاق",
+ type:"النوع",mode:"طريقة الدراسة",lang:"اللغة",provider:"الجهة",country:"الدولة",cost:"التكلفة",focus:"التركيز",status:"الحالة",
+ online:"عن بُعد",checkSite:"حسب البرنامج",english:"الإنجليزية",arabic:"العربية",paid:"برسوم",free:"مجاني",
+ visit:"زيارة الموقع",apply:"قدّم طلبك الآن",compareAdd:"قارن",compareN:"برامج محددة للمقارنة",compareGo:"عرض المقارنة",clear:"مسح",
+ cmpT:"مقارنة البرامج",cmpEmpty:"اختر برنامجين أو ثلاثة لمقارنتها.",cmpMax:"يمكن مقارنة ثلاثة برامج كحد أقصى",
+ fieldsT:"تصفية المجالات",f_waqf:"إدارة الأوقاف",f_csr:"المسؤولية المجتمعية",f_lead:"القيادة",f_gov:"الحوكمة",f_dev:"العمل التنموي",f_fund:"تنمية الموارد",f_vol:"التطوع",f_impact:"قياس الأثر",
+ rateIt:"قيّم البرنامج:",ratings:"تقييم",noRatings:"لا تقييمات بعد",
+ evT:"الفعاليات والمواعيد",evP:"ملتقيات ومعارض القطاع غير الربحي. تابع أي فعالية ليصلك تنبيه قبلها.",
+ ended:"انتهت",upcoming:"قادمة",daysLeft:"بعد {n} يوم",today:"اليوم",follow:"تابِع",following:"تتابعها",
+ cmT:"المجتمعات المهنية",cmP:"ثلاثة مجتمعات داخل بوصلة، ومعها شبكات مهنية خارجية تفيدك.",cm_beg:"مجتمع المبتدئين",cm_beg_d:"لمن انضم حديثًا إلى القطاع: أسئلة البداية، والمفاهيم الأساسية، وأول البرامج.",cm_exp:"مجتمع الخبراء",cm_exp_d:"لأصحاب الخبرة: تبادل التجارب، والإرشاد، وصناعة المعرفة للقطاع.",cm_tech:"مجتمع التخصصات الفنية",cm_tech_d:"للمتخصصين في تنمية الموارد، وقياس الأثر، والحوكمة، والتطوع.",
+ joinC:"انضم للمجتمع",joined:"أنت عضو",members:"{n} عضو",extNets:"شبكات مهنية خارجية",join:"زيارة",
+ ctT:"المحتوى الإثرائي",ctP:"بودكاست ومقالات ودراسات ونماذج وقاموس للمصطلحات.",podcast:"بودكاست",article:"مقالات",study:"دراسة",open:"افتح",
+ tplT:"نماذج جاهزة",copy:"نسخ النموذج",copied:"نُسخ النموذج",copyFail:"حدد النص وانسخه يدويًا",
+ glT:"قاموس القطاع غير الربحي",glSearch:"ابحث عن مصطلح بالعربي أو الإنجليزي",
+ elT:"منصات التعلم عن بعد",elP:"منصات موثوقة فيها دورات في القيادة والإدارة وجمع التبرعات.",
+ fdT:"للممولين: وجّه دعمك حيث الاحتياج",fdP:"تعرض بوصلة الفجوات التأهيلية في القطاع من واقع طلبات العاملين وعدد البرامج المتاحة في كل رحلة، لتدعم البرامج التي يحتاجها القطاع دون تكرار.",
+ gapT:"الفجوة في كل رحلة",gapPrograms:"{n} برامج متاحة",gapReq:"{n} طلب",gapLow:"احتياج مرتفع",
+ reqT:"احتياجات طلبها العاملون",reqNone:"لا توجد طلبات بعد. يضيف العاملون احتياجاتهم من صفحة «حسابي».",
+ intT:"أبدِ اهتمامك بالدعم",intName:"الاسم",intOrg:"الجهة المانحة",intArea:"مجال الدعم",intNote:"ملاحظات",intSend:"إرسال الاهتمام",intSent:"وصل اهتمامك، سيتواصل معك فريق بوصلة",
+ orT:"للجمعيات: خطة تعليمية لموظفيك",orP:"أضف موظفيك واختر لكل واحد رحلة تناسب دوره، لتحصل على خطة تعليمية جاهزة.",
+ empName:"اسم الموظف",empJ:"الرحلة",addEmp:"إضافة",planT:"الخطة التعليمية",planNone:"أضف أول موظف لتظهر الخطة.",planSaved:"حُفظت الخطة",remove:"حذف",
+ acT:"حسابي",acLogin:"سجّل الدخول لتبني حسابك الموحد وسيرتك الذاتية.",prT:"الملف الشخصي",pName:"الاسم",pTitle:"المسمى الوظيفي",pOrg:"الجهة",pCity:"المدينة",pBio:"نبذة مختصرة",pSave:"حفظ الملف",pSaved:"حُفظ ملفك",
+ pathT:"خريطة المسار المهني",lv_beg:"مبتدئ",lv_spec:"متخصص",lv_exp:"خبير",lv_cons:"مستشار",lv_beg_d:"استكشاف القطاع",lv_spec_d:"بناء المهارات",lv_exp_d:"التميز والقيادة",lv_cons_d:"نقل المعرفة",
+ myJ:"رحلاتي",noJ:"لم تبدأ رحلة بعد.",myF:"ما أتابعه",acNone:"لم تتابع شيئًا بعد.",
+ cvT:"سيرتي الذاتية",cvDl:"تحميل السيرة (Word)",cvDone:"البرامج المنجزة",cvNone:"أنجز خطوات في رحلتك لتظهر هنا.",cvFail:"تعذّر التحميل",
+ advT:"المستشار التعليمي",advP:"يقترح عليك خطة من برامج بوصلة بناءً على ملفك ورحلتك.",advBtn:"اقترح لي خطة",advWait:"يجهّز المستشار خطتك…",advErr:"تعذّر إعداد الخطة الآن",advNeed:"احفظ ملفك الشخصي أولًا",
+ needT:"اطلب برنامجًا تحتاجه",needP:"لم تجد برنامجًا يغطي احتياجك؟ أخبرنا ليصل طلبك للممولين والجهات التعليمية.",needTopic:"البرنامج أو المهارة التي تحتاجها",needSend:"إرسال الطلب",needSent:"وصل طلبك",
+ kPoints:"نقاطي",kRank:"ترتيبي",kDone:"خطوات منجزة",
+ lbT:"لوحة الصدارة",lbP:"اكسب نقاطًا كلما تعلمت وشاركت.",lbEmpty:"لا توجد نقاط بعد.",pts:"نقطة",you:"أنت",someone:"مستخدم",
+ earnT:"كيف تكسب النقاط؟",e_step:"إنجاز خطوة في رحلتك",e_rate:"تقييم برنامج",e_profile:"إكمال ملفك الشخصي",e_follow:"متابعة فعالية أو برنامج",e_review:"مشاركة رأيك بالمنصة",gained:"+{n} نقطة",
+ vT:"آراء المستفيدين",vP:"تجارب حقيقية من مستفيدي بوصلة وتقييمهم للمنصة.",vCount:"تقييم",vEmpty:"لا توجد آراء بعد. كن أول من يشارك تجربته.",
+ vAdd:"شارك رأيك",vEdit:"عدّل رأيك",vName:"الاسم",vRole:"المسمى والجهة",vRolePh:"مثال: مديرة تنمية الموارد – جمعية ...",vText:"رأيك وتجربتك",vRate:"تقييمك:",
+ vSend:"نشر الرأي",vSent:"شكرًا، نُشر رأيك",vErr:"تعذّر الحفظ، حاول مرة أخرى",vNeed:"اكتب اسمك ورأيك واختر التقييم",vLogin:"سجّل الدخول للمشاركة.",vMine:"رأيك",vDel:"حذف رأيي",vDeleted:"حُذف رأيك",vLoading:"جارٍ التحميل…",
+ nT:"الإشعارات",nNone:"لا توجد تنبيهات. تابع الفعاليات لتصلك تذكيرات بمواعيدها.",nAll:"عرض حسابي",
+ adT:"إضافة برنامج إلى بوصلة",adP:"يظهر هذا القسم لإدارة المنصة فقط.",adName:"اسم البرنامج",adProv:"الجهة المقدمة",adUrl:"رابط البرنامج",adDesc:"وصف مختصر",adStart:"تاريخ البداية",adAdd:"إضافة البرنامج",adAdded:"أُضيف البرنامج",adNeed:"اكتب اسم البرنامج ورابطه",
+ grants:"المنح والتمويل",readiness:"جاهزية الجمعية",gpT:"مسار «جاهز للمنحة الدولية»",gpP:"ست خطوات تأخذك من اختيار البرنامج حتى إرسال الطلب.",
+ grantsT:"المنح والتمويل",grantsP:"جهات تدعم الجمعيات وأدلة للبحث عن المنح المحلية والدولية.",
+ rdT:"مؤشر جاهزية الجمعية للتمويل",rdP:"أجب عن ثمانية أسئلة لتعرف أين تقف جمعيتك، وما الخطوة التالية.",yes:"نعم",no:"لا",
+ rdScore:"درجة الجاهزية",rdHigh:"جاهزية عالية: جمعيتك مستعدة للتقدم إلى المنح الدولية.",rdMid:"جاهزية متوسطة: أكمل النواقص أدناه قبل التقدم للمنح الكبرى.",rdLow:"جاهزية أولية: ابدأ بالأساسيات أدناه، ثم تقدم للمنح المحلية.",
+ rdNext:"خطواتك التالية:",rdAll:"أكملت كل المتطلبات الأساسية. ابدأ من بنك المنح.",rdAnswer:"أجب عن جميع الأسئلة لتظهر النتيجة.",e_ready:"إكمال مؤشر الجاهزية",
+ sgT:"اقتراحات وكيل المحتوى",sgP:"برامج جمعها الوكيل من مصادر موثوقة. راجعها ثم اقبلها لتظهر في المنصة.",sgNone:"لا توجد اقتراحات جديدة.",sgOk:"قبول",sgNo:"رفض",sgSrc:"المصدر",sgAdded:"أُضيف إلى المنصة",sgDropped:"حُذف الاقتراح",
+ hiddenTag:"مخفي",noMatch:"لا توجد نتائج مطابقة.",login:"سجّل الدخول لاستخدام هذه الميزة"},
+en:{brand:"Bosla",tagline:"The learning reference for nonprofit professionals",
+ home:"Home",journeys:"Learning journeys",programs:"Learning calendar",calendar:"Events & dates",communities:"Communities",content:"Learning content",elearn:"E-learning",funders:"For funders",orgs:"For nonprofits",account:"My account",
+ heroT:"Your learning journey in the nonprofit sector starts here",
+ heroP:"Bosla brings scattered training programs into one place, maps a learning journey that fits your stage, and directs funders to the programs the sector truly needs.",
+ startJ:"Choose your journey",exploreP:"Browse programs",
+ visionT:"Vision",visionP:"To be the learning reference for nonprofit professionals.",missionT:"Mission",missionP:"Empowering nonprofit professionals in skills and knowledge.",valuesT:"Values",valuesP:"Partnership · Credibility · Impact · Innovation",
+ forWhom:"What Bosla offers",fw_w:"For professionals",fw_wp:"A unified account and CV, complete learning journeys and trusted programs.",fw_f:"For funders",fw_fp:"Direct support to the programs the sector needs, without duplication.",fw_o:"For nonprofits",fw_op:"Staff learning plans and access to better talent.",fw_e:"For training providers",fw_ep:"Faster reach to professionals and real program ratings from learners.",
+ jT:"Learning journeys",jP:"Five journeys ordered by your stage in the sector. Start yours and mark each step you complete.",jStart:"Start this journey",jStarted:"Your current journey",jFor:"Who is it for?",jDone:"Done",jMark:"Mark as done",jProgress:"Progress",
+ pT:"Learning calendar",pP:"All sector training programs, grouped by status. Check deadlines and fees on each program's website.",
+ st_all:"All programs",st_existing:"Ongoing programs",st_current:"Current programs",st_new:"New programs",st_future:"Upcoming programs",
+ st_existing_d:"Always available",st_current_d:"Open for registration",st_new_d:"Recently added",st_future_d:"Coming soon",
+ masters:"Master's",certificate:"Certificate",course:"Courses",fellowship:"Fellowship",directory:"Directory",award:"Award",academy:"Academy",all:"All",
+ local:"Local",intl:"International",allScope:"Local & international",region:"Scope",
+ type:"Type",mode:"Mode",lang:"Language",provider:"Provider",country:"Country",cost:"Cost",focus:"Focus",status:"Status",
+ online:"Online",checkSite:"See program",english:"English",arabic:"Arabic",paid:"Paid",free:"Free",
+ visit:"Visit website",apply:"Apply now",compareAdd:"Compare",compareN:"programs selected",compareGo:"View comparison",clear:"Clear",
+ cmpT:"Program comparison",cmpEmpty:"Select two or three programs to compare.",cmpMax:"You can compare up to three programs",
+ fieldsT:"Filter by field",f_waqf:"Endowments",f_csr:"Social responsibility",f_lead:"Leadership",f_gov:"Governance",f_dev:"Community development",f_fund:"Resource development",f_vol:"Volunteering",f_impact:"Impact measurement",
+ rateIt:"Rate this program:",ratings:"ratings",noRatings:"No ratings yet",
+ evT:"Events & dates",evP:"Nonprofit sector forums and exhibitions. Follow an event to get a reminder before it starts.",
+ ended:"Ended",upcoming:"Upcoming",daysLeft:"in {n} days",today:"Today",follow:"Follow",following:"Following",
+ cmT:"Professional communities",cmP:"Three communities inside Bosla, plus external professional networks.",cm_beg:"Beginners community",cm_beg_d:"For newcomers: first questions, core concepts and first programs.",cm_exp:"Experts community",cm_exp_d:"For experienced professionals: sharing experience, mentoring and building sector knowledge.",cm_tech:"Technical specialties community",cm_tech_d:"For specialists in resource development, impact measurement, governance and volunteering.",
+ joinC:"Join community",joined:"You're a member",members:"{n} members",extNets:"External professional networks",join:"Visit",
+ ctT:"Learning content",ctP:"Podcasts, articles, studies, templates and a glossary.",podcast:"Podcast",article:"Articles",study:"Study",open:"Open",
+ tplT:"Ready templates",copy:"Copy template",copied:"Template copied",copyFail:"Select the text and copy it manually",
+ glT:"Nonprofit glossary",glSearch:"Search a term in Arabic or English",
+ elT:"E-learning platforms",elP:"Trusted platforms with courses in leadership, management and fundraising.",
+ fdT:"For funders: direct your support where it's needed",fdP:"Bosla shows the sector's training gaps based on professionals' requests and the number of programs in each journey, so you can fund what the sector needs without duplication.",
+ gapT:"Gap by journey",gapPrograms:"{n} programs available",gapReq:"{n} requests",gapLow:"High need",
+ reqT:"Needs requested by professionals",reqNone:"No requests yet. Professionals add their needs from \"My account\".",
+ intT:"Express interest in funding",intName:"Name",intOrg:"Funding organization",intArea:"Area of support",intNote:"Notes",intSend:"Send interest",intSent:"Received. The Bosla team will contact you",
+ orT:"For nonprofits: a learning plan for your staff",orP:"Add your staff and choose a journey for each role to get a ready learning plan.",
+ empName:"Employee name",empJ:"Journey",addEmp:"Add",planT:"Learning plan",planNone:"Add your first employee to see the plan.",planSaved:"Plan saved",remove:"Remove",
+ acT:"My account",acLogin:"Sign in to build your unified account and CV.",prT:"Profile",pName:"Name",pTitle:"Job title",pOrg:"Organization",pCity:"City",pBio:"Short bio",pSave:"Save profile",pSaved:"Profile saved",
+ pathT:"Career path map",lv_beg:"Beginner",lv_spec:"Specialist",lv_exp:"Expert",lv_cons:"Consultant",lv_beg_d:"Exploring the sector",lv_spec_d:"Building skills",lv_exp_d:"Excellence & leadership",lv_cons_d:"Sharing knowledge",
+ myJ:"My journeys",noJ:"You haven't started a journey yet.",myF:"What I follow",acNone:"You're not following anything yet.",
+ cvT:"My CV",cvDl:"Download CV (Word)",cvDone:"Completed programs",cvNone:"Complete steps in your journey to see them here.",cvFail:"Download failed",
+ advT:"Learning advisor",advP:"Suggests a plan from Bosla's programs based on your profile and journey.",advBtn:"Suggest a plan",advWait:"Preparing your plan…",advErr:"Couldn't prepare a plan right now",advNeed:"Save your profile first",
+ needT:"Request a program you need",needP:"Can't find a program for your need? Tell us so funders and training providers see it.",needTopic:"Program or skill you need",needSend:"Send request",needSent:"Request received",
+ kPoints:"My points",kRank:"My rank",kDone:"Steps done",
+ lbT:"Leaderboard",lbP:"Earn points as you learn and contribute.",lbEmpty:"No points yet.",pts:"pts",you:"You",someone:"Member",
+ earnT:"How to earn points",e_step:"Complete a journey step",e_rate:"Rate a program",e_profile:"Complete your profile",e_follow:"Follow an event or program",e_review:"Share your platform review",gained:"+{n} points",
+ vT:"What our members say",vP:"Real experiences and ratings from people who use Bosla.",vCount:"ratings",vEmpty:"No reviews yet. Be the first to share your experience.",
+ vAdd:"Share your review",vEdit:"Edit your review",vName:"Name",vRole:"Title and organization",vRolePh:"e.g. Resource Development Manager – ...",vText:"Your experience",vRate:"Your rating:",
+ vSend:"Publish review",vSent:"Thank you, your review is live",vErr:"Couldn't save, please try again",vNeed:"Add your name, your review and a rating",vLogin:"Sign in to take part.",vMine:"Your review",vDel:"Delete my review",vDeleted:"Your review was deleted",vLoading:"Loading…",
+ nT:"Notifications",nNone:"No alerts. Follow events to get reminders before they start.",nAll:"Open my account",
+ adT:"Add a program to Bosla",adP:"Only platform admins see this section.",adName:"Program name",adProv:"Provider",adUrl:"Program link",adDesc:"Short description",adStart:"Start date",adAdd:"Add program",adAdded:"Program added",adNeed:"Add the program name and link",
+ grants:"Grants & Funding",readiness:"Org Readiness",gpT:"The \"Grant-Ready\" path",gpP:"Six steps from choosing a program to submitting your application.",
+ grantsT:"Grants & Funding",grantsP:"Funders that support nonprofits, plus directories for finding local and international grants.",
+ rdT:"Funding readiness index",rdP:"Answer eight questions to see where your organization stands and what to do next.",yes:"Yes",no:"No",
+ rdScore:"Readiness score",rdHigh:"High readiness: your organization is ready for international grants.",rdMid:"Medium readiness: close the gaps below before applying for major grants.",rdLow:"Early readiness: start with the basics below, then apply for local grants.",
+ rdNext:"Your next steps:",rdAll:"You meet every core requirement. Start with the grants list.",rdAnswer:"Answer every question to see your result.",e_ready:"Complete the readiness index",
+ sgT:"Content agent suggestions",sgP:"Programs the agent collected from trusted sources. Review, then approve to publish them.",sgNone:"No new suggestions.",sgOk:"Approve",sgNo:"Reject",sgSrc:"Source",sgAdded:"Added to the platform",sgDropped:"Suggestion removed",
+ hiddenTag:"hidden",noMatch:"No matching results.",login:"Sign in to use this feature"}
+};
+
+/* ---------- static catalog ---------- */
+const BASE=[
+ {id:"fozan",type:"academy",region:"local",status:"existing",cost:"check",mode:"check",lng:"arabic",fields:["f_vol","f_dev","f_lead"],country:{ar:"السعودية",en:"Saudi Arabia"},
+  name:{ar:"أكاديمية الفوزان لإعداد قادة التنمية المجتمعية",en:"Al Fozan Academy for Community Development Leaders"},provider:{ar:"جامعة الملك فهد للبترول والمعادن",en:"King Fahd University of Petroleum and Minerals"},
+  focus:{ar:"تأهيل قادة التنمية، ومعيار «إدامة» لإدارة التطوع، ومؤهلات معتمدة في التنمية المجتمعية",en:"Leadership development, the Edamah volunteer-management standard and accredited community-development qualifications"},url:"https://alfozanacademy.kfupm.edu.sa"},
+ {id:"kkfaward",type:"award",region:"local",status:"existing",cost:"free",mode:"check",lng:"arabic",fields:["f_gov","f_impact"],country:{ar:"السعودية",en:"Saudi Arabia"},
+  name:{ar:"جائزة الملك خالد لتميز القطاعات غير الربحية",en:"King Khalid Award for Nonprofit Excellence"},provider:{ar:"مؤسسة الملك خالد",en:"King Khalid Foundation"},
+  focus:{ar:"تكريم المنظمات المتميزة في الحوكمة والأثر",en:"Recognizes outstanding organizations in governance and impact"},url:"https://kkf.org.sa"},
+ {id:"kkfmeal",type:"course",region:"local",status:"existing",cost:"check",mode:"check",lng:"arabic",fields:["f_impact"],country:{ar:"السعودية",en:"Saudi Arabia"},
+  name:{ar:"مشروع MEAL Pro لقياس الأداء والأثر",en:"MEAL Pro: monitoring, evaluation and learning"},provider:{ar:"مؤسسة الملك خالد",en:"King Khalid Foundation"},
+  focus:{ar:"بناء قدرات الجمعيات في المتابعة والتقييم والتعلم",en:"Building nonprofit capacity in monitoring, evaluation and learning"},url:"https://www.al-madina.com/article/994970"},
+ {id:"liberty",type:"masters",region:"intl",status:"existing",cost:"paid",mode:"online",lng:"english",fields:["f_lead","f_dev"],country:{ar:"الولايات المتحدة",en:"United States"},
+  name:{ar:"ماجستير إدارة المنظمات غير الربحية – الدراسات العالمية",en:"Master of Nonprofit Management – Global Studies"},provider:{ar:"جامعة ليبرتي",en:"Liberty University"},
+  focus:{ar:"إدارة المنظمات والقيادة في سياق دولي",en:"Nonprofit management and leadership in a global context"},url:"https://www.liberty.edu/lp/welcome/master-of-nonprofit-management-global-studies"},
+ {id:"tulane",type:"masters",region:"intl",status:"existing",cost:"paid",mode:"check",lng:"english",fields:["f_fund","f_waqf","f_csr"],country:{ar:"الولايات المتحدة",en:"United States"},
+  name:{ar:"إدارة المنظمات غير الربحية والعطاء الاستراتيجي",en:"Nonprofit and Strategic Philanthropy Management"},provider:{ar:"جامعة تولين",en:"Tulane University"},
+  focus:{ar:"العطاء الاستراتيجي وإدارة المؤسسات المانحة",en:"Strategic philanthropy and foundation management"},url:"https://tulane.edu/academics/graduate-programs/nonprofit-and-strategic-philanthropy-management"},
+ {id:"ohio",type:"certificate",region:"intl",status:"existing",cost:"paid",mode:"online",lng:"english",fields:["f_lead","f_gov","f_vol"],country:{ar:"الولايات المتحدة",en:"United States"},
+  name:{ar:"شهادة الدراسات العليا في القيادة والإدارة غير الربحية",en:"Nonprofit Leadership & Management Certificate"},provider:{ar:"جامعة أوهايو",en:"Ohio University"},
+  focus:{ar:"القيادة والحوكمة وإدارة المتطوعين",en:"Leadership, governance and volunteer management"},url:"https://www.ohio.edu/online/programs/graduate/nonprofit-leadership-management-certificate"},
+ {id:"utk",type:"certificate",region:"intl",status:"existing",cost:"paid",mode:"online",lng:"english",fields:["f_fund"],country:{ar:"الولايات المتحدة",en:"United States"},
+  name:{ar:"شهادة جمع التبرعات للمنظمات غير الربحية",en:"Nonprofit Fundraising Certificate"},provider:{ar:"جامعة تينيسي",en:"University of Tennessee"},
+  focus:{ar:"جمع التبرعات وتنمية الموارد",en:"Fundraising and resource development"},url:"https://cpell.utk.edu/programs-courses/nonprofit-fundraising-certificate-online"},
+ {id:"harvard",type:"course",region:"intl",status:"existing",cost:"paid",mode:"check",lng:"english",fields:["f_lead","f_gov"],country:{ar:"الولايات المتحدة",en:"United States"},
+  name:{ar:"برامج التعلّم المهني لقادة القطاع غير الربحي",en:"Professional learning for nonprofit leaders"},provider:{ar:"جامعة هارفارد",en:"Harvard University"},
+  focus:{ar:"دورات قصيرة لقادة المنظمات",en:"Short courses for nonprofit leaders"},url:"https://pll.harvard.edu/node/16040"},
+ {id:"acumen",type:"fellowship",region:"intl",status:"existing",cost:"free",mode:"online",lng:"english",fields:["f_lead","f_dev","f_impact"],country:{ar:"دولي",en:"Global"},
+  name:{ar:"أكاديمية أكيومن: دورات وزمالات",en:"Acumen Academy: courses & fellowships"},provider:{ar:"أكاديمية أكيومن",en:"Acumen Academy"},
+  focus:{ar:"القيادة الأخلاقية والأثر الاجتماعي، ودورات مجانية",en:"Moral leadership and social impact, with free courses"},url:"https://acumenacademy.org/about"},
+ {id:"portal",type:"directory",region:"intl",status:"existing",cost:"check",mode:"check",lng:"english",fields:[],country:{ar:"دولي",en:"Global"},
+  name:{ar:"دليل برامج الماجستير في إدارة المنظمات غير الربحية",en:"Directory of nonprofit management master's programs"},provider:{ar:"ماسترز بورتال",en:"Mastersportal"},
+  focus:{ar:"بحث ومقارنة برامج من جامعات حول العالم",en:"Search and compare programs worldwide"},url:"https://www.mastersportal.com/studies/438751/nonprofit-management-and-leadership-international-nongovernmental-organizations.html"}
+];
+const FIELDS=["f_waqf","f_csr","f_lead","f_gov","f_dev","f_fund","f_vol","f_impact"];
+const STATUSES=["existing","current","new","future"];
+
+const EVENTS=[
+ {id:"ev-future5",date:"2026-11-02",name:{ar:"ملتقى مستقبل القطاع غير الربحي (النسخة الخامسة)",en:"Future of the Nonprofit Sector Forum (5th edition)"},
+  place:{ar:"الرياض · مركز الملك عبدالله المالي (كافد)",en:"Riyadh · King Abdullah Financial District (KAFD)"},
+  desc:{ar:"بعنوان «دور القطاع غير الربحي في المشهد الحضري»: الإسكان التنموي، والتمويل المبتكر للبنية الاجتماعية، والمشاركة المجتمعية.",en:"Theme: the nonprofit sector's role in the urban landscape: developmental housing, innovative social-infrastructure finance and community participation."},url:"https://annahar-news.com/news/single/38396"},
+ {id:"ev-iena5",date:"2027-05-03",end:"2027-05-05",name:{ar:"معرض إينا الدولي للقطاع غير الربحي (النسخة الخامسة)",en:"IENA International Non-Profit Exhibition (5th edition)"},
+  place:{ar:"الرياض · مركز الرياض الدولي للمؤتمرات والمعارض",en:"Riyadh · Riyadh International Convention & Exhibition Center"},
+  desc:{ar:"معرض وملتقى مصاحب يجمع الجمعيات والمانحين والجهات الداعمة.",en:"An exhibition with a companion forum bringing together nonprofits, donors and supporters."},url:"https://ienaexpoksa.com/"},
+ {id:"ev-edu3",date:"2026-10-20",end:"2026-10-21",name:{ar:"ملتقى القطاع غير الربحي في التعليم والتدريب 2026",en:"Nonprofit Sector Forum in Education & Training 2026"},
+  place:{ar:"جامعة الأميرة نورة بنت عبدالرحمن",en:"Princess Nourah bint Abdulrahman University"},
+  desc:{ar:"تنظمه وزارة التعليم بعنوان «جودة تعظم الأثر».",en:"Hosted by the Ministry of Education under the theme \"Quality that maximizes impact\"."},url:"https://edu-npo.net/"}
+];
+
+const PLATFORMS=[
+ {id:"doroob",name:{ar:"دروب",en:"Doroob"},lng:"arabic",desc:{ar:"منصة صندوق تنمية الموارد البشرية، دورات مجانية بشهادات.",en:"HRDF's platform with free certified courses."},url:"https://doroob.sa"},
+ {id:"edraak",name:{ar:"إدراك",en:"Edraak"},lng:"arabic",desc:{ar:"دورات عربية مجانية في المهارات والقيادة.",en:"Free Arabic courses in skills and leadership."},url:"https://www.edraak.org"},
+ {id:"rwaq",name:{ar:"رواق",en:"Rwaq"},lng:"arabic",desc:{ar:"منصة عربية للتعليم المفتوح بمواد أكاديمية.",en:"An Arabic open-learning platform with academic courses."},url:"https://www.rwaq.org"},
+ {id:"coursera",name:{ar:"كورسيرا",en:"Coursera"},lng:"english",desc:{ar:"دورات وشهادات من جامعات عالمية، منها إدارة المنظمات غير الربحية.",en:"Courses and certificates from global universities, including nonprofit management."},url:"https://www.coursera.org"},
+ {id:"edx",name:{ar:"إيدكس",en:"edX"},lng:"english",desc:{ar:"برامج من جامعات عالمية في القيادة والأثر الاجتماعي.",en:"Programs from global universities on leadership and social impact."},url:"https://www.edx.org"}
+];
+
+const CONTENT=[
+ {id:"anan",kind:"podcast",name:{ar:"بودكاست عنان",en:"Anan Podcast"},by:{ar:"مؤسسة محمد بن سلمان «مسك»",en:"Misk Foundation"},desc:{ar:"حوارات مع خبراء حول القطاع الثالث، وإطلاق المشاريع غير الربحية، والقيادة الشبابية.",en:"Conversations with experts on the third sector, launching nonprofit projects and youth leadership."},url:"https://saudipedia.com/بودكاست-عنان"},
+ {id:"ssir",kind:"article",name:{ar:"مجلة ستانفورد للابتكار الاجتماعي",en:"Stanford Social Innovation Review"},by:{ar:"جامعة ستانفورد",en:"Stanford University"},desc:{ar:"مقالات وأبحاث عالمية في الابتكار الاجتماعي والعطاء وقياس الأثر (بالإنجليزية).",en:"Global articles and research on social innovation, philanthropy and impact measurement."},url:"https://ssir.org"},
+ {id:"candid",kind:"article",name:{ar:"مكتبة Candid للتعلم",en:"Candid Learning"},by:{ar:"Candid",en:"Candid"},desc:{ar:"أدلة ومقالات ودورات مجانية في جمع التبرعات وكتابة المقترحات (بالإنجليزية).",en:"Free guides, articles and courses on fundraising and proposal writing."},url:"https://learning.candid.org"},
+ {id:"ncss",kind:"study",name:{ar:"مجلة البحوث والدراسات الاجتماعية",en:"Journal of Social Research and Studies"},by:{ar:"المركز الوطني للدراسات والبحوث الاجتماعية",en:"National Center for Social Studies"},desc:{ar:"دراسات محكّمة عن القطاع غير الربحي والتنمية الاجتماعية في المملكة.",en:"Peer-reviewed studies on the nonprofit sector and social development in Saudi Arabia."},url:"https://ncss.gov.sa"}
+];
+
+const NETWORKS=[
+ {id:"afp",cm:"cm_tech",name:{ar:"جمعية محترفي جمع التبرعات (AFP)",en:"Association of Fundraising Professionals (AFP)"},desc:{ar:"شبكة دولية لمحترفي جمع التبرعات، ولها معايير أخلاقية وشهادات مهنية.",en:"An international network of fundraising professionals, with ethics standards and credentials."},url:"https://afpglobal.org"},
+ {id:"nvg",cm:"cm_beg",name:{ar:"المنصة الوطنية للعمل التطوعي",en:"National Volunteering Platform"},desc:{ar:"تربط المتطوعين بالفرص التطوعية في الجهات غير الربحية بالمملكة.",en:"Connects volunteers with opportunities at Saudi nonprofits."},url:"https://nvg.gov.sa"},
+ {id:"ncnp",cm:"cm_exp",name:{ar:"المركز الوطني لتنمية القطاع غير الربحي",en:"National Center for Non-Profit Sector"},desc:{ar:"يجمع الجمعيات والمؤسسات الأهلية، ويطرح برامج التمكين والمبادرات الوطنية.",en:"Brings together Saudi nonprofits and runs national enablement programs."},url:"https://ncnp.gov.sa"}
+];
+
+/* journeys: stages hold item ids from programs (P:), platforms (L:), content (C:), networks (N:) */
+const JOURNEYS=[
+ {id:"vol",icon:"vol",name:{ar:"رحلة المتطوع",en:"The Volunteer journey"},who:{ar:"لمن يريد أن يبدأ عطاءه بالتطوع المنظم في الجمعيات.",en:"For anyone starting to give through organized volunteering."},
+  stages:[{t:{ar:"اعرف القطاع",en:"Know the sector"},items:["N:nvg","C:anan"]},{t:{ar:"تعلّم الأساسيات",en:"Learn the basics"},items:["L:doroob","L:edraak"]},{t:{ar:"تطوّع باحتراف",en:"Volunteer professionally"},items:["P:fozan"]}]},
+ {id:"beg",icon:"beg",name:{ar:"رحلة المبتدئ",en:"The Beginner journey"},who:{ar:"لمن انضم حديثًا للعمل في القطاع غير الربحي.",en:"For newcomers working in the nonprofit sector."},
+  stages:[{t:{ar:"المفاهيم الأساسية",en:"Core concepts"},items:["C:anan","C:candid"]},{t:{ar:"مهارات العمل",en:"Work skills"},items:["L:doroob","L:rwaq","P:acumen"]},{t:{ar:"تخصص أولي",en:"First specialty"},items:["P:kkfmeal","N:afp"]}]},
+ {id:"board",icon:"board",name:{ar:"رحلة عضو مجلس الإدارة",en:"The Board Member journey"},who:{ar:"لأعضاء مجالس إدارة الجمعيات ومن يستعد لهذا الدور.",en:"For nonprofit board members and those preparing for the role."},
+  stages:[{t:{ar:"الحوكمة والمسؤوليات",en:"Governance and duties"},items:["P:ohio","N:ncnp"]},{t:{ar:"القيادة الاستراتيجية",en:"Strategic leadership"},items:["P:harvard"]},{t:{ar:"التميز المؤسسي",en:"Organizational excellence"},items:["P:kkfaward"]}]},
+ {id:"pro",icon:"pro",name:{ar:"رحلة المحترف",en:"The Professional journey"},who:{ar:"للعاملين أصحاب الخبرة الذين يريدون التخصص في مجال.",en:"For experienced staff who want to specialize."},
+  stages:[{t:{ar:"تنمية الموارد",en:"Resource development"},items:["P:utk","C:candid"]},{t:{ar:"قياس الأثر",en:"Impact measurement"},items:["P:kkfmeal","C:ssir"]},{t:{ar:"الشبكات المهنية",en:"Professional networks"},items:["N:afp","L:coursera"]}]},
+ {id:"exp",icon:"exp",name:{ar:"رحلة الخبير",en:"The Expert journey"},who:{ar:"للقادة والخبراء الذين يريدون التعمق الأكاديمي ونقل المعرفة.",en:"For leaders and experts seeking academic depth and knowledge sharing."},
+  stages:[{t:{ar:"التعمق الأكاديمي",en:"Academic depth"},items:["P:liberty","P:tulane"]},{t:{ar:"القيادة والأثر",en:"Leadership and impact"},items:["P:acumen","C:ssir"]},{t:{ar:"نقل المعرفة",en:"Sharing knowledge"},items:["C:ncss","N:ncnp"]}]}
+];
+const JICON={vol:'<path d="M12 21s-7-4.5-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.5-9 9-9 9z"/>',beg:'<path d="M12 3v18M5 10l7-7 7 7"/>',board:'<rect x="3" y="7" width="18" height="12" rx="2"/><path d="M8 7V5h8v2"/>',pro:'<path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/>',exp:'<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/>'};
+
+const MOTIVATION=`Dear Admissions Committee,
+
+I am writing to apply for the [Program Name] at [University]. I have worked for [X] years in the nonprofit sector in Saudi Arabia, most recently as [Your Role] at [Organization].
+
+In this role, I [key achievement with a number]. This experience showed me that [the challenge you want to solve].
+
+I am applying to this program because [2 specific reasons]. I want to gain skills in [skill 1] and [skill 2].
+
+After graduating, I plan to [your goal], helping nonprofits in Saudi Arabia [expected impact], in line with Saudi Vision 2030's goals for the nonprofit sector.
+
+Sincerely,
+[Full Name]`;
+const TEMPLATES={ar:[
+ {t:"خطاب الدافع (Motivation Letter) بالإنجليزية",d:"نموذج من خمس فقرات للتقديم على البرامج الدولية.",tpl:true},
+ {t:"السيرة الذاتية بالإنجليزية",list:["ابدأ كل نقطة بفعل قوي: Led, Raised, Designed, Launched.","اذكر الأثر بالأرقام: عدد المستفيدين، المبالغ، النسب.","صفحة أو صفحتان فقط، بترتيب زمني عكسي."]},
+ {t:"مقترح مشروع لجهة مانحة",list:["ملخص تنفيذي.","المشكلة والاحتياج بالأرقام.","الأهداف والمخرجات والمؤشرات.","خطة التنفيذ والموازنة.","خطة الاستدامة."]}],
+en:[
+ {t:"Motivation Letter (English)",d:"A five-paragraph template for international programs.",tpl:true},
+ {t:"English CV",list:["Start every bullet with a strong verb: Led, Raised, Designed, Launched.","Show impact in numbers.","One or two pages, reverse chronological."]},
+ {t:"Project proposal for a funder",list:["Executive summary.","Problem and need with data.","Objectives, outputs and indicators.","Implementation plan and budget.","Sustainability plan."]}]};
+const GLOSS=[
+ ["الاستدامة المالية","Financial Sustainability","قدرة الجمعية على تمويل برامجها على المدى الطويل.","Long-term ability to fund programs."],
+ ["تنمية الموارد المالية","Resource Development","العمل المنظم لجذب التبرعات والمنح والإيرادات.","Organized work to attract donations, grants and revenue."],
+ ["جمع التبرعات","Fundraising","طلب الدعم المالي من الأفراد والجهات.","Soliciting financial support."],
+ ["علاقات الداعمين","Donor Relations","بناء علاقة مستمرة مع الداعمين.","Building lasting donor relationships."],
+ ["المنحة","Grant","مبلغ تقدمه جهة مانحة لتنفيذ مشروع محدد.","Funding for a specific project."],
+ ["الأثر الاجتماعي","Social Impact","التغيير الحقيقي في حياة المستفيدين.","Real change in beneficiaries' lives."],
+ ["قياس الأثر","Impact Measurement","أدوات تقيس التغيير الذي أحدثه البرنامج.","Tools that measure program change."],
+ ["نظرية التغيير","Theory of Change","الربط المنطقي بين الأنشطة والنتائج.","Logical link between activities and outcomes."],
+ ["الحوكمة","Governance","الأنظمة والمجلس الذي يضمن حسن الإدارة.","Rules and board ensuring sound management."],
+ ["الوقف","Endowment (Waqf)","أصل يُحبس ويُصرف ريعه على أوجه الخير.","An asset whose returns fund good causes."],
+ ["المسؤولية المجتمعية","CSR","مساهمة الشركات في خدمة المجتمع.","Companies' contribution to society."],
+ ["بناء القدرات","Capacity Building","تطوير مهارات الجمعية وأنظمتها.","Strengthening skills and systems."]
+];
+
+
+const GRANTS=[
+ {scope:"local",name:{ar:"المركز الوطني لتنمية القطاع غير الربحي",en:"National Center for Non-Profit Sector (NCNP)"},
+  desc:{ar:"الجهة المنظمة للقطاع في المملكة، وتطرح برامج دعم وتمكين للجمعيات.",en:"Saudi Arabia's sector regulator, offering support and enablement programs for nonprofits."},url:"https://ncnp.gov.sa"},
+ {scope:"local",name:{ar:"مؤسسة الملك خالد",en:"King Khalid Foundation"},
+  desc:{ar:"تقدم منحًا وبرامج بناء قدرات للمنظمات غير الربحية في المملكة.",en:"Provides grants and capacity-building programs for Saudi nonprofits."},url:"https://kkf.org.sa"},
+ {scope:"intl",name:{ar:"Funds for NGOs",en:"Funds for NGOs"},
+  desc:{ar:"دليل محدّث بفرص المنح الدولية والزمالات ومواعيد إغلاقها.",en:"An updated directory of international grants and fellowships with deadlines."},url:"https://www2.fundsforngos.org"},
+ {scope:"intl",name:{ar:"Candid",en:"Candid"},
+  desc:{ar:"قاعدة بيانات عالمية عن المانحين والمؤسسات المانحة وأبحاث القطاع.",en:"A global database of funders, foundations and sector research."},url:"https://candid.org"}
+];
+
+const STEPS={ar:[
+ ["اختر البرنامج","قارن بين برنامجين أو ثلاثة حسب التخصص وطريقة الدراسة."],
+ ["تحقق من الشروط","اللغة، والمؤهل، والخبرة، ومواعيد التقديم في موقع البرنامج."],
+ ["جهّز لغتك","اختبار IELTS أو TOEFL إن طُلب، واستعن بقاموس المصطلحات."],
+ ["اكتب خطاب الدافع","استخدم نموذج Motivation Letter في قسم النماذج."],
+ ["حدّث سيرتك","سيرة ذاتية بالإنجليزية تبرز أثرك في القطاع بالأرقام."],
+ ["قدّم وتابع","أرسل الطلب قبل الموعد بأسبوع، وتابع بريدك باستمرار."]],
+en:[
+ ["Choose a program","Compare two or three programs by focus and mode of study."],
+ ["Check requirements","Language, degree, experience and deadlines on the program website."],
+ ["Prepare your English","IELTS or TOEFL if required; use the sector glossary."],
+ ["Write your motivation letter","Use the Motivation Letter template in Templates."],
+ ["Update your CV","An English CV that shows your impact in numbers."],
+ ["Apply and follow up","Submit a week before the deadline and watch your inbox."]]};
+
+const QUESTIONS={ar:[
+ ["لدى الجمعية خطة استراتيجية معتمدة ومحدّثة.","اعتمد خطة استراتيجية من 3 إلى 5 سنوات."],
+ ["لدى الجمعية قوائم مالية مدققة لآخر سنة.","استكمل تدقيق القوائم المالية لآخر سنة."],
+ ["لمجلس الإدارة اجتماعات دورية ومحاضر موثقة.","وثّق اجتماعات المجلس ومحاضره بانتظام."],
+ ["تقيس الجمعية أثر برامجها بمؤشرات واضحة.","حدد مؤشرات أثر لكل برنامج، وراجع قسم القاموس."],
+ ["للجمعية أكثر من ثلاثة مصادر دخل.","نوّع مصادر الدخل: أفراد، منح، شراكات، أوقاف."],
+ ["لدى الجمعية نموذج جاهز لمقترح المشاريع.","استخدم نموذج «مقترح مشروع» في قسم النماذج."],
+ ["تنشر الجمعية تقاريرها السنوية للعامة.","انشر تقريرًا سنويًا مختصرًا على موقعك."],
+ ["لدى الفريق من يكتب ويتواصل بالإنجليزية.","طوّر مهارة الإنجليزية لدى عضو في الفريق، وابدأ من القاموس."]],
+en:[
+ ["We have an approved, up-to-date strategic plan.","Adopt a 3–5 year strategic plan."],
+ ["We have audited financial statements for the last year.","Complete the audit of last year's financial statements."],
+ ["Our board meets regularly with documented minutes.","Document board meetings and minutes regularly."],
+ ["We measure program impact with clear indicators.","Set impact indicators for each program; see the glossary."],
+ ["We have more than three income sources.","Diversify income: individuals, grants, partnerships, endowments."],
+ ["We have a ready project proposal template.","Use the project proposal template in Templates."],
+ ["We publish annual reports publicly.","Publish a short annual report on your website."],
+ ["Someone on our team writes and communicates in English.","Build English skills in one team member; start with the glossary."]]};
+
+const POINTS={ready:30,step:15,rate:10,profile:20,follow:10,review:50,need:10};
+const S={answers:{},lang:"ar",tab:"home",status:"all",filter:"all",region:"all",fields:[],cmp:[],q:"",openJ:null,advice:null,advBusy:false};
+const R={db:null,user:null,uid:null,owner:false,sample:null,downloads:null,list:null,rating:0,board:null,names:{},prefs:{},prefsRef:null,ratings:[],members:[],needs:[],extra:[]};
+const TABS=["home","journeys","programs","calendar","communities","content","elearn","grants","readiness","funders","orgs","account"];
+const t=(k,v)=>{let s=T[S.lang][k]??T.ar[k]??k;if(v)for(const x in v)s=s.replace("{"+x+"}",v[x]);return s};
+const L=o=>o==null?"":typeof o==="string"?o:(o[S.lang]||o.ar||"");
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const $=id=>document.getElementById(id);
+const arrow=()=>S.lang==="ar"?"←":"→";
+function toast(m){const e=$("toast");e.textContent=m;e.classList.add("on");clearTimeout(toast._);toast._=setTimeout(()=>e.classList.remove("on"),2000)}
+const dOf=s=>{const d=new Date(s+"T00:00:00");d.setHours(0,0,0,0);return d};
+const daysTo=s=>Math.round((dOf(s)-TODAY)/864e5);
+const isPast=e=>daysTo(e.end||e.date)<0;
+const fmtD=(s,o)=>dOf(s).toLocaleDateString(S.lang==="ar"?"ar-SA-u-ca-gregory-nu-latn":"en-GB",o||{day:"numeric",month:"long",year:"numeric"});
+
+/* catalog = static + admin additions */
+function programs(){return [...BASE,...R.extra.map(x=>({id:x.id,type:x.type||"course",region:x.region||"local",status:x.status||"new",cost:x.cost||"check",mode:x.mode||"check",lng:x.lng||"arabic",fields:Array.isArray(x.fields)?x.fields:[],country:{ar:x.country||"",en:x.country||""},name:{ar:x.name,en:x.name_en||x.name},provider:{ar:x.provider||"",en:x.provider||""},focus:{ar:x.desc||"",en:x.desc||""},url:x.url,start:x.start||""}))]}
+function resolve(ref){const [k,id]=ref.split(":");
+ if(k==="P"){const p=programs().find(x=>x.id===id);return p&&{id:ref,name:p.name,sub:p.provider,url:p.url}}
+ if(k==="L"){const p=PLATFORMS.find(x=>x.id===id);return p&&{id:ref,name:p.name,sub:{ar:"منصة تعلم عن بعد",en:"E-learning platform"},url:p.url}}
+ if(k==="C"){const p=CONTENT.find(x=>x.id===id);return p&&{id:ref,name:p.name,sub:p.by,url:p.url}}
+ if(k==="N"){const p=NETWORKS.find(x=>x.id===id);return p&&{id:ref,name:p.name,sub:{ar:"شبكة مهنية",en:"Professional network"},url:p.url}}}
+const jItems=j=>j.stages.flatMap(s=>s.items);
+const jDoneList=jid=>((R.prefs.journeys||{})[jid]||{}).done||[];
+const jPct=j=>{const all=jItems(j);return all.length?Math.round(jDoneList(j.id).filter(x=>all.includes(x)).length/all.length*100):0};
+const itemById=id=>programs().find(p=>p.id===id)||EVENTS.find(e=>e.id===id);
+const follows=()=>Array.isArray(R.prefs.follows)?R.prefs.follows:[];
+const isFollowing=id=>follows().includes(id);
+const followBtn=id=>`<button class="follow" type="button" data-follow="${id}" aria-pressed="${isFollowing(id)}">${isFollowing(id)?"✓ "+t("following"):t("follow")}</button>`;
+async function savePrefs(patch){
+ if(!R.prefsRef){toast(t("login"));return false}
+ R.prefs={...R.prefs,...patch};
+ try{await R.prefsRef.set(R.prefs);return true}catch(_){toast(t("vErr"));return false}
+}
+
+/* ratings of programs */
+function ratingOf(pid){const xs=R.ratings.map(r=>Number((r.r||{})[pid])||0).filter(Boolean);return{n:xs.length,avg:xs.length?xs.reduce((a,b)=>a+b,0)/xs.length:0}}
+const myRating=pid=>Number(((R.ratings.find(r=>r.id===R.uid)||{}).r||{})[pid])||0;
+async function rateProgram(pid,n){
+ if(!R.db||!R.uid){toast(t("login"));return}
+ const cur=(R.ratings.find(r=>r.id===R.uid)||{}).r||{};
+ try{await R.db.doc("ratings/"+R.uid).set({r:{...cur,[pid]:n}});award("rate_"+pid,POINTS.rate)}catch(_){toast(t("vErr"))}
+}
+const starStr=n=>`<span class="stars" aria-label="${n}/5">${"★".repeat(n)}<span class="off">${"★".repeat(5-n)}</span></span>`;
+
+/* ---------- program card ---------- */
+function programCard(p){
+ const on=S.cmp.includes(p.id);
+ const mode=p.mode==="online"?t("online"):t("checkSite");
+ const cost=p.cost==="free"?t("free"):p.cost==="paid"?t("paid"):t("checkSite");
+ const rt=ratingOf(p.id),mine=myRating(p.id);
+ const canApply=p.type!=="directory";
+ return `<article class="card">
+  <div class="tags"><span class="tag">${t(p.type)}</span><span class="tag ${p.region==="local"?"cu":""}">${t(p.region)}</span>${p.status!=="existing"?`<span class="tag soonT">${t("st_"+p.status)}</span>`:""}${p.cost==="free"?`<span class="tag ok">${t("free")}</span>`:""}${p.fields.slice(0,2).map(f=>`<span class="tag" style="background:var(--sage-soft);color:var(--sage)">${t(f)}</span>`).join("")}</div>
+  <h3>${esc(L(p.name))}</h3>
+  <p>${esc(L(p.provider))}${L(p.country)?" · "+esc(L(p.country)):""}</p>
+  <p>${esc(L(p.focus))}</p>
+  <div class="meta"><div><span>${t("lang")}</span>${t(p.lng)}</div><div><span>${t("mode")}</span>${mode}</div><div><span>${t("cost")}</span>${cost}</div></div>
+  ${canApply?`<div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap"><span class="rsum">${rt.n?`${starStr(Math.round(rt.avg))} ${rt.avg.toFixed(1)} · ${rt.n} ${t("ratings")}`:t("noRatings")}</span>
+   <span class="myrate" role="group" aria-label="${t("rateIt")}">${[1,2,3,4,5].map(n=>`<button type="button" data-rate="${p.id}" data-n="${n}" class="${n<=mine?"on":""}" aria-label="${n}">★</button>`).join("")}</span></div>`:""}
+  <div class="cardfoot">${canApply?`<a class="btn apply" href="${esc(p.url)}" target="_blank" rel="noopener">${t("apply")} ${arrow()}</a>`:`<a class="link" href="${esc(p.url)}" target="_blank" rel="noopener">${t("visit")} ${arrow()}</a>`}
+   <div style="display:flex;gap:10px;align-items:center">${canApply?followBtn(p.id):""}${canApply?`<label class="chk"><input type="checkbox" id="c-${p.id}" data-cmp="${p.id}" ${on?"checked":""}> ${t("compareAdd")}</label>`:""}</div></div>
+ </article>`;
+}
+function comparison(){
+ const ps=programs().filter(p=>S.cmp.includes(p.id));
+ if(ps.length<2)return "";
+ const row=(k,f)=>`<tr><th>${t(k)}</th>${ps.map(p=>`<td>${f(p)}</td>`).join("")}</tr>`;
+ return `<div id="cmpBox"><h2>${t("cmpT")}</h2><div class="cmp"><table>
+  <tr><th></th>${ps.map(p=>`<td><b>${esc(L(p.name))}</b></td>`).join("")}</tr>
+  ${row("provider",p=>esc(L(p.provider)))}${row("type",p=>t(p.type))}${row("status",p=>t("st_"+p.status))}${row("region",p=>t(p.region))}
+  ${row("mode",p=>p.mode==="online"?t("online"):t("checkSite"))}${row("cost",p=>p.cost==="free"?t("free"):p.cost==="paid"?t("paid"):t("checkSite"))}
+  ${row("lang",p=>t(p.lng))}${row("ratings",p=>{const r=ratingOf(p.id);return r.n?r.avg.toFixed(1)+" / 5":"—"})}${row("focus",p=>esc(L(p.focus)))}
+ </table></div></div>`;
+}
+
+/* ---------- views ---------- */
+function home(){
+ const up=EVENTS.filter(e=>!isPast(e)).sort((a,b)=>a.date.localeCompare(b.date)).slice(0,2);
+ return `<section class="hero">
+  <svg class="ripple" viewBox="0 0 440 440" aria-hidden="true">
+   <circle class="r" cx="220" cy="220" r="210" stroke="#BA6740"/><circle class="r" cx="220" cy="220" r="210" stroke="#5E8B6E"/><circle class="r" cx="220" cy="220" r="210" stroke="#BA6740"/><circle class="r" cx="220" cy="220" r="210" stroke="#0F3557"/>
+   <circle cx="220" cy="220" r="60" fill="none" stroke="#BA6740" stroke-opacity=".25"/><circle cx="220" cy="220" r="110" fill="none" stroke="#5E8B6E" stroke-opacity=".2" stroke-dasharray="3 6"/><circle cx="220" cy="220" r="165" fill="none" stroke="#0F3557" stroke-opacity=".12"/>
+   <circle cx="220" cy="220" r="9" fill="#BA6740"/><circle cx="280" cy="180" r="4" fill="#5E8B6E"/><circle cx="150" cy="260" r="5" fill="#0F3557" fill-opacity=".6"/><circle cx="300" cy="300" r="3.5" fill="#BA6740" fill-opacity=".7"/><circle cx="130" cy="150" r="3" fill="#5E8B6E" fill-opacity=".7"/><circle cx="345" cy="215" r="4" fill="#0F3557" fill-opacity=".4"/>
+  </svg>
+  <h1>${t("heroT")}</h1><p>${t("heroP")}</p>
+  <div class="stats">${canSee("journeys")?`<div><b>${JOURNEYS.length}</b><span>${t("journeys")}</span></div>`:""}<div><b>${programs().length}</b><span>${t("programs")}</span></div><div><b>3</b><span>${t("communities")}</span></div></div>
+  <div class="row">${canSee("journeys")?`<button class="btn" data-go="journeys">${t("startJ")}</button>`:""}<button class="btn ${canSee("journeys")?"line":""}" data-go="programs">${t("exploreP")}</button></div></section>
+ ${canSee("journeys")?`<section class="section"><h2>${t("journeys")}</h2><p class="lead">${t("jP")}</p>${journeyCards()}</section>`:""}
+ <section class="section"><h2>${t("forWhom")}</h2><div class="grid">${[["fw_w","account"],["fw_f","funders"],["fw_o","orgs"],["fw_e","programs"]].filter(([k,g])=>canSee(g)).map(([k,g])=>`<button class="card" data-go="${g}" style="text-align:start;font:inherit;color:inherit;cursor:pointer"><h3>${t(k)}</h3><p>${t(k+"p")}</p><span class="link">${arrow()}</span></button>`).join("")}</div></section>
+ ${up.length?`<section class="section"><div class="vhead" style="margin-bottom:10px"><h2>${t("evT")}</h2><button class="btn line" data-go="calendar" style="font-size:13px;padding:5px 14px">${t("calendar")}</button></div><div class="grid">${up.map(eventCard).join("")}</div></section>`:""}
+ <section class="section"><div class="grid">${[["visionT","visionP"],["missionT","missionP"],["valuesT","valuesP"]].map(([a,b])=>`<div class="card soon"><h3>${t(a)}</h3><p>${t(b)}</p></div>`).join("")}</div></section>
+ <section class="section"><h2>${t("gpT")}</h2><p class="lead">${t("gpP")}</p><div class="steps">${STEPS[S.lang].map(s=>`<div class="step"><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join("")}</div></section>
+ <section class="section voices" id="voices">${voicesHTML()}</section>
+ <section class="section two-col"><div><h2>${t("lbT")}</h2><p class="lead">${t("lbP")}</p><div id="boardBox">${boardHTML(5)}</div></div><div style="padding-top:6px">${earnHTML()}</div></section>`;
+}
+function journeyCards(){
+ return `<div class="jgrid">${JOURNEYS.map(j=>{const pct=jPct(j);const started=(R.prefs.journeys||{})[j.id];
+  return `<button class="jcard" type="button" data-openj="${j.id}" aria-pressed="${S.openJ===j.id}"><span class="jicon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${JICON[j.icon]}</svg></span>
+   <h3>${esc(L(j.name))}</h3><p>${esc(L(j.who))}</p>${started?`<div class="bar" aria-label="${pct}%"><i style="width:${pct}%"></i></div><p>${t("jProgress")}: ${pct}%</p>`:""}</button>`}).join("")}</div>`;
+}
+function journeyDetail(){
+ const j=JOURNEYS.find(x=>x.id===S.openJ);if(!j)return "";
+ const done=jDoneList(j.id);const started=(R.prefs.journeys||{})[j.id];
+ return `<div class="jdetail" id="jDetail"><div class="cmhead"><div><h2>${esc(L(j.name))}</h2><p class="lead" style="margin:0"><b>${t("jFor")}</b> ${esc(L(j.who))}</p></div>
+  ${started?`<span class="tag ok">${t("jStarted")} · ${jPct(j)}%</span>`:`<button class="btn" type="button" data-startj="${j.id}">${t("jStart")}</button>`}</div>
+  <div class="stages">${j.stages.map((s,i)=>`<div class="stage"><span class="num">${i+1}</span><div><h3>${esc(L(s.t))}</h3>
+   ${s.items.map(resolve).filter(Boolean).map(it=>{const d=done.includes(it.id);return `<div class="titem ${d?"done":""}"><div class="nm"><a class="link" href="${esc(it.url)}" target="_blank" rel="noopener" style="color:var(--navy)">${esc(L(it.name))}</a><small>${esc(L(it.sub))}</small></div>
+    <button class="done-btn" type="button" data-step="${j.id}|${it.id}" aria-pressed="${d}">${d?"✓ "+t("jDone"):t("jMark")}</button></div>`}).join("")}</div></div>`).join("")}</div></div>`;
+}
+function journeysView(){return `<h2>${t("jT")}</h2><p class="lead">${t("jP")}</p>${journeyCards()}${journeyDetail()}`}
+
+function programsView(){
+ const all=programs();
+ const types=["all","masters","certificate","course","fellowship","academy","award","directory"];
+ const cnt=s=>s==="all"?all.length:all.filter(p=>p.status===s).length;
+ const list=all.filter(p=>(S.status==="all"||p.status===S.status)&&(S.filter==="all"||p.type===S.filter)&&(S.region==="all"||p.region===S.region)&&(!S.fields.length||S.fields.some(f=>p.fields.includes(f))));
+ return `${comparison()}<h2>${t("pT")}</h2><p class="lead">${t("pP")}</p>
+  <div class="statusbar">${["all",...STATUSES].map(s=>`<button class="sbtn" type="button" data-status="${s}" aria-pressed="${S.status===s}"><b>${cnt(s)}</b>${t("st_"+s)}${s!=="all"?`<span style="display:block">${t("st_"+s+"_d")}</span>`:""}</button>`).join("")}</div>
+  <div class="row2">${["all","local","intl"].map(k=>`<button class="chip" data-region="${k}" aria-pressed="${S.region===k}">${t(k==="all"?"allScope":k)}</button>`).join("")}<span class="sep"></span>
+  ${types.map(k=>`<button class="chip" data-filter="${k}" aria-pressed="${S.filter===k}">${t(k)}</button>`).join("")}</div>
+  <div class="fieldbox"><b>${t("fieldsT")}</b><div class="opts">${FIELDS.map(f=>`<label class="chk"><input type="checkbox" id="fld-${f}" data-field="${f}" ${S.fields.includes(f)?"checked":""}> ${t(f)}</label>`).join("")}</div></div>
+  <div class="grid">${list.length?list.map(programCard).join(""):`<p class="note">${t("noMatch")}</p>`}</div>
+  ${R.owner?suggestPanel()+adminForm():""}`;
+}
+function suggestPanel(){
+ const L2=R.suggest||[];
+ return `<div class="panel admin" style="margin-top:22px" id="sgPanel"><h3>${t("sgT")} <span class="tag soonT">${L2.length}</span></h3><p class="note" style="margin-top:4px">${t("sgP")}</p>
+  ${L2.length?L2.map(s=>`<div class="titem" style="background:var(--bg)"><div class="nm"><a class="link" href="${esc(s.url)}" target="_blank" rel="noopener" style="color:var(--navy)">${esc(s.name)}</a>
+   <small>${esc(s.provider||"")} · ${t("st_"+(s.status||"new"))}${s.start?" · "+esc(s.start):""} · ${t("sgSrc")}: ${esc(s.source||"")}</small>${s.desc?`<small>${esc(s.desc)}</small>`:""}</div>
+   <div style="display:flex;gap:6px"><button class="done-btn" type="button" data-sg="${s.id}" data-act="ok" style="background:var(--sage);color:#fff;border-color:var(--sage)">${t("sgOk")}</button><button class="done-btn" type="button" data-sg="${s.id}" data-act="no">${t("sgNo")}</button></div></div>`).join(""):`<p class="note">${t("sgNone")}</p>`}</div>`;
+}
+async function reviewSuggestion(id,act){
+ const s=(R.suggest||[]).find(x=>x.id===id);if(!s||!R.db)return;
+ try{
+  if(act==="ok"){const {id:_,version:__,...data}=s;await R.db.collection("catalog").add({...data,at:Date.now()});toast(t("sgAdded"))}
+  await R.db.doc("suggest/"+id).delete();if(act!=="ok")toast(t("sgDropped"));
+ }catch(_){toast(t("vErr"))}
+}
+function adminForm(){
+ return `<div class="panel admin" style="margin-top:22px"><h3>${t("adT")}</h3><p class="note" style="margin-top:4px">${t("adP")}</p>
+ <form class="form" id="adForm"><div class="two"><label>${t("adName")}<input id="adName" maxlength="120"></label><label>${t("adProv")}<input id="adProv" maxlength="120"></label></div>
+  <div class="two"><label>${t("adUrl")}<input id="adUrl" type="url" maxlength="400" dir="ltr"></label><label>${t("adStart")}<input id="adStart" type="date"></label></div>
+  <div class="two"><label>${t("status")}<select id="adStatus">${STATUSES.map(s=>`<option value="${s}">${t("st_"+s)}</option>`).join("")}</select></label><label>${t("type")}<select id="adType">${["course","certificate","masters","fellowship","academy","award"].map(s=>`<option value="${s}">${t(s)}</option>`).join("")}</select></label></div>
+  <div class="two"><label>${t("region")}<select id="adRegion"><option value="local">${t("local")}</option><option value="intl">${t("intl")}</option></select></label><label>${t("lang")}<select id="adLng"><option value="arabic">${t("arabic")}</option><option value="english">${t("english")}</option></select></label></div>
+  <label>${t("adDesc")}<textarea id="adDesc" maxlength="300"></textarea></label>
+  <div><button class="btn" type="submit">${t("adAdd")}</button></div></form></div>`;
+}
+
+function eventCard(e){
+ const past=isPast(e);const n=daysTo(e.date);const d=dOf(e.date);
+ const status=past?`<span class="tag end">${t("ended")}</span>`:(n<=30?`<span class="tag soonT">${n<=0?t("today"):t("daysLeft",{n})}</span>`:`<span class="tag ok">${t("upcoming")}</span>`);
+ return `<article class="card"><div class="ev"><div class="date ${past?"past":""}"><span>${d.toLocaleDateString(S.lang==="ar"?"ar-SA-u-ca-gregory-nu-latn":"en-GB",{month:"short"})}</span><b>${d.getDate()}</b></div>
+  <div style="display:grid;gap:6px;min-width:0"><div class="tags">${status}</div><h3>${esc(L(e.name))}</h3><p>${fmtD(e.date)}${e.end?` – ${fmtD(e.end)}`:""}</p><p>${esc(L(e.place))}</p></div></div>
+  <p>${esc(L(e.desc))}</p><div class="cardfoot"><a class="link" href="${e.url}" target="_blank" rel="noopener">${t("visit")} ${arrow()}</a>${past?"":followBtn(e.id)}</div></article>`;
+}
+function calendarView(){
+ const ev=[...EVENTS].sort((a,b)=>(isPast(a)-isPast(b))||(isPast(a)?b.date.localeCompare(a.date):a.date.localeCompare(b.date)));
+ return `<h2>${t("evT")}</h2><p class="lead">${t("evP")}</p><div class="grid">${ev.map(eventCard).join("")}</div>`;
+}
+
+function communitiesView(){
+ const cnt=c=>R.members.filter(m=>Array.isArray(m.c)&&m.c.includes(c)).length;
+ const mine=Array.isArray(R.prefs.communities)?R.prefs.communities:[];
+ return `<h2>${t("cmT")}</h2><p class="lead">${t("cmP")}</p><div class="grid">${["cm_beg","cm_exp","cm_tech"].map(c=>`<article class="card"><div class="chead"><div class="ctype g"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c1-3.5 3.5-5 6.5-5s5.5 1.5 6.5 5"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14c2.5 0 4 1.5 4.5 4"/></svg></div><div><h3>${t(c)}</h3><span class="members">${t("members",{n:cnt(c)})}</span></div></div>
+  <p>${t(c+"_d")}</p>${NETWORKS.filter(n=>n.cm===c).map(n=>`<p style="font-size:13px">↳ <a class="link" href="${n.url}" target="_blank" rel="noopener">${esc(L(n.name))}</a></p>`).join("")}
+  <div class="cardfoot">${mine.includes(c)?`<button class="follow" type="button" data-joinc="${c}" aria-pressed="true">✓ ${t("joined")}</button>`:`<button class="btn" type="button" data-joinc="${c}">${t("joinC")}</button>`}</div></article>`).join("")}</div>
+  <h3 class="sub">${t("extNets")}</h3><div class="grid">${NETWORKS.map(n=>`<article class="card"><h3>${esc(L(n.name))}</h3><p>${esc(L(n.desc))}</p><div class="cardfoot"><a class="link" href="${n.url}" target="_blank" rel="noopener">${t("join")} ${arrow()}</a></div></article>`).join("")}</div>`;
+}
+
+const ICON={podcast:'<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/>',article:'<path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7M9 8h3"/>',study:'<path d="M4 19V5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M8 7h6"/>'};
+const glossItems=list=>list.length?list.map(g=>`<div class="term"><b>${g[0]}</b><span class="en" dir="ltr">${g[1]}</span><p>${S.lang==="ar"?g[2]:g[3]}</p></div>`).join(""):`<p>${t("noMatch")}</p>`;
+const glossFilter=()=>{const q=S.q.trim().toLowerCase();return GLOSS.filter(g=>!q||g[0].includes(q)||g[1].toLowerCase().includes(q))};
+function contentView(){
+ return `<h2>${t("ctT")}</h2><p class="lead">${t("ctP")}</p><div class="grid">${CONTENT.map(c=>`<article class="card"><div class="chead"><div class="ctype ${c.kind==="article"?"b":c.kind==="study"?"g":""}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">${ICON[c.kind]}</svg></div>
+  <div style="min-width:0"><div class="tags"><span class="tag">${t(c.kind)}</span></div><h3 style="margin-top:6px">${esc(L(c.name))}</h3><p>${esc(L(c.by))}</p></div></div>
+  <p>${esc(L(c.desc))}</p><div class="cardfoot"><a class="link" href="${c.url}" target="_blank" rel="noopener">${t("open")} ${arrow()}</a></div></article>`).join("")}</div>
+ <h3 class="sub">${t("tplT")}</h3>${TEMPLATES[S.lang].map(x=>`<details><summary>${x.t}</summary>${x.d?`<p>${x.d}</p>`:""}${x.tpl?`<pre class="tpl" id="tplText">${esc(MOTIVATION)}</pre><button class="btn" type="button" id="copyTpl">${t("copy")}</button>`:""}${x.list?`<ul>${x.list.map(li=>`<li>${li}</li>`).join("")}</ul>`:""}</details>`).join("")}
+ <h3 class="sub">${t("glT")}</h3><input class="search" id="glq" type="search" placeholder="${t("glSearch")}" value="${esc(S.q)}" aria-label="${t("glSearch")}"><div class="gloss" id="glList">${glossItems(glossFilter())}</div>`;
+}
+function elearnView(){
+ return `<h2>${t("elT")}</h2><p class="lead">${t("elP")}</p><div class="grid">${PLATFORMS.map(c=>`<article class="card"><div class="tags"><span class="tag ${c.lng==="arabic"?"cu":""}">${t(c.lng)}</span></div><h3>${esc(L(c.name))}</h3>
+  <p>${esc(L(c.desc))}</p><div class="cardfoot"><a class="link" href="${c.url}" target="_blank" rel="noopener">${t("visit")} ${arrow()}</a></div></article>`).join("")}</div>`;
+}
+
+function fundersView(){
+ const reqs=R.needs.filter(n=>n.topic);
+ const max=Math.max(1,...JOURNEYS.map(j=>reqs.filter(r=>r.journey===j.id).length));
+ const gaps=JOURNEYS.map(j=>{const nP=jItems(j).filter(x=>x.startsWith("P:")).length;const nR=reqs.filter(r=>r.journey===j.id).length;return{j,nP,nR,score:nR/max+(nP<=2?0.5:0)}}).sort((a,b)=>b.score-a.score);
+ return `<h2>${t("fdT")}</h2><p class="lead">${t("fdP")}</p>
+ <div class="two-col"><div class="panel"><h3>${t("gapT")}</h3><div style="margin-top:8px">${gaps.map(g=>`<div class="gap"><span>${esc(L(g.j.name))} ${g.score>=0.5?`<span class="tag soonT">${t("gapLow")}</span>`:""}</span><b>${t("gapPrograms",{n:g.nP})} · ${t("gapReq",{n:g.nR})}</b><div class="bar"><i style="width:${Math.min(100,Math.round(g.score/1.5*100))}%;background:var(--copper)"></i></div></div>`).join("")}</div></div>
+  <div class="panel"><h3>${t("reqT")}</h3>${reqs.length?`<ul style="margin:8px 0 0;padding-inline-start:20px">${reqs.slice(0,12).map(r=>`<li>${esc(r.topic)} <small style="color:var(--muted)">· ${esc(L((JOURNEYS.find(j=>j.id===r.journey)||{}).name))}</small></li>`).join("")}</ul>`:`<p class="note">${t("reqNone")}</p>`}</div></div>
+ <div class="panel" style="margin-top:16px"><h3>${t("intT")}</h3>${R.uid?`<form class="form" id="intForm" style="margin-top:10px"><div class="two"><label>${t("intName")}<input id="iName" maxlength="80"></label><label>${t("intOrg")}<input id="iOrg" maxlength="120"></label></div>
+  <label>${t("intArea")}<select id="iArea">${JOURNEYS.map(j=>`<option value="${j.id}">${esc(L(j.name))}</option>`).join("")}</select></label><label>${t("intNote")}<textarea id="iNote" maxlength="400"></textarea></label><div><button class="btn" type="submit">${t("intSend")}</button></div></form>`:`<p class="note">${t("login")}</p>`}</div>`;
+}
+
+function orgsView(){
+ const plan=Array.isArray(R.prefs.orgplan)?R.prefs.orgplan:[];
+ return `<h2>${t("orT")}</h2><p class="lead">${t("orP")}</p>
+ <div class="panel">${R.uid?`<form id="empForm" class="planrow"><input class="search" style="margin:0;max-width:none" id="empName" maxlength="60" placeholder="${t("empName")}" aria-label="${t("empName")}"><select class="search" style="margin:0;max-width:none" id="empJ" aria-label="${t("empJ")}">${JOURNEYS.map(j=>`<option value="${j.id}">${esc(L(j.name))}</option>`).join("")}</select><button class="btn" type="submit">${t("addEmp")}</button></form>`:`<p class="note">${t("login")}</p>`}
+  <h3 style="margin-top:14px">${t("planT")}</h3><div class="planout">${plan.length?plan.map((e,i)=>{const j=JOURNEYS.find(x=>x.id===e.j);return `<div class="emp"><div class="cmhead"><b>${esc(e.n)} · <span style="color:var(--copper)">${esc(L(j?.name))}</span></b><button class="del done-btn" type="button" data-delemp="${i}">${t("remove")}</button></div>
+   <ul>${(j?j.stages:[]).map(s=>`<li><b>${esc(L(s.t))}:</b> ${s.items.map(resolve).filter(Boolean).map(x=>esc(L(x.name))).join("، ")}</li>`).join("")}</ul></div>`}).join(""):`<p class="note">${t("planNone")}</p>`}</div></div>`;
+}
+
+const LEVELS=["lv_beg","lv_spec","lv_exp","lv_cons"];
+function doneSteps(){const js=R.prefs.journeys||{};return [...new Set(Object.values(js).flatMap(x=>x.done||[]))]}
+function accountView(){
+ if(!R.uid)return `<h2>${t("acT")}</h2><p class="lead">${t("acLogin")}</p>${window.BOSLA_AUTH?window.BOSLA_AUTH.form(S.lang):""}`;
+ const p=R.prefs.profile||{};const lv=LEVELS.indexOf(p.level||"lv_beg");
+ const myJs=JOURNEYS.filter(j=>(R.prefs.journeys||{})[j.id]);
+ const done=doneSteps().map(resolve).filter(Boolean);
+ return `<div class="cmhead"><h2>${t("acT")}</h2>${window.BOSLA_AUTH?window.BOSLA_AUTH.logout(S.lang):""}</div><div class="kpi" id="acKpi">${acKpi()}</div>
+ <div class="panel"><div class="cvhead"><div class="cvav">${esc((p.name||"؟").trim().charAt(0))}</div><div><h3>${esc(p.name||t("you"))}</h3><p class="note" style="margin:2px 0 0">${esc([p.title,p.org,p.city].filter(Boolean).join(" · "))}</p></div></div>
+  <h3 style="margin-top:16px">${t("pathT")}</h3><div class="path">${LEVELS.map((l,i)=>`<button class="pstep ${i<lv?"reached":""} ${i===lv?"now":""}" type="button" data-level="${l}"><i>${i+1}</i>${t(l)}<small>${t(l+"_d")}</small></button>`).join("")}</div></div>
+ <div class="two-col" style="margin-top:14px"><div>
+  <div class="panel"><h3>${t("prT")}</h3><form class="form" id="prForm" style="margin-top:10px"><div class="two"><label>${t("pName")}<input id="pName" maxlength="60" value="${esc(p.name||"")}"></label><label>${t("pTitle")}<input id="pTitle" maxlength="80" value="${esc(p.title||"")}"></label></div>
+   <div class="two"><label>${t("pOrg")}<input id="pOrg" maxlength="80" value="${esc(p.org||"")}"></label><label>${t("pCity")}<input id="pCity" maxlength="40" value="${esc(p.city||"")}"></label></div>
+   <label>${t("pBio")}<textarea id="pBio" maxlength="400">${esc(p.bio||"")}</textarea></label><div><button class="btn" type="submit">${t("pSave")}</button></div></form></div>
+  <div class="panel"><div class="cmhead"><h3>${t("cvT")}</h3>${R.downloads?`<button class="btn line" type="button" id="cvBtn" style="font-size:13px;padding:5px 12px">${t("cvDl")}</button>`:""}</div>
+   <p class="note" style="margin-top:6px"><b>${t("cvDone")}:</b></p>${done.length?`<ul style="margin:4px 0 0;padding-inline-start:20px">${done.map(d=>`<li>${esc(L(d.name))} <small style="color:var(--muted)">· ${esc(L(d.sub))}</small></li>`).join("")}</ul>`:`<p class="note">${t("cvNone")}</p>`}</div>
+  <div class="panel"><h3>${t("needT")}</h3><p class="note" style="margin-top:4px">${t("needP")}</p><form class="form" id="needForm" style="margin-top:8px"><label>${t("needTopic")}<input id="nTopic" maxlength="120" value="${esc((R.needs.find(n=>n.id===R.uid)||{}).topic||"")}"></label>
+   <label ${canSee("journeys")?"":"hidden"}>${t("empJ")}<select id="nJ">${JOURNEYS.map(j=>`<option value="${j.id}" ${(R.needs.find(n=>n.id===R.uid)||{}).journey===j.id?"selected":""}>${esc(L(j.name))}</option>`).join("")}</select></label><div><button class="btn" type="submit">${t("needSend")}</button></div></form></div>
+ </div><div>
+  ${R.sample?`<div class="adv"><h3>${t("advT")}</h3><p class="note" style="margin-top:4px">${t("advP")}</p><button class="btn" type="button" id="advBtn" ${S.advBusy?"disabled":""}>${S.advBusy?t("advWait"):t("advBtn")}</button><div id="advOut">${adviceHTML()}</div></div>`:""}
+  ${canSee("journeys")?"":"<!--"}<div class="panel"><h3>${t("myJ")}</h3>${myJs.length?myJs.map(j=>`<div class="gap"><span>${esc(L(j.name))}</span><b>${jPct(j)}%</b><div class="bar"><i style="width:${jPct(j)}%"></i></div></div>`).join(""):`<p class="note">${t("noJ")}</p>`}</div>${canSee("journeys")?"":"-->"}
+  <div class="panel"><h3>${t("myF")}</h3><div id="acFollows">${followsList()}</div></div>
+  <div class="panel"><h3>${t("lbT")}</h3><div id="boardBox" style="margin-top:8px">${boardHTML(10)}</div><div style="margin-top:12px">${earnHTML()}</div></div>
+ </div></div>`;
+}
+function adviceHTML(){
+ const a=S.advice;if(!a)return "";
+ if(a.error)return `<p class="note">${t("advErr")}</p>`;
+ return `<p style="margin:10px 0 0">${esc(a.summary||"")}</p><ul>${(a.steps||[]).map(s=>{const it=resolve(String(s.ref||""));return `<li><b>${esc(it?L(it.name):s.ref)}</b>: ${esc(s.why||"")}</li>`}).join("")}</ul>`;
+}
+function followsList(){
+ const items=follows().map(itemById).filter(Boolean);
+ if(!items.length)return `<p class="note">${t("acNone")}</p>`;
+ return `<div class="lb">${items.map(x=>`<div class="r"><span class="nm">${esc(L(x.name))}</span><small style="color:var(--muted)">${x.date?(isPast(x)?t("ended"):fmtD(x.date,{day:"numeric",month:"short"})):t(x.type)}</small>${followBtn(x.id)}</div>`).join("")}</div>`;
+}
+
+function grants(){
+ return `<h2>${t("grantsT")}</h2><p class="lead">${t("grantsP")}</p>
+  <div class="grid">${GRANTS.map(g=>`<article class="card"><div class="tags"><span class="tag ${g.scope==="local"?"cu":""}">${t(g.scope)}</span></div>
+   <h3>${esc(L(g.name))}</h3><p>${esc(L(g.desc))}</p><div class="cardfoot"><a class="link" href="${g.url}" target="_blank" rel="noopener">${t("visit")} ${arrow()}</a></div></article>`).join("")}</div>`;
+}
+function readiness(){
+ const Q=QUESTIONS[S.lang];
+ const answered=Object.keys(S.answers).length;
+ let res=`<p class="note">${t("rdAnswer")}</p>`;
+ if(answered===Q.length){
+  const yes=Q.filter((_,i)=>S.answers[i]).length;const pct=Math.round(yes/Q.length*100);
+  const msg=pct>=75?t("rdHigh"):pct>=40?t("rdMid"):t("rdLow");
+  const gaps=Q.map((q,i)=>S.answers[i]?null:q[1]).filter(Boolean);
+  res=`<div class="result"><div>${t("rdScore")}</div><div class="score">${pct}%</div><p>${msg}</p>
+   <b>${t("rdNext")}</b>${gaps.length?`<ul>${gaps.map(g=>`<li>${g}</li>`).join("")}</ul>`:`<p>${t("rdAll")}</p>`}</div>`;
+ }
+ return `<h2>${t("rdT")}</h2><p class="lead">${t("rdP")}</p>
+  ${Q.map((q,i)=>`<div class="q"><span>${q[0]}</span><div class="yn">
+   <button class="chip" data-ans="${i}" data-v="1" aria-pressed="${S.answers[i]===true}">${t("yes")}</button>
+   <button class="chip" data-ans="${i}" data-v="0" aria-pressed="${S.answers[i]===false}">${t("no")}</button></div></div>`).join("")}
+  <div id="rdRes">${res}</div>`;
+}
+
+/* ---------- reviews ---------- */
+function voicesList(){
+ if(R.list===null)return `<p class="note">${t("vLoading")}</p>`;
+ if(!R.list.length)return `<p class="note">${t("vEmpty")}</p>`;
+ return `<div class="rgrid">${R.list.map(r=>`<article class="review">${starStr(Math.max(1,Math.min(5,Number(r.rating)||0)))}<p>${esc(r.text)}</p>
+  <div class="who"><div class="av">${esc(String(r.name||"؟").trim().charAt(0))}</div><div><b>${esc(r.name)}</b><small>${esc(r.role)}</small>${r.id===R.uid?` <span class="mine">· ${t("vMine")}</span>`:""}</div></div></article>`).join("")}</div>`;
+}
+function voicesHead(){
+ const L2=R.list||[];const avg=L2.length?(L2.reduce((a,r)=>a+(Number(r.rating)||0),0)/L2.length):0;
+ return `<div><h2>${t("vT")}</h2><p class="lead" style="margin:0">${t("vP")}</p></div>${L2.length?`<div class="avg"><b>${avg.toFixed(1)}</b><div>${starStr(Math.round(avg))}<small>${L2.length} ${t("vCount")}</small></div></div>`:""}`;
+}
+function voicesForm(){
+ if(!R.db)return "";
+ if(!R.uid)return `<p class="note">${t("vLogin")}</p>`;
+ const mine=(R.list||[]).find(r=>r.id===R.uid);
+ if(!R.rating&&mine)R.rating=Number(mine.rating)||0;
+ return `<form class="rform" id="rform"><b>${mine?t("vEdit"):t("vAdd")}</b>
+  <div class="rate" role="group" aria-label="${t("vRate")}"><span class="note" style="margin:0 6px">${t("vRate")}</span>${[1,2,3,4,5].map(n=>`<button type="button" data-star="${n}" class="${n<=R.rating?"on":""}" aria-label="${n}">★</button>`).join("")}</div>
+  <div class="two"><input id="rName" maxlength="60" placeholder="${t("vName")}" aria-label="${t("vName")}" value="${esc(mine?.name||"")}"><input id="rRole" maxlength="90" placeholder="${t("vRolePh")}" aria-label="${t("vRole")}" value="${esc(mine?.role||"")}"></div>
+  <textarea id="rText" maxlength="500" placeholder="${t("vText")}" aria-label="${t("vText")}">${esc(mine?.text||"")}</textarea>
+  <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" type="submit">${t("vSend")}</button>${mine?`<button class="btn line" type="button" id="rDel">${t("vDel")}</button>`:""}</div></form>`;
+}
+function voicesHTML(){return `<div class="vhead">${voicesHead()}</div><div id="vList">${voicesList()}</div><div id="vForm">${voicesForm()}</div>`}
+function refreshVoices(){if(!$("voices"))return;$("voices").querySelector(".vhead").innerHTML=voicesHead();$("vList").innerHTML=voicesList();if(!$("vForm").contains(document.activeElement))$("vForm").innerHTML=voicesForm()}
+
+/* ---------- points ---------- */
+const myPoints=()=>((R.board||[]).find(b=>b.id===R.uid)||{}).points||0;
+const nameOf=id=>id===R.uid?t("you"):(R.names[id]||t("someone"));
+function boardHTML(limit){
+ if(R.board===null)return `<p class="note">${t("vLoading")}</p>`;
+ const L2=[...R.board].filter(b=>(b.points||0)>0).sort((a,b)=>(b.points||0)-(a.points||0)).slice(0,limit||10);
+ if(!L2.length)return `<p class="note">${t("lbEmpty")}</p>`;
+ return `<div class="lb">${L2.map((b,i)=>`<div class="r ${b.id===R.uid?"me":""}"><span class="rk">${i+1}</span><span class="nm">${esc(nameOf(b.id))}</span><span class="pt">${b.points} <small style="color:var(--muted);font-weight:400">${t("pts")}</small></span></div>`).join("")}</div>`;
+}
+function earnHTML(){return `<h3 style="margin:0 0 8px">${t("earnT")}</h3><ul class="earn">${[["e_step",POINTS.step],["e_rate",POINTS.rate],["e_profile",POINTS.profile],["e_follow",POINTS.follow],["e_ready",POINTS.ready],["e_review",POINTS.review]].map(([k,n])=>`<li>${t(k)}<b>+${n}</b></li>`).join("")}</ul>`}
+function acKpi(){
+ const sorted=[...(R.board||[])].filter(b=>(b.points||0)>0).sort((a,b)=>(b.points||0)-(a.points||0));
+ const rank=sorted.findIndex(b=>b.id===R.uid);
+ return `<div><b>${myPoints()}</b><span>${t("kPoints")}</span></div><div><b>${rank>=0?rank+1:"—"}</b><span>${t("kRank")}</span></div><div><b>${doneSteps().length}</b><span>${t("kDone")}</span></div>`;
+}
+async function resolveNames(){
+ if(!R.user||!R.board)return;
+ const ids=R.board.map(b=>b.id).filter(id=>id!==R.uid&&!(id in R.names));if(!ids.length)return;
+ try{const ps=await R.user.profiles(ids);ids.forEach(id=>{R.names[id]=(ps&&ps[id]&&ps[id].name)||""});refreshBoard()}catch(_){}
+}
+function refreshBoard(){const b=$("boardBox");if(b)b.innerHTML=boardHTML(S.tab==="account"?10:5);if($("acKpi"))$("acKpi").innerHTML=acKpi()}
+async function award(key,n){
+ if(!R.db||!R.uid)return;
+ const cur=(R.board||[]).find(b=>b.id===R.uid)||{points:0,awarded:{}};
+ if(cur.awarded&&cur.awarded[key])return;
+ const next={points:(cur.points||0)+n,awarded:{...(cur.awarded||{}),[key]:true},name:((R.prefs.profile||{}).name||"")};
+ const i=(R.board||[]).findIndex(b=>b.id===R.uid);if(R.board){if(i>=0)R.board[i]={id:R.uid,...next};else R.board.push({id:R.uid,...next})}
+ try{await R.db.doc("points/"+R.uid).set(next);toast(t("gained",{n}))}catch(_){}
+}
+
+/* ---------- notifications ---------- */
+function alerts(){return follows().map(itemById).filter(x=>x&&x.date&&!isPast(x)&&daysTo(x.date)<=30).sort((a,b)=>a.date.localeCompare(b.date))}
+function updateBell(){const n=alerts().length;const d=$("bellDot");d.hidden=!n;d.textContent=n;if(!$("bellPop").hidden)$("bellPop").innerHTML=bellHTML()}
+function bellHTML(){const A=alerts();return `<h3>${t("nT")}</h3>${A.length?A.map(e=>`<div class="it"><span>${esc(L(e.name))}</span><small>${daysTo(e.date)<=0?t("today"):t("daysLeft",{n:daysTo(e.date)})}</small></div>`).join(""):`<p class="note" style="margin:0">${t("nNone")}</p>`}<div style="margin-top:10px"><button class="btn line" type="button" data-go="account" style="font-size:13px;padding:5px 12px">${t("nAll")}</button></div>`}
+
+/* ---------- render ---------- */
+const HIDDEN=["journeys","funders","grants","orgs"];
+const canSee=k=>R.owner||!HIDDEN.includes(k);
+const VIEWS={grants,readiness,home,journeys:journeysView,programs:programsView,calendar:calendarView,communities:communitiesView,content:contentView,elearn:elearnView,funders:fundersView,orgs:orgsView,account:accountView};
+function render(){
+ const app=$("app");app.dir=S.lang==="ar"?"rtl":"ltr";app.lang=S.lang;document.documentElement.lang=S.lang;
+ document.querySelectorAll("[data-t]").forEach(e=>e.textContent=t(e.dataset.t));
+ $("langBtn").textContent=S.lang==="ar"?"English":"العربية";
+ $("bellBtn").setAttribute("aria-label",t("nT"));$("meBtn").setAttribute("aria-label",t("account"));
+ if(!canSee(S.tab))S.tab="home";
+ $("tabs").innerHTML=TABS.filter(k=>k!=="account"&&canSee(k)).map(k=>`<button role="tab" data-tab="${k}" aria-selected="${S.tab===k}">${t(k)}${HIDDEN.includes(k)?` <small style="opacity:.6">(${t("hiddenTag")})</small>`:""}</button>`).join("");
+ const y=window.scrollY;$("view").innerHTML=VIEWS[S.tab]();
+ $("tray").hidden=S.tab!=="programs"||S.cmp.length===0;
+ $("trayText").textContent=`${S.cmp.length} ${t("compareN")}`;$("clearCmp").textContent=t("clear");$("goCmp").textContent=t("compareGo");
+ updateBell();return y;
+}
+function rerender(){const y=window.scrollY;render();window.scrollTo({top:y})}
+function go(tab){if(!canSee(tab))tab="home";S.tab=tab;$("bellPop").hidden=true;try{history.replaceState(null,"","#"+tab)}catch(e){}render();window.scrollTo({top:0})}
+
+/* ---------- events ---------- */
+document.addEventListener("click",async e=>{
+ const b=e.target.closest("[data-tab],[data-go],[data-filter],[data-region],[data-status],[data-follow],[data-star],[data-rate],[data-openj],[data-startj],[data-step],[data-joinc],[data-level],[data-delemp],[data-ans],[data-sg]");
+ if(b){
+  const d=b.dataset;
+  if(d.tab)go(d.tab);
+  else if(d.go)go(d.go);
+  else if(d.filter){S.filter=d.filter;rerender()}
+  else if(d.region){S.region=d.region;rerender()}
+  else if(d.status){S.status=d.status;rerender()}
+  else if(d.follow){const on=isFollowing(d.follow);const ok=await savePrefs({follows:on?follows().filter(x=>x!==d.follow):[...follows(),d.follow]});if(ok){if(!on)award("follow_"+d.follow,POINTS.follow);rerender()}}
+  else if(d.star){R.rating=Number(d.star);document.querySelectorAll("[data-star]").forEach(x=>x.classList.toggle("on",Number(x.dataset.star)<=R.rating))}
+  else if(d.rate)rateProgram(d.rate,Number(d.n));
+  else if(d.openj){S.openJ=S.openJ===d.openj?null:d.openj;if(S.tab!=="journeys")go("journeys");else rerender();setTimeout(()=>$("jDetail")?.scrollIntoView({behavior:"smooth",block:"start"}),40)}
+  else if(d.startj){const js={...(R.prefs.journeys||{})};js[d.startj]=js[d.startj]||{done:[]};if(await savePrefs({journeys:js}))rerender()}
+  else if(d.step){const [jid,ref]=d.step.split("|");const js={...(R.prefs.journeys||{})};const cur=js[jid]||{done:[]};const has=cur.done.includes(ref);
+   js[jid]={done:has?cur.done.filter(x=>x!==ref):[...cur.done,ref]};if(await savePrefs({journeys:js})){if(!has)award("step_"+ref,POINTS.step);rerender()}}
+  else if(d.joinc){const cs=Array.isArray(R.prefs.communities)?R.prefs.communities:[];const on=cs.includes(d.joinc);const next=on?cs.filter(x=>x!==d.joinc):[...cs,d.joinc];
+   if(await savePrefs({communities:next})){try{await R.db.doc("members/"+R.uid).set({c:next})}catch(_){}rerender()}}
+  else if(d.level){if(await savePrefs({profile:{...(R.prefs.profile||{}),level:d.level}}))rerender()}
+  else if(d.ans){S.answers[d.ans]=d.v==="1";rerender();if(Object.keys(S.answers).length===QUESTIONS.ar.length)award("ready",POINTS.ready)}
+  else if(d.sg){reviewSuggestion(d.sg,d.act)}
+  else if(d.delemp){const plan=[...(R.prefs.orgplan||[])];plan.splice(Number(d.delemp),1);if(await savePrefs({orgplan:plan}))rerender()}
+  return;
+ }
+ const id=e.target.closest("button")?.id;
+ if(id==="langBtn"){S.lang=S.lang==="ar"?"en":"ar";try{localStorage.setItem("bosla-lang",S.lang)}catch(_){}rerender()}
+ else if(id==="bellBtn"){const p=$("bellPop");p.hidden=!p.hidden;if(!p.hidden)p.innerHTML=bellHTML()}
+ else if(id==="meBtn")go("account");
+ else if(id==="clearCmp"){S.cmp=[];rerender()}
+ else if(id==="goCmp"){if(S.cmp.length<2){toast(t("cmpEmpty"));return}setTimeout(()=>$("cmpBox")?.scrollIntoView({behavior:"smooth"}),30)}
+ else if(id==="copyTpl"){try{navigator.clipboard.writeText(MOTIVATION).then(()=>toast(t("copied")),()=>{selectTpl();toast(t("copyFail"))})}catch(_){selectTpl();toast(t("copyFail"))}}
+ else if(id==="rDel"&&R.db&&R.uid){const btn=e.target.closest("button");if(btn.dataset.sure!=="1"){btn.dataset.sure="1";btn.textContent=S.lang==="ar"?"تأكيد الحذف":"Confirm delete";return}
+  try{await R.db.doc("reviews/"+R.uid).delete();R.rating=0;$("vForm").innerHTML="";toast(t("vDeleted"))}catch(_){toast(t("vErr"))}}
+ else if(id==="advBtn")runAdvisor();
+ else if(id==="cvBtn")downloadCV();
+ if(!e.target.closest("#bellPop,#bellBtn"))$("bellPop").hidden=true;
+});
+function selectTpl(){const r=document.createRange();r.selectNodeContents($("tplText"));const s=getSelection();s.removeAllRanges();s.addRange(r)}
+document.addEventListener("change",e=>{
+ const id=e.target.dataset.cmp,f=e.target.dataset.field;
+ if(f){S.fields=e.target.checked?[...S.fields,f]:S.fields.filter(x=>x!==f);rerender();return}
+ if(!id)return;
+ if(e.target.checked){if(S.cmp.length>=3){e.target.checked=false;toast(t("cmpMax"));return}S.cmp.push(id)}else S.cmp=S.cmp.filter(x=>x!==id);
+ rerender();
+});
+document.addEventListener("input",e=>{if(e.target.id==="glq"){S.q=e.target.value;$("glList").innerHTML=glossItems(glossFilter())}});
+document.addEventListener("submit",async e=>{
+ const f=e.target.id;if(!["rform","prForm","needForm","intForm","empForm","adForm"].includes(f))return;e.preventDefault();
+ const v=id=>($(id)?.value||"").trim();
+ if(f==="rform"){const name=v("rName"),role=v("rRole"),text=v("rText");if(!name||!text||!R.rating){toast(t("vNeed"));return}
+  try{await R.db.doc("reviews/"+R.uid).set({name,role,text,rating:R.rating,at:Date.now()});toast(t("vSent"));document.activeElement?.blur();$("vForm").innerHTML=voicesForm();award("review",POINTS.review)}catch(_){toast(t("vErr"))}}
+ else if(f==="prForm"){const prof={...(R.prefs.profile||{}),name:v("pName"),title:v("pTitle"),org:v("pOrg"),city:v("pCity"),bio:v("pBio")};
+  if(await savePrefs({profile:prof})){toast(t("pSaved"));if(prof.name&&prof.title&&prof.org)award("profile",POINTS.profile);rerender()}}
+ else if(f==="needForm"){const topic=v("nTopic");if(!topic||!R.db)return;try{await R.db.doc("needs/"+R.uid).set({topic,journey:$("nJ").value,at:Date.now()});toast(t("needSent"));award("need",POINTS.need)}catch(_){toast(t("vErr"))}}
+ else if(f==="intForm"){const name=v("iName"),org=v("iOrg");if(!name||!org)return;try{await R.db.doc("interest/"+R.uid).set({name,org,area:$("iArea").value,note:v("iNote"),at:Date.now()});toast(t("intSent"));e.target.reset()}catch(_){toast(t("vErr"))}}
+ else if(f==="empForm"){const n=v("empName");if(!n)return;const plan=[...(R.prefs.orgplan||[]),{n,j:$("empJ").value}];if(await savePrefs({orgplan:plan})){toast(t("planSaved"));rerender()}}
+ else if(f==="adForm"){const name=v("adName"),url=v("adUrl");if(!name||!url){toast(t("adNeed"));return}
+  try{await R.db.collection("catalog").add({name,provider:v("adProv"),url,desc:v("adDesc"),start:v("adStart"),status:$("adStatus").value,type:$("adType").value,region:$("adRegion").value,lng:$("adLng").value,fields:[],at:Date.now()});toast(t("adAdded"));e.target.reset()}catch(_){toast(t("vErr"))}}
+});
+
+/* ---------- advisor & CV ---------- */
+async function runAdvisor(){
+ const p=R.prefs.profile||{};if(!p.title&&!p.bio){toast(t("advNeed"));return}
+ S.advBusy=true;rerender();
+ const catalog=[...programs().filter(x=>x.type!=="directory").map(x=>({ref:"P:"+x.id,name:x.name.ar,provider:x.provider.ar,focus:x.focus.ar})),...PLATFORMS.map(x=>({ref:"L:"+x.id,name:x.name.ar,focus:x.desc.ar})),...CONTENT.map(x=>({ref:"C:"+x.id,name:x.name.ar,focus:x.desc.ar}))];
+ const prompt=`You are an educational advisor for people working in the Saudi nonprofit sector.
+Profile: title="${p.title||""}", organization="${p.org||""}", career stage="${t(p.level||"lv_beg")}", bio="${p.bio||""}".
+Journeys started: ${JOURNEYS.filter(j=>(R.prefs.journeys||{})[j.id]).map(j=>j.name.ar).join(", ")||"none"}. Already completed: ${doneSteps().join(", ")||"none"}.
+Catalog (use only these refs): ${JSON.stringify(catalog)}
+Recommend 3 to 5 next items, in order, not already completed. Write in ${S.lang==="ar"?"clear Modern Standard Arabic":"English"}.
+Return JSON only: {"summary":"one sentence","steps":[{"ref":"P:id","why":"one short sentence"}]}`;
+ try{S.advice=await R.sample.json(prompt,{modelTier:"quick"})}catch(_){S.advice={error:true}}
+ S.advBusy=false;if(S.tab==="account")rerender();
+}
+async function downloadCV(){
+ const p=R.prefs.profile||{};const done=doneSteps().map(resolve).filter(Boolean);
+ const js=JOURNEYS.filter(j=>(R.prefs.journeys||{})[j.id]);
+ const html=`<html dir="rtl" lang="ar"><head><meta charset="utf-8"><title>${esc(p.name||"CV")}</title><style>body{font-family:Arial,sans-serif;color:#2A2F3A;line-height:1.6}h1{color:#0F3557;margin:0}h2{color:#BA6740;border-bottom:1px solid #EAE4D6;padding-bottom:4px}</style></head><body>
+ <h1>${esc(p.name||"")}</h1><p>${esc([p.title,p.org,p.city].filter(Boolean).join(" · "))}</p>
+ ${p.bio?`<h2>نبذة</h2><p>${esc(p.bio)}</p>`:""}<h2>المرحلة المهنية</h2><p>${esc(T.ar[p.level||"lv_beg"])}</p>
+ ${js.length?`<h2>الرحلات التعليمية</h2><ul>${js.map(j=>`<li>${esc(j.name.ar)} (${jPct(j)}%)</li>`).join("")}</ul>`:""}
+ <h2>البرامج المنجزة</h2>${done.length?`<ul>${done.map(d=>`<li>${esc(d.name.ar)} – ${esc(d.sub.ar)}</li>`).join("")}</ul>`:"<p>—</p>"}
+ <p style="color:#888;font-size:12px">بوصلة</p></body></html>`;
+ try{await R.downloads.save({filename:`${(p.name||"cv").replace(/[\\/:*?"<>|]/g,"")}-bosla.doc`,data:new Blob([html],{type:"application/msword"})})}catch(err){if(err?.code!=="declined")toast(t("cvFail"))}
+}
+
+/* ---------- boot ---------- */
+try{const l=localStorage.getItem("bosla-lang");if(l==="en"||l==="ar")S.lang=l}catch(e){}
+const h=(location.hash||"").slice(1);if(TABS.includes(h))S.tab=h;
+render();
+(async()=>{
+ const use=n=>window.claude?.use?.(n);
+ const db=await use("db");
+ if(!db){R.list=[];R.board=[];refreshVoices();refreshBoard();return}
+ R.db=db;
+ try{R.user=await use("user");R.uid=R.user?await R.user.id():null;R.owner=R.user?await R.user.isOwner():false}catch(_){R.uid=null}
+ use("sample").then(s=>{R.sample=s||null;if(S.tab==="account")rerender()});
+ use("downloads").then(s=>{R.downloads=s||null;if(S.tab==="account")rerender()});
+ const keep=fn=>(snap)=>{fn(snap.docs.map(d=>({id:d.id,...d.data()})))};
+ db.collection("reviews").onSnapshot(keep(x=>{R.list=x.sort((a,b)=>(b.at||0)-(a.at||0));refreshVoices()}),()=>{R.list=R.list||[];refreshVoices()});
+ db.collection("points").onSnapshot(keep(x=>{R.board=x;refreshBoard();resolveNames()}),()=>{R.board=R.board||[];refreshBoard()});
+ const soft=()=>{if(["programs","communities","funders","account"].includes(S.tab)&&!document.activeElement?.closest?.("form"))rerender()};
+ db.collection("ratings").onSnapshot(keep(x=>{R.ratings=x;soft()}));
+ db.collection("members").onSnapshot(keep(x=>{R.members=x;soft()}));
+ db.collection("needs").onSnapshot(keep(x=>{R.needs=x.sort((a,b)=>(b.at||0)-(a.at||0));soft()}));
+ if(R.owner)db.collection("suggest").onSnapshot(keep(x=>{R.suggest=x.filter(y=>y.name&&y.url).sort((a,b)=>(b.at||0)-(a.at||0));soft()}));
+ db.collection("catalog").onSnapshot(keep(x=>{R.extra=x.filter(y=>y.name&&y.url);soft()}));
+ if(R.uid){
+  R.prefsRef=db.collection("data/users/"+R.uid).doc("prefs");
+  R.prefsRef.onSnapshot(s=>{R.prefs=s.data()||{};updateBell();if(!document.activeElement?.closest?.("form"))rerender()});
+ }
+ rerender();
+})();
+</script>
+
+</body></html>
