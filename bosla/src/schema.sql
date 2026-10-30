@@ -46,6 +46,12 @@ create policy docs_update on public.docs for update using (public.can_write(coll
 drop policy if exists docs_delete on public.docs;
 create policy docs_delete on public.docs for delete using (public.can_write(collection, id) or public.is_admin());
 
+grant usage on schema public to anon, authenticated;
+grant select, insert, update, delete on public.docs to anon, authenticated;
+grant select on public.admins to authenticated;
+grant execute on function public.is_admin() to anon, authenticated;
+grant execute on function public.can_write(text, text) to anon, authenticated;
+
 do $$ begin
   alter publication supabase_realtime add table public.docs;
 exception when others then null; end $$;
