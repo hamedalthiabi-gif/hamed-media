@@ -839,7 +839,6 @@ function home(){
  <section class="section"><h2>${t("forWhom")}</h2><div class="simple">${[["fw_w","account"],["fw_f","funders"],["fw_o","orgs"],["fw_e","programs"]].filter(([k,g])=>canSee(g)).map(([k,g])=>`<button class="card" data-go="${g}" style="text-align:start;font:inherit;color:inherit;cursor:pointer"><h3>${t(k)}</h3><p>${t(k+"p")}</p></button>`).join("")}</div></section>
  <section class="section"><h2>${t("gpT")}</h2><p class="lead">${t("gpP")}</p><div class="steps">${STEPS[S.lang].map(s=>`<div class="step"><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join("")}</div></section>
  ${showVoices?`<section class="section voices" id="voices">${voicesHTML()}</section>`:""}
- <section class="section"><div class="sources"><span>${t("sourcesT")}</span>${["مسك","أكاديمية طويق","موهبة","المركز الوطني لتنمية القطاع غير الربحي","مؤسسة الملك خالد","أكاديمية الفوزان"].map(s=>`<b>${s}</b>`).join("")}</div></section>
  ${board.length>=3||R.owner?`<section class="section two-col"><div><h2>${t("lbT")}</h2><p class="lead">${t("lbP")}</p><div id="boardBox">${boardHTML(5)}</div></div><div style="padding-top:6px">${earnHTML()}</div></section>`:""}`;
 }
 function journeyCards(){
