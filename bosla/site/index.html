@@ -147,7 +147,7 @@
 }
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:15px;line-height:1.65;margin:0;
-  background-image:radial-gradient(circle at 1px 1px,rgba(186,103,64,.10) 1px,transparent 0);background-size:22px 22px}
+}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--head)}
 [lang="en"] body,[dir="ltr"]{font-family:var(--latin)}
 .wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
@@ -168,7 +168,7 @@ nav button[aria-selected="true"]{opacity:1;border-bottom-color:#BA6740;font-weig
 main{padding-block:26px 120px}
 h1{font-size:28px;line-height:1.3;margin:0 0 10px;text-wrap:balance}
 h2{font-size:20px;margin:0 0 6px;color:var(--navy);text-wrap:balance;display:flex;align-items:center;gap:10px}
-h2::before{content:"";flex:none;width:18px;height:18px;border-radius:50%;background:radial-gradient(circle,var(--copper) 0 3px,transparent 3.5px),radial-gradient(circle,transparent 5px,rgba(186,103,64,.45) 5.5px 6.5px,transparent 7px),radial-gradient(circle,transparent 8px,rgba(94,139,110,.4) 8.5px 9px,transparent 9.5px)}
+h2::before{display:none;content:"";flex:none;width:18px;height:18px;border-radius:50%;background:radial-gradient(circle,var(--copper) 0 3px,transparent 3.5px),radial-gradient(circle,transparent 5px,rgba(186,103,64,.45) 5.5px 6.5px,transparent 7px),radial-gradient(circle,transparent 8px,rgba(94,139,110,.4) 8.5px 9px,transparent 9.5px)}
 h3{font-size:16px;margin:0;text-wrap:balance}
 .lead{color:var(--muted);max-width:65ch;margin:0 0 18px}
 .section{margin-bottom:34px}
@@ -194,7 +194,7 @@ h3{font-size:16px;margin:0;text-wrap:balance}
 .btn:focus-visible{outline:2px solid var(--navy);outline-offset:2px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:10px;min-width:0;transition:transform .2s,box-shadow .2s,border-color .2s}
-.card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(15,53,87,.08);border-color:rgba(186,103,64,.45)}
+.card:hover{border-color:rgba(15,53,87,.25)}
 .card.soon{background:linear-gradient(160deg,var(--surface),var(--sage-soft))}
 .card p{margin:0;color:var(--muted);font-size:14px}
 .tags{display:flex;gap:6px;flex-wrap:wrap}
@@ -339,7 +339,7 @@ pre.tpl{white-space:pre-wrap;direction:ltr;text-align:left;font-family:var(--lat
 <style>
 .jgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
 .jcard{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:8px;cursor:pointer;text-align:start;font:inherit;color:inherit;transition:transform .2s,border-color .2s,box-shadow .2s}
-.jcard:hover,.jcard:focus-visible{transform:translateY(-3px);border-color:var(--copper);box-shadow:0 10px 24px rgba(15,53,87,.08);outline:none}
+.jcard:hover,.jcard:focus-visible{border-color:var(--copper);box-shadow:0 10px 24px rgba(15,53,87,.08);outline:none}
 .jcard[aria-pressed="true"]{border-color:var(--copper);background:linear-gradient(160deg,var(--surface),var(--copper-soft))}
 .jicon{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:var(--sage-soft);color:var(--sage)}
 .jcard:nth-child(2n) .jicon{background:var(--copper-soft);color:var(--copper)}
@@ -405,6 +405,19 @@ pre.tpl{white-space:pre-wrap;direction:ltr;text-align:left;font-family:var(--lat
 .planout ul{margin:6px 0 0;padding-inline-start:20px;font-size:14px;color:var(--muted)}
 .admin{border:1px dashed var(--copper)}
 .sub{font-size:16px;margin:26px 0 10px;color:var(--navy)}
+.hero2{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:32px 28px;margin-bottom:30px;display:grid;gap:14px}
+.hero2 h1{font-size:30px;color:var(--navy);margin:0;max-width:24ch}
+.hero2 p{margin:0;color:var(--muted);max-width:62ch}
+.sform{display:flex;gap:8px;max-width:620px;margin-top:6px}
+.sform input{flex:1;min-width:0;font:inherit;font-size:15px;padding:11px 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--fg)}
+.sform input:focus{outline:2px solid var(--navy);outline-offset:1px}
+.sform .btn{padding:10px 20px}
+.qbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.qbar input{flex:1;min-width:200px;max-width:460px;font:inherit;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--fg)}
+.qbar input:focus{outline:2px solid var(--navy);outline-offset:1px}
+.simple{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.simple .card{gap:6px}
+@media (max-width:600px){.hero2{padding:22px 18px}.hero2 h1{font-size:23px}.sform{flex-direction:column}}
 </style>
 
 <div id="app" dir="rtl" lang="ar">
@@ -431,22 +444,22 @@ pre.tpl{white-space:pre-wrap;direction:ltr;text-align:left;font-family:var(--lat
 <script>
 const TODAY=new Date();TODAY.setHours(0,0,0,0);
 const T={
-ar:{brand:"بوصلة",tagline:"المرجع التعليمي للعاملين في القطاع غير الربحي",
+ar:{brand:"بوصلة",tagline:"دليل البرامج التأهيلية للعاملين في القطاع غير الربحي",
  home:"الرئيسية",journeys:"الرحلات التعليمية",programs:"تقويم التعليم",calendar:"الفعاليات والمواعيد",communities:"المجتمعات المهنية",content:"المحتوى الإثرائي",elearn:"التعلم عن بعد",funders:"للممولين",orgs:"للجمعيات",account:"حسابي",
- heroT:"مرجعك التعليمي في القطاع غير الربحي",
- heroP:"بوصلة تجمع البرامج التأهيلية المتفرقة في القطاع غير الربحي في مكان واحد، لتصل إلى ما يناسبك منها بسهولة وثقة.",
+ heroT:"البرامج التأهيلية للقطاع غير الربحي في مكان واحد",
+ heroP:"نجمع الدورات والدبلومات والزمالات والفعاليات من مصادرها الرسمية ونحدّثها كل أسبوع. تختار ما يناسبك، وتقدّم مباشرة من موقع الجهة المقدمة.",searchPh:"ابحث عن برنامج أو جهة، مثل: تنمية الموارد",searchBtn:"بحث",latestT:"أحدث البرامج",allPrograms:"كل البرامج",resultsFor:"نتائج البحث عن «{q}»",clearSearch:"مسح البحث",
  startJ:"اختر رحلتك",exploreP:"تصفح البرامج",
  visionT:"الرؤية",visionP:"أن تكون بوصلة المرجع التعليمي للعاملين بالقطاع غير الربحي.",missionT:"الرسالة",missionP:"تمكين العاملين بالقطاع غير الربحي مهاريًا وعلميًا.",valuesT:"القيم",valuesP:"الشراكة · المصداقية · التأثير · الابتكار",
- forWhom:"ماذا تقدم بوصلة؟",fw_w:"للعاملين بالقطاع",fw_wp:"حساب موحد وسيرة ذاتية، وبرامج تأهيلية موثوقة.",fw_f:"للممولين",fw_fp:"توجيه الدعم نحو البرامج التي يحتاجها القطاع دون تكرار.",fw_o:"للجمعيات",fw_op:"خطط تعليمية للموظفين والوصول إلى كفاءات أفضل.",fw_e:"للجهات التعليمية",fw_ep:"الوصول للعاملين أسرع، وتقييم حقيقي للبرامج من المتعلمين.",
+ forWhom:"لمن بوصلة؟",fw_w:"للعاملين بالقطاع",fw_wp:"حساب موحد وسيرة ذاتية، وبرامج تأهيلية موثوقة.",fw_f:"للممولين",fw_fp:"توجيه الدعم نحو البرامج التي يحتاجها القطاع دون تكرار.",fw_o:"للجمعيات",fw_op:"خطط تعليمية للموظفين والوصول إلى كفاءات أفضل.",fw_e:"للجهات التعليمية",fw_ep:"الوصول للعاملين أسرع، وتقييم حقيقي للبرامج من المتعلمين.",
  jT:"الرحلات التعليمية",jP:"خمس رحلات مرتبة حسب موقعك في القطاع. ابدأ رحلتك وعلّم كل خطوة تنجزها.",jStart:"ابدأ هذه الرحلة",jStarted:"رحلتك الحالية",jFor:"لمن هذه الرحلة؟",jDone:"أنجزت",jMark:"علّم كمنجز",jProgress:"التقدم",
- pT:"تقويم التعليم",pP:"كل البرامج التأهيلية في القطاع مصنفة حسب حالتها. تحقق من مواعيد التقديم والرسوم في موقع كل برنامج.",
+ pT:"تقويم التعليم",pP:"نعرض كل برنامج كما تنشره الجهة المقدمة، مع رابط صفحته الرسمية. المواعيد والرسوم قد تتغير، فراجعها في موقع الجهة قبل التقديم.",
  st_all:"كل البرامج",st_existing:"البرامج القائمة",st_current:"البرامج الحالية",st_new:"البرامج الجديدة",st_future:"البرامج المستقبلية",
  st_existing_d:"متاحة باستمرار",st_current_d:"مفتوحة للتسجيل الآن",st_new_d:"أُضيفت حديثًا",st_future_d:"قادمة قريبًا",
  masters:"ماجستير",certificate:"شهادة مهنية",course:"دورات",fellowship:"زمالة",directory:"دليل برامج",award:"جائزة",academy:"أكاديمية",all:"الكل",
  local:"محلي",intl:"دولي",allScope:"محلي ودولي",region:"النطاق",
  type:"النوع",mode:"طريقة الدراسة",lang:"اللغة",provider:"الجهة",country:"الدولة",cost:"التكلفة",focus:"التركيز",status:"الحالة",
  online:"عن بُعد",checkSite:"حسب البرنامج",english:"الإنجليزية",arabic:"العربية",paid:"برسوم",free:"مجاني",
- visit:"زيارة الموقع",apply:"قدّم طلبك الآن",compareAdd:"قارن",compareN:"برامج محددة للمقارنة",compareGo:"عرض المقارنة",clear:"مسح",
+ visit:"زيارة الموقع",apply:"صفحة البرنامج",compareAdd:"قارن",compareN:"برامج محددة للمقارنة",compareGo:"عرض المقارنة",clear:"مسح",
  cmpT:"مقارنة البرامج",cmpEmpty:"اختر برنامجين أو ثلاثة لمقارنتها.",cmpMax:"يمكن مقارنة ثلاثة برامج كحد أقصى",
  fieldsT:"تصفية المجالات",f_waqf:"إدارة الأوقاف",f_csr:"المسؤولية المجتمعية",f_lead:"القيادة",f_gov:"الحوكمة",f_dev:"العمل التنموي",f_fund:"تنمية الموارد",f_vol:"التطوع",f_impact:"قياس الأثر",
  rateIt:"قيّم البرنامج:",ratings:"تقييم",noRatings:"لا تقييمات بعد",
@@ -485,13 +498,13 @@ ar:{brand:"بوصلة",tagline:"المرجع التعليمي للعاملين �
  rdNext:"خطواتك التالية:",rdAll:"أكملت كل المتطلبات الأساسية. ابدأ من بنك المنح.",rdAnswer:"أجب عن جميع الأسئلة لتظهر النتيجة.",e_ready:"إكمال مؤشر الجاهزية",
  sgT:"اقتراحات وكيل المحتوى",sgP:"برامج جمعها الوكيل من مصادر موثوقة. راجعها ثم اقبلها لتظهر في المنصة.",sgNone:"لا توجد اقتراحات جديدة.",sgOk:"قبول",sgNo:"رفض",sgSrc:"المصدر",sgAdded:"أُضيف إلى المنصة",sgDropped:"حُذف الاقتراح",
  hiddenTag:"مخفي",noMatch:"لا توجد نتائج مطابقة.",login:"سجّل الدخول لاستخدام هذه الميزة"},
-en:{brand:"Bosla",tagline:"The learning reference for nonprofit professionals",
+en:{brand:"Bosla",tagline:"A directory of training programs for nonprofit professionals",
  home:"Home",journeys:"Learning journeys",programs:"Learning calendar",calendar:"Events & dates",communities:"Communities",content:"Learning content",elearn:"E-learning",funders:"For funders",orgs:"For nonprofits",account:"My account",
- heroT:"Your learning reference in the nonprofit sector",
- heroP:"Bosla brings the sector's scattered training programs into one place, so you can find what fits you easily and with confidence.",
+ heroT:"Nonprofit training programs, in one place",
+ heroP:"We collect courses, diplomas, fellowships and events from their official sources and update them every week. Pick what fits you and apply directly on the provider's site.",searchPh:"Search a program or provider, e.g. fundraising",searchBtn:"Search",latestT:"Latest programs",allPrograms:"All programs",resultsFor:"Results for \"{q}\"",clearSearch:"Clear search",
  startJ:"Choose your journey",exploreP:"Browse programs",
  visionT:"Vision",visionP:"To be the learning reference for nonprofit professionals.",missionT:"Mission",missionP:"Empowering nonprofit professionals in skills and knowledge.",valuesT:"Values",valuesP:"Partnership · Credibility · Impact · Innovation",
- forWhom:"What Bosla offers",fw_w:"For professionals",fw_wp:"A unified account and CV, and trusted training programs.",fw_f:"For funders",fw_fp:"Direct support to the programs the sector needs, without duplication.",fw_o:"For nonprofits",fw_op:"Staff learning plans and access to better talent.",fw_e:"For training providers",fw_ep:"Faster reach to professionals and real program ratings from learners.",
+ forWhom:"Who is Bosla for?",fw_w:"For professionals",fw_wp:"A unified account and CV, and trusted training programs.",fw_f:"For funders",fw_fp:"Direct support to the programs the sector needs, without duplication.",fw_o:"For nonprofits",fw_op:"Staff learning plans and access to better talent.",fw_e:"For training providers",fw_ep:"Faster reach to professionals and real program ratings from learners.",
  jT:"Learning journeys",jP:"Five journeys ordered by your stage in the sector. Start yours and mark each step you complete.",jStart:"Start this journey",jStarted:"Your current journey",jFor:"Who is it for?",jDone:"Done",jMark:"Mark as done",jProgress:"Progress",
  pT:"Learning calendar",pP:"All sector training programs, grouped by status. Check deadlines and fees on each program's website.",
  st_all:"All programs",st_existing:"Ongoing programs",st_current:"Current programs",st_new:"New programs",st_future:"Upcoming programs",
@@ -500,7 +513,7 @@ en:{brand:"Bosla",tagline:"The learning reference for nonprofit professionals",
  local:"Local",intl:"International",allScope:"Local & international",region:"Scope",
  type:"Type",mode:"Mode",lang:"Language",provider:"Provider",country:"Country",cost:"Cost",focus:"Focus",status:"Status",
  online:"Online",checkSite:"See program",english:"English",arabic:"Arabic",paid:"Paid",free:"Free",
- visit:"Visit website",apply:"Apply now",compareAdd:"Compare",compareN:"programs selected",compareGo:"View comparison",clear:"Clear",
+ visit:"Visit website",apply:"Program page",compareAdd:"Compare",compareN:"programs selected",compareGo:"View comparison",clear:"Clear",
  cmpT:"Program comparison",cmpEmpty:"Select two or three programs to compare.",cmpMax:"You can compare up to three programs",
  fieldsT:"Filter by field",f_waqf:"Endowments",f_csr:"Social responsibility",f_lead:"Leadership",f_gov:"Governance",f_dev:"Community development",f_fund:"Resource development",f_vol:"Volunteering",f_impact:"Impact measurement",
  rateIt:"Rate this program:",ratings:"ratings",noRatings:"No ratings yet",
@@ -764,7 +777,7 @@ function programCard(p){
   <p>${esc(L(p.provider))}${L(p.country)?" · "+esc(L(p.country)):""}</p>
   <p>${esc(L(p.focus))}</p>
   <div class="meta"><div><span>${t("lang")}</span>${t(p.lng)}</div><div><span>${t("mode")}</span>${mode}</div><div><span>${t("cost")}</span>${cost}</div></div>
-  ${canApply?`<div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap"><span class="rsum">${rt.n?`${starStr(Math.round(rt.avg))} ${rt.avg.toFixed(1)} · ${rt.n} ${t("ratings")}`:t("noRatings")}</span>
+  ${canApply?`<div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap"><span class="rsum">${rt.n?`${starStr(Math.round(rt.avg))} ${rt.avg.toFixed(1)} · ${rt.n} ${t("ratings")}`:t("rateIt")}</span>
    <span class="myrate" role="group" aria-label="${t("rateIt")}">${[1,2,3,4,5].map(n=>`<button type="button" data-rate="${p.id}" data-n="${n}" class="${n<=mine?"on":""}" aria-label="${n}">★</button>`).join("")}</span></div>`:""}
   <div class="cardfoot">${canApply?`<a class="btn apply" href="${esc(p.url)}" target="_blank" rel="noopener">${t("apply")} ${arrow()}</a>`:`<a class="link" href="${esc(p.url)}" target="_blank" rel="noopener">${t("visit")} ${arrow()}</a>`}
    <div style="display:flex;gap:10px;align-items:center">${canApply?followBtn(p.id):""}${canApply?`<label class="chk"><input type="checkbox" id="c-${p.id}" data-cmp="${p.id}" ${on?"checked":""}> ${t("compareAdd")}</label>`:""}</div></div>
@@ -785,22 +798,20 @@ function comparison(){
 /* ---------- views ---------- */
 function home(){
  const up=EVENTS.filter(e=>!isPast(e)).sort((a,b)=>a.date.localeCompare(b.date)).slice(0,2);
- return `<section class="hero">
-  <svg class="ripple" viewBox="0 0 440 440" aria-hidden="true">
-   <circle class="r" cx="220" cy="220" r="210" stroke="#BA6740"/><circle class="r" cx="220" cy="220" r="210" stroke="#5E8B6E"/><circle class="r" cx="220" cy="220" r="210" stroke="#BA6740"/><circle class="r" cx="220" cy="220" r="210" stroke="#0F3557"/>
-   <circle cx="220" cy="220" r="60" fill="none" stroke="#BA6740" stroke-opacity=".25"/><circle cx="220" cy="220" r="110" fill="none" stroke="#5E8B6E" stroke-opacity=".2" stroke-dasharray="3 6"/><circle cx="220" cy="220" r="165" fill="none" stroke="#0F3557" stroke-opacity=".12"/>
-   <circle cx="220" cy="220" r="9" fill="#BA6740"/><circle cx="280" cy="180" r="4" fill="#5E8B6E"/><circle cx="150" cy="260" r="5" fill="#0F3557" fill-opacity=".6"/><circle cx="300" cy="300" r="3.5" fill="#BA6740" fill-opacity=".7"/><circle cx="130" cy="150" r="3" fill="#5E8B6E" fill-opacity=".7"/><circle cx="345" cy="215" r="4" fill="#0F3557" fill-opacity=".4"/>
-  </svg>
-  <h1>${t("heroT")}</h1><p>${t("heroP")}</p>
-  <div class="stats">${canSee("journeys")?`<div><b>${JOURNEYS.length}</b><span>${t("journeys")}</span></div>`:""}<div><b>${programs().length}</b><span>${t("programs")}</span></div><div><b>3</b><span>${t("communities")}</span></div></div>
-  <div class="row">${canSee("journeys")?`<button class="btn" data-go="journeys">${t("startJ")}</button>`:""}<button class="btn ${canSee("journeys")?"line":""}" data-go="programs">${t("exploreP")}</button></div></section>
- ${canSee("journeys")?`<section class="section"><h2>${t("journeys")}</h2><p class="lead">${t("jP")}</p>${journeyCards()}</section>`:""}
- <section class="section"><h2>${t("forWhom")}</h2><div class="grid">${[["fw_w","account"],["fw_f","funders"],["fw_o","orgs"],["fw_e","programs"]].filter(([k,g])=>canSee(g)).map(([k,g])=>`<button class="card" data-go="${g}" style="text-align:start;font:inherit;color:inherit;cursor:pointer"><h3>${t(k)}</h3><p>${t(k+"p")}</p><span class="link">${arrow()}</span></button>`).join("")}</div></section>
+ const rank=p=>({current:0,new:1,future:2,existing:3}[p.status]??4)+(p.region==="local"?0:0.5);
+ const latest=programs().filter(p=>p.type!=="directory").sort((a,b)=>rank(a)-rank(b)).slice(0,6);
+ const board=(R.board||[]).filter(b=>(b.points||0)>0);
+ const showVoices=(R.list&&R.list.length>0)||R.owner;
+ return `<section class="hero2"><h1>${t("heroT")}</h1><p>${t("heroP")}</p>
+  <form class="sform" id="heroSearch" role="search"><input id="heroQ" type="search" placeholder="${t("searchPh")}" aria-label="${t("searchPh")}"><button class="btn" type="submit">${t("searchBtn")}</button></form></section>
+ ${canSee("journeys")?`<section class="section"><h2>${t("journeys")} <small class="tag">${t("hiddenTag")}</small></h2><p class="lead">${t("jP")}</p>${journeyCards()}</section>`:""}
+ <section class="section"><div class="vhead" style="margin-bottom:10px"><h2>${t("latestT")}</h2><button class="btn line" data-go="programs" style="font-size:13px;padding:5px 14px">${t("allPrograms")}</button></div>
+  <div class="grid">${latest.map(programCard).join("")}</div></section>
  ${up.length?`<section class="section"><div class="vhead" style="margin-bottom:10px"><h2>${t("evT")}</h2><button class="btn line" data-go="calendar" style="font-size:13px;padding:5px 14px">${t("calendar")}</button></div><div class="grid">${up.map(eventCard).join("")}</div></section>`:""}
- <section class="section"><div class="grid">${[["visionT","visionP"],["missionT","missionP"],["valuesT","valuesP"]].map(([a,b])=>`<div class="card soon"><h3>${t(a)}</h3><p>${t(b)}</p></div>`).join("")}</div></section>
+ <section class="section"><h2>${t("forWhom")}</h2><div class="simple">${[["fw_w","account"],["fw_f","funders"],["fw_o","orgs"],["fw_e","programs"]].filter(([k,g])=>canSee(g)).map(([k,g])=>`<button class="card" data-go="${g}" style="text-align:start;font:inherit;color:inherit;cursor:pointer"><h3>${t(k)}</h3><p>${t(k+"p")}</p></button>`).join("")}</div></section>
  <section class="section"><h2>${t("gpT")}</h2><p class="lead">${t("gpP")}</p><div class="steps">${STEPS[S.lang].map(s=>`<div class="step"><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join("")}</div></section>
- <section class="section voices" id="voices">${voicesHTML()}</section>
- <section class="section two-col"><div><h2>${t("lbT")}</h2><p class="lead">${t("lbP")}</p><div id="boardBox">${boardHTML(5)}</div></div><div style="padding-top:6px">${earnHTML()}</div></section>`;
+ ${showVoices?`<section class="section voices" id="voices">${voicesHTML()}</section>`:""}
+ ${board.length>=3||R.owner?`<section class="section two-col"><div><h2>${t("lbT")}</h2><p class="lead">${t("lbP")}</p><div id="boardBox">${boardHTML(5)}</div></div><div style="padding-top:6px">${earnHTML()}</div></section>`:""}`;
 }
 function journeyCards(){
  return `<div class="jgrid">${JOURNEYS.map(j=>{const pct=jPct(j);const started=(R.prefs.journeys||{})[j.id];
@@ -822,9 +833,9 @@ function programsView(){
  const all=programs();
  const types=["all","masters","certificate","course","fellowship","academy","award","directory"];
  const cnt=s=>s==="all"?all.length:all.filter(p=>p.status===s).length;
- const list=all.filter(p=>(S.status==="all"||p.status===S.status)&&(S.filter==="all"||p.type===S.filter)&&(S.region==="all"||p.region===S.region)&&(!S.fields.length||S.fields.some(f=>p.fields.includes(f))));
- return `${comparison()}<h2>${t("pT")}</h2><p class="lead">${t("pP")}</p>
-  <div class="statusbar">${["all",...STATUSES].map(s=>`<button class="sbtn" type="button" data-status="${s}" aria-pressed="${S.status===s}"><b>${cnt(s)}</b>${t("st_"+s)}${s!=="all"?`<span style="display:block">${t("st_"+s+"_d")}</span>`:""}</button>`).join("")}</div>
+ const qq=(S.pq||"").trim().toLowerCase();const list=all.filter(p=>(!qq||[L(p.name),L(p.provider),L(p.focus),p.name.en||"",p.provider.en||""].join(" ").toLowerCase().includes(qq))&&(S.status==="all"||p.status===S.status)&&(S.filter==="all"||p.type===S.filter)&&(S.region==="all"||p.region===S.region)&&(!S.fields.length||S.fields.some(f=>p.fields.includes(f))));
+ return `${comparison()}<h2>${t("pT")}</h2><p class="lead">${t("pP")}</p><div class="qbar"><input id="pq" type="search" value="${esc(S.pq||"")}" placeholder="${t("searchPh")}" aria-label="${t("searchPh")}">${qq?`<span class="note" style="margin:0">${t("resultsFor",{q:esc(S.pq)})} · ${list.length}</span>`:""}</div>
+  <div class="statusbar">${["all",...STATUSES].filter(s=>s==="all"||cnt(s)>0||S.status===s).map(s=>`<button class="sbtn" type="button" data-status="${s}" aria-pressed="${S.status===s}"><b>${cnt(s)}</b>${t("st_"+s)}${s!=="all"?`<span style="display:block">${t("st_"+s+"_d")}</span>`:""}</button>`).join("")}</div>
   <div class="row2">${["all","local","intl"].map(k=>`<button class="chip" data-region="${k}" aria-pressed="${S.region===k}">${t(k==="all"?"allScope":k)}</button>`).join("")}<span class="sep"></span>
   ${types.map(k=>`<button class="chip" data-filter="${k}" aria-pressed="${S.filter===k}">${t(k)}</button>`).join("")}</div>
   <div class="fieldbox"><b>${t("fieldsT")}</b><div class="opts">${FIELDS.map(f=>`<label class="chk"><input type="checkbox" id="fld-${f}" data-field="${f}" ${S.fields.includes(f)?"checked":""}> ${t(f)}</label>`).join("")}</div></div>
@@ -926,6 +937,7 @@ function accountView(){
    <label>${t("pBio")}<textarea id="pBio" maxlength="400">${esc(p.bio||"")}</textarea></label><div><button class="btn" type="submit">${t("pSave")}</button></div></form></div>
   <div class="panel"><div class="cmhead"><h3>${t("cvT")}</h3>${R.downloads?`<button class="btn line" type="button" id="cvBtn" style="font-size:13px;padding:5px 12px">${t("cvDl")}</button>`:""}</div>
    <p class="note" style="margin-top:6px"><b>${t("cvDone")}:</b></p>${done.length?`<ul style="margin:4px 0 0;padding-inline-start:20px">${done.map(d=>`<li>${esc(L(d.name))} <small style="color:var(--muted)">· ${esc(L(d.sub))}</small></li>`).join("")}</ul>`:`<p class="note">${t("cvNone")}</p>`}</div>
+  <div class="panel" id="acReview"><h3>${t("vAdd")}</h3><div id="vForm">${voicesForm()}</div></div>
   <div class="panel"><h3>${t("needT")}</h3><p class="note" style="margin-top:4px">${t("needP")}</p><form class="form" id="needForm" style="margin-top:8px"><label>${t("needTopic")}<input id="nTopic" maxlength="120" value="${esc((R.needs.find(n=>n.id===R.uid)||{}).topic||"")}"></label>
    <label ${canSee("journeys")?"":"hidden"}>${t("empJ")}<select id="nJ">${JOURNEYS.map(j=>`<option value="${j.id}" ${(R.needs.find(n=>n.id===R.uid)||{}).journey===j.id?"selected":""}>${esc(L(j.name))}</option>`).join("")}</select></label><div><button class="btn" type="submit">${t("needSend")}</button></div></form></div>
  </div><div>
@@ -992,7 +1004,7 @@ function voicesForm(){
   <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" type="submit">${t("vSend")}</button>${mine?`<button class="btn line" type="button" id="rDel">${t("vDel")}</button>`:""}</div></form>`;
 }
 function voicesHTML(){return `<div class="vhead">${voicesHead()}</div><div id="vList">${voicesList()}</div><div id="vForm">${voicesForm()}</div>`}
-function refreshVoices(){if(!$("voices"))return;$("voices").querySelector(".vhead").innerHTML=voicesHead();$("vList").innerHTML=voicesList();if(!$("vForm").contains(document.activeElement))$("vForm").innerHTML=voicesForm()}
+function refreshVoices(){if(!$("voices")){if(S.tab==="home"&&R.list&&R.list.length&&!document.activeElement?.closest?.("form"))rerender();return}$("voices").querySelector(".vhead").innerHTML=voicesHead();$("vList").innerHTML=voicesList();if(!$("vForm").contains(document.activeElement))$("vForm").innerHTML=voicesForm()}
 
 /* ---------- points ---------- */
 const myPoints=()=>((R.board||[]).find(b=>b.id===R.uid)||{}).points||0;
@@ -1014,7 +1026,7 @@ async function resolveNames(){
  const ids=R.board.map(b=>b.id).filter(id=>id!==R.uid&&!(id in R.names));if(!ids.length)return;
  try{const ps=await R.user.profiles(ids);ids.forEach(id=>{R.names[id]=(ps&&ps[id]&&ps[id].name)||""});refreshBoard()}catch(_){}
 }
-function refreshBoard(){const b=$("boardBox");if(b)b.innerHTML=boardHTML(S.tab==="account"?10:5);if($("acKpi"))$("acKpi").innerHTML=acKpi()}
+function refreshBoard(){if(S.tab==="home"&&!$("boardBox")&&(R.board||[]).filter(x=>(x.points||0)>0).length>=3&&!document.activeElement?.closest?.("form")){rerender();return}const b=$("boardBox");if(b)b.innerHTML=boardHTML(S.tab==="account"?10:5);if($("acKpi"))$("acKpi").innerHTML=acKpi()}
 async function award(key,n){
  if(!R.db||!R.uid)return;
  const cur=(R.board||[]).find(b=>b.id===R.uid)||{points:0,awarded:{}};
@@ -1135,6 +1147,8 @@ async function downloadCV(){
  try{await R.downloads.save({filename:`${(p.name||"cv").replace(/[\\/:*?"<>|]/g,"")}-bosla.doc`,data:new Blob([html],{type:"application/msword"})})}catch(err){if(err?.code!=="declined")toast(t("cvFail"))}
 }
 
+document.addEventListener("submit",e=>{if(e.target.id!=="heroSearch")return;e.preventDefault();S.pq=($("heroQ").value||"").trim();S.status="all";S.filter="all";S.region="all";S.fields=[];go("programs")});
+document.addEventListener("input",e=>{if(e.target.id!=="pq")return;S.pq=e.target.value;const pos=e.target.selectionStart;rerender();const el=$("pq");if(el){el.focus();try{el.setSelectionRange(pos,pos)}catch(_){}}});
 /* ---------- boot ---------- */
 try{const l=localStorage.getItem("bosla-lang");if(l==="en"||l==="ar")S.lang=l}catch(e){}
 const h=(location.hash||"").slice(1);if(TABS.includes(h))S.tab=h;
