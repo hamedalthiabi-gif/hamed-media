@@ -1,0 +1,1255 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="إصدارات مجانية وتقويم للقطاع غير الربحي، وخدمات استشارية وتدريبية في التسويق والاستدامة المالية للمنظمات غير الربحية.">
+<meta property="og:title" content="حامد الذيابي | معرفة وخدمات لاستدامة القطاع غير الربحي">
+<meta property="og:description" content="اقرأ مجانًا، وتابع مناسبات القطاع، واطلب الخدمة التي تناسب منظمتك.">
+<meta property="og:image" content="https://hamedalthiabi.com/og.png">
+<meta property="og:url" content="https://hamedalthiabi.com/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@HAMEDALTHIABI">
+<link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="theme-color" content="#002544">
+<style>img{max-width:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+<title>حامد الذيابي | معرفة وخدمات لاستدامة القطاع غير الربحي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&amp;display=swap">
+<style>
+/* Layout: brand-led single look — cream ground (60%), navy blocks (30%), coral accent (10%); diamonds as the recurring mark */
+:root{
+  --cream:#F8F5EF; --paper:#FFFFFF; --navy:#002544; --navy-2:#0B3358; --coral:#BB6841; --ink:#1B2433; --muted:#5E6673; --line:#E3DCCF;
+  --font:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;direction:rtl}
+.wrap{max-width:1160px;margin-inline:auto;padding-inline:20px}
+h1,h2,h3{line-height:1.35;text-wrap:balance;margin:0}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--coral);outline-offset:3px}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(248,245,239,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.nav img{height:44px;width:auto}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:15px;font-weight:500}
+.nav ul a{text-decoration:none;color:var(--navy)}
+.nav ul a:hover{color:var(--coral)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;font:600 15px var(--font);text-decoration:none;border:0;cursor:pointer;border-radius:2px;transition:transform .2s,background .2s}
+.btn-coral{background:var(--coral);color:#fff}
+.btn-coral:hover{background:#a85a36;transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--cream);box-shadow:inset 0 0 0 1px rgba(248,245,239,.5)}
+.btn-ghost:hover{box-shadow:inset 0 0 0 1px var(--cream)}
+.nav .btn{padding:9px 16px}
+
+
+/* diamonds */
+.dots{display:flex;gap:7px;align-items:center}
+.dots i{width:9px;height:9px;background:var(--coral);display:block}
+.dots i:nth-child(odd){transform:rotate(45deg)}
+.dots i:nth-child(even){border-radius:50%}
+
+/* hero */
+.hero{background:var(--navy);color:var(--cream);overflow:hidden;position:relative}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;align-items:end;gap:24px;padding-block:56px 0}
+.hero-text{padding-bottom:64px;min-width:0}
+.launch{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:500;color:#E9C9B6;margin-bottom:22px}
+.launch b{background:var(--coral);color:#fff;padding:3px 10px;font-weight:600}
+.hero h1{font-size:clamp(34px,5.4vw,62px);font-weight:700;letter-spacing:-.5px}
+.hero h1 span{color:#E9A57F}
+.hero .lede{max-width:34em;margin-top:20px;font-size:18px;font-weight:300;color:#D9DEE6}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero-photo{position:relative;align-self:end;justify-self:center;width:min(440px,100%)}
+.hero-photo::before{content:"";position:absolute;width:72%;aspect-ratio:1;background:var(--coral);transform:rotate(45deg);left:14%;top:22%}
+.hero-photo img{position:relative;display:block;width:100%;height:auto}
+.hero .tri{position:absolute;left:0;bottom:0;width:0;height:0;border-bottom:120px solid var(--cream);border-right:120px solid transparent}
+@media (max-width:820px){
+  .hero .wrap{grid-template-columns:1fr;padding-top:40px}
+  .hero-text{padding-bottom:8px}
+  .hero-photo{width:min(340px,86%)}
+  .hero .tri{border-bottom-width:70px;border-right-width:70px}
+}
+
+/* stats band */
+.band{background:var(--paper);border-bottom:1px solid var(--line)}
+.band .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.stat{padding:26px 18px;border-inline-start:1px solid var(--line)}
+.stat:first-child{border-inline-start:0}
+.stat strong{display:block;font-size:30px;color:var(--navy);font-weight:700;font-variant-numeric:tabular-nums}
+.stat span{font-size:14px;color:var(--muted)}
+@media (max-width:720px){.band .wrap{grid-template-columns:repeat(2,1fr)}.stat:nth-child(3){border-inline-start:0}.stat{border-top:1px solid var(--line)}}
+
+/* sections */
+section{padding-block:84px}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--coral);font-weight:600;font-size:14px;margin-bottom:14px}
+.eyebrow::before{content:"";width:10px;height:10px;background:var(--coral);transform:rotate(45deg)}
+.h2{font-size:clamp(26px,3.4vw,40px);color:var(--navy);font-weight:700}
+.intro{max-width:40em;color:var(--muted);margin-top:14px}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.about p{color:var(--ink)}
+.about p+p{margin-top:16px}
+.about .quote{background:var(--navy);color:var(--cream);padding:34px;position:relative}
+.about .quote::after{content:"";position:absolute;top:0;left:0;border-top:56px solid var(--coral);border-right:56px solid transparent}
+.about .quote small{display:block;color:#E9A57F;font-weight:600;margin-bottom:10px;font-size:14px}
+.about .quote p{color:var(--cream);font-size:21px;font-weight:500;line-height:1.7}
+.about .quote .alt{margin-top:22px;padding-top:18px;border-top:1px solid rgba(248,245,239,.18);font-size:15px;font-weight:300;color:#C9D1DC}
+@media (max-width:820px){.about .wrap{grid-template-columns:1fr;gap:32px}}
+
+/* services */
+.services{background:var(--paper);border-block:1px solid var(--line)}
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:40px}
+.svc{border:1px solid var(--line);background:var(--cream);padding:30px;display:grid;grid-template-rows:auto auto 1fr auto;gap:10px;min-width:0}
+.svc .ico{width:46px;height:46px;background:var(--navy);display:grid;place-items:center;transform:rotate(45deg);margin:6px 6px 12px}
+.svc .ico svg{transform:rotate(-45deg);width:22px;height:22px;stroke:var(--cream);fill:none;stroke-width:1.8}
+.svc h3{font-size:22px;color:var(--navy)}
+.svc p{color:var(--muted);font-size:16px}
+.svc ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.svc li{font-size:13.5px;background:var(--paper);border:1px solid var(--line);padding:3px 12px;color:var(--navy)}
+@media (max-width:720px){.svc-grid{grid-template-columns:1fr}}
+.tabs{display:flex;gap:0;margin-top:36px;border-bottom:2px solid var(--navy);overflow-x:auto;scrollbar-width:none}
+.tab{background:none;border:0;padding:12px 18px;font:600 15px var(--font);color:var(--muted);cursor:pointer;white-space:nowrap;position:relative}
+.tab[aria-selected="true"]{color:var(--cream);background:var(--navy)}
+.tab:not([aria-selected="true"]):hover{color:var(--navy)}
+.panel{background:var(--cream);border:1px solid var(--line);border-top:0;padding:28px}
+.items{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:0 28px}
+.items li{display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);font-size:17px;font-weight:500;color:var(--navy);min-width:0}
+.items li::before{content:"";width:9px;height:9px;background:var(--coral);transform:rotate(45deg);flex:none}
+.panel .single{font-size:18px;color:var(--navy);font-weight:500}
+.panel .foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:24px}
+.panel .foot p{color:var(--muted);font-size:15px}
+@media (max-width:640px){.items{grid-template-columns:1fr}.panel{padding:20px}}
+
+
+/* store */
+.store{padding-top:72px}
+.fchips{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
+.fchip{border:1px solid var(--line);background:var(--paper);color:var(--navy);padding:7px 16px;font:500 14px var(--font);cursor:pointer}
+.fchip[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:var(--cream)}
+.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
+.prod{background:var(--paper);border:1px solid var(--line);padding:24px;display:grid;grid-template-rows:auto auto 1fr auto auto;gap:14px;position:relative;overflow:hidden;min-width:0}
+.prod::after{content:"";position:absolute;top:0;left:0;border-top:30px solid var(--coral);border-right:30px solid transparent}
+.prod .cat{font-size:12.5px;color:var(--coral);font-weight:600}
+.prod h3{font-size:19px;color:var(--navy);font-weight:600}
+.prod .price{display:flex;justify-content:space-between;align-items:baseline;padding-top:12px;border-top:1px solid var(--line)}
+.prod .price small{color:var(--muted);font-size:13px}
+.prod .price b{color:var(--navy);font-size:16px}
+.prod .btn{justify-content:center}
+@media (max-width:900px){.prod-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.prod-grid{grid-template-columns:1fr}}
+
+
+/* pages */
+.nav ul a[aria-current="page"]{color:var(--coral);box-shadow:inset 0 -2px 0 var(--coral);padding-bottom:4px}
+.btn-navy{background:var(--navy);color:var(--cream)}
+.btn-navy:hover{background:#0B3358;transform:translateY(-1px)}
+.home-about{padding-block:64px;border-bottom:1px solid var(--line)}
+.home-about .wrap{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.home-about .wrap>div{min-width:0;flex:1 1 420px}
+.home-svc{background:var(--paper)}
+.hs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px}
+.hs{display:grid;grid-template-rows:auto 1fr auto;gap:10px;padding:24px;background:var(--cream);border:1px solid var(--line);text-decoration:none;transition:border-color .2s,transform .2s;min-width:0}
+.hs:hover{border-color:var(--coral);transform:translateY(-2px)}
+.hs .n{color:var(--coral);font-weight:600;font-size:14px}
+.hs h3{font-size:18px;color:var(--navy)}
+.hs .go{font-size:14px;color:var(--muted)}
+.hs:hover .go{color:var(--coral)}
+.home-cta{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:32px;padding:24px 28px;background:var(--navy);color:var(--cream)}
+.home-cta p{font-size:18px;font-weight:500}
+@media (max-width:900px){.hs-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.hs-grid{grid-template-columns:1fr}}
+@media (max-width:860px){.nav ul{display:flex;position:fixed;bottom:0;left:0;right:0;background:var(--paper);border-top:1px solid var(--line);justify-content:space-around;gap:0;padding:8px 4px calc(8px + env(safe-area-inset-bottom,0px));z-index:30;font-size:13px}
+.nav ul a{padding:6px 4px;display:block}
+.nav ul a[aria-current="page"]{box-shadow:none}
+body{padding-bottom:56px}
+.nav{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--cream)}}
+
+
+/* publications */
+.pub-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}
+.pub{background:var(--paper);border:1px solid var(--line);display:grid;grid-template-rows:auto 1fr auto;min-width:0}
+.pub img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;display:block;max-width:100%}
+.pub-body{padding:16px 16px 8px;display:grid;gap:6px;align-content:start}
+.pub-tag{font-size:12.5px;color:var(--coral);font-weight:600;font-variant-numeric:tabular-nums}
+.pub h3{font-size:17px;color:var(--navy);line-height:1.5}
+.pub p{font-size:14px;color:var(--muted);line-height:1.7}
+.pub .btn{margin:12px 16px 16px;justify-content:center;padding:10px 14px}
+@media (max-width:1000px){.pub-grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:760px){.pub-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:440px){.pub-grid{grid-template-columns:1fr}}
+@media (max-width:860px){.nav ul{font-size:12px}}
+
+
+.pubs-sec{padding-block:44px}
+.pubs-top{padding-top:84px}
+#sec-trans{background:var(--paper);border-block:1px solid var(--line)}
+.pub-head{display:flex;align-items:center;gap:12px;margin-top:8px;padding-bottom:10px;border-bottom:2px solid var(--navy)}
+.pub-head::before{content:"";width:12px;height:12px;background:var(--coral);transform:rotate(45deg);flex:none}
+.h3x{font-size:22px;color:var(--navy)}
+.pubs-top .pub-head{margin-top:36px}
+.intro.sm{font-size:15.5px;margin-top:12px}
+.pub-grid{margin-top:24px}
+.pub.tall img{aspect-ratio:3/4;object-position:top}
+.pub-jump{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
+.pub-jump a{border:1px solid var(--line);background:var(--paper);color:var(--navy);padding:6px 14px;font-size:14px;font-weight:500;text-decoration:none}
+.pub-jump a:hover{border-color:var(--coral);color:var(--coral)}
+#sec-trans .pub-grid{grid-template-columns:repeat(3,1fr)}
+#sec-guides .pub-grid{grid-template-columns:repeat(2,1fr);max-width:620px}
+@media (max-width:760px){#sec-trans .pub-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:440px){#sec-trans .pub-grid,#sec-guides .pub-grid{grid-template-columns:1fr}}
+
+/* proof */
+.clients{padding-bottom:56px;overflow:hidden}
+.marquee{margin-top:30px;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.track{list-style:none;margin:0;padding:0;display:flex;gap:14px;width:max-content;animation:scroll 70s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+.track li{flex:none;background:#fff;border:1px solid var(--line);width:180px;height:84px;display:grid;place-items:center}
+.track img{max-width:160px;max-height:72px;width:auto;height:auto;filter:grayscale(1);opacity:.8;transition:filter .3s,opacity .3s}
+.track li:hover img{filter:none;opacity:1}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(50%)}}
+@media (prefers-reduced-motion:reduce){.track{animation:none;flex-wrap:wrap;width:auto;justify-content:center;padding-inline:16px}.track li[aria-hidden]{display:none}.marquee{mask-image:none;-webkit-mask-image:none}}
+.awards{background:var(--navy);color:var(--cream)}
+.awards .h2{color:var(--cream)}
+.aw-list{list-style:none;margin:32px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(248,245,239,.15)}
+.aw-list li{background:var(--navy);padding:22px;display:grid;gap:4px;min-width:0;position:relative}
+.aw-list li::before{content:"";width:10px;height:10px;background:var(--coral);transform:rotate(45deg);margin-bottom:8px}
+.aw-list b{font-size:17px}
+.aw-list span{color:#C9D1DC;font-size:14.5px}
+@media (max-width:820px){.aw-list{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.aw-list{grid-template-columns:1fr}}
+.journey{background:var(--paper);border-block:1px solid var(--line)}
+.tl{list-style:none;margin:36px 0 0;padding:0;display:grid;gap:0;border-inline-start:2px solid var(--line)}
+.tl li{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:18px 0 18px 0;padding-inline-start:28px;position:relative;min-width:0}
+.tl li::before{content:"";position:absolute;inset-inline-start:-7px;top:26px;width:12px;height:12px;background:var(--coral);transform:rotate(45deg)}
+.tl .yr{font-weight:600;color:var(--coral);font-variant-numeric:tabular-nums;padding-top:2px}
+.tl h3{font-size:18px;color:var(--navy)}
+.tl p{color:var(--muted);font-size:15.5px;margin-top:4px}
+.tl p b{color:var(--navy)}
+@media (max-width:640px){.tl li{grid-template-columns:1fr;gap:4px}}
+.creds-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.cr-list{list-style:none;margin:24px 0 0;padding:0;display:grid}
+.cr-list li{display:grid;gap:2px;padding:14px 0;border-bottom:1px solid var(--line)}
+.cr-list b{color:var(--navy);font-size:16.5px}
+.cr-list span{color:var(--muted);font-size:14.5px}
+@media (max-width:820px){.creds-grid{grid-template-columns:1fr;gap:32px}}
+.link-list{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.link-list li{display:flex;justify-content:space-between;align-items:center;gap:14px;background:var(--paper);border:1px solid var(--line);padding:14px 16px;min-width:0}
+.link-list li div{display:grid;gap:2px;min-width:0}
+.link-list b{color:var(--navy);font-size:15.5px}
+.link-list span{color:var(--muted);font-size:13.5px}
+.link-list a{flex:none;background:var(--navy);color:var(--cream);text-decoration:none;font-size:13.5px;font-weight:600;padding:7px 14px}
+.link-list a:hover{background:var(--coral)}
+@media (max-width:720px){.link-list{grid-template-columns:1fr}}
+.media-sec{background:var(--paper);border-top:1px solid var(--line)}
+.media-sec .link-list li{background:var(--cream)}
+.events{margin-top:22px;padding:16px 18px;border-inline-start:3px solid var(--coral);background:var(--cream);font-size:15px;color:var(--ink)}
+.events b{color:var(--navy)}
+
+@media (max-width:860px){.nav ul{justify-content:flex-start;overflow-x:auto;scrollbar-width:none;gap:2px;padding-inline:8px}.nav ul li{flex:none}.nav ul a{padding:6px 10px;white-space:nowrap}}
+.stat{min-width:0}
+@media (max-width:720px){.stat strong{font-size:24px}.stat{padding:18px 14px}}
+.pub img.nocrop{aspect-ratio:auto;object-fit:contain}
+.pdesc{color:var(--muted);font-size:14.5px;line-height:1.75}
+.home-pubs{border-top:1px solid var(--line)}
+.hp-top{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.hp-grid{grid-template-columns:repeat(3,1fr)!important;margin-top:28px}
+@media (max-width:760px){.hp-grid{grid-template-columns:1fr 1fr!important}.hp-grid .pub:last-child{display:none}}
+@media (max-width:440px){.hp-grid{grid-template-columns:1fr!important}.hp-grid .pub:last-child{display:grid}}
+.nl-band{background:var(--coral);color:#fff;padding-block:44px}
+.nl-band .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.nl-text{min-width:0;flex:1 1 380px;display:grid;gap:6px}
+.nl-text small{font-size:13.5px;font-weight:600;opacity:.92}
+.nl-text h2{font-size:clamp(22px,3.2vw,30px)}
+.nl-text p{opacity:.92;max-width:36em}
+.nl-band .btn-coral{background:var(--navy)}
+.nl-band .btn-coral:hover{background:#0B3358}
+.hp-grid .pub img{aspect-ratio:4/5;object-fit:contain;background:#F1ECE3}
+
+/* calendar */
+.month-sec{background:var(--paper);border-block:1px solid var(--line)}
+.month-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;margin-top:28px}
+.mg-col{min-width:0}
+.mg-h{font-size:17px;color:var(--navy);padding-bottom:10px;border-bottom:2px solid var(--navy);margin-bottom:6px}
+.day-list,.ev-list{list-style:none;margin:0;padding:0;display:grid}
+.day-list li{display:grid;grid-template-columns:62px 1fr;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line);min-width:0}
+.d-date{display:grid;justify-items:center;background:var(--cream);border:1px solid var(--line);padding:6px 4px;line-height:1.2}
+.d-date b{font-size:22px;color:var(--navy);font-variant-numeric:tabular-nums}
+.d-date small{font-size:11.5px;color:var(--muted)}
+.day-list li.today .d-date{background:var(--coral);border-color:var(--coral)}
+.day-list li.today .d-date b,.day-list li.today .d-date small{color:#fff}
+.day-list li.past{opacity:.55}
+.d-body{min-width:0;display:grid;gap:2px}
+.d-body strong{font-size:16px;color:var(--ink);font-weight:600}
+.d-meta{display:flex;gap:8px;flex-wrap:wrap;font-size:12.5px;color:var(--muted)}
+.d-tag{color:var(--coral);font-weight:600}
+.ev-list li{padding:14px 0;border-bottom:1px solid var(--line);display:grid;gap:4px;min-width:0}
+.ev-when{font-size:13px;font-weight:600;color:var(--coral);font-variant-numeric:tabular-nums}
+.ev-list strong{font-size:16px;color:var(--navy)}
+.ev-list span{font-size:14px;color:var(--muted)}
+.ev-list a{font-size:13px;color:var(--navy);font-weight:600}
+.empty-li{color:var(--muted);font-size:14.5px;padding:14px 0}
+.cal-note{font-size:13px;color:var(--muted);margin-top:12px}
+.month-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-top:26px}
+.month-tabs button{border:1px solid var(--line);background:var(--paper);color:var(--navy);font:500 14px var(--font);padding:6px 12px;cursor:pointer}
+.month-tabs button[aria-selected="true"]{background:var(--navy);border-color:var(--navy);color:var(--cream)}
+.month-tabs button.now{box-shadow:inset 0 -3px 0 var(--coral)}
+@media (max-width:820px){.month-grid{grid-template-columns:1fr}}
+.ev-type{font-style:normal;background:var(--navy);color:var(--cream);font-size:11.5px;padding:1px 8px;margin-inline-end:8px}
+.day-list li.nat .d-tag{color:#2F7A55}
+.day-list li.nat .d-date{border-color:#2F7A55}
+/* reader */
+.reader{position:fixed;inset:0;z-index:50;background:#0B1A2B;display:flex;flex-direction:column}
+.rd-bar{display:flex;align-items:center;gap:12px;padding:10px 16px;padding-top:calc(10px + env(safe-area-inset-top,0px));background:var(--navy);color:var(--cream);border-bottom:1px solid rgba(248,245,239,.15)}
+.rd-bar h3{flex:1;font-size:15px;font-weight:600;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rd-close{background:transparent;border:1px solid rgba(248,245,239,.4);color:var(--cream);font:500 14px var(--font);padding:7px 14px;cursor:pointer}
+.rd-bar .btn{padding:8px 14px}
+.rd-pages{flex:1;overflow:auto;padding:16px;padding-bottom:calc(16px + env(safe-area-inset-bottom,0px));display:grid;justify-items:center;gap:14px;align-content:start}
+.rd-pages canvas{width:min(100%,820px);height:auto;background:#fff;box-shadow:0 2px 14px rgba(0,0,0,.35)}
+.rd-msg{color:#C9D1DC;padding:40px 0;text-align:center}
+
+/* method */
+.method{background:var(--navy);color:var(--cream)}
+.method .h2{color:var(--cream)}
+.method .intro{color:#C9D1DC}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:44px;counter-reset:s}
+.step{padding:6px 22px 6px 0;border-inline-start:1px solid rgba(248,245,239,.18);padding-inline:22px;min-width:0}
+.step:first-child{border-inline-start:0;padding-inline-start:0}
+.step .n{font-size:14px;color:#E9A57F;font-weight:600;font-variant-numeric:tabular-nums}
+.step h3{font-size:20px;margin:8px 0 8px}
+.step p{font-size:15px;color:#C9D1DC;font-weight:300}
+@media (max-width:820px){.steps{grid-template-columns:1fr 1fr;row-gap:30px}.step:nth-child(3){border-inline-start:0;padding-inline-start:0}}
+@media (max-width:480px){.steps{grid-template-columns:1fr}.step{border-inline-start:0;padding-inline:0}}
+
+/* audiences */
+.aud-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:40px}
+.aud{background:var(--cream);padding:26px;min-width:0}
+.aud h3{font-size:18px;color:var(--navy)}
+.aud .tags{font-size:13px;color:var(--coral);font-weight:500;margin:4px 0 10px}
+.aud p{font-size:15.5px;color:var(--ink)}
+@media (max-width:860px){.aud-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.aud-grid{grid-template-columns:1fr}}
+
+/* knowledge */
+.knowledge{background:var(--paper);border-block:1px solid var(--line)}
+.kn-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}
+.kn{display:grid;grid-template-columns:150px 1fr;gap:22px;align-items:center;padding:24px;border:1px solid var(--line);background:var(--cream)}
+.cover{aspect-ratio:3/4;max-width:100%;padding:14px;color:var(--cream);display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.cover.c1{background:var(--coral)} .cover.c2{background:var(--navy)}
+.cover::after{content:"";position:absolute;top:0;left:0;border-top:34px solid var(--navy);border-right:34px solid transparent}
+.cover.c2::after{border-top-color:var(--coral)}
+.cover b{font-size:19px;line-height:1.3}
+.cover small{font-size:10px;letter-spacing:.08em;direction:ltr;text-align:left}
+.kn h3{font-size:20px;color:var(--navy)}
+.kn p{font-size:15px;color:var(--muted);margin-top:6px}
+.kn .soon{display:inline-block;margin-top:12px;font-size:13px;font-weight:600;color:var(--coral)}
+@media (max-width:860px){.kn-grid{grid-template-columns:1fr}}
+@media (max-width:440px){.kn{grid-template-columns:1fr}.cover{max-width:160px}}
+
+/* contact */
+.contact .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.contact-card{background:var(--navy);color:var(--cream);padding:34px;display:grid;gap:18px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-bottom:16px;border-bottom:1px solid rgba(248,245,239,.16);flex-wrap:wrap}
+.row:last-of-type{border-bottom:0;padding-bottom:0}
+.row small{display:block;color:#E9A57F;font-size:13px;font-weight:600}
+.row span{font-size:19px;direction:ltr;unicode-bidi:isolate;user-select:all;font-variant-numeric:tabular-nums}
+.copy{background:transparent;border:1px solid rgba(248,245,239,.4);color:var(--cream);font:500 13px var(--font);padding:6px 12px;cursor:pointer}
+.copy:hover{border-color:var(--cream)}
+@media (max-width:820px){.contact .wrap{grid-template-columns:1fr}}
+
+.socials{display:grid;gap:10px}
+.socials small{color:#E9A57F;font-size:13px;font-weight:600}
+.soc-list{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.soc-list a{display:flex;flex-direction:column;padding:10px 12px;border:1px solid rgba(248,245,239,.22);text-decoration:none;color:var(--cream);transition:border-color .2s;min-width:0}
+.soc-list a:hover{border-color:var(--cream)}
+.soc-list b{font-size:14px;font-weight:600}
+.soc-list span{font-size:13px;color:#C9D1DC;direction:ltr;text-align:right;overflow-wrap:anywhere}
+.foot-soc{display:flex;gap:16px;flex-wrap:wrap}
+.foot-soc a{color:var(--cream);text-decoration:none;font-weight:500}
+.foot-soc a:hover{color:#E9A57F}
+@media (max-width:420px){.soc-list{grid-template-columns:1fr}}
+footer{background:var(--navy);color:#AEB8C6;font-size:14px;border-top:1px solid rgba(248,245,239,.1)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding-block:30px}
+footer img{height:46px;width:auto}
+footer .meta{display:flex;gap:20px;flex-wrap:wrap;direction:ltr}
+
+.reveal{animation:up .8s ease both}
+.reveal.d2{animation-delay:.15s}.reveal.d3{animation-delay:.3s}
+@keyframes up{from{transform:translateY(14px);opacity:.01}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-display:swap;font-weight:300;src:url(fonts/ibm-plex-sans-arabic-arabic-300-normal.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-display:swap;font-weight:300;src:url(fonts/ibm-plex-sans-arabic-latin-300-normal.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-display:swap;font-weight:400;src:url(fonts/ibm-plex-sans-arabic-arabic-400-normal.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-display:swap;font-weight:400;src:url(fonts/ibm-plex-sans-arabic-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-display:swap;font-weight:500;src:url(fonts/ibm-plex-sans-arabic-arabic-500-normal.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-display:swap;font-weight:500;src:url(fonts/ibm-plex-sans-arabic-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-display:swap;font-weight:600;src:url(fonts/ibm-plex-sans-arabic-arabic-600-normal.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-display:swap;font-weight:600;src:url(fonts/ibm-plex-sans-arabic-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-display:swap;font-weight:700;src:url(fonts/ibm-plex-sans-arabic-arabic-700-normal.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-display:swap;font-weight:700;src:url(fonts/ibm-plex-sans-arabic-latin-700-normal.woff2) format('woff2')}
+/* ===== corporate restyle ===== */
+:root{--shadow:0 10px 30px rgba(0,37,68,.08)}
+body{background:#fff}
+.nav{background:#fff;backdrop-filter:none;border-bottom:0;box-shadow:0 2px 14px rgba(0,37,68,.07)}
+.nav .wrap{padding-block:14px}
+.nav img{height:46px}
+.nav ul a{font-size:15.5px;padding-block:6px;border-bottom:2px solid transparent}
+.nav ul a[aria-current="page"]{color:var(--coral);border-color:var(--coral)}
+.burger{display:none;width:46px;height:46px;background:var(--navy);border:0;cursor:pointer;place-items:center}
+.burger svg{width:24px;fill:#fff}
+.mnav{display:none}
+@media (max-width:900px){
+  .nav ul,.nav .btn{display:none}
+  .burger{display:grid}
+  .mnav{display:block;position:absolute;top:100%;left:0;right:0;background:#fff;box-shadow:0 12px 24px rgba(0,37,68,.12);max-height:0;overflow:hidden;transition:max-height .35s}
+  .mnav.open{max-height:480px}
+  .mnav a{display:block;padding:14px 20px;border-top:1px solid #eee;text-decoration:none;color:var(--navy);font-weight:600}
+  .mnav a[aria-current="page"]{color:var(--coral)}
+}
+.btn{border-radius:0;padding:13px 28px}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--coral)}
+
+/* hero slider */
+.slider{position:relative;height:min(86vh,720px);min-height:520px;overflow:hidden;background:var(--navy);padding:0!important}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1s ease;display:grid;place-items:center;text-align:center;color:#fff}
+.slide.on{opacity:1;z-index:1}
+.slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.08);transition:transform 7s ease}
+.slide.on img{transform:scale(1)}
+.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(0,37,68,.42),rgba(0,22,41,.72))}
+.slide .cap h2,.slide .cap p,.slide .cap small{text-shadow:0 2px 12px rgba(0,0,0,.45)}
+.slide:first-child img{object-position:50% 22%}
+@media (max-width:700px){.slide:first-child img{object-position:82% 20%}}
+.slide .cap{position:relative;z-index:2;max-width:760px;padding:0 70px}
+.slide .cap small{display:inline-block;color:#E9A57F;font-weight:600;font-size:15px;letter-spacing:.3px;margin-bottom:14px}
+.slide h2{font-size:clamp(32px,5vw,58px);font-weight:700;line-height:1.3}
+.slide p{margin:18px auto 0;max-width:36em;font-size:clamp(16px,1.6vw,19px);font-weight:300;color:#E4E8EE}
+.slide .btn{margin-top:30px}
+.slide.on .cap>*{animation:capin .9s both}
+.slide.on .cap>*:nth-child(2){animation-delay:.15s}.slide.on .cap>*:nth-child(3){animation-delay:.3s}.slide.on .cap>*:nth-child(4){animation-delay:.45s}
+@keyframes capin{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.sl-arr{position:absolute;top:50%;z-index:3;width:48px;height:56px;margin-top:-28px;background:rgba(187,104,65,.9);border:0;cursor:pointer;display:grid;place-items:center}
+.sl-arr svg{width:24px;fill:#fff}
+.sl-prev{right:0}.sl-next{left:0}.sl-next svg{transform:none}.sl-prev svg{transform:scaleX(-1)}
+.sl-dots{position:absolute;bottom:26px;left:0;right:0;z-index:3;display:flex;justify-content:center;gap:10px}
+.sl-dots button{width:12px;height:12px;border:0;background:rgba(255,255,255,.45);cursor:pointer;padding:0}
+.sl-dots button[aria-current="true"]{background:var(--coral)}
+@media (max-width:640px){.slide .cap{padding:0 56px}.sl-arr{width:40px;height:48px}}
+
+/* section heads */
+.sec-head{text-align:center;max-width:720px;margin:0 auto 48px}
+.sec-head small{display:block;color:var(--coral);font-weight:600;font-size:15px;margin-bottom:8px}
+.sec-head h2{font-size:clamp(28px,3.6vw,42px);color:var(--navy);font-weight:700}
+.sec-head p{color:var(--muted);margin-top:12px}
+
+/* about split */
+.ab-split{background:#fff}
+.ab-split .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.ab-pics{position:relative;padding:0 0 60px 60px}
+.ab-pics img{display:block;width:100%;height:auto;object-fit:cover}
+.ab-pics .p1{aspect-ratio:4/3}
+.ab-pics .p2{position:absolute;left:0;bottom:0;width:52%;aspect-ratio:1;border:8px solid #fff;box-shadow:var(--shadow)}
+.ab-pics::before{content:"";position:absolute;right:-18px;top:-18px;width:120px;height:120px;background:var(--coral);z-index:-1}
+.ab-txt small{color:var(--coral);font-weight:600;font-size:15px}
+.ab-txt h2{font-size:clamp(28px,3.4vw,40px);color:var(--navy);margin:6px 0 18px}
+.ab-txt p{color:var(--muted)}
+.ab-txt p+p{margin-top:12px}
+.ab-txt .btn{margin-top:26px}
+@media (max-width:860px){.ab-split .wrap{grid-template-columns:1fr;gap:34px}}
+
+/* service cards */
+.svc2{background:var(--cream)}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.card{background:#fff;box-shadow:var(--shadow);padding:0 26px 28px;position:relative;transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column;text-decoration:none;color:inherit;border-bottom:3px solid transparent}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,37,68,.14);border-color:var(--coral)}
+.card .ic{width:76px;height:76px;background:var(--cream);display:grid;place-items:center;margin:0 0 22px auto;box-shadow:0 6px 14px rgba(0,37,68,.06)}
+.card .ic svg{width:36px;fill:var(--coral)}
+.card:hover .ic{background:var(--navy)}
+.card:hover .ic svg{fill:#fff}
+.card h3{font-size:21px;color:var(--navy);margin-bottom:10px}
+.card p{color:var(--muted);font-size:15.5px;line-height:1.8;flex:1}
+.card .more{margin-top:18px;color:var(--navy);font-weight:600;font-size:15px;display:flex;align-items:center;gap:6px}
+.card .more::before{content:"+";color:var(--coral);font-size:20px;font-weight:700}
+@media (max-width:1000px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.cards{grid-template-columns:1fr}}
+
+/* counters band */
+.cnt-band{background:var(--navy) url(img/n-board.webp) center/cover;position:relative}
+.cnt-band::before{content:"";position:absolute;inset:0;background:rgba(0,37,68,.9)}
+.cnt-band .wrap{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.cnt{background:#fff;text-align:center;padding:30px 18px 0;box-shadow:0 20px 40px rgba(0,0,0,.2)}
+.cnt svg{width:52px;fill:var(--navy)}
+.cnt h3{font-size:18px;color:var(--navy);margin:12px 0 16px}
+.cnt b{display:block;background:var(--coral);color:#fff;font-size:30px;font-weight:700;padding:8px 0;margin:0 -18px}
+@media (max-width:860px){.cnt-band .wrap{grid-template-columns:repeat(2,1fr);gap:16px}}
+
+/* why */
+.why .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.why-list{display:grid;gap:22px;margin-top:26px}
+.why-item{display:grid;grid-template-columns:62px 1fr;gap:18px;align-items:start}
+.why-item i{width:62px;height:62px;background:var(--navy);color:#fff;display:grid;place-items:center;font-style:normal;font-weight:700;font-size:22px}
+.why-item:nth-child(even) i{background:var(--coral)}
+.why-item h3{font-size:20px;color:var(--navy)}
+.why-item p{color:var(--muted);font-size:15.5px}
+.why-pic{position:relative}
+.why-pic img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
+.why-pic .badge{position:absolute;right:-20px;bottom:30px;background:var(--coral);color:#fff;padding:20px 26px;box-shadow:var(--shadow)}
+.why-pic .badge b{display:block;font-size:40px;line-height:1.1}
+@media (max-width:860px){.why .wrap{grid-template-columns:1fr}.why-pic .badge{right:10px}}
+
+/* inner page header */
+.phead{position:relative;background:var(--navy) center/cover;color:#fff;text-align:center;padding:78px 20px 70px}
+.phead::before{content:"";position:absolute;inset:0;background:rgba(0,37,68,.82)}
+.phead>*{position:relative}
+.phead h1{font-size:clamp(30px,4vw,46px)}
+.phead nav{margin-top:10px;font-size:15px;color:#C9D1DC}
+.phead nav a{color:#E9A57F;text-decoration:none}
+.phead nav span{margin:0 8px}
+
+/* footer */
+footer.f2{background:#00182D;color:#C9D1DC;padding:70px 0 0;font-size:15px}
+.f2 .cols{display:grid;grid-template-columns:1.4fr 1fr 1.2fr;gap:44px}
+.f2 img{height:56px;width:auto}
+.f2 .about-f p{margin-top:18px;line-height:1.9}
+.f2 h4{color:#fff;font-size:19px;margin:0 0 20px;position:relative;padding-bottom:12px}
+.f2 h4::after{content:"";position:absolute;right:0;bottom:0;width:44px;height:3px;background:var(--coral)}
+.f2 ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.f2 li a{color:#C9D1DC;text-decoration:none;display:flex;align-items:center;gap:6px}
+.f2 li a:hover{color:#E9A57F}
+.f2 li a svg{width:16px;fill:var(--coral)}
+.f2 .ci li{display:flex;gap:10px;align-items:center}
+.f2 .ci svg{width:18px;fill:var(--coral);flex:none}
+.f2 .ci span{direction:ltr;unicode-bidi:isolate}
+.f2 .soc{display:flex;gap:8px;margin-top:22px;flex-wrap:wrap}
+.f2 .soc a svg{width:20px;fill:currentColor}
+.f2 .soc a{width:44px;height:44px;background:var(--coral);color:#fff;text-decoration:none;display:grid;place-items:center;font-weight:600;font-size:14px}
+.f2 .soc a:hover{background:#fff;color:var(--navy)}
+.f2 .copy-r{margin-top:56px;border-top:1px solid rgba(255,255,255,.1);padding:20px 0;text-align:center;font-size:14px;color:#8fa0b2}
+@media (max-width:860px){.f2 .cols{grid-template-columns:1fr;gap:34px}}
+.totop{position:fixed;left:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));width:46px;height:46px;background:var(--coral);border:0;display:grid;place-items:center;cursor:pointer;z-index:30;opacity:0;pointer-events:none;transition:opacity .3s}
+.totop.show{opacity:1;pointer-events:auto}
+.totop svg{width:22px;fill:#fff}
+
+/* pubs cards */
+.pub{background:#fff;box-shadow:var(--shadow);border:0!important}
+.pub img{background:var(--cream)}
+
+/* ===== creative touches ===== */
+#loader{position:fixed;inset:0;z-index:100;background:#fff;display:grid;place-items:center;transition:opacity .6s,visibility .6s}
+#loader img{width:220px;animation:lpulse 1.2s ease-in-out infinite}
+#loader i{position:absolute;bottom:38%;width:120px;height:3px;background:#eee;overflow:hidden}
+#loader i::after{content:"";position:absolute;inset:0;background:var(--coral);animation:lbar 1.1s ease-in-out infinite}
+@keyframes lbar{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
+@keyframes lpulse{50%{opacity:.55}}
+body.ready #loader{opacity:0;visibility:hidden}
+.nav{transition:box-shadow .3s}
+.nav .wrap{transition:padding .3s}
+.nav.small .wrap{padding-block:6px}
+.nav.small img{height:38px}
+.nav img{transition:height .3s}
+/*x*/.slider::before{display:none;content:"";position:absolute;right:0;bottom:0;z-index:3;border-bottom:110px solid var(--coral);border-left:110px solid transparent;opacity:.95}
+/*x*/.slider::after{display:none;content:"";position:absolute;left:0;top:0;z-index:3;border-top:70px solid var(--coral);border-right:70px solid transparent;opacity:.95}
+.scroll-ind{position:absolute;left:50%;bottom:70px;z-index:3;width:26px;height:42px;margin-left:-13px;border:2px solid rgba(255,255,255,.7);border-radius:14px}
+.scroll-ind::after{content:"";position:absolute;left:50%;top:8px;width:4px;height:8px;margin-left:-2px;background:#fff;border-radius:2px;animation:sdown 1.6s infinite}
+@keyframes sdown{0%{opacity:0;transform:translateY(0)}40%{opacity:1}100%{opacity:0;transform:translateY(14px)}}
+@media (max-width:700px){.scroll-ind{display:none}.slider::before{border-bottom-width:70px;border-left-width:70px}.slider::after{border-top-width:44px;border-right-width:44px}}
+.dotgrid{position:absolute;width:150px;height:110px;background-image:radial-gradient(var(--coral) 2px,transparent 2.5px);background-size:16px 16px;opacity:.35;pointer-events:none}
+.ab-split,.why,.svc2{position:relative;overflow:hidden}
+.ab-split .dotgrid{left:3%;top:40px}
+.why .dotgrid{right:2%;bottom:40px}
+.svc2 .dotgrid{left:4%;top:60px}
+.sec-head h2::after{content:"";display:block;width:64px;height:4px;margin:16px auto 0;background:linear-gradient(90deg,var(--coral) 0 70%,transparent 70% 78%,var(--navy) 78%)}
+.why .sec-head h2::after{margin-right:0}
+.quote-band{position:relative;padding:110px 0;text-align:center;color:#fff;background:url(img/honor.webp) center/cover fixed}
+.quote-band::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(0,37,68,.92),rgba(0,37,68,.75) 60%,rgba(187,104,65,.75))}
+.quote-band .wrap{position:relative;max-width:900px}
+.quote-band .qm{font-size:120px;line-height:.6;color:var(--coral);font-family:Georgia,serif;display:block;margin-bottom:10px}
+.quote-band blockquote{margin:0;font-size:clamp(24px,3.4vw,40px);font-weight:600;line-height:1.6}
+.quote-band cite{display:block;margin-top:22px;font-style:normal;color:#E9A57F;font-weight:600}
+@media (hover:none){.quote-band{background-attachment:scroll}}
+.pub img{transition:transform .6s}
+.pub:hover img{transform:scale(1.05)}
+.pub{overflow:hidden}
+.cnt b{position:relative;overflow:hidden}
+.cnt b::after{content:"";position:absolute;top:0;bottom:0;width:40%;left:-60%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);animation:shine 3.5s infinite}
+@keyframes shine{0%,60%{left:-60%}100%{left:130%}}
+.card .ic{position:relative}
+.card .ic::after{content:"";position:absolute;inset:-6px;border:1px dashed var(--coral);opacity:0;transition:opacity .3s}
+.card:hover .ic::after{opacity:.7}
+.why-pic::before{content:"";position:absolute;left:-18px;top:-18px;width:60%;height:60%;border:4px solid var(--coral);z-index:-1}
+.why-pic{z-index:0}
+.phead::after{display:none;content:"";position:absolute;right:0;bottom:0;border-bottom:60px solid var(--coral);border-left:60px solid transparent}
+
+/* ===== unify old sections ===== */
+.eyebrow{justify-content:center;font-size:15px}
+.eyebrow::before{display:none}
+.home-pubs .hp-top,.month-sec .hp-top{flex-direction:column;align-items:center;text-align:center;margin-bottom:40px}
+.home-pubs .hp-top .btn,.month-sec .hp-top .btn{order:3}
+.h2{text-align:center}
+.h2::after{content:"";display:block;width:64px;height:4px;margin:16px auto 0;background:linear-gradient(90deg,var(--coral) 0 70%,transparent 70% 78%,var(--navy) 78%)}
+.clients .wrap{text-align:center}.clients .intro{margin-inline:auto}
+.awards{background:var(--cream);color:var(--ink)}
+.awards .wrap{text-align:center}
+.awards .h2{color:var(--navy)}
+.aw-list{background:none;gap:24px;margin-top:44px;text-align:center}
+.aw-list li{background:#fff;box-shadow:var(--shadow);padding:34px 22px 28px;justify-items:center;transition:transform .3s}
+.aw-list li:hover{transform:translateY(-6px)}
+.aw-list li::before{content:"";width:64px;height:64px;transform:none;margin:0 0 14px;background:var(--navy) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E9A57F'><path d='M7 2h10v2h4v3a5 5 0 0 1-4.6 5A5 5 0 0 1 13 14.9V18h3v2H8v-2h3v-3.1A5 5 0 0 1 7.6 12 5 5 0 0 1 3 7V4h4V2zm0 4H5v1a3 3 0 0 0 2 2.8V6zm10 0v3.8A3 3 0 0 0 19 7V6h-2z'/></svg>") center/32px no-repeat}
+.aw-list li:nth-child(even)::before{background-color:var(--coral);background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'><path d='M12 2 9.2 8.3 2 9.3l5.3 4.8L5.8 21 12 17.6 18.2 21l-1.5-6.9L22 9.3l-7.2-1L12 2z'/></svg>")}
+.aw-list b{font-size:18px;color:var(--navy)}
+.aw-list span{color:var(--muted)}
+.why-item i{font-size:0}
+.why-item i svg{width:30px;fill:#fff}
+
+/* reveal on scroll */
+.rv{opacity:0;transform:translateY(30px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.slide img{transition:none}}
+
+/* ===== content-first restructure ===== */
+.start{padding-block:44px 8px}
+.start-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.st{display:grid;gap:6px;align-content:start;padding:22px;background:#fff;box-shadow:var(--shadow);text-decoration:none;color:inherit;border-top:3px solid var(--navy);transition:transform .3s,border-color .3s;min-width:0}
+.st:hover{transform:translateY(-4px);border-color:var(--coral)}
+.st small{color:var(--coral);font-weight:600;font-size:13.5px}
+.st h3{font-size:19px;color:var(--navy)}
+.st p{font-size:14.5px;color:var(--muted);line-height:1.7}
+.st .go{font-size:14px;font-weight:600;color:var(--navy);margin-top:4px}
+.st.hl{background:var(--navy);border-color:var(--coral)}.st.hl h3,.st.hl .go{color:#fff}.st.hl p{color:#C9D1DC}.st.hl small{color:#E9A57F}
+@media (max-width:900px){.start-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.start-grid{grid-template-columns:1fr}}
+.media-home{background:var(--cream)}
+.media-home .link-list{max-width:900px;margin:32px auto 0}
+.media-home .more-c{text-align:center;margin-top:26px}
+.cta-end{background:var(--navy);color:#fff;text-align:center;padding-block:72px}
+.cta-end h2{font-size:clamp(26px,3.4vw,38px)}
+.cta-end p{color:#C9D1DC;margin:12px auto 0;max-width:34em}
+.cta-end .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.slide .cap div{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.slide .cap div .btn{margin-top:0}
+.btn-ghost{color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.7)}
+.btn-ghost:hover{box-shadow:inset 0 0 0 1px #fff;background:rgba(255,255,255,.08)}
+
+.aw-photos{display:grid;grid-template-columns:repeat(2,1fr);max-width:900px;margin-inline:auto;gap:24px;margin-top:44px}
+.aw-photos figure{margin:0;background:#fff;box-shadow:var(--shadow);overflow:hidden}
+.aw-photos img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .6s}
+.aw-photos figure:hover img{transform:scale(1.04)}
+.aw-photos figcaption{padding:14px 16px;font-size:15px;font-weight:600;color:var(--navy)}
+
+@media (max-width:480px){.aw-photos{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+
+<header class="nav" style="position:sticky">
+  <div class="wrap">
+    <a href="#home" aria-label="حامد الذيابي — الرئيسية"><img src="logo_navy.png" alt="حامد الذيابي"></a>
+    <ul><li><a href="#home" data-nav="home">الرئيسية</a></li><li><a href="#pubs" data-nav="pubs">الإصدارات</a></li><li><a href="#cal" data-nav="cal">التقويم</a></li><li><a href="#store" data-nav="store">خدماتنا</a></li><li><a href="#about" data-nav="about">من نحن</a></li><li><a href="#contact" data-nav="contact">تواصل معنا</a></li></ul>
+    <a class="btn btn-coral" href="#store">اطلب الخدمة</a>
+    <button class="burger" id="burger" aria-label="القائمة" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"></path></svg></button>
+  </div>
+  <nav class="mnav" id="mnav"><a href="#home" data-nav="home">الرئيسية</a><a href="#pubs" data-nav="pubs">الإصدارات</a><a href="#cal" data-nav="cal">التقويم</a><a href="#store" data-nav="store">خدماتنا</a><a href="#about" data-nav="about">من نحن</a><a href="#contact" data-nav="contact">تواصل معنا</a></nav>
+</header>
+
+<main>
+<div class="page" id="home" data-page="home">
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+<section class="slider" aria-label="عرض رئيسي"><div class="slide on"><img src="img/n-hero1.webp" alt="" fetchpriority="high"><div class="cap"><small>مكتبة مجانية للقطاع غير الربحي</small><h2>معرفة عملية تنمّي موارد منظمتك</h2><p>أدلة وترجمات وتقارير في جمع التبرعات والسرد القصصي والاستدامة المالية، اقرأها الآن مجانًا.</p><div><a class="btn btn-coral" href="#pubs">اقرأ مجانًا</a><a class="btn btn-ghost" href="#store">خدماتنا</a></div></div></div><div class="slide"><img src="img/n-hero2.webp" alt="" loading="lazy"><div class="cap"><small>تقويم القطاع غير الربحي</small><h2>مناسبات القطاع وفعالياته في مكان واحد</h2><p>الأيام العالمية ومواسم العطاء وملتقيات القطاع في المملكة، محدّثة كل شهر لتخطط حملاتك مبكرًا.</p><div><a class="btn btn-coral" href="#cal">افتح التقويم</a></div></div></div><div class="slide"><img src="img/n-hero3.webp" alt="" loading="lazy"><div class="cap"><small>خدماتنا للمنظمات غير الربحية</small><h2>استدامة العطاء، وأثرٌ يمتد</h2><p>نساعد المنظمات غير الربحية على تنمية مواردها، وتنويع مصادر دخلها، وبناء استدامة مالية تحررها من الطوارئ.</p><div><a class="btn btn-coral" href="#store">اطلب الخدمة</a></div></div></div>
+    <button class="sl-arr sl-prev" aria-label="السابق"><svg viewBox="0 0 24 24"><path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"></path></svg></button><button class="sl-arr sl-next" aria-label="التالي"><svg viewBox="0 0 24 24"><path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"></path></svg></button>
+    <div class="sl-dots"><button aria-label="الشريحة 1" aria-current="true"></button><button aria-label="الشريحة 2" aria-current="false"></button><button aria-label="الشريحة 3" aria-current="false"></button></div><span class="scroll-ind" aria-hidden="true"></span>
+  </section><section class="start"><div class="wrap"><div class="start-grid">
+<a class="st" href="#pubs"><small>اقرأ مجانًا</small><h3>١٦ إصدارًا معرفيًا</h3><p>أدلة وترجمات وتقارير جاهزة للقراءة والتطبيق.</p><span class="go">تصفّح الإصدارات ←</span></a>
+<a class="st" href="#cal"><small>خطّط مبكرًا</small><h3>تقويم القطاع</h3><p>الأيام العالمية ومواسم العطاء وفعاليات المملكة.</p><span class="go">افتح التقويم ←</span></a>
+<a class="st" href="#pubs" data-sec="media"><small>شاهد واستمع</small><h3>بودكاست ولقاءات</h3><p>حوارات عن تجارب القطاع غير الربحي ومستقبله.</p><span class="go">شاهد الآن ←</span></a>
+<a class="st hl" href="#store"><small>لمنظمتك</small><h3>اطلب الخدمة</h3><p>خطط ودورات وجلسات استشارية وتقييم.</p><span class="go">اختر خدمتك ←</span></a>
+</div></div></section><section class="home-pubs">
+    <div class="wrap">
+      <div class="hp-top">
+        <div><div class="eyebrow">مكتبة مجانية</div><h2 class="h2">اقرأ مجانًا، وطبّق في منظمتك</h2></div>
+        <a class="btn btn-navy" href="#pubs">كل الإصدارات</a>
+      </div>
+      <div class="pub-grid hp-grid"><article class="pub"><img src="pubs/cover16.webp" alt="غلاف: تطوير أدوات تمويل مبتكرة لتعزيز الاستدامة المالية للمنظمات غير الربحية" width="900" height="1200" loading="lazy"><div class="pub-body"><span class="pub-tag">دراسة محكّمة · ٢٠٢٦</span><h3>تطوير أدوات تمويل مبتكرة لتعزيز الاستدامة المالية للمنظمات غير الربحية</h3><p>دراسة منشورة في مجلة البحوث والدراسات الاجتماعية، تقترح إطارًا عمليًا لتطبيق أدوات التمويل المبتكرة في السياق السعودي.</p></div><a class="btn btn-coral" href="https://rssj.ncss.gov.sa/index.php/rssj/article/view/257" target="_blank" rel="noopener">قراءة الدراسة</a></article>
+        <article class="pub">
+          <img src="pubs/cover01.webp" alt="ترجمات الاستدامة" width="640" height="640" loading="lazy">
+          <div class="pub-body"><span class="pub-tag">سلسلة · ٩ ترجمات</span><h3>ترجمات الاستدامة</h3><p>ترجمات عربية بتصرّف موائم للسياق المحلي، في السرد القصصي وجمع التبرعات.</p></div>
+          <a class="btn btn-navy" href="#pubs" data-sec="trans">عرض الترجمات</a>
+        </article>
+        <article class="pub">
+          <img src="pubs/cover15.webp" alt="غلاف: الدعم المستدام" width="900" height="900" loading="lazy">
+          <div class="pub-body"><span class="pub-tag">ترجمة · ٢٠ صفحة</span><h3>الدعم المستدام: كيف تبني قاعدة متبرعيك الشهريين</h3><p>دليل متكامل لصناعة تجربة متبرع تلهم الالتزام طويل الأمد.</p></div>
+          <a class="btn btn-navy read-pub" href="pubs/pub15.pdf" target="_blank" rel="noopener" data-pdf="pubs/pub15.pdf">قراءة الإصدار</a>
+        </article>
+        
+      </div>
+    </div>
+  </section><section class="month-sec">
+    <div class="wrap">
+      <div class="hp-top">
+        <div><div class="eyebrow" id="m-eyebrow">هذا الشهر</div><h2 class="h2">مناسبات القطاع وفعالياته</h2></div>
+        <a class="btn btn-navy" href="#cal">التقويم الكامل</a>
+      </div>
+      <div class="month-grid">
+        <div class="mg-col"><h3 class="mg-h">الأيام العالمية والوطنية والمواسم</h3><ul class="day-list" id="home-days"><li class="empty-li">تظهر هنا أيام الشهر الحالي.</li></ul></div>
+        <div class="mg-col"><h3 class="mg-h">فعاليات قادمة في المملكة</h3><ul class="ev-list" id="home-events"><li class="empty-li">تظهر هنا الفعاليات القادمة.</li></ul></div>
+      </div>
+    </div>
+  </section><section class="media-home"><div class="wrap"><div class="eyebrow">شاهد واستمع</div><h2 class="h2">حوارات عن القطاع غير الربحي</h2>
+<ul class="link-list"><li><div><b>بودكاست «حكاية القطاع»</b><span>الموسم الثاني</span></div><a href="https://youtube.com/playlist?list=PLAo-jF-fp49E9FgPTL12OkFwTjiPrUwtw" target="_blank" rel="noopener">مشاهدة</a></li><li><div><b>بودكاست «سبر»</b><span>توثيق تجارب القطاع غير الربحي</span></div><a href="https://youtube.com/@user-sb2gs6rx7l" target="_blank" rel="noopener">مشاهدة</a></li><li><div><b>بودكاست «اكتفاء»</b><span>حلقة حوارية</span></div><a href="https://youtu.be/XbSVe_wosPU" target="_blank" rel="noopener">مشاهدة</a></li><li><div><b>ذا ستيج</b><span>مشاركة</span></div><a href="https://youtu.be/-byebEAYGnk" target="_blank" rel="noopener">مشاهدة</a></li></ul>
+<div class="more-c"><a class="btn btn-navy" href="#pubs" data-sec="media">كل المشاركات الإعلامية</a></div></div></section><section class="nl-band">
+    <div class="wrap">
+      <div class="nl-text">
+        <small>نشرة «الاستدامة المالية» على لينكدإن</small>
+        <h2>انضم إلى أكثر من ٢٨٠٠ مشترك</h2>
+        <p>مقالات ونصائح عملية في الاستدامة المالية وتنمية موارد القطاع غير الربحي، تصلك مباشرة.</p>
+      </div>
+      <a class="btn btn-coral" href="https://www.linkedin.com/newsletters/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%AF%D8%A7%D9%85%D8%A9-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9-7063422465699409920" target="_blank" rel="noopener">اشترك في النشرة</a>
+    </div>
+  </section><section class="svc2">
+    <div class="wrap">
+      <div class="sec-head rv"><small>خدماتنا</small><h2>ما نقدّمه للمنظمات غير الربحية</h2></div>
+      <div class="cards"><a class="card rv" href="#store" data-go="plans"><span class="ic"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1.5V8h4.5L14 3.5zM8 12h8v2H8v-2zm0 4h8v2H8v-2zm0-8h4v2H8V8z"></path></svg></span><h3>تصميم الخطط والنماذج</h3><p>خطط الاستدامة المالية والتسويق وجمع التبرعات ورحلة المتبرع، مبنية على طبيعة جهتك وجمهورها.</p><span class="more">المزيد</span></a><a class="card rv" href="#store" data-go="courses"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zm-6 9.2v4.3C6 18.4 8.7 20 12 20s6-1.6 6-3.5v-4.3l-6 3.3-6-3.3z"></path></svg></span><h3>الدورات التدريبية</h3><p>دورات تطبيقية في التسويق الخيري والاستدامة المالية وتجربة المتبرع وتنمية الموارد.</p><span class="more">المزيد</span></a><a class="card rv" href="#store" data-go="sessions"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 3h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm3 6v2h2V9H7zm4 0v2h2V9h-2zm4 0v2h2V9h-2z"></path></svg></span><h3>الجلسات الاستشارية</h3><p>جلسة مع أ. حامد الذيابي لمناقشة تحديات جهتك في التسويق والاستدامة المالية، حضوريًا أو عن بُعد.</p><span class="more">المزيد</span></a><a class="card rv" href="#store" data-go="review"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4zm-1.5 15.5-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4-7 7z"></path></svg></span><h3>التقييم والتحكيم</h3><p>مراجعة مهنية لخططك ومنتجات التبرع ومتجرك الإلكتروني، مع توصيات واضحة للتحسين.</p><span class="more">المزيد</span></a></div>
+    <div class="home-cta"><p>تحتاج خدمة لمنظمتك؟ اختر ما يناسبك واطلبه مباشرة.</p><a class="btn btn-coral" href="#store">اطلب الخدمة</a></div></div>
+  </section><section class="cnt-band">
+    <div class="wrap"><div class="cnt rv"><svg viewBox="0 0 24 24"><path d="M7 2h2v2h6V2h2v2h3a1 1 0 0 1 1 1v15a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a1 1 0 0 1 1-1h3V2zm-2 8v10h14V10H5zm2 2h4v4H7v-4z"></path></svg><h3>عامًا من الخبرة الميدانية</h3><b data-n="20">+٢٠</b></div><div class="cnt rv"><svg viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zm-6 9.2v4.3C6 18.4 8.7 20 12 20s6-1.6 6-3.5v-4.3l-6 3.3-6-3.3z"></path></svg><h3>دورة تدريبية قدّمناها</h3><b data-n="118">+١١٨</b></div><div class="cnt rv"><svg viewBox="0 0 24 24"><path d="M11 6 8.5 3.5 1 11l3 3 1-1 5.5 5.5a1.5 1.5 0 0 0 2.1-2.1l.4.4a1.5 1.5 0 0 0 2.1-2.1l.4.4a1.5 1.5 0 0 0 2.1-2.1l.4.4a1.5 1.5 0 0 0 2.1-2.1L15 6.5 12.5 9a2 2 0 0 1-2.8-2.8L11 6zm4.6-2.6L23 10.8l-3 3-6.9-6.9 2.5-3.5z"></path></svg><h3>جهة وثقت بنا</h3><b data-n="60">+٦٠</b></div><div class="cnt rv"><svg viewBox="0 0 24 24"><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm8 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM1 20c0-3.3 3.6-6 8-6s8 2.7 8 6v1H1v-1zm17.5 1v-1c0-1.9-.8-3.6-2.1-4.9 3.6.2 6.6 2.4 6.6 4.9v1h-4.5z"></path></svg><h3>مستفيد من برامجنا</h3><b data-n="15000">+١٥٬٠٠٠</b></div></div>
+  </section><section class="why">
+    <div class="wrap">
+      <div class="rv">
+        <div class="sec-head" style="text-align:right;margin:0"><small>كيف نعمل معك</small><h2>لماذا نحن؟</h2><p>لا نقدّم إجابات جاهزة، بل نساعدك على رؤية الصورة كاملة واتخاذ قرار أفضل.</p></div>
+        <div class="why-list"><div class="why-item"><i><svg viewBox="0 0 24 24"><path d="M10 2a8 8 0 0 1 6.3 12.9l5.4 5.4-1.4 1.4-5.4-5.4A8 8 0 1 1 10 2zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12z"></path></svg></i><div><h3>التشخيص</h3><p>نقرأ واقع المنظمة: مصادر الدخل الحالية، ونقاط القوة، والمخاطر.</p></div></div><div class="why-item"><i><svg viewBox="0 0 24 24"><path d="M3 17.2V21h3.8L17.8 10 14 6.2 3 17.2zM20.7 7a1 1 0 0 0 0-1.4l-2.3-2.3a1 1 0 0 0-1.4 0L15.2 5 19 8.8 20.7 7z"></path></svg></i><div><h3>التصميم</h3><p>نختار مصادر الدخل الأنسب لطبيعة المنظمة ونبني خطة واضحة.</p></div></div><div class="why-item"><i><svg viewBox="0 0 24 24"><path d="M22.7 19 13.6 9.9a6 6 0 0 0-7.9-7.7l4 4-2.8 2.8-4-4a6 6 0 0 0 7.7 7.9l9.1 9.1a1 1 0 0 0 1.4 0l1.6-1.6a1 1 0 0 0 0-1.5z"></path></svg></i><div><h3>التمكين</h3><p>نسلّم الفريق الأدوات والمنهجيات، وندرّبه على التطبيق.</p></div></div><div class="why-item"><i><svg viewBox="0 0 24 24"><path d="M3 3h2v16h16v2H3V3zm4 10h3v5H7v-5zm5-6h3v11h-3V7zm5 3h3v8h-3v-8z"></path></svg></i><div><h3>القياس</h3><p>نتابع النتائج بالمؤشرات، ونحسّن المسار حتى تستقر القدرة.</p></div></div></div>
+      </div>
+      <div class="why-pic rv"><img src="img/n-why.webp" alt="أ. حامد الذيابي يقدّم ورشة عمل" loading="lazy"><div class="badge"><b>+٢٠</b>عامًا في الميدان</div></div>
+    </div>
+  </section><section class="clients">
+    <div class="wrap">
+      <div class="eyebrow">عملاء وشركاء</div>
+      <h2 class="h2">جهات وثقت بنا</h2>
+      <p class="intro">من القطاع غير الربحي والجهات الحكومية والقطاع الخاص.</p>
+    </div>
+    <div class="marquee" aria-label="شعارات العملاء"><ul class="track"><li><img src="clients/s13_01.webp" alt="جمعية عزم للتصلب المتعدد" width="260" height="120" loading="lazy"></li><li><img src="clients/s13_02.webp" alt="الوداد لرعاية الأيتام" width="260" height="120" loading="lazy"></li><li><img src="clients/s13_03.webp" alt="جمعية الرائدة النسائية الاجتماعية" width="260" height="120" loading="lazy"></li><li><img src="clients/s13_04.webp" alt="جمعية دعم الأوقاف" width="260" height="120" loading="lazy"></li><li><img src="clients/s13_05.webp" alt="كبدك" width="260" height="120" loading="lazy"></li><li><img src="clients/s13_06.webp" alt="جمعية تحفيظ القرآن بوادي لية" width="260" height="120" loading="lazy"></li><li><img src="clients/s13_07.webp" alt="إرادة" width="260" height="120" loading="lazy"></li><li><img src="clients/s13_08.webp" alt="مكارم الأخلاق" width="260" height="120" loading="lazy"></li><li><img src="clients/s13_09.webp" alt="شعار جهة غير ربحية" width="260" height="120" loading="lazy"></li><li><img src="clients/s13_10.webp" alt="مطورون" width="260" height="120" loading="lazy"></li><li><img src="clients/s13_11.webp" alt="مؤسسة الحبيب الخيرية" width="260" height="120" loading="lazy"></li><li><img src="clients/s13_12.webp" alt="مؤسسة سامي علي الجفالي الأهلية" width="260" height="120" loading="lazy"></li><li><img src="clients/s13_13.webp" alt="جمعية مسكن للإسكان التنموي" width="260" height="120" loading="lazy"></li><li><img src="clients/s13_14.webp" alt="شعار جمعية خيرية" width="260" height="120" loading="lazy"></li><li><img src="clients/s13_15.webp" alt="مسك" width="260" height="120" loading="lazy"></li><li><img src="clients/s14_01.webp" alt="بنك التنمية الاجتماعية" width="260" height="120" loading="lazy"></li><li><img src="clients/s14_02.webp" alt="المركز الوطني لتنمية القطاع غير الربحي" width="260" height="120" loading="lazy"></li><li><img src="clients/s14_03.webp" alt="وزارة البيئة والمياه والزراعة" width="260" height="120" loading="lazy"></li><li><img src="clients/s14_04.webp" alt="جود الأعمال" width="260" height="120" loading="lazy"></li><li><img src="clients/s14_05.webp" alt="وزارة الثقافة" width="260" height="120" loading="lazy"></li><li><img src="clients/s15_01.webp" alt="غزارة للاستشارات" width="260" height="120" loading="lazy"></li><li><img src="clients/s15_02.webp" alt="التحول التقني" width="260" height="120" loading="lazy"></li><li><img src="clients/s15_03.webp" alt="سقيفة" width="260" height="120" loading="lazy"></li><li><img src="clients/s15_04.webp" alt="واكب" width="260" height="120" loading="lazy"></li><li><img src="clients/s15_05.webp" alt="ركين" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_01.webp" alt="جمعية عزم للتصلب المتعدد" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_02.webp" alt="الوداد لرعاية الأيتام" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_03.webp" alt="جمعية الرائدة النسائية الاجتماعية" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_04.webp" alt="جمعية دعم الأوقاف" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_05.webp" alt="كبدك" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_06.webp" alt="جمعية تحفيظ القرآن بوادي لية" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_07.webp" alt="إرادة" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_08.webp" alt="مكارم الأخلاق" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_09.webp" alt="شعار جهة غير ربحية" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_10.webp" alt="مطورون" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_11.webp" alt="مؤسسة الحبيب الخيرية" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_12.webp" alt="مؤسسة سامي علي الجفالي الأهلية" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_13.webp" alt="جمعية مسكن للإسكان التنموي" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_14.webp" alt="شعار جمعية خيرية" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_15.webp" alt="مسك" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s14_01.webp" alt="بنك التنمية الاجتماعية" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s14_02.webp" alt="المركز الوطني لتنمية القطاع غير الربحي" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s14_03.webp" alt="وزارة البيئة والمياه والزراعة" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s14_04.webp" alt="جود الأعمال" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s14_05.webp" alt="وزارة الثقافة" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s15_01.webp" alt="غزارة للاستشارات" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s15_02.webp" alt="التحول التقني" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s15_03.webp" alt="سقيفة" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s15_04.webp" alt="واكب" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s15_05.webp" alt="ركين" width="260" height="120" loading="lazy"></li></ul></div>
+  </section><section class="awards">
+    <div class="wrap">
+      <div class="eyebrow">جوائز وتكريمات</div>
+      <h2 class="h2">أثر حظي بالتقدير</h2>
+      <div class="aw-photos"><figure><img src="img/n-aw1.webp" alt="تكريم من المركز الوطني لتنمية القطاع غير الربحي" loading="lazy"><figcaption>تكريم من المركز الوطني لتنمية القطاع غير الربحي</figcaption></figure><figure><img src="img/n-aw2.webp" alt="الجائزة الوطنية للعمل التطوعي" loading="lazy"><figcaption>الجائزة الوطنية للعمل التطوعي</figcaption></figure></div><ul class="aw-list">
+        <li><b>جائزة Stevie الدولية</b><span>المستوى الذهبي لأفضل مشروع إنساني شارك في إنتاجه</span></li>
+        <li><b>موسوعة جينيس</b><span>أكبر صف تبرعات في العالم، حملة «أواني الخير»</span></li>
+        <li><b>جائزة رواد التسويق</b><span>المركز الثاني على مستوى المملكة</span></li>
+        <li><b>جائزة العمل التطوعي ٢٠٢٥</b><span>إلى جانب تكريم أمير المنطقة الشرقية</span></li><li><b>تطوع احترافي</b><span>المركز الوطني لتنمية القطاع غير الربحي</span></li>
+        <li><b>أبطال العدالة الاجتماعية</b><span>مؤسسة الملك خالد</span></li>
+        <li><b>من أبرز ١٠ مؤثرين</b><span>على منصة لينكدإن</span></li>
+      <li><b>هاكثون التنمية الاجتماعية الأول</b><span>المركز الثاني، مشروع «تعزيز»</span></li></ul>
+    </div>
+  </section><section class="ab-split">
+    <div class="wrap">
+      <div class="ab-pics rv"><img class="p1" src="img/n-consult.webp" alt="أ. حامد الذيابي في جلسة استشارية مع فريق إحدى المنظمات" loading="lazy"><img class="p2" src="img/n-portrait.webp" alt="أ. حامد الذيابي" loading="lazy" style="object-fit:cover"></div>
+      <div class="ab-txt rv"><small>من نحن</small><h2>خبرة ميدانية تحوّلت إلى منهجيات عملية</h2><p>خلف هذا المحتوى خبرة تمتد أكثر من عشرين عامًا يقودها أ. حامد الذيابي في تنمية موارد المنظمات غير الربحية وبناء استدامتها المالية.</p><p>تعلّمنا من الميدان أن التحدي الحقيقي ليس جمع المال فقط، بل بناء استدامة تحرر المنظمة من الطوارئ المالية؛ ولذلك نحوّل الخبرة إلى أدوات ومنهجيات تساعد المنظمات على خدمة قضاياها وتعظيم أثرها.</p><a class="btn btn-navy" href="#about">تعرّف علينا</a></div>
+    </div>
+  </section><section class="cta-end"><div class="wrap"><h2>لنبدأ من واقع منظمتك</h2><p>أخبرنا بما تحتاجه منظمتك، ونقترح عليك المسار الأنسب لتنمية مواردها واستدامتها.</p><div class="ctas"><a class="btn btn-coral" href="#store">اطلب الخدمة</a><a class="btn btn-ghost" href="https://wa.me/966554070212" target="_blank" rel="noopener">راسلنا على واتساب</a></div></div></section></div>
+
+<div class="page" id="about" data-page="about" hidden="">
+  <div class="phead" style="background-image: url(&quot;img/n-about.webp&quot;);"><h1>من نحن</h1><nav><a href="#home">الرئيسية</a><span>/</span>من نحن</nav></div>
+  <section class="about">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow">من هو حامد الذيابي</div>
+        <h2 class="h2">من قلب الميدان إلى منهجيات عملية</h2>
+        <p style="margin-top:20px">أدرك حامد الذيابي من عمله الميداني أن التحدي الحقيقي للمنظمات غير الربحية ليس جمع المال فقط، بل بناء استدامة تحررها من الطوارئ المالية.</p>
+        <p>ومن خلال أكثر من عشرين عامًا من الخبرة والتعلم المتخصص، حوّل خبرته إلى منهجيات عملية تساعد المنظمات على خدمة قضاياها وتعظيم أثرها، لا مجرد الحفاظ على كياناتها.</p>
+        <p>يجمع بين الخبرة الميدانية والرؤية المستقبلية، ويحوّل المعرفة المعقدة إلى أدوات واضحة، ويقدّم نقدًا مهنيًا مبنيًا على البيانات والحلول.</p>
+      </div>
+      <div class="quote">
+        <small>الرسالة</small>
+        <p>الاستدامة المالية هي الطريق، والحرية المالية هي الغاية.</p>
+        <p class="alt">«تنويع مصادر الدخل ليس هدفًا في ذاته؛ السؤال الأهم: أي مصادر دخل تتناسب مع طبيعة منظمتك وتمنحها قدرة أكبر على الاستمرار؟»</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="creds">
+    <div class="wrap creds-grid">
+      <div>
+        <div class="eyebrow">المؤهلات</div>
+        <h2 class="h2">تأهيل أكاديمي ومهني</h2>
+        <ul class="cr-list">
+          <li><b>زمالة قيادة العمل التشاركي</b><span>جامعة مانشستر، ٢٠٢٥</span></li>
+          <li><b>الزمالة العربية الأوروبية في الاقتصاد الاجتماعي</b><span>جامعة غرناطة، ٢٠٢٤</span></li>
+          <li><b>ماجستير إدارة المنظمات غير الربحية التنفيذي</b><span>جامعة حائل، ٢٠٢٢، بتقدير ممتاز مع مرتبة الشرف الأولى</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="eyebrow">أدوار استشارية</div>
+        <h2 class="h2">مستشار لبرامج رائدة</h2>
+        <ul class="cr-list">
+          <li><b>مسرعة مسك</b><span>مستشار في الاستدامة المالية</span></li>
+          <li><b>برنامج سند محمد بن سلمان</b><span>مستشار في التسويق الخيري</span></li>
+          <li><b>حاضنة جدارة</b><span>مستشار</span></li>
+          <li><b>مؤسسة درب غير الربحية</b><span>رئيس مجلس الأمناء</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="method">
+    <div class="wrap">
+      <div class="eyebrow">المنهجية</div>
+      <h2 class="h2">كيف نعمل معك</h2>
+      <p class="intro">لا نقدّم إجابات جاهزة، بل نساعدك على رؤية الصورة كاملة واتخاذ قرار أفضل.</p>
+      <div class="steps">
+        <div class="step"><div class="n">٠١</div><h3>التشخيص</h3><p>نقرأ واقع المنظمة: مصادر الدخل الحالية، ونقاط القوة، والمخاطر.</p></div>
+        <div class="step"><div class="n">٠٢</div><h3>التصميم</h3><p>نختار مصادر الدخل الأنسب لطبيعة المنظمة ونبني خطة واضحة.</p></div>
+        <div class="step"><div class="n">٠٣</div><h3>التمكين</h3><p>نسلّم الفريق الأدوات والمنهجيات، وندرّبه على التطبيق.</p></div>
+        <div class="step"><div class="n">٠٤</div><h3>القياس</h3><p>نتابع النتائج بالمؤشرات، ونحسّن المسار حتى تستقر القدرة.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="aud-sec">
+    <div class="wrap">
+      <div class="eyebrow">لمن نعمل</div>
+      <h2 class="h2">شركاء في استدامة القطاع</h2>
+      <div class="aud-grid">
+        <div class="aud"><h3>قيادات المنظمات غير الربحية</h3><div class="tags">الاستقرار المالي · تنويع الدخل · الأثر</div><p>الاستدامة المالية تمنح منظمتك قدرة أكبر على خدمة قضيتها واتخاذ قراراتها بثقة.</p></div>
+        <div class="aud"><h3>مجالس الإدارات</h3><div class="tags">الحوكمة · المخاطر · وضوح القرار</div><p>الاستدامة ليست مسؤولية إدارة تنمية الموارد وحدها، بل قرار استراتيجي يبدأ من مجلس الإدارة.</p></div>
+        <div class="aud"><h3>الجهات المانحة</h3><div class="tags">كفاءة التمويل · قياس النتائج</div><p>التمويل الأكثر أثرًا هو الذي يساعد المنظمة على بناء قدرتها والاستمرار بعد انتهاء المنحة.</p></div>
+        <div class="aud"><h3>الجهات الداعمة والمنظِّمة</h3><div class="tags">تطوير القطاع · النضج المؤسسي</div><p>قطاع غير ربحي أكثر استدامة ماليًا هو قطاع أكثر قدرة على المساهمة في التنمية.</p></div>
+        <div class="aud"><h3>الإعلام وصنّاع المحتوى</h3><div class="tags">القضايا · الأرقام · مستقبل القطاع</div><p>الاستدامة المالية ليست قضية مالية فقط؛ بل قضية تنمية ومستقبل وأثر مجتمعي.</p></div>
+        <div class="aud"><h3>الباحثون والأكاديميون</h3><div class="tags">المعرفة · البيانات · النماذج</div><p>الميدان يقدّم أسئلة حقيقية، والبحث يحوّلها إلى معرفة ومنهجيات تساعد القطاع.</p></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="page" id="store" data-page="store" hidden="">
+  <div class="phead" style="background-image: url(&quot;img/n-services.webp&quot;);"><h1>خدماتنا</h1><nav><a href="#home">الرئيسية</a><span>/</span>خدماتنا</nav></div>
+  <section class="store">
+    <div class="wrap">
+      <div class="eyebrow">خدماتنا</div>
+      <h2 class="h2">اطلب خدمتك</h2>
+      <div class="fchips" role="group" aria-label="تصفية الخدمات"><button class="fchip" data-g="all" aria-pressed="true">الكل</button><button class="fchip" data-g="plans" aria-pressed="false">تصميم الخطط والنماذج</button><button class="fchip" data-g="courses" aria-pressed="false">الدورات التدريبية</button><button class="fchip" data-g="sessions" aria-pressed="false">الجلسات الاستشارية</button><button class="fchip" data-g="review" aria-pressed="false">التقييم والتحكيم وخدمات أخرى</button></div>
+      <div class="prod-grid">
+        <article class="prod" data-g="plans"><span class="cat">تصميم الخطط والنماذج</span><h3>خطة الاستدامة المالية</h3><p class="pdesc">خطة تبني لجهتك مصادر دخل مستقرة ومتنوعة، وتقلل اعتمادها على التبرعات الموسمية.</p><div class="price"><small>السعر</small><b>حسب الطلب</b></div><a class="btn btn-coral" href="#contact">اطلب الآن</a></article>
+        <article class="prod" data-g="plans"><span class="cat">تصميم الخطط والنماذج</span><h3>تصميم الخطة التسويقية</h3><p class="pdesc">خطة تسويقية واضحة الأهداف والرسائل والقنوات، مبنية على طبيعة جهتك وجمهورها.</p><div class="price"><small>السعر</small><b>حسب الطلب</b></div><a class="btn btn-coral" href="#contact">اطلب الآن</a></article>
+        <article class="prod" data-g="plans"><span class="cat">تصميم الخطط والنماذج</span><h3>تصميم ملف تسويقي للمانحين</h3><p class="pdesc">ملف احترافي يعرض جهتك ومشاريعها وأثرها بلغة تقنع المانحين.</p><div class="price"><small>السعر</small><b>حسب الطلب</b></div><a class="btn btn-coral" href="#contact">اطلب الآن</a></article>
+        <article class="prod" data-g="plans"><span class="cat">تصميم الخطط والنماذج</span><h3>تصميم رحلة المتبرع</h3><p class="pdesc">رسم مسار المتبرع من أول تعرّف على جهتك حتى يصبح داعمًا دائمًا.</p><div class="price"><small>السعر</small><b>حسب الطلب</b></div><a class="btn btn-coral" href="#contact">اطلب الآن</a></article>
+        <article class="prod" data-g="plans"><span class="cat">تصميم الخطط والنماذج</span><h3>خطة جمع التبرعات</h3><p class="pdesc">خطة عملية بأهداف ومواسم وأدوات محددة لتنمية تبرعات جهتك.</p><div class="price"><small>السعر</small><b>حسب الطلب</b></div><a class="btn btn-coral" href="#contact">اطلب الآن</a></article>
+        <article class="prod" data-g="plans"><span class="cat">تصميم الخطط والنماذج</span><h3>تصميم شخصية المتبرع</h3><p class="pdesc">تحديد ملامح المتبرعين المستهدفين لجهتك، لتصل رسائلك إلى الشخص المناسب.</p><div class="price"><small>السعر</small><b>حسب الطلب</b></div><a class="btn btn-coral" href="#contact">اطلب الآن</a></article>
+        <article class="prod" data-g="courses"><span class="cat">الدورات التدريبية</span><h3>التسويق الخيري</h3><p class="pdesc">دورة في أسس تسويق الجهات غير الربحية وبناء علاقتها بالداعمين.</p><div class="price"><small>السعر</small><b>حسب الطلب</b></div><a class="btn btn-coral" href="#contact">اطلب الآن</a></article>
+        <article class="prod" data-g="courses"><span class="cat">الدورات التدريبية</span><h3>صناعة الخطة التسويقية</h3><p class="pdesc">دورة تطبيقية يخرج منها المتدرب بخطة تسويقية لجهته.</p><div class="price"><small>السعر</small><b>حسب الطلب</b></div><a class="btn btn-coral" href="#contact">اطلب الآن</a></article>
+        <article class="prod" data-g="courses"><span class="cat">الدورات التدريبية</span><h3>تصميم تجربة المتبرع</h3><p class="pdesc">دورة في تحسين تجربة المتبرع لرفع رضاه وولائه.</p><div class="price"><small>السعر</small><b>حسب الطلب</b></div><a class="btn btn-coral" href="#contact">اطلب الآن</a></article>
+        <article class="prod" data-g="courses"><span class="cat">الدورات التدريبية</span><h3>الاستدامة المالية</h3><p class="pdesc">دورة في بناء الاستدامة المالية وتنويع مصادر الدخل.</p><div class="price"><small>السعر</small><b>حسب الطلب</b></div><a class="btn btn-coral" href="#contact">اطلب الآن</a></article>
+        <article class="prod" data-g="courses"><span class="cat">الدورات التدريبية</span><h3>خطة تنمية الموارد المالية</h3><p class="pdesc">دورة تطبيقية في إعداد خطة تنمية موارد متكاملة.</p><div class="price"><small>السعر</small><b>حسب الطلب</b></div><a class="btn btn-coral" href="#contact">اطلب الآن</a></article>
+        <article class="prod" data-g="sessions"><span class="cat">الجلسات الاستشارية</span><h3>جلسة استشارية</h3><p class="pdesc">جلسة مع أ. حامد الذيابي لمناقشة تحديات جهتك في التسويق والاستدامة المالية، حضوريًا أو عن بُعد.</p><div class="price"><small>السعر</small><b>حسب الطلب</b></div><a class="btn btn-coral" href="#contact">اطلب الآن</a></article>
+        <article class="prod" data-g="review"><span class="cat">التقييم والتحكيم وخدمات أخرى</span><h3>تجديد الهوية البصرية للجهة</h3><p class="pdesc">تطوير هوية جهتك البصرية لتعكس رسالتها بصورة احترافية.</p><div class="price"><small>السعر</small><b>حسب الطلب</b></div><a class="btn btn-coral" href="#contact">اطلب الآن</a></article>
+        <article class="prod" data-g="review"><span class="cat">التقييم والتحكيم وخدمات أخرى</span><h3>تحكيم خطط الاستدامة المالية</h3><p class="pdesc">مراجعة مهنية لخطة الاستدامة لديك، مع ملاحظات وتوصيات للتحسين.</p><div class="price"><small>السعر</small><b>حسب الطلب</b></div><a class="btn btn-coral" href="#contact">اطلب الآن</a></article>
+        <article class="prod" data-g="review"><span class="cat">التقييم والتحكيم وخدمات أخرى</span><h3>تقييم خطة تسويقية</h3><p class="pdesc">تقييم خطتك التسويقية الحالية، وتحديد نقاط القوة وفرص التطوير.</p><div class="price"><small>السعر</small><b>حسب الطلب</b></div><a class="btn btn-coral" href="#contact">اطلب الآن</a></article>
+        <article class="prod" data-g="review"><span class="cat">التقييم والتحكيم وخدمات أخرى</span><h3>تقييم منتج التبرع</h3><p class="pdesc">تقييم مشاريع التبرع لديك من حيث وضوحها وجاذبيتها للمتبرع.</p><div class="price"><small>السعر</small><b>حسب الطلب</b></div><a class="btn btn-coral" href="#contact">اطلب الآن</a></article>
+        <article class="prod" data-g="review"><span class="cat">التقييم والتحكيم وخدمات أخرى</span><h3>تقييم متجر إلكتروني</h3><p class="pdesc">تقييم متجر التبرعات الإلكتروني لجهتك من حيث سهولة الاستخدام وتجربة المتبرع.</p><div class="price"><small>السعر</small><b>حسب الطلب</b></div><a class="btn btn-coral" href="#contact">اطلب الآن</a></article>
+        <article class="prod" data-g="review"><span class="cat">التقييم والتحكيم وخدمات أخرى</span><h3>تجربة المتبرع الخفي</h3><p class="pdesc">نجرّب التبرع لجهتك كمتبرع عادي، ثم نقدّم تقريرًا بما يحتاج تحسينًا.</p><div class="price"><small>السعر</small><b>حسب الطلب</b></div><a class="btn btn-coral" href="#contact">اطلب الآن</a></article>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="page" id="cal" data-page="cal" hidden="">
+  <div class="phead" style="background-image:url(img/panel.webp)"><h1>التقويم</h1><nav><a href="#home">الرئيسية</a><span>/</span>التقويم</nav></div>
+  <section class="cal-sec">
+    <div class="wrap">
+      <div class="eyebrow">التقويم</div>
+      <h2 class="h2">تقويم القطاع غير الربحي</h2>
+      <p class="intro">الأيام العالمية والمواسم المرتبطة بالعمل الخيري والتنموي، والمناسبات الوطنية، وفعاليات القطاع في المملكة العربية السعودية. يتحدّث تلقائيًا مع كل شهر.</p>
+      <div class="month-tabs" id="month-tabs" role="tablist" aria-label="أشهر السنة"></div>
+      <div class="month-grid cal-grid">
+        <div class="mg-col"><h3 class="mg-h" id="cal-days-h">الأيام العالمية والمواسم</h3><ul class="day-list" id="cal-days"></ul></div>
+        <div class="mg-col"><h3 class="mg-h">فعاليات القطاع في المملكة</h3><ul class="ev-list" id="cal-events"></ul><p class="cal-note">ملتقيات ومنتديات ومؤتمرات ومعارض القطاع غير الربحي، وتُحدَّث بحسب ما تعلنه الجهات المنظمة.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="page" id="pubs" data-page="pubs" hidden="">
+  <div class="phead" style="background-image: url(&quot;img/n-pubs.webp&quot;);"><h1>الإصدارات</h1><nav><a href="#home">الرئيسية</a><span>/</span>الإصدارات</nav></div>
+  <section class="pubs-sec pubs-top">
+    <div class="wrap">
+      <div class="eyebrow">الإصدارات</div>
+      <h2 class="h2">مكتبة الإصدارات</h2>
+      <p class="intro">كتاب وأدلة وبحوث وتقارير ونماذج في التسويق والاستدامة المالية للقطاع غير الربحي، أغلبها متاح للقراءة مجانًا، إلى جانب مشاركاتنا الإعلامية.</p>
+      <nav class="pub-jump" aria-label="أقسام الإصدارات"><a href="#pubs" data-jump="own">الإصدارات</a><a href="#pubs" data-jump="trans">ترجمات الاستدامة</a><a href="#pubs" data-jump="guides">أدلة مصوّرة</a><a href="#pubs" data-jump="contrib">إصدارات شارك فيها</a><a href="#pubs" data-jump="media">الإعلام والمشاركات</a></nav>
+      <div class="pub-head" id="sec-own"><h2 class="h3x">الإصدارات</h2></div>
+      <div class="pub-grid"><article class="pub tall"><img src="pubs/cover16.webp" alt="غلاف: تطوير أدوات تمويل مبتكرة لتعزيز الاستدامة المالية للمنظمات غير الربحية" width="900" height="1200" loading="lazy"><div class="pub-body"><span class="pub-tag">دراسة محكّمة · ٢٠٢٦</span><h3>تطوير أدوات تمويل مبتكرة لتعزيز الاستدامة المالية للمنظمات غير الربحية</h3><p>دراسة منشورة في مجلة البحوث والدراسات الاجتماعية، تقترح إطارًا عمليًا لتطبيق أدوات التمويل المبتكرة في السياق السعودي.</p></div><a class="btn btn-coral" href="https://rssj.ncss.gov.sa/index.php/rssj/article/view/257" target="_blank" rel="noopener">قراءة الدراسة</a></article>
+        <article class="pub tall">
+          <img class="nocrop" src="pubs/book.webp" alt="غلاف كتاب استدامة العطاء" width="773" height="1100" loading="lazy">
+          <div class="pub-body"><span class="pub-tag">كتاب</span><h3>استدامة العطاء</h3><p>كيف تخلق التجارب المميزة الاستدامة.</p></div>
+          <a class="btn btn-coral" href="https://rushd.sa/products/%D8%A7%D8%B3%D8%AA%D8%AF%D8%A7%D9%85%D8%A9-%D8%A7%D9%84%D8%B9%D8%B7%D8%A7%D8%A1-%D9%80%D9%80-%D9%83%D9%8A%D9%81-%D8%AA%D8%AE%D9%84%D9%82-%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A8-%D8%A7%D9%84%D9%85%D9%85%D9%8A%D8%B2%D8%A9-%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%AF%D8%A7%D9%85%D8%A9" target="_blank" rel="noopener">شراء الكتاب</a>
+        </article>
+        <article class="pub tall">
+          <img src="pubs/newsletter.webp" alt="النشرة البريدية: الاستدامة المالية" width="600" height="800" loading="lazy">
+          <div class="pub-body"><span class="pub-tag">نشرة بريدية · +٢٨٠٠ مشترك</span><h3>نشرة «الاستدامة المالية»</h3><p>نشرة دورية على لينكدإن في الاستدامة المالية للقطاع غير الربحي.</p></div>
+          <a class="btn btn-coral" href="https://www.linkedin.com/newsletters/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%AF%D8%A7%D9%85%D8%A9-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9-7063422465699409920" target="_blank" rel="noopener">اشترك في النشرة</a>
+        </article>
+        <article class="pub tall">
+          <img src="pubs/cover09.webp" alt="غلاف: التسويق للمنظمات غير الربحية" width="637" height="900" loading="lazy">
+          <div class="pub-body"><span class="pub-tag">دليل · ٢٨ صفحة</span><h3>التسويق للمنظمات غير الربحية</h3><p>مفاهيم ونماذج وممارسات في تسويق المنظمات غير الربحية.</p></div>
+          <a class="btn btn-navy read-pub" href="pubs/pub09.pdf" target="_blank" rel="noopener" data-pdf="pubs/pub09.pdf">قراءة الإصدار</a>
+        </article>
+        <article class="pub tall">
+          <img src="pubs/cover10.webp" alt="غلاف: فنتك التبرعات" width="574" height="900" loading="lazy">
+          <div class="pub-body"><span class="pub-tag">بحث · ٢٠٢٥ · ٣٨ صفحة</span><h3>فنتك التبرعات</h3><p>بحث في توظيف الجهات الأهلية في السعودية للابتكار والتقنية المالية لتحقيق الكفاءة والاستدامة.</p></div>
+          <a class="btn btn-navy read-pub" href="pubs/pub10.pdf" target="_blank" rel="noopener" data-pdf="pubs/pub10.pdf">قراءة الإصدار</a>
+        </article>
+        <article class="pub tall">
+          <img src="pubs/cover11.webp" alt="غلاف: رحلة المتبرع" width="720" height="900" loading="lazy">
+          <div class="pub-body"><span class="pub-tag">نموذج · ٨ صفحات</span><h3>رحلة المتبرع</h3><p>نموذج يساعد الجهات غير الربحية على تحسين تجربة المتبرع، ورفع الثقة والولاء، وتعظيم الأثر.</p></div>
+          <a class="btn btn-navy read-pub" href="pubs/pub11.pdf" target="_blank" rel="noopener" data-pdf="pubs/pub11.pdf">قراءة الإصدار</a>
+        </article>
+        <article class="pub tall">
+          <img src="pubs/cover12.webp" alt="غلاف: أبرز ١٠ حملات تسويقية في رمضان ١٤٤٦هـ" width="637" height="900" loading="lazy">
+          <div class="pub-body"><span class="pub-tag">تقرير · ٢٧ صفحة</span><h3>أبرز ١٠ حملات تسويقية في رمضان ١٤٤٦هـ</h3><p>تقرير يرصد أبرز الحملات التسويقية في رمضان، مع خاتمة وتوصيات.</p></div>
+          <a class="btn btn-navy read-pub" href="pubs/pub12.pdf" target="_blank" rel="noopener" data-pdf="pubs/pub12.pdf">قراءة الإصدار</a>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="pubs-sec" id="sec-trans">
+    <div class="wrap">
+      <div class="pub-head"><h2 class="h3x">ترجمات الاستدامة</h2></div>
+      <p class="intro sm">ترجمات عربية ومراجعة أ. حامد الذيابي بتصرّف موائم للسياق المحلي للقطاع غير الربحي في المملكة العربية السعودية، في السرد القصصي وجمع التبرعات.</p>
+      <div class="pub-grid">
+        <article class="pub">
+          <img src="pubs/cover01.webp" alt="غلاف: الدخول إلى قلب القصة: دليل الطلب الغامر" width="640" height="640" loading="lazy">
+          <div class="pub-body"><span class="pub-tag">ترجمة ومراجعة · ١٢ صفحة</span><h3>الدخول إلى قلب القصة: دليل الطلب الغامر</h3><p>كيف تصوغ طلبات تبرع تجعل المتبرع يشعر بأنه جزء أساسي من القصة</p></div>
+          <a class="btn btn-navy read-pub" href="pubs/pub01.pdf" target="_blank" rel="noopener" data-pdf="pubs/pub01.pdf">قراءة الإصدار</a>
+        </article>
+        <article class="pub">
+          <img src="pubs/cover02.webp" alt="غلاف: سرد القصص من أجل الفعل" width="640" height="640" loading="lazy">
+          <div class="pub-body"><span class="pub-tag">ملخص تحليلي · ٩ صفحات</span><h3>سرد القصص من أجل الفعل</h3><p>كيف تحوّل القصة الصحيحة، في التوقيت الصحيح، تبرع المانح إلى فعل</p></div>
+          <a class="btn btn-navy read-pub" href="pubs/pub02.pdf" target="_blank" rel="noopener" data-pdf="pubs/pub02.pdf">قراءة الإصدار</a>
+        </article>
+        <article class="pub">
+          <img src="pubs/cover03.webp" alt="غلاف: التفاصيل المؤثرة التي تجعل قصص المنظمات غير الربحية لا تُنسى" width="640" height="640" loading="lazy">
+          <div class="pub-body"><span class="pub-tag">ترجمة ومراجعة · ١٤ صفحة</span><h3>التفاصيل المؤثرة التي تجعل قصص المنظمات غير الربحية لا تُنسى</h3><p>كيف تجد التفاصيل الصغيرة القوية وتوظّفها لتبث الحياة في قصص منظمتك</p></div>
+          <a class="btn btn-navy read-pub" href="pubs/pub03.pdf" target="_blank" rel="noopener" data-pdf="pubs/pub03.pdf">قراءة الإصدار</a>
+        </article>
+        <article class="pub">
+          <img src="pubs/cover04.webp" alt="غلاف: اكتشاف القصص التي تجمع تبرعات أكثر" width="640" height="640" loading="lazy">
+          <div class="pub-body"><span class="pub-tag">ترجمة ومراجعة · ١٣ صفحة</span><h3>اكتشاف القصص التي تجمع تبرعات أكثر</h3><p>دليل الممارس في القطاع غير الربحي للعثور على القصص المؤثرة وتوظيفها</p></div>
+          <a class="btn btn-navy read-pub" href="pubs/pub04.pdf" target="_blank" rel="noopener" data-pdf="pubs/pub04.pdf">قراءة الإصدار</a>
+        </article>
+        <article class="pub">
+          <img src="pubs/cover05.webp" alt="غلاف: افتتاحيات السرد القصصي" width="640" height="640" loading="lazy">
+          <div class="pub-body"><span class="pub-tag">ترجمة ومراجعة · ١٨ صفحة</span><h3>افتتاحيات السرد القصصي</h3><p>١٢٥ افتتاحية قصصية لاستخدامها في رسائلك البريدية ونداءاتك ومنصات التواصل وغيرها</p></div>
+          <a class="btn btn-navy read-pub" href="pubs/pub05.pdf" target="_blank" rel="noopener" data-pdf="pubs/pub05.pdf">قراءة الإصدار</a>
+        </article>
+        <article class="pub">
+          <img src="pubs/cover06.webp" alt="غلاف: إطار القصة القصيرة لجمع التبرعات" width="640" height="640" loading="lazy">
+          <div class="pub-body"><span class="pub-tag">ترجمة · ١٣ صفحة</span><h3>إطار القصة القصيرة لجمع التبرعات</h3><p>دليل تفصيلي خطوة بخطوة لكتابة نداءات تبرع تُلهم العطاء</p></div>
+          <a class="btn btn-navy read-pub" href="pubs/pub06.pdf" target="_blank" rel="noopener" data-pdf="pubs/pub06.pdf">قراءة الإصدار</a>
+        </article>
+        <article class="pub">
+          <img src="pubs/cover07.webp" alt="غلاف: قصص جمع التبرعات التي تبدأ بالعاطفة" width="640" height="640" loading="lazy">
+          <div class="pub-body"><span class="pub-tag">ترجمة ومراجعة · ١٦ صفحة</span><h3>قصص جمع التبرعات التي تبدأ بالعاطفة</h3><p>دليل في السرد القصصي: كيف تأسر قلوب المتبرعين وتلهمهم للعطاء</p></div>
+          <a class="btn btn-navy read-pub" href="pubs/pub07.pdf" target="_blank" rel="noopener" data-pdf="pubs/pub07.pdf">قراءة الإصدار</a>
+        </article>
+        <article class="pub">
+          <img src="pubs/cover08.webp" alt="غلاف: اختبار نبض القصة" width="640" height="640" loading="lazy">
+          <div class="pub-body"><span class="pub-tag">ترجمة ومراجعة · ١٤ صفحة</span><h3>اختبار نبض القصة</h3><p>قائمة فحص تضمن أن قصتك تلامس القلوب وتُلهم المتبرعين للعطاء</p></div>
+          <a class="btn btn-navy read-pub" href="pubs/pub08.pdf" target="_blank" rel="noopener" data-pdf="pubs/pub08.pdf">قراءة الإصدار</a>
+        </article>
+
+        <article class="pub">
+          <img src="pubs/cover15.webp" alt="غلاف: الدعم المستدام: كيف تبني قاعدة متبرعيك الشهريين" width="900" height="900" loading="lazy">
+          <div class="pub-body"><span class="pub-tag">ترجمة · ٢٠ صفحة</span><h3>الدعم المستدام: كيف تبني قاعدة متبرعيك الشهريين</h3><p>دليل متكامل لصناعة تجربة متبرع تلهم الالتزام طويل الأمد.</p></div>
+          <a class="btn btn-navy read-pub" href="pubs/pub15.pdf" target="_blank" rel="noopener" data-pdf="pubs/pub15.pdf">قراءة الإصدار</a>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="pubs-sec" id="sec-guides">
+    <div class="wrap">
+      <div class="pub-head"><h2 class="h3x">أدلة مصوّرة</h2></div>
+      <p class="intro sm">لوحات مختصرة في صفحة واحدة، تصلح للمشاركة والطباعة.</p>
+      <div class="pub-grid">
+        <article class="pub tall">
+          <img src="pubs/cover13.webp" alt="غلاف: بوصلة البداية" width="507" height="900" loading="lazy">
+          <div class="pub-body"><span class="pub-tag">دليل مصوّر · ٢٠٢٥ · صفحة واحدة</span><h3>بوصلة البداية</h3><p>خارطة موجهة للمنضمين حديثًا إلى القطاع غير الربحي.</p></div>
+          <a class="btn btn-navy read-pub" href="pubs/pub13.pdf" target="_blank" rel="noopener" data-pdf="pubs/pub13.pdf">قراءة الإصدار</a>
+        </article>
+        <article class="pub tall">
+          <img src="pubs/cover14.webp" alt="غلاف: سلسلة القطاع الجديد" width="507" height="900" loading="lazy">
+          <div class="pub-body"><span class="pub-tag">دليل مصوّر · صفحة واحدة</span><h3>سلسلة القطاع الجديد</h3><p>تعريف بالقطاع غير الربحي وأشكاله المختلفة والمتنوعة.</p></div>
+          <a class="btn btn-navy read-pub" href="pubs/pub14.pdf" target="_blank" rel="noopener" data-pdf="pubs/pub14.pdf">قراءة الإصدار</a>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="pubs-sec" id="sec-contrib">
+    <div class="wrap">
+      <div class="pub-head"><h2 class="h3x">إصدارات شارك فيها</h2></div>
+      <ul class="link-list"><li><div><b>المؤشر الوطني للعطاء</b><span>إصدار شارك فيه</span></div><a href="https://drive.google.com/file/d/10Rkdy_gChBtJwDIpBTfzv14kDax3aVmA/view?usp=sharing" target="_blank" rel="noopener">فتح</a></li><li><div><b>دراسة تحسين تجربة المتبرعين</b><span>دراسة شارك فيها</span></div><a href="https://jmihdom.sa/%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9-%D8%AA%D8%AD%D8%B3%D9%8A%D9%86-%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9-%D8%A7%D9%84%D9%85%D8%AA%D8%A8%D8%B1%D8%B9%D9%8A%D9%86/" target="_blank" rel="noopener">فتح</a></li><li><div><b>تسويق القطاع غير الربحي عالميًا</b><span>معرفي</span></div><a href="https://knowledgeinnov.education/marketing-the-non-profit-sector-globally/" target="_blank" rel="noopener">فتح</a></li><li><div><b>دليل التخصص في القطاع غير الربحي</b><span>مؤسسة درب</span></div><a href="https://darb-hub.com/ar/pdf-files/%D8%AF%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%AA%D8%AE%D8%B5%D8%B5-%D9%85%D8%B9-%D8%A7%D9%84%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A-2/" target="_blank" rel="noopener">فتح</a></li><li><div><b>تقرير حملات رمضان ٢٠٢٤</b><span>مؤسسة درب</span></div><a href="https://darb-hub.com/pdf-files/%d8%aa%d9%82%d8%b1%d9%8a%d8%b1-%d8%ad%d9%85%d9%84%d8%a7%d8%aa-%d8%b1%d9%85%d8%b6%d8%a7%d9%86-2024/" target="_blank" rel="noopener">فتح</a></li></ul>
+    </div>
+  </section>
+
+  <section class="pubs-sec media-sec" id="sec-media">
+    <div class="wrap">
+      <div class="pub-head"><h2 class="h3x">الإعلام والمشاركات</h2></div>
+      <p class="intro sm">بودكاست ولقاءات إعلامية، إلى جانب مشاركات في إذاعة القرآن الكريم وإذاعة نداء الإسلام وقناة الرسالة وبلومبرغ الشرق.</p>
+      <ul class="link-list"><li><div><b>بودكاست «حكاية القطاع»</b><span>تقديم، الموسم الثاني</span></div><a href="https://youtube.com/playlist?list=PLAo-jF-fp49E9FgPTL12OkFwTjiPrUwtw" target="_blank" rel="noopener">مشاهدة</a></li><li><div><b>بودكاست «سبر»</b><span>مقدّم، لتوثيق تجارب القطاع غير الربحي</span></div><a href="https://youtube.com/@user-sb2gs6rx7l" target="_blank" rel="noopener">مشاهدة</a></li><li><div><b>بودكاست «اكتفاء»</b><span>ضيف</span></div><a href="https://youtu.be/XbSVe_wosPU" target="_blank" rel="noopener">مشاهدة</a></li><li><div><b>أسرة القطاع</b><span>لقاء</span></div><a href="https://youtu.be/23sC2lz_pKY" target="_blank" rel="noopener">مشاهدة</a></li><li><div><b>ذا ستيج</b><span>مشاركة</span></div><a href="https://youtu.be/-byebEAYGnk" target="_blank" rel="noopener">مشاهدة</a></li><li><div><b>لقاء أبجورة الإعلامي</b><span>لقاء</span></div><a href="https://youtu.be/M3gTwL70GVs" target="_blank" rel="noopener">مشاهدة</a></li><li><div><b>بودكاست الادخار المالي</b><span>حلقة مع بنك التنمية الاجتماعية</span></div><a href="https://youtu.be/xseHe3L8aMY" target="_blank" rel="noopener">مشاهدة</a></li><li><div><b>صحيفة عكاظ</b><span>تحقيق صحفي</span></div><a href="https://www.okaz.com.sa/investigation/na/2239858" target="_blank" rel="noopener">قراءة</a></li><li><div><b>قناة المجد</b><span>لقاء تلفزيوني</span></div><a href="https://twitter.com/AlmajdChannels/status/1356280958505394182" target="_blank" rel="noopener">مشاهدة</a></li><li><div><b>قناة الإخبارية</b><span>لقاء تلفزيوني</span></div><a href="https://twitter.com/jmihdom/status/1257679003332292609" target="_blank" rel="noopener">مشاهدة</a></li></ul>
+    </div>
+  </section>
+</div>
+
+<div class="page" id="contact" data-page="contact" hidden="">
+  <div class="phead" style="background-image:url(img/prince.webp)"><h1>تواصل معنا</h1><nav><a href="#home">الرئيسية</a><span>/</span>تواصل معنا</nav></div>
+  <section class="contact">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow">تواصل معنا</div>
+        <h2 class="h2">لنبدأ من واقع منظمتك</h2>
+        <p class="intro">يسعدنا تواصلك للاستفسار عن خدماتنا، أو لنتعرّف على واقع منظمتك ونقترح المسار الأنسب لها.</p>
+        <div class="dots" style="margin-top:28px" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="contact-card">
+        <div class="row"><div><small>البريد الإلكتروني</small><span id="mail">hamedalthiabi@gmail.com</span></div><button class="copy" data-t="hamedalthiabi@gmail.com">نسخ</button></div>
+        <div class="row"><div><small>واتساب الأعمال</small><span>+966 55 407 0212</span></div><a class="copy" href="https://wa.me/966554070212" target="_blank" rel="noopener" style="text-decoration:none">مراسلة</a></div>
+        <div class="socials">
+          <small>تابعنا</small>
+          <div class="soc-list">
+            <a href="https://x.com/HAMEDALTHIABI" target="_blank" rel="noopener"><b>X</b><span>@HAMEDALTHIABI</span></a>
+            <a href="https://www.linkedin.com/in/HAMEDALTHIABI" target="_blank" rel="noopener"><b>لينكدإن</b><span>HAMEDALTHIABI</span></a>
+            <a href="https://www.tiktok.com/@HAMEDALTHIABI" target="_blank" rel="noopener"><b>تيك توك</b><span>@HAMEDALTHIABI</span></a>
+            <a href="https://youtube.com/@hamedalthiabi1" target="_blank" rel="noopener"><b>يوتيوب</b><span>@hamedalthiabi1</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+</main>
+
+
+<div class="reader" id="reader" hidden="" role="dialog" aria-modal="true" aria-labelledby="rd-title">
+  <div class="rd-bar">
+    <button class="rd-close" id="rd-close" aria-label="إغلاق">إغلاق ✕</button>
+    <h3 id="rd-title"></h3>
+    <button class="btn btn-coral" id="rd-save" hidden="">حفظ الملف</button>
+  </div>
+  <div class="rd-pages" id="rd-pages"></div>
+</div>
+<footer class="f2">
+  <div class="wrap cols">
+    <div class="about-f"><img src="logo_white.png" alt="حامد الذيابي"><p>معرفة وخدمات في التسويق والاستدامة المالية للمنظمات غير الربحية. نساعد المنظمات على تنمية مواردها وبناء استدامتها؛ لتتفرغ لخدمة قضاياها وتعظيم أثرها.</p></div>
+    <div><h4>روابط سريعة</h4><ul><li><a href="#home"><svg viewBox="0 0 24 24"><path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"></path></svg>الرئيسية</a></li><li><a href="#pubs"><svg viewBox="0 0 24 24"><path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"></path></svg>الإصدارات</a></li><li><a href="#cal"><svg viewBox="0 0 24 24"><path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"></path></svg>التقويم</a></li><li><a href="#store"><svg viewBox="0 0 24 24"><path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"></path></svg>خدماتنا</a></li><li><a href="#about"><svg viewBox="0 0 24 24"><path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"></path></svg>من نحن</a></li><li><a href="#contact"><svg viewBox="0 0 24 24"><path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"></path></svg>تواصل معنا</a></li></ul></div>
+    <div><h4>معلومات الاتصال</h4><ul class="ci"><li><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 5.2-7 13-7 13S5 14.2 5 9a7 7 0 0 1 7-7zm0 4.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"></path></svg>الرياض، المملكة العربية السعودية</li><li><svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.4 7H4v.4l8 5.6 8-5.6V7h-.4L12 12.2z"></path></svg><span>hamedalthiabi@gmail.com</span></li><li><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.6 3.6a1 1 0 0 1-.25 1l-2.25 2.2z"></path></svg><span>+966 55 407 0212</span></li></ul>
+      <div class="soc"><a href="https://x.com/HAMEDALTHIABI" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.8-6.3L5.4 21H2.3l7.2-8.3L2 3h6.4l4.4 5.8L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"></path></svg></a><a href="https://www.linkedin.com/in/HAMEDALTHIABI" target="_blank" rel="noopener" aria-label="لينكدإن"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3V9.5zm6.5 0h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4V9.5z"></path></svg></a><a href="https://www.tiktok.com/@HAMEDALTHIABI" target="_blank" rel="noopener" aria-label="تيك توك"><svg viewBox="0 0 24 24"><path d="M16.6 2h-3.4v13.4a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9.1a6.4 6.4 0 1 0 5.4 6.3V8.7a7.8 7.8 0 0 0 4.4 1.4V6.7A4.4 4.4 0 0 1 16.6 2z"></path></svg></a><a href="https://youtube.com/@hamedalthiabi1" target="_blank" rel="noopener" aria-label="يوتيوب"><svg viewBox="0 0 24 24"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.4-1.6.5-3.2.5-4.8s-.1-3.2-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"></path></svg></a><a href="https://wa.me/966554070212" target="_blank" rel="noopener" aria-label="واتساب"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3 1 2.6 1.1 2.8s1.9 2.9 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.2z"></path></svg></a></div></div>
+  </div>
+  <div class="wrap copy-r">جميع الحقوق محفوظة © ٢٠٢٦ حامد الذيابي</div>
+</footer>
+<div id="loader" aria-hidden="true"><img src="logo_navy.png" alt=""><i></i></div>
+<button class="totop" id="totop" aria-label="العودة للأعلى"><svg viewBox="0 0 24 24"><path d="M12 5 4 13l1.4 1.4L11 8.8V20h2V8.8l5.6 5.6L20 13z"></path></svg></button>
+
+<script>
+document.querySelectorAll('.copy[data-t]').forEach(b=>{
+  b.addEventListener('click',()=>{
+    const t=b.dataset.t, done=()=>{b.textContent='تم النسخ';setTimeout(()=>b.textContent='نسخ',1800)};
+    try{navigator.clipboard.writeText(t).then(done).catch(()=>selTxt(b))}catch(e){selTxt(b)}
+  });
+});
+function selTxt(b){const s=b.parentElement.querySelector('span');const r=document.createRange();r.selectNodeContents(s);const x=getSelection();x.removeAllRanges();x.addRange(r)}
+
+const tabs=[...document.querySelectorAll('.tab')];
+function sel(t){tabs.forEach(x=>{const on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on})}
+tabs.forEach((t,i)=>{t.addEventListener('click',()=>sel(t));t.addEventListener('keydown',e=>{let j=null;if(e.key==='ArrowLeft')j=i+1;if(e.key==='ArrowRight')j=i-1;if(j!==null){j=(j+tabs.length)%tabs.length;sel(tabs[j]);tabs[j].focus()}})});
+
+const fchips=[...document.querySelectorAll('.fchip')];
+fchips.forEach(c=>c.addEventListener('click',()=>{fchips.forEach(x=>x.setAttribute('aria-pressed',x===c));document.querySelectorAll('.prod').forEach(p=>p.hidden=!(c.dataset.g==='all'||p.dataset.g===c.dataset.g))}));
+
+const pagesEl=[...document.querySelectorAll('.page')];
+function route(){const h=location.hash.slice(1);const target=pagesEl.find(p=>p.dataset.page===h)?h:'home';pagesEl.forEach(p=>p.hidden=p.dataset.page!==target);document.querySelectorAll('[data-nav]').forEach(a=>{if(a.dataset.nav===target)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});window.scrollTo(0,0)}
+window.addEventListener('hashchange',route);route();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+(function(){
+  const rd=document.getElementById('reader'),pages=document.getElementById('rd-pages'),title=document.getElementById('rd-title'),saveBtn=document.getElementById('rd-save');
+  let current=null,dl=null,token=0;
+  if(window.pdfjsLib){pdfjsLib.GlobalWorkerOptions.workerSrc='pdf.worker.min.js'}
+  (async()=>{try{if(window.claude){dl=await claude.use('downloads')}}catch(e){}})();
+  function close(){rd.hidden=true;pages.innerHTML='';token++;document.body.style.overflow=''}
+  document.getElementById('rd-close').addEventListener('click',close);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!rd.hidden)close()});
+  saveBtn.addEventListener('click',async()=>{
+    if(!dl||!current)return;
+    try{const blob=await (await fetch(current.url)).blob();await dl.save({filename:current.name+'.pdf',data:blob})}catch(e){if(e&&e.code==='unavailable')saveBtn.hidden=true}
+  });
+  async function open(url,name){
+    const my=++token; current={url,name};
+    title.textContent=name; pages.innerHTML='<p class="rd-msg">جارٍ فتح الإصدار…</p>';
+    saveBtn.hidden=!dl; rd.hidden=false; document.body.style.overflow='hidden'; document.getElementById('rd-close').focus();
+    try{
+      const buf=await (await fetch(url)).arrayBuffer();
+      const pdf=await pdfjsLib.getDocument({data:buf,disableFontFace:true,useSystemFonts:false}).promise;
+      if(my!==token)return; pages.innerHTML='';
+      const ratio=Math.min(window.devicePixelRatio||1,2);
+      for(let i=1;i<=pdf.numPages;i++){
+        if(my!==token)return;
+        const pg=await pdf.getPage(i); const base=pg.getViewport({scale:1});
+        const w=Math.min(pages.clientWidth-32,820); const vp=pg.getViewport({scale:(w/base.width)*ratio});
+        const c=document.createElement('canvas'); c.width=vp.width; c.height=vp.height; c.setAttribute('aria-label','صفحة '+i);
+        pages.appendChild(c); await pg.render({canvasContext:c.getContext('2d'),viewport:vp}).promise;
+      }
+    }catch(e){ if(my===token) pages.innerHTML='<p class="rd-msg">تعذّر فتح الإصدار. حاول مرة أخرى.</p>'; }
+  }
+  document.querySelectorAll('.read-pub').forEach(a=>a.addEventListener('click',e=>{
+    if(!window.pdfjsLib)return; e.preventDefault();
+    open(a.dataset.pdf,a.closest('.pub').querySelector('h3').textContent);
+  }));
+})();
+</script>
+<script>
+document.querySelectorAll('[data-jump]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const t=document.getElementById('sec-'+a.dataset.jump);if(t)t.scrollIntoView({behavior:'smooth',block:'start'})}));
+</script>
+<script>
+document.querySelectorAll('[data-go]').forEach(a=>a.addEventListener('click',()=>{const g=a.dataset.go;setTimeout(()=>{const c=document.querySelector('.fchip[data-g="'+g+'"]');if(c)c.click()},0)}));
+</script>
+<script>
+document.querySelectorAll('[data-sec]').forEach(a=>a.addEventListener('click',()=>{const id='sec-'+a.dataset.sec;setTimeout(()=>{const t=document.getElementById(id);if(t)t.scrollIntoView({block:'start'})},60)}));
+</script>
+<script>
+(function(){
+const MONTHS=["يناير","فبراير","مارس","أبريل","مايو","يونيو","يوليو","أغسطس","سبتمبر","أكتوبر","نوفمبر","ديسمبر"];
+const DAYS=["الأحد","الاثنين","الثلاثاء","الأربعاء","الخميس","الجمعة","السبت"];
+const AR=n=>String(n).replace(/\d/g,d=>"٠١٢٣٤٥٦٧٨٩"[d]);
+const FIXED=[
+ [2,20,"اليوم العالمي للعدالة الاجتماعية","تنمية"],[2,22,"يوم التأسيس","وطني"],
+ [3,8,"اليوم الدولي للمرأة","مجتمع"],[3,11,"يوم العلم","وطني"],[3,20,"اليوم الدولي للسعادة","مجتمع"],
+ [4,2,"اليوم العالمي للتوعية بالتوحد","صحة"],[4,7,"يوم الصحة العالمي","صحة"],
+ [5,15,"اليوم الدولي للأسر","أسرة"],
+ [6,5,"اليوم العالمي للبيئة","بيئة"],[6,14,"اليوم العالمي للمتبرعين بالدم","صحة"],[6,20,"اليوم العالمي للاجئين","إنساني"],
+ [8,12,"اليوم الدولي للشباب","شباب"],[8,19,"اليوم العالمي للعمل الإنساني","إنساني"],
+ [9,5,"اليوم الدولي للعمل الخيري","العمل الخيري"],[9,8,"اليوم الدولي لمحو الأمية","تعليم"],[9,23,"اليوم الوطني السعودي","وطني"],
+ [10,1,"اليوم الدولي لكبار السن","مجتمع"],[10,5,"اليوم العالمي للمعلم","تعليم"],[10,10,"اليوم العالمي للصحة النفسية","صحة"],[10,16,"يوم الأغذية العالمي","إنساني"],[10,17,"اليوم الدولي للقضاء على الفقر","تنمية"],
+ [11,14,"اليوم العالمي للسكري","صحة"],[11,20,"اليوم العالمي للطفل","طفولة"],
+ [12,3,"اليوم الدولي للأشخاص ذوي الإعاقة","مجتمع"],[12,5,"اليوم الدولي للمتطوعين","تطوع"],[12,18,"اليوم العالمي للغة العربية","ثقافة"],[12,20,"اليوم الدولي للتضامن الإنساني","إنساني"]
+];
+let EVENTS=[
+ {type:"ملتقى",name:"ملتقى القطاع غير الربحي في التعليم والتدريب، النسخة الثالثة",org:"وزارة التعليم",city:"الرياض، جامعة الأميرة نورة بنت عبدالرحمن",from:"2026-10-20",to:"2026-10-21",url:"https://sabq.org/article/k8naqj7"},
+ {type:"ملتقى",name:"ملتقى مستقبل القطاع غير الربحي، النسخة الخامسة",org:"برعاية وزير البلديات والإسكان",city:"الرياض، مركز الملك عبدالله المالي",from:"2026-11-02",to:"2026-11-02",url:"https://annahar-news.com/news/single/38396"}
+];
+let hijriFmt=null; try{hijriFmt=new Intl.DateTimeFormat('en-u-ca-islamic-umalqura-nu-latn',{day:'numeric',month:'numeric'})}catch(e){}
+let hijriTxt=null; try{hijriTxt=new Intl.DateTimeFormat('ar-SA-u-ca-islamic-umalqura',{day:'numeric',month:'long'})}catch(e){}
+function hijri(d){if(!hijriFmt)return null;const p=hijriFmt.formatToParts(d);return{m:+p.find(x=>x.type==='month').value,d:+p.find(x=>x.type==='day').value}}
+const cache={};
+function daysOf(y){
+  if(cache[y])return cache[y];
+  const out=FIXED.map(([m,d,t,c])=>({date:new Date(y,m-1,d),t,c}));
+  if(hijriFmt){
+    for(let d=new Date(y,0,1);d.getFullYear()===y;d.setDate(d.getDate()+1)){
+      const h=hijri(d); if(!h)continue;
+      if(h.m===9&&h.d===1)out.push({date:new Date(d),t:"بداية شهر رمضان",c:"موسم العطاء",note:"موعد تقريبي بحسب تقويم أم القرى"});
+      if(h.m===4&&h.d===3)out.push({date:new Date(d),t:"ذكرى بيعة خادم الحرمين الشريفين",c:"وطني",note:"٣ ربيع الآخر"});
+      if(h.m===12&&h.d===1)out.push({date:new Date(d),t:"بداية عشر ذي الحجة",c:"موسم العطاء",note:"موعد تقريبي بحسب تقويم أم القرى"});
+    }
+  }
+  out.sort((a,b)=>a.date-b.date); cache[y]=out; return out;
+}
+const today=new Date(); today.setHours(0,0,0,0);
+function dayLi(x){
+  const li=document.createElement('li'); const same=+x.date===+today; if(same)li.className='today'; else if(x.date<today)li.className='past';
+  const h=hijriTxt?hijriTxt.format(x.date):'';
+  li.innerHTML='<div class="d-date"><b></b><small></small></div><div class="d-body"><strong></strong><div class="d-meta"><span class="d-tag"></span><span class="d-w"></span></div></div>';
+  li.querySelector('b').textContent=AR(x.date.getDate()); li.querySelector('small').textContent=MONTHS[x.date.getMonth()];
+  li.querySelector('strong').textContent=x.t+(same?' · اليوم':''); li.querySelector('.d-tag').textContent=x.c==='وطني'?'مناسبة وطنية':x.c;if(x.c==='وطني')li.classList.add('nat');
+  li.querySelector('.d-w').textContent=DAYS[x.date.getDay()]+(h?' · '+h:'')+(x.note?' · '+x.note:'');
+  return li;
+}
+function fmtRange(e){const a=new Date(e.from+'T00:00'),b=new Date(e.to+'T00:00');return e.from===e.to?DAYS[a.getDay()]+' '+AR(a.getDate())+' '+MONTHS[a.getMonth()]+' '+AR(a.getFullYear()):AR(a.getDate())+'–'+AR(b.getDate())+' '+MONTHS[b.getMonth()]+' '+AR(b.getFullYear())}
+function evLi(e){const li=document.createElement('li');li.innerHTML='<span class="ev-when"><i class="ev-type"></i></span><strong></strong><span class="ev-where"></span><a target="_blank" rel="noopener">التفاصيل</a>';li.querySelector('.ev-when').append(fmtRange(e));li.querySelector('.ev-type').textContent=e.type;li.querySelector('strong').textContent=e.name;li.querySelector('.ev-where').textContent=e.org+' · '+e.city;li.querySelector('a').href=e.url;return li}
+function fill(ul,items,empty){ul.innerHTML='';if(!items.length){const li=document.createElement('li');li.className='empty-li';li.textContent=empty;ul.appendChild(li);return}items.forEach(i=>ul.appendChild(i))}
+// home: this month
+const y=today.getFullYear(),m=today.getMonth();
+document.getElementById('m-eyebrow').textContent='هذا الشهر · '+MONTHS[m]+' '+AR(y);
+fill(document.getElementById('home-days'),daysOf(y).filter(x=>x.date.getMonth()===m).map(dayLi),'لا توجد أيام عالمية مرتبطة بالقطاع في هذا الشهر.');
+function renderHomeEvents(){const upcoming=EVENTS.filter(e=>new Date(e.to+'T23:59')>=today).sort((a,b)=>a.from.localeCompare(b.from));
+fill(document.getElementById('home-events'),upcoming.slice(0,3).map(evLi),'لا توجد فعاليات معلنة قريبًا.');}
+renderHomeEvents();
+// calendar page
+const tabs=document.getElementById('month-tabs'); let sel={y,m};
+function months12(){const arr=[];for(let i=0;i<12;i++){const d=new Date(y,m+i,1);arr.push({y:d.getFullYear(),m:d.getMonth()})}return arr}
+function renderCal(){
+  tabs.innerHTML='';
+  months12().forEach(o=>{const b=document.createElement('button');b.type='button';b.setAttribute('role','tab');b.textContent=MONTHS[o.m]+(o.y!==y?' '+AR(o.y):'');b.setAttribute('aria-selected',String(o.y===sel.y&&o.m===sel.m));if(o.y===y&&o.m===m)b.classList.add('now');b.onclick=()=>{sel=o;renderCal()};tabs.appendChild(b)});
+  document.getElementById('cal-days-h').textContent='الأيام العالمية والوطنية والمواسم · '+MONTHS[sel.m]+' '+AR(sel.y);
+  fill(document.getElementById('cal-days'),daysOf(sel.y).filter(x=>x.date.getMonth()===sel.m).map(dayLi),'لا توجد أيام عالمية مرتبطة بالقطاع في هذا الشهر.');
+  const ev=EVENTS.filter(e=>{const a=new Date(e.from+'T00:00');return a.getFullYear()===sel.y&&a.getMonth()===sel.m});
+  fill(document.getElementById('cal-events'),ev.map(evLi),'لا توجد فعاليات معلنة في هذا الشهر حتى الآن.');
+}
+renderCal();
+// live events from the Google Sheet (works once the site is hosted)
+const SHEET_ID='1QEPXJI6Nz61nZ71HS_TW8T-gORuCsboVayOFjT5el14';
+function iso(v){if(v==null)return null;if(typeof v==='string'){const m=v.match(/^Date\((\d+),(\d+),(\d+)/);if(m)return m[1]+'-'+String(+m[2]+1).padStart(2,'0')+'-'+m[3].padStart(2,'0');const t=v.trim();if(/^\d{4}-\d{2}-\d{2}$/.test(t))return t}return null}
+fetch('https://docs.google.com/spreadsheets/d/'+SHEET_ID+'/gviz/tq?tqx=out:json&headers=1').then(r=>r.text()).then(t=>{
+  const j=JSON.parse(t.slice(t.indexOf('{'),t.lastIndexOf('}')+1)); const cols=j.table.cols.map(c=>(c.label||'').trim().toLowerCase());
+  const ix=k=>cols.indexOf(k); const rows=[];
+  (j.table.rows||[]).forEach(r=>{const g=k=>{const c=r.c[ix(k)];return c?(c.v!=null?c.v:c.f):null};const from=iso(g('from')),to=iso(g('to'))||from,name=g('name');
+    if(name&&from&&/^https?:\/\//.test(String(g('url')||'https://x')))rows.push({type:String(g('type')||'فعالية'),name:String(name),org:String(g('org')||''),city:String(g('city')||''),from,to,url:String(g('url')||'#')})});
+  if(rows.length){EVENTS=rows;renderHomeEvents();renderCal()}
+}).catch(()=>{});
+})();
+</script>
+<script>
+(function(){
+const sl=[...document.querySelectorAll('.slide')],dt=[...document.querySelectorAll('.sl-dots button')];let k=0,tm;
+function go(n){k=(n+sl.length)%sl.length;sl.forEach((x,i)=>x.classList.toggle('on',i===k));dt.forEach((d,i)=>d.setAttribute('aria-current',String(i===k)));clearInterval(tm);tm=setInterval(()=>go(k+1),6500)}
+if(sl.length){document.querySelector('.sl-next').onclick=()=>go(k+1);document.querySelector('.sl-prev').onclick=()=>go(k-1);dt.forEach((d,i)=>d.onclick=()=>go(i));go(0)}
+const bu=document.getElementById('burger'),mn=document.getElementById('mnav');
+bu.onclick=()=>{const o=mn.classList.toggle('open');bu.setAttribute('aria-expanded',o)};
+mn.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mn.classList.remove('open');bu.setAttribute('aria-expanded','false')}));
+const tt=document.getElementById('totop'),nv=document.querySelector('.nav');addEventListener('scroll',()=>{tt.classList.toggle('show',scrollY>500);nv.classList.toggle('small',scrollY>40)});
+const AR=n=>String(n).replace(/\d/g,d=>'٠١٢٣٤٥٦٧٨٩'[d]);
+const fmt=n=>AR(n>=1000?Math.floor(n/1000)+'٬'+String(n%1000).padStart(3,'0'):n);
+const co='IntersectionObserver' in window?new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;co.unobserve(e.target);const el=e.target,v=+el.dataset.n,t0=performance.now();(function f(t){const k=Math.min(1,(t-t0)/1600),x=Math.round(v*(1-Math.pow(1-k,3)));el.textContent='+'+fmt(x);if(k<1)requestAnimationFrame(f)})(t0)}),{threshold:.5}):null;
+document.querySelectorAll('[data-n]').forEach(el=>co&&co.observe(el));
+addEventListener('load',()=>setTimeout(()=>document.body.classList.add('ready'),300));setTimeout(()=>document.body.classList.add('ready'),3000);tt.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+const io='IntersectionObserver' in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12}):null;
+document.querySelectorAll('.rv').forEach(el=>io?io.observe(el):el.classList.add('in'));
+addEventListener('hashchange',()=>document.querySelectorAll('.rv').forEach(el=>{if(el.getBoundingClientRect().top<innerHeight)el.classList.add('in')}));
+})();
+</script>
+
+
+
+
+<script>document.querySelectorAll('.prod .btn').forEach(function(a){var n=a.closest('.prod').querySelector('h3').textContent;a.href='https://wa.me/966554070212?text='+encodeURIComponent('السلام عليكم، أرغب في طلب خدمة: '+n);a.target='_blank';a.rel='noopener'});</script></body></html>
