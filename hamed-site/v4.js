@@ -50,8 +50,7 @@ abp[1].textContent = 'حوّل خبرته الميدانية إلى منهجيا
 
 // courses
 const courses = H(`<section class="crs-sec"><div class="wrap"><div class="sec-head rv"><small>الدورات التدريبية</small><h2>دورات قدّمناها</h2><p>من أكثر من ١١٨ دورة وبرنامجًا تدريبيًا قدّمناها للعاملين في القطاع غير الربحي.</p></div>
-<div class="crs-grid">${COURSES.map(([t, p], i) => `<article class="crs"><span class="crs-n">${['٠١','٠٢','٠٣','٠٤','٠٥','٠٦'][i]}</span><h3>${t}</h3><p>${p}</p></article>`).join('')}</div>
-<div class="more-c"><a class="btn btn-navy" href="#pubs" data-sec="courses">مقاطع من الدورات</a></div></div></section>`);
+<div class="crs-grid">${COURSES.map(([t, p], i) => `<article class="crs"><span class="crs-n">${['٠١','٠٢','٠٣','٠٤','٠٥','٠٦'][i]}</span><h3>${t}</h3><p>${p}</p></article>`).join('')}</div></div></section>`);
 
 // publications: 6 only
 [...prods.querySelectorAll('.pub')].forEach(p => { if (/cover13|cover14/.test(p.querySelector('img').getAttribute('src'))) p.remove(); });
