@@ -119,13 +119,19 @@ const VIDS = [
   ['الملف التسويقي للمانحين', 'ويبينار إيسام', 'https://www.youtube.com/live/F_nBbgdoT8k', 'F_nBbgdoT8k'],
   ['بوصلة القطاع غير الربحي والتوجهات الحديثة', 'يوتيوب', 'https://youtu.be/i8CCDGlyRUw', 'i8CCDGlyRUw'],
   ['كيف تبني حملات تسويقية لمنظمتك؟', 'منصة مزن', 'https://mozn.ws/95286', null],
-  ['فيديوهات المنتج التسويقي', 'مجموعة مقاطع', 'https://drive.google.com/drive/folders/1jE2nI13owKkTubNMWGRxDkFmVTik5HXT', null],
+  ['فيديوهات المنتج التسويقي', '٧ مقاطع قصيرة', '#mp', 'MP'],
 ];
-$('#vid-grid').innerHTML = '<h3 class="vid-h">دورات ولقاءات مسجّلة</h3>' + VIDS.map(([t, src, u, id], i) => `<a class="vid${i === 0 ? ' feat' : ''}" href="${u}" target="_blank" rel="noopener"><span class="vid-th">${id ? `<img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" loading="lazy"><i aria-hidden="true"></i>` : `<b>${i === 0 ? 'سديم' : src}</b>`}</span><small>${src}</small><strong>${t}</strong></a>`).join('');
+$('#vid-grid').innerHTML = '<h3 class="vid-h">دورات ولقاءات مسجّلة</h3>' + VIDS.map(([t, src, u, id], i) => `<a class="vid${i === 0 ? ' feat' : ''}${id === 'MP' ? ' mp-open' : ''}" href="${u}"${id === 'MP' ? '' : ' target="_blank" rel="noopener"'}><span class="vid-th">${id === 'MP' ? `<img src="vid/mp3.jpg" alt="" loading="lazy" style="object-position:center 35%"><i aria-hidden="true"></i>` : id ? `<img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" loading="lazy"><i aria-hidden="true"></i>` : `<b>${i === 0 ? 'سديم' : src}</b>`}</span><small>${src}</small><strong>${t}</strong></a>`).join('');
 $('#pubs .pub-jump').innerHTML = [['own', 'الإصدارات'], ['articles', 'المقالات'], ['courses', 'الدورات'], ['trans', 'ترجمات الاستدامة'], ['guides', 'أدلة مصوّرة'], ['contrib', 'إصدارات شارك فيها'], ['media', 'الإعلام والمشاركات']].map(([k, t]) => `<a href="#pubs" data-jump="${k}">${t}</a>`).join('');
 // hide empty article/video grids until links are added
 // (cards are added later as <a class="art"> / <a class="vid">)
 
+
+const MP = [['mp2','صفات المسوّق الناجح في القطاعات غير الربحية'],['mp3','عناصر تصميم المنتج التسويقي'],['mp4','تحديات التسويق غير الربحي'],['mp5','عناصر المنتج التسويقي'],['mp7','مراحل الحملة التسويقية'],['mp1','المنتج التسويقي: مقطع ١'],['mp6','المنتج التسويقي: مقطع ٢']];
+d.body.insertAdjacentHTML('beforeend', `<div class="sr-modal" id="mp-modal" hidden role="dialog" aria-modal="true" aria-label="فيديوهات المنتج التسويقي"><div class="mp-box"><button class="sr-x" type="button" aria-label="إغلاق">✕</button><h3>فيديوهات المنتج التسويقي</h3><p>مقاطع قصيرة يقدّمها أ. حامد الذيابي عن المنتج التسويقي في القطاع غير الربحي.</p><div class="mp-grid">${MP.map(([f, t]) => `<figure><video src="vid/${f}.mp4" poster="vid/${f}.jpg" controls preload="none" playsinline></video><figcaption>${t}</figcaption></figure>`).join('')}</div></div></div>`);
+const mps = d.createElement('script');
+mps.textContent = `(function(){var m=document.getElementById('mp-modal');function c(){m.hidden=true;document.body.style.overflow='';m.querySelectorAll('video').forEach(function(v){v.pause()})}document.querySelectorAll('.mp-open').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();m.hidden=false;document.body.style.overflow='hidden'})});m.querySelector('.sr-x').addEventListener('click',c);m.addEventListener('click',function(e){if(e.target===m)c()});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden)c()});m.addEventListener('play',function(e){m.querySelectorAll('video').forEach(function(v){if(v!==e.target)v.pause()})},true)})();`;
+d.body.appendChild(mps);
 // ---------- ABOUT (السيرة الكاملة) ----------
 ['creds', 'method', 'aud-sec'].forEach(c => { const e = d.querySelector('#about section.' + c); if (e) e.remove(); });
 const li = (b, s) => `<li><b>${b}</b>${s ? `<span>${s}</span>` : ''}</li>`;
@@ -218,6 +224,14 @@ $$('style').pop().textContent += `
 .vid.feat{grid-template-rows:1fr auto auto}
 .vid.feat .vid-th b{font-size:26px}
 .vid.feat strong{font-size:20px}
+.mp-box{position:relative;background:#fff;border-radius:8px;max-width:1100px;width:100%;max-height:92vh;overflow:auto;padding:28px 26px}
+.mp-box h3{color:var(--navy);font-size:22px}
+.mp-box>p{color:var(--muted);font-size:14.5px;margin:4px 0 18px}
+.mp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.mp-grid figure{margin:0}
+.mp-grid video{width:100%;aspect-ratio:9/16;object-fit:cover;background:#000;border-radius:6px;display:block}
+.mp-grid figcaption{font-size:14px;color:var(--navy);font-weight:600;margin-top:6px;line-height:1.6}
+@media (max-width:900px){.mp-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:900px){.vid-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:520px){.vid-grid{grid-template-columns:1fr}.vid.feat{grid-column:auto;grid-row:auto}}
 #sec-articles{background:#fff}
