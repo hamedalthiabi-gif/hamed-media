@@ -68,7 +68,7 @@ const about = $('#about .phead'); about.querySelector('h1').textContent = 'من 
 const store = $('#store .phead'); store.querySelector('h1').textContent = 'خدماتنا'; store.querySelector('nav').lastChild.textContent = 'خدماتنا';
 $('#store .eyebrow').textContent = 'خدماتنا';
 $('#pubs .pubs-top .h2').textContent = 'مكتبة الإصدارات';
-$('#pubs .pubs-top .intro').textContent = 'كتاب وأدلة وبحوث وتقارير ونماذج في التسويق والاستدامة المالية للقطاع غير الربحي، أغلبها متاح للقراءة مجانًا، إلى جانب مشاركاتنا الإعلامية.';
+$('#pubs .pubs-top .intro').textContent = 'كتاب وأدلة وبحوث وتقارير ونماذج في التسويق والاستدامة المالية للقطاع غير الربحي، إلى جانب مشاركاتنا الإعلامية.';
 
 // styles
 $$('style').pop().textContent += `

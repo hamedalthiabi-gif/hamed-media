@@ -54,7 +54,7 @@ const ownGrid = $('#sec-own').nextElementSibling, guideGrid = $('#sec-guides .pu
 const pick = (g, t) => [...g.children].filter(a => t(a.querySelector('img').getAttribute('src'))).map(a => { const c = a.cloneNode(true); c.classList.remove('tall'); return c; });
 const products = [...pick(ownGrid, s => /cover16|book|cover10|cover09|cover11|cover12/.test(s)), ...pick(guideGrid, s => /cover13|cover14/.test(s))];
 if (products.length !== 8) throw new Error('products ' + products.length);
-const prods = H(`<section class="prods"><div class="wrap"><div class="sec-head rv"><small>الإصدارات</small><h2>من إعداد حامد الذيابي</h2><p>كتاب وبحوث وأدلة في التسويق والاستدامة المالية، أغلبها متاح للقراءة مجانًا.</p></div><div class="pub-grid prod-pubs"></div><div class="more-c"><a class="btn btn-navy" href="#pubs">كل الإصدارات</a></div></div></section>`);
+const prods = H(`<section class="prods"><div class="wrap"><div class="sec-head rv"><small>الإصدارات</small><h2>من إعداد حامد الذيابي</h2><p>كتاب وبحوث وأدلة في التسويق والاستدامة المالية للقطاع غير الربحي.</p></div><div class="pub-grid prod-pubs"></div><div class="more-c"><a class="btn btn-navy" href="#pubs">كل الإصدارات</a></div></div></section>`);
 products.forEach(p => prods.querySelector('.prod-pubs').appendChild(p));
 
 // 5) proof
