@@ -1,0 +1,60 @@
+name: نشر موقع حامد الذيابي على Netlify
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "hamed-site/new/**"
+      - "hamed-site/vid/**"
+      - "hamed-site/*.webp"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: hamed-site-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: تجهيز ملفات الموقع
+        run: |
+          set -e
+          S=hamed-site
+          rm -rf dist && mkdir -p dist/img dist/pubs dist/vid
+          cp -r $S/live/. dist/
+          cp $S/aw-*.webp dist/img/ 2>/dev/null || true
+          cp $S/cover*.webp dist/pubs/ 2>/dev/null || true
+          cp -r $S/vid/. dist/vid/ 2>/dev/null || true
+          cp $S/new/index.html dist/index.html
+          for f in logo_navy.png logo_white.png og.png; do [ -f $S/new/$f ] && cp $S/new/$f dist/$f; done
+          du -sh dist
+
+      - name: التحقق من وجود كل ملفات الصفحة
+        run: |
+          python3 - <<'PY'
+          import re, os, sys
+          s = open('dist/index.html', encoding='utf-8').read()
+          pat = r'''(?:src|href|data-src|data-pdf|data-file)\s*=\s*["']((?!https?:|#|mailto|tel|data:|//|javascript)[A-Za-z0-9_./\-]+\.(?:png|webp|jpg|jpeg|svg|pdf|mp4|webm|js|woff2|ico|css))'''
+          refs = set(re.findall(pat, s)) | set(re.findall(r'["\'(]((?:img|pubs|clients|fonts|vid)/[A-Za-z0-9_.\-]+)', s))
+          missing = sorted(r for r in refs if not os.path.exists('dist/' + r))
+          print(len(refs), 'files referenced')
+          if missing:
+              print('Missing:', *missing, sep='\n  ')
+              sys.exit(1)
+          PY
+
+      - name: النشر
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          if [ -z "$NETLIFY_AUTH_TOKEN" ] || [ -z "$NETLIFY_SITE_ID" ]; then
+            echo "::error::NETLIFY_AUTH_TOKEN / NETLIFY_SITE_ID secrets are not set"; exit 1
+          fi
+          npx --yes netlify-cli@17 deploy --prod --dir=dist --site="$NETLIFY_SITE_ID" --auth="$NETLIFY_AUTH_TOKEN" --message="GitHub ${GITHUB_SHA::7}"
