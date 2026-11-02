@@ -78,11 +78,12 @@ const ownGrid = $('#sec-own').nextElementSibling;
 const nlCard = [...ownGrid.children].find(a => /newsletter/.test(a.querySelector('img').getAttribute('src')));
 nlCard.remove();
 ownGrid.appendChild(H(`<article class="pub tall"><img src="pubs/cover17.webp" alt="غلاف: تقرير حملات رمضان ٢٠٢٤" width="900" height="1200" loading="lazy"><div class="pub-body"><span class="pub-tag">تقرير · ٢٠٢٤</span><h3>تقرير حملات رمضان ٢٠٢٤</h3><p>قراءة في حملات القطاع غير الربحي خلال رمضان، صادر عن مؤسسة درب.</p></div><a class="btn btn-navy" href="https://darb-hub.com/pdf-files/%d8%aa%d9%82%d8%b1%d9%8a%d8%b1-%d8%ad%d9%85%d9%84%d8%a7%d8%aa-%d8%b1%d9%85%d8%b6%d8%a7%d9%86-2024/" target="_blank" rel="noopener">قراءة التقرير</a></article>`));
+ownGrid.appendChild(H(`<article class="pub tall"><img src="pubs/cover18.webp" alt="غلاف: دليل التخصص في القطاع غير الربحي" width="900" height="1200" loading="lazy"><div class="pub-body"><span class="pub-tag">دليل</span><h3>دليل التخصص في القطاع غير الربحي</h3><p>دليل أعدّه أ. حامد الذيابي مع المركز الوطني لتنمية القطاع غير الربحي.</p></div><a class="btn btn-navy" href="https://darb-hub.com/ar/pdf-files/%D8%AF%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%AA%D8%AE%D8%B5%D8%B5-%D9%85%D8%B9-%D8%A7%D9%84%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A-2/" target="_blank" rel="noopener">قراءة الدليل</a></article>`));
 // contributions list fixes
 $$('#sec-contrib .link-list li').forEach(li => {
   const b = li.querySelector('b').textContent;
   if (/تقرير حملات رمضان/.test(b)) li.remove();
-  if (/دليل التخصص/.test(b)) li.querySelector('span').textContent = 'مع المركز الوطني لتنمية القطاع غير الربحي';
+  if (/دليل التخصص/.test(b)) li.remove();
 });
 // articles + courses sections
 const nlUrl = nlCard.querySelector('a').href;
