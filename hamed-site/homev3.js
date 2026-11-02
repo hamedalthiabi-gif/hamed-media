@@ -85,6 +85,7 @@ $$('style').pop().textContent += `
 .tb-soc a svg{width:14px;fill:currentColor}
 @media (max-width:700px){.tb-soc{display:none}.tb-info{gap:14px;font-size:12.5px}}
 .dotgrid,.scroll-ind{display:none!important}
+.track img{filter:none!important;opacity:1!important}
 .sec-head h2::after,.h2::after{display:none!important}
 .ab-pics::before,.why-pic::before,.card .ic::after{display:none!important}
 .cnt b::after{display:none}
