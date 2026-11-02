@@ -804,6 +804,67 @@ section .eyebrow{color:var(--coral);font-weight:600;font-size:15px}
 @keyframes ssin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 @media (max-width:560px){.season{padding:18px}.ss-art{width:110px}}
 @media (prefers-reduced-motion:reduce){.season.in .ss-art,.season.in .ss-text{animation:none}}
+
+/* ===== v4 ===== */
+.crs-sec{background:#fff}
+.crs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.crs{background:#fff;border-radius:6px;box-shadow:var(--shadow);padding:26px 24px;display:grid;gap:8px;align-content:start;border-top:3px solid var(--navy);transition:transform .3s,border-color .3s}
+.crs:hover{transform:translateY(-4px);border-color:var(--coral)}
+.crs-n{color:var(--coral);font-weight:700;font-size:15px}
+.crs h3{font-size:20px;color:var(--navy)}
+.crs p{color:var(--muted);font-size:15px}
+.crs-go{justify-self:start;margin-top:6px;color:var(--navy);font-weight:600;font-size:14.5px;text-decoration:none;border-bottom:2px solid var(--coral)}
+.crs-sec .more-c,.aw6 .more-c{text-align:center;margin-top:34px}
+.prod-pubs.six{grid-template-columns:repeat(3,1fr)!important}
+.aw6{background:var(--cream)}
+.aw6-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.aw6-c{margin:0;background:#fff;border-radius:6px;box-shadow:var(--shadow);overflow:hidden}
+.aw6-c img,.aw6-ph{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.aw6-ph{background:var(--navy);display:grid;place-items:center}
+.aw6-ph svg{width:72px;fill:#E9A57F}
+.aw6-c figcaption{padding:16px 18px;display:grid;gap:2px}
+.aw6-c b{color:var(--navy);font-size:17px}
+.aw6-c span{color:var(--muted);font-size:14px}
+@media (max-width:900px){.crs-grid,.aw6-grid,.prod-pubs.six{grid-template-columns:1fr 1fr!important}}
+@media (max-width:520px){.crs-grid,.aw6-grid,.prod-pubs.six{grid-template-columns:1fr!important}}
+.ct-cards{grid-template-columns:repeat(2,1fr)!important;max-width:680px!important}
+@media (max-width:560px){.ct-cards{grid-template-columns:1fr!important}}
+/* pubs: articles + courses */
+.art-grid:empty,.vid-grid:empty{display:none}
+.art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+.nl-card{display:grid;grid-template-columns:180px 1fr;gap:24px;align-items:center;margin-top:24px;background:#fff;border-radius:6px;box-shadow:var(--shadow);padding:20px}
+.nl-card img{width:100%;border-radius:6px}
+.nl-card small{color:var(--coral);font-weight:600;font-size:13.5px}
+.nl-card h3{color:var(--navy);font-size:21px;margin:2px 0 6px}
+.nl-card p{color:var(--muted);font-size:15px;margin-bottom:14px}
+@media (max-width:600px){.nl-card{grid-template-columns:1fr}.nl-card img{max-width:200px}}
+#sec-courses .crs-grid{margin-top:22px}
+.vid-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+#sec-articles{background:#fff}
+#sec-courses{background:var(--cream)}
+/* about: full CV */
+.cv-exp,.cv-aw,.cv-more{background:#fff}
+.cv-q,.cv-roles{background:var(--cream)}
+.cv-exp .sec-head,.cv-q .sec-head,.cv-aw .sec-head{text-align:start;margin-inline:0;margin-bottom:26px}
+.cv-exp .tl{margin-top:0}
+.cv-exp .tl h3{font-size:18px}
+.cv-2{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.cv-3{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.cv-list{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.cv-list li{background:#fff;border-radius:6px;box-shadow:var(--shadow);border-inline-start:3px solid var(--coral);padding:12px 16px;display:grid;gap:2px}
+.cv-list b{color:var(--navy);font-size:15.5px}
+.cv-list span{color:var(--muted);font-size:13.5px}
+.cv-list.sm li{padding:10px 14px}
+.cv-h{color:var(--navy);font-size:22px;margin-bottom:16px}
+.cv-awl{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cv-awl li{background:var(--cream);border-radius:6px;padding:16px 18px;display:grid;gap:2px}
+.cv-awl b{color:var(--navy)}.cv-awl span{color:var(--muted);font-size:14px}
+.cv-chips{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.cv-chips li{background:var(--cream);border-radius:30px;padding:7px 14px;font-size:14px;color:var(--navy)}
+.cv-vol{margin-top:22px;background:var(--navy);color:#fff;border-radius:6px;padding:18px 22px;display:flex;align-items:baseline;gap:12px}
+.cv-vol b{font-size:34px;color:#E9A57F}
+@media (max-width:900px){.cv-3,.cv-awl{grid-template-columns:1fr 1fr}}
+@media (max-width:700px){.cv-2,.cv-3,.cv-awl{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -820,7 +881,7 @@ section .eyebrow{color:var(--coral);font-weight:600;font-size:15px}
 </header>
 
 <main>
-<div class="page" id="home" data-page="home"><section class="slider" aria-label="عرض رئيسي"><div class="slide on"><img src="img/n-hero1.webp" alt="" fetchpriority="high"><div class="cap"><small>مستشار التسويق والاستدامة المالية</small><h2>حامد الذيابي</h2><p>أكثر من عشرين عامًا في تنمية موارد المنظمات غير الربحية وبناء استدامتها المالية.</p><a class="btn btn-coral" href="#about">تعرّف على حامد</a></div></div><div class="slide"><img src="img/n-hero3.webp" alt="" loading="lazy"><div class="cap"><small>الخدمات</small><h2>خطط ودورات واستشارات لمنظمتك</h2><p>من التشخيص إلى القياس، نبني مع منظمتك مصادر دخل مستقرة ومتنوعة.</p><a class="btn btn-coral" href="#store">اطلب الخدمة</a></div></div><div class="slide"><img src="img/n-about.webp" alt="" loading="lazy"><div class="cap"><small>الإصدارات</small><h2>معرفة من الميدان، متاحة للجميع</h2><p>كتاب وبحوث وأدلة في التسويق والاستدامة المالية للقطاع غير الربحي.</p><a class="btn btn-coral" href="#pubs">تصفّح الإصدارات</a></div></div>
+<div class="page" id="home" data-page="home"><section class="slider" aria-label="عرض رئيسي"><div class="slide on"><img src="img/n-hero1.webp" alt="" fetchpriority="high"><div class="cap"><small>مستشار التسويق والاستدامة المالية</small><h2>حامد الذيابي</h2><p>مستشار في تنمية موارد المنظمات غير الربحية وبناء استدامتها المالية.</p><a class="btn btn-coral" href="#about">تعرّف على حامد</a></div></div><div class="slide"><img src="img/n-hero3.webp" alt="" loading="lazy"><div class="cap"><small>الخدمات</small><h2>خطط ودورات واستشارات لمنظمتك</h2><p>من التشخيص إلى القياس، نبني مع منظمتك مصادر دخل مستقرة ومتنوعة.</p><a class="btn btn-coral" href="#store">اطلب الخدمة</a></div></div><div class="slide"><img src="img/n-about.webp" alt="" loading="lazy"><div class="cap"><small>الإصدارات</small><h2>معرفة من الميدان، متاحة للجميع</h2><p>كتاب وبحوث وأدلة في التسويق والاستدامة المالية للقطاع غير الربحي.</p><a class="btn btn-coral" href="#pubs">تصفّح الإصدارات</a></div></div>
     <button class="sl-arr sl-prev" aria-label="السابق"><svg viewBox="0 0 24 24"><path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"></path></svg></button><button class="sl-arr sl-next" aria-label="التالي"><svg viewBox="0 0 24 24"><path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"></path></svg></button>
     <div class="sl-dots"><button aria-label="الشريحة 1" aria-current="true"></button><button aria-label="الشريحة 2" aria-current="false"></button><button aria-label="الشريحة 3" aria-current="false"></button></div>
   </section><section class="ab-split">
@@ -828,26 +889,15 @@ section .eyebrow{color:var(--coral);font-weight:600;font-size:15px}
       <div class="ab-pics rv"><img class="p1" src="img/n-consult.webp" alt="أ. حامد الذيابي في جلسة استشارية مع فريق إحدى المنظمات" loading="lazy"><img class="p2" src="img/n-portrait.webp" alt="أ. حامد الذيابي" loading="lazy" style="object-fit:cover"></div>
       <div class="ab-txt rv"><small>من حامد</small><h2>حامد الذيابي</h2>
 <p>مستشار في التسويق والاستدامة المالية للمنظمات غير الربحية. أدرك من عمله الميداني أن التحدي الحقيقي للمنظمات ليس جمع المال فقط، بل بناء استدامة تحررها من الطوارئ المالية.</p>
-<p>حوّل خبرته الممتدة لأكثر من عشرين عامًا إلى منهجيات عملية تساعد المنظمات على خدمة قضاياها وتعظيم أثرها.</p>
+<p>حوّل خبرته الميدانية إلى منهجيات عملية تساعد المنظمات على خدمة قضاياها وتعظيم أثرها.</p>
 <ul class="ab-facts"><li><b>مستشار لبرامج رائدة</b>مسرعة مسك، وبرنامج سند محمد بن سلمان، وحاضنة جدارة</li><li><b>رئيس مجلس أمناء مؤسسة درب</b>مؤسسة غير ربحية</li><li><b>تأهيل أكاديمي</b>جامعة مانشستر ٢٠٢٥، جامعة غرناطة ٢٠٢٤، ماجستير جامعة حائل ٢٠٢٢</li></ul>
 <a class="btn btn-navy" href="#about">السيرة الكاملة</a></div>
     </div>
-  </section><section class="svc2">
-    <div class="wrap">
-      <div class="sec-head rv"><small>الخدمات</small><h2>ما نقدّمه للمنظمات غير الربحية</h2></div>
-      <div class="cards"><a class="card rv" href="#store" data-go="plans"><span class="ic"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1.5V8h4.5L14 3.5zM8 12h8v2H8v-2zm0 4h8v2H8v-2zm0-8h4v2H8V8z"></path></svg></span><h3>تصميم الخطط والنماذج</h3><p>خطط الاستدامة المالية والتسويق وجمع التبرعات ورحلة المتبرع، مبنية على طبيعة جهتك وجمهورها.</p><span class="more">المزيد</span></a><a class="card rv" href="#store" data-go="courses"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zm-6 9.2v4.3C6 18.4 8.7 20 12 20s6-1.6 6-3.5v-4.3l-6 3.3-6-3.3z"></path></svg></span><h3>الدورات التدريبية</h3><p>دورات تطبيقية في التسويق الخيري والاستدامة المالية وتجربة المتبرع وتنمية الموارد.</p><span class="more">المزيد</span></a><a class="card rv" href="#store" data-go="sessions"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 3h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm3 6v2h2V9H7zm4 0v2h2V9h-2zm4 0v2h2V9h-2z"></path></svg></span><h3>الجلسات الاستشارية</h3><p>جلسة مع أ. حامد الذيابي لمناقشة تحديات جهتك في التسويق والاستدامة المالية، حضوريًا أو عن بُعد.</p><span class="more">المزيد</span></a><a class="card rv" href="#store" data-go="review"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4zm-1.5 15.5-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4-7 7z"></path></svg></span><h3>التقييم والتحكيم</h3><p>مراجعة مهنية لخططك ومنتجات التبرع ومتجرك الإلكتروني، مع توصيات واضحة للتحسين.</p><span class="more">المزيد</span></a></div>
-    <div class="more-c"><a class="btn btn-coral" href="#store">اطلب الخدمة</a></div></div>
   </section><section class="cnt-band">
     <div class="wrap"><div class="cnt rv"><svg viewBox="0 0 24 24"><path d="M7 2h2v2h6V2h2v2h3a1 1 0 0 1 1 1v15a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a1 1 0 0 1 1-1h3V2zm-2 8v10h14V10H5zm2 2h4v4H7v-4z"></path></svg><h3>عامًا من الخبرة الميدانية</h3><b data-n="20">+٢٠</b></div><div class="cnt rv"><svg viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zm-6 9.2v4.3C6 18.4 8.7 20 12 20s6-1.6 6-3.5v-4.3l-6 3.3-6-3.3z"></path></svg><h3>دورة تدريبية قدّمناها</h3><b data-n="118">+١١٨</b></div><div class="cnt rv"><svg viewBox="0 0 24 24"><path d="M11 6 8.5 3.5 1 11l3 3 1-1 5.5 5.5a1.5 1.5 0 0 0 2.1-2.1l.4.4a1.5 1.5 0 0 0 2.1-2.1l.4.4a1.5 1.5 0 0 0 2.1-2.1l.4.4a1.5 1.5 0 0 0 2.1-2.1L15 6.5 12.5 9a2 2 0 0 1-2.8-2.8L11 6zm4.6-2.6L23 10.8l-3 3-6.9-6.9 2.5-3.5z"></path></svg><h3>جهة وثقت بنا</h3><b data-n="60">+٦٠</b></div><div class="cnt rv"><svg viewBox="0 0 24 24"><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm8 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM1 20c0-3.3 3.6-6 8-6s8 2.7 8 6v1H1v-1zm17.5 1v-1c0-1.9-.8-3.6-2.1-4.9 3.6.2 6.6 2.4 6.6 4.9v1h-4.5z"></path></svg><h3>مستفيد من برامجنا</h3><b data-n="15000">+١٥٬٠٠٠</b></div></div>
-  </section><section class="why">
-    <div class="wrap">
-      <div class="rv">
-        <div class="sec-head" style="text-align:right;margin:0"><small>كيف نعمل</small><h2>نبدأ من واقع منظمتك</h2><p>لا نقدّم إجابات جاهزة، بل نساعدك على رؤية الصورة كاملة واتخاذ قرار أفضل.</p></div>
-        <div class="why-list"><div class="why-item"><i><svg viewBox="0 0 24 24"><path d="M10 2a8 8 0 0 1 6.3 12.9l5.4 5.4-1.4 1.4-5.4-5.4A8 8 0 1 1 10 2zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12z"></path></svg></i><div><h3>التشخيص</h3><p>نقرأ واقع المنظمة: مصادر الدخل الحالية، ونقاط القوة، والمخاطر.</p></div></div><div class="why-item"><i><svg viewBox="0 0 24 24"><path d="M3 17.2V21h3.8L17.8 10 14 6.2 3 17.2zM20.7 7a1 1 0 0 0 0-1.4l-2.3-2.3a1 1 0 0 0-1.4 0L15.2 5 19 8.8 20.7 7z"></path></svg></i><div><h3>التصميم</h3><p>نختار مصادر الدخل الأنسب لطبيعة المنظمة ونبني خطة واضحة.</p></div></div><div class="why-item"><i><svg viewBox="0 0 24 24"><path d="M22.7 19 13.6 9.9a6 6 0 0 0-7.9-7.7l4 4-2.8 2.8-4-4a6 6 0 0 0 7.7 7.9l9.1 9.1a1 1 0 0 0 1.4 0l1.6-1.6a1 1 0 0 0 0-1.5z"></path></svg></i><div><h3>التمكين</h3><p>نسلّم الفريق الأدوات والمنهجيات، وندرّبه على التطبيق.</p></div></div><div class="why-item"><i><svg viewBox="0 0 24 24"><path d="M3 3h2v16h16v2H3V3zm4 10h3v5H7v-5zm5-6h3v11h-3V7zm5 3h3v8h-3v-8z"></path></svg></i><div><h3>القياس</h3><p>نتابع النتائج بالمؤشرات، ونحسّن المسار حتى تستقر القدرة.</p></div></div></div>
-      </div>
-      <div class="why-pic rv"><img src="img/n-why.webp" alt="أ. حامد الذيابي يقدّم ورشة عمل" loading="lazy"><div class="badge"><b>+٢٠</b>عامًا في الميدان</div></div>
-    </div>
-  </section><section class="prods"><div class="wrap"><div class="sec-head rv"><small>الإصدارات</small><h2>من إعداد حامد الذيابي</h2><p>كتاب وبحوث وأدلة في التسويق والاستدامة المالية للقطاع غير الربحي.</p></div><div class="pub-grid prod-pubs"><article class="pub"><img src="pubs/cover16.webp" alt="غلاف: تطوير أدوات تمويل مبتكرة لتعزيز الاستدامة المالية للمنظمات غير الربحية" width="900" height="1200" loading="lazy"><div class="pub-body"><span class="pub-tag">دراسة محكّمة · ٢٠٢٦</span><h3>تطوير أدوات تمويل مبتكرة لتعزيز الاستدامة المالية للمنظمات غير الربحية</h3><p>دراسة منشورة في مجلة البحوث والدراسات الاجتماعية، تقترح إطارًا عمليًا لتطبيق أدوات التمويل المبتكرة في السياق السعودي.</p></div><a class="btn btn-coral" href="https://rssj.ncss.gov.sa/index.php/rssj/article/view/257" target="_blank" rel="noopener">قراءة الدراسة</a></article><article class="pub">
+  </section><section class="crs-sec"><div class="wrap"><div class="sec-head rv"><small>الدورات التدريبية</small><h2>دورات نقدّمها للعاملين في القطاع</h2><p>برامج تطبيقية في التسويق والاستدامة المالية وتنمية الموارد، حضوريًا أو عن بُعد.</p></div>
+<div class="crs-grid"><article class="crs"><span class="crs-n">٠١</span><h3>التسويق الخيري</h3><p>أسس تسويق الجهات غير الربحية وبناء علاقتها بالداعمين.</p><a class="crs-go" href="https://wa.me/966554070212?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%AF%D9%88%D8%B1%D8%A9%3A%20%D8%A7%D9%84%D8%AA%D8%B3%D9%88%D9%8A%D9%82%20%D8%A7%D9%84%D8%AE%D9%8A%D8%B1%D9%8A" target="_blank" rel="noopener">اطلب الدورة</a></article><article class="crs"><span class="crs-n">٠٢</span><h3>صناعة الخطة التسويقية</h3><p>دورة تطبيقية يخرج منها المتدرب بخطة تسويقية لجهته.</p><a class="crs-go" href="https://wa.me/966554070212?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%AF%D9%88%D8%B1%D8%A9%3A%20%D8%B5%D9%86%D8%A7%D8%B9%D8%A9%20%D8%A7%D9%84%D8%AE%D8%B7%D8%A9%20%D8%A7%D9%84%D8%AA%D8%B3%D9%88%D9%8A%D9%82%D9%8A%D8%A9" target="_blank" rel="noopener">اطلب الدورة</a></article><article class="crs"><span class="crs-n">٠٣</span><h3>تصميم تجربة المتبرع</h3><p>تحسين تجربة المتبرع لرفع رضاه وولائه.</p><a class="crs-go" href="https://wa.me/966554070212?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%AF%D9%88%D8%B1%D8%A9%3A%20%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9%20%D8%A7%D9%84%D9%85%D8%AA%D8%A8%D8%B1%D8%B9" target="_blank" rel="noopener">اطلب الدورة</a></article><article class="crs"><span class="crs-n">٠٤</span><h3>الاستدامة المالية</h3><p>بناء الاستدامة المالية وتنويع مصادر الدخل.</p><a class="crs-go" href="https://wa.me/966554070212?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%AF%D9%88%D8%B1%D8%A9%3A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%AF%D8%A7%D9%85%D8%A9%20%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9" target="_blank" rel="noopener">اطلب الدورة</a></article><article class="crs"><span class="crs-n">٠٥</span><h3>خطة تنمية الموارد المالية</h3><p>دورة تطبيقية في إعداد خطة تنمية موارد متكاملة.</p><a class="crs-go" href="https://wa.me/966554070212?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%AF%D9%88%D8%B1%D8%A9%3A%20%D8%AE%D8%B7%D8%A9%20%D8%AA%D9%86%D9%85%D9%8A%D8%A9%20%D8%A7%D9%84%D9%85%D9%88%D8%A7%D8%B1%D8%AF%20%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9" target="_blank" rel="noopener">اطلب الدورة</a></article><article class="crs"><span class="crs-n">٠٦</span><h3>برنامج تدريبي حسب احتياجك</h3><p>نصمّم برنامجًا تدريبيًا يناسب فريق منظمتك وأهدافها.</p><a class="crs-go" href="https://wa.me/966554070212?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC%20%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8%D9%8A%20%D9%84%D9%85%D9%86%D8%B8%D9%85%D8%AA%D9%86%D8%A7" target="_blank" rel="noopener">اطلب الدورة</a></article></div>
+<div class="more-c"><a class="btn btn-navy" href="#pubs" data-sec="courses">مقاطع من الدورات</a></div></div></section><section class="prods"><div class="wrap"><div class="sec-head rv"><small>الإصدارات</small><h2>من إعداد حامد الذيابي</h2><p>كتاب وبحوث وأدلة في التسويق والاستدامة المالية للقطاع غير الربحي.</p></div><div class="pub-grid prod-pubs six"><article class="pub"><img src="pubs/cover16.webp" alt="غلاف: تطوير أدوات تمويل مبتكرة لتعزيز الاستدامة المالية للمنظمات غير الربحية" width="900" height="1200" loading="lazy"><div class="pub-body"><span class="pub-tag">دراسة محكّمة · ٢٠٢٦</span><h3>تطوير أدوات تمويل مبتكرة لتعزيز الاستدامة المالية للمنظمات غير الربحية</h3><p>دراسة منشورة في مجلة البحوث والدراسات الاجتماعية، تقترح إطارًا عمليًا لتطبيق أدوات التمويل المبتكرة في السياق السعودي.</p></div><a class="btn btn-coral" href="https://rssj.ncss.gov.sa/index.php/rssj/article/view/257" target="_blank" rel="noopener">قراءة الدراسة</a></article><article class="pub">
           <img class="nocrop" src="pubs/book.webp" alt="غلاف كتاب استدامة العطاء" width="773" height="1100" loading="lazy">
           <div class="pub-body"><span class="pub-tag">كتاب</span><h3>استدامة العطاء</h3><p>كيف تخلق التجارب المميزة الاستدامة.</p></div>
           <a class="btn btn-coral" href="https://rushd.sa/products/%D8%A7%D8%B3%D8%AA%D8%AF%D8%A7%D9%85%D8%A9-%D8%A7%D9%84%D8%B9%D8%B7%D8%A7%D8%A1-%D9%80%D9%80-%D9%83%D9%8A%D9%81-%D8%AA%D8%AE%D9%84%D9%82-%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A8-%D8%A7%D9%84%D9%85%D9%85%D9%8A%D8%B2%D8%A9-%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%AF%D8%A7%D9%85%D8%A9" target="_blank" rel="noopener">شراء الكتاب</a>
@@ -867,14 +917,6 @@ section .eyebrow{color:var(--coral);font-weight:600;font-size:15px}
           <img src="pubs/cover12.webp" alt="غلاف: أبرز ١٠ حملات تسويقية في رمضان ١٤٤٦هـ" width="637" height="900" loading="lazy">
           <div class="pub-body"><span class="pub-tag">تقرير · ٢٧ صفحة</span><h3>أبرز ١٠ حملات تسويقية في رمضان ١٤٤٦هـ</h3><p>تقرير يرصد أبرز الحملات التسويقية في رمضان، مع خاتمة وتوصيات.</p></div>
           <a class="btn btn-navy read-pub" href="pubs/pub12.pdf" target="_blank" rel="noopener" data-pdf="pubs/pub12.pdf">قراءة الإصدار</a>
-        </article><article class="pub">
-          <img src="pubs/cover13.webp" alt="غلاف: بوصلة البداية" width="507" height="900" loading="lazy">
-          <div class="pub-body"><span class="pub-tag">دليل مصوّر · ٢٠٢٥ · صفحة واحدة</span><h3>بوصلة البداية</h3><p>خارطة موجهة للمنضمين حديثًا إلى القطاع غير الربحي.</p></div>
-          <a class="btn btn-navy read-pub" href="pubs/pub13.pdf" target="_blank" rel="noopener" data-pdf="pubs/pub13.pdf">قراءة الإصدار</a>
-        </article><article class="pub series-card">
-          <img src="pubs/cover14.webp" alt="غلاف: سلسلة القطاع الجديد" width="507" height="900" loading="lazy" class="series-open" style="cursor: pointer;">
-          <div class="pub-body"><span class="pub-tag">سلسلة مرئية · ٦ حلقات</span><h3>سلسلة القطاع الجديد</h3><p>تعريف بالقطاع غير الربحي وأشكاله المختلفة والمتنوعة.</p></div>
-          <a class="btn btn-coral series-open" href="https://www.youtube.com/shorts/43YCmPw_OUU" target="_blank" rel="noopener">شاهد الحلقات</a>
         </article></div><div class="more-c"><a class="btn btn-navy" href="#pubs">كل الإصدارات</a></div></div></section><section class="nl-band">
     <div class="wrap">
       <div class="nl-text">
@@ -884,31 +926,25 @@ section .eyebrow{color:var(--coral);font-weight:600;font-size:15px}
       </div>
       <a class="btn btn-coral" href="https://www.linkedin.com/newsletters/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%AF%D8%A7%D9%85%D8%A9-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9-7063422465699409920" target="_blank" rel="noopener">اشترك في النشرة</a>
     </div>
-  </section><section class="wa-band"><div class="wrap"><div class="wa-text"><small>قناة واتساب</small><h2>تابع «درب الاستدامة المالية»</h2><p>محتوى في الاستدامة المالية وتنمية موارد القطاع غير الربحي، يصلك على واتساب.</p></div><a class="btn btn-coral" href="https://whatsapp.com/channel/0029VaDG6R49Gv7Okjpy860R" target="_blank" rel="noopener">متابعة القناة</a></div></section><section class="clients">
+  </section><section class="wa-band"><div class="wrap"><div class="wa-text"><small>قناة واتساب</small><h2>تابع «درب الاستدامة المالية»</h2><p>محتوى في الاستدامة المالية وتنمية موارد القطاع غير الربحي، يصلك على واتساب.</p></div><a class="btn btn-coral" href="https://whatsapp.com/channel/0029VaDG6R49Gv7Okjpy860R" target="_blank" rel="noopener">متابعة القناة</a></div></section><section class="aw6"><div class="wrap"><div class="sec-head rv"><small>جوائز وتكريمات</small><h2>أثر حظي بالتقدير</h2></div>
+<div class="aw6-grid"><figure class="aw6-c"><img src="img/aw-stevie.webp" alt="جائزة Stevie الدولية" loading="lazy"><figcaption><b>جائزة Stevie الدولية</b><span>المستوى الذهبي لأفضل مشروع إنساني شارك في إنتاجه</span></figcaption></figure><figure class="aw6-c"><div class="aw6-ph"><svg viewBox="0 0 24 24"><path d="M7 2h10v2h4v3a5 5 0 0 1-4.6 5A5 5 0 0 1 13 14.9V18h3v2H8v-2h3v-3.1A5 5 0 0 1 7.6 12 5 5 0 0 1 3 7V4h4V2zm0 4H5v1a3 3 0 0 0 2 2.8V6zm10 0v3.8A3 3 0 0 0 19 7V6h-2z"></path></svg></div><figcaption><b>موسوعة جينيس</b><span>أكبر صف تبرعات في العالم، حملة «أواني الخير»</span></figcaption></figure><figure class="aw6-c"><img src="img/aw-prince.webp" alt="تكريم أمير المنطقة الشرقية" loading="lazy"><figcaption><b>تكريم أمير المنطقة الشرقية</b><span>تكريم من صاحب السمو الملكي أمير المنطقة الشرقية</span></figcaption></figure><figure class="aw6-c"><img src="img/n-aw2.webp" alt="جائزة العمل التطوعي ٢٠٢٥" loading="lazy"><figcaption><b>جائزة العمل التطوعي ٢٠٢٥</b><span>الجائزة الوطنية للعمل التطوعي</span></figcaption></figure><figure class="aw6-c"><img src="img/n-aw1.webp" alt="تطوع احترافي" loading="lazy"><figcaption><b>تطوع احترافي</b><span>المركز الوطني لتنمية القطاع غير الربحي</span></figcaption></figure><figure class="aw6-c"><img src="img/aw-linkedin.webp" alt="من أبرز ١٠ مؤثرين" loading="lazy"><figcaption><b>من أبرز ١٠ مؤثرين</b><span>على منصة لينكدإن</span></figcaption></figure></div>
+<div class="more-c"><a class="btn btn-navy" href="#about">كل الجوائز في السيرة الكاملة</a></div></div></section><section class="svc2">
+    <div class="wrap">
+      <div class="sec-head rv"><small>الخدمات</small><h2>ماذا نقدّم</h2><p>خدمات للمنظمات غير الربحية من التخطيط إلى التدريب والتقييم.</p></div>
+      <div class="cards"><a class="card rv" href="#store" data-go="plans"><span class="ic"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1.5V8h4.5L14 3.5zM8 12h8v2H8v-2zm0 4h8v2H8v-2zm0-8h4v2H8V8z"></path></svg></span><h3>تصميم الخطط والنماذج</h3><p>خطط الاستدامة المالية والتسويق وجمع التبرعات ورحلة المتبرع، مبنية على طبيعة جهتك وجمهورها.</p><span class="more">المزيد</span></a><a class="card rv" href="#store" data-go="courses"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zm-6 9.2v4.3C6 18.4 8.7 20 12 20s6-1.6 6-3.5v-4.3l-6 3.3-6-3.3z"></path></svg></span><h3>الدورات التدريبية</h3><p>دورات تطبيقية في التسويق الخيري والاستدامة المالية وتجربة المتبرع وتنمية الموارد.</p><span class="more">المزيد</span></a><a class="card rv" href="#store" data-go="sessions"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 3h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm3 6v2h2V9H7zm4 0v2h2V9h-2zm4 0v2h2V9h-2z"></path></svg></span><h3>الجلسات الاستشارية</h3><p>جلسة مع أ. حامد الذيابي لمناقشة تحديات جهتك في التسويق والاستدامة المالية، حضوريًا أو عن بُعد.</p><span class="more">المزيد</span></a><a class="card rv" href="#store" data-go="review"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4zm-1.5 15.5-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4-7 7z"></path></svg></span><h3>التقييم والتحكيم</h3><p>مراجعة مهنية لخططك ومنتجات التبرع ومتجرك الإلكتروني، مع توصيات واضحة للتحسين.</p><span class="more">المزيد</span></a></div>
+    <div class="more-c"><a class="btn btn-coral" href="#store">اطلب الخدمة</a></div></div>
+  </section><section class="clients">
     <div class="wrap">
       <div class="eyebrow">عملاء وشركاء</div>
       <h2 class="h2">جهات وثقت بنا</h2>
       <p class="intro">من القطاع غير الربحي والجهات الحكومية والقطاع الخاص.</p>
     </div>
     <div class="marquee" aria-label="شعارات العملاء"><ul class="track"><li><img src="clients/s13_01.webp" alt="جمعية عزم للتصلب المتعدد" width="260" height="120" loading="lazy"></li><li><img src="clients/s13_02.webp" alt="الوداد لرعاية الأيتام" width="260" height="120" loading="lazy"></li><li><img src="clients/s13_03.webp" alt="جمعية الرائدة النسائية الاجتماعية" width="260" height="120" loading="lazy"></li><li><img src="clients/s13_04.webp" alt="جمعية دعم الأوقاف" width="260" height="120" loading="lazy"></li><li><img src="clients/s13_05.webp" alt="كبدك" width="260" height="120" loading="lazy"></li><li><img src="clients/s13_06.webp" alt="جمعية تحفيظ القرآن بوادي لية" width="260" height="120" loading="lazy"></li><li><img src="clients/s13_07.webp" alt="إرادة" width="260" height="120" loading="lazy"></li><li><img src="clients/s13_08.webp" alt="مكارم الأخلاق" width="260" height="120" loading="lazy"></li><li><img src="clients/s13_09.webp" alt="شعار جهة غير ربحية" width="260" height="120" loading="lazy"></li><li><img src="clients/s13_10.webp" alt="مطورون" width="260" height="120" loading="lazy"></li><li><img src="clients/s13_11.webp" alt="مؤسسة الحبيب الخيرية" width="260" height="120" loading="lazy"></li><li><img src="clients/s13_12.webp" alt="مؤسسة سامي علي الجفالي الأهلية" width="260" height="120" loading="lazy"></li><li><img src="clients/s13_13.webp" alt="جمعية مسكن للإسكان التنموي" width="260" height="120" loading="lazy"></li><li><img src="clients/s13_14.webp" alt="شعار جمعية خيرية" width="260" height="120" loading="lazy"></li><li><img src="clients/s13_15.webp" alt="مسك" width="260" height="120" loading="lazy"></li><li><img src="clients/s14_01.webp" alt="بنك التنمية الاجتماعية" width="260" height="120" loading="lazy"></li><li><img src="clients/s14_02.webp" alt="المركز الوطني لتنمية القطاع غير الربحي" width="260" height="120" loading="lazy"></li><li><img src="clients/s14_03.webp" alt="وزارة البيئة والمياه والزراعة" width="260" height="120" loading="lazy"></li><li><img src="clients/s14_04.webp" alt="جود الأعمال" width="260" height="120" loading="lazy"></li><li><img src="clients/s14_05.webp" alt="وزارة الثقافة" width="260" height="120" loading="lazy"></li><li><img src="clients/s15_01.webp" alt="غزارة للاستشارات" width="260" height="120" loading="lazy"></li><li><img src="clients/s15_02.webp" alt="التحول التقني" width="260" height="120" loading="lazy"></li><li><img src="clients/s15_03.webp" alt="سقيفة" width="260" height="120" loading="lazy"></li><li><img src="clients/s15_04.webp" alt="واكب" width="260" height="120" loading="lazy"></li><li><img src="clients/s15_05.webp" alt="ركين" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_01.webp" alt="جمعية عزم للتصلب المتعدد" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_02.webp" alt="الوداد لرعاية الأيتام" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_03.webp" alt="جمعية الرائدة النسائية الاجتماعية" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_04.webp" alt="جمعية دعم الأوقاف" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_05.webp" alt="كبدك" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_06.webp" alt="جمعية تحفيظ القرآن بوادي لية" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_07.webp" alt="إرادة" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_08.webp" alt="مكارم الأخلاق" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_09.webp" alt="شعار جهة غير ربحية" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_10.webp" alt="مطورون" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_11.webp" alt="مؤسسة الحبيب الخيرية" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_12.webp" alt="مؤسسة سامي علي الجفالي الأهلية" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_13.webp" alt="جمعية مسكن للإسكان التنموي" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_14.webp" alt="شعار جمعية خيرية" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s13_15.webp" alt="مسك" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s14_01.webp" alt="بنك التنمية الاجتماعية" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s14_02.webp" alt="المركز الوطني لتنمية القطاع غير الربحي" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s14_03.webp" alt="وزارة البيئة والمياه والزراعة" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s14_04.webp" alt="جود الأعمال" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s14_05.webp" alt="وزارة الثقافة" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s15_01.webp" alt="غزارة للاستشارات" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s15_02.webp" alt="التحول التقني" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s15_03.webp" alt="سقيفة" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s15_04.webp" alt="واكب" width="260" height="120" loading="lazy"></li><li aria-hidden="true"><img src="clients/s15_05.webp" alt="ركين" width="260" height="120" loading="lazy"></li></ul></div>
-  </section><section class="awards">
-    <div class="wrap">
-      <div class="eyebrow">جوائز وتكريمات</div>
-      <h2 class="h2">أثر حظي بالتقدير</h2>
-      <div class="aw-photos"><figure><img src="img/n-aw1.webp" alt="تكريم من المركز الوطني لتنمية القطاع غير الربحي" loading="lazy"><figcaption>تكريم من المركز الوطني لتنمية القطاع غير الربحي</figcaption></figure><figure><img src="img/n-aw2.webp" alt="الجائزة الوطنية للعمل التطوعي" loading="lazy"><figcaption>الجائزة الوطنية للعمل التطوعي</figcaption></figure></div><ul class="aw-list">
-        <li><b>جائزة Stevie الدولية</b><span>المستوى الذهبي لأفضل مشروع إنساني شارك في إنتاجه</span></li>
-        <li><b>موسوعة جينيس</b><span>أكبر صف تبرعات في العالم، حملة «أواني الخير»</span></li>
-        <li><b>جائزة رواد التسويق</b><span>المركز الثاني على مستوى المملكة</span></li>
-        <li><b>جائزة العمل التطوعي ٢٠٢٥</b><span>إلى جانب تكريم أمير المنطقة الشرقية</span></li><li><b>تطوع احترافي</b><span>المركز الوطني لتنمية القطاع غير الربحي</span></li>
-        <li><b>أبطال العدالة الاجتماعية</b><span>مؤسسة الملك خالد</span></li>
-        <li><b>من أبرز ١٠ مؤثرين</b><span>على منصة لينكدإن</span></li>
-      <li><b>هاكثون التنمية الاجتماعية الأول</b><span>المركز الثاني، مشروع «تعزيز»</span></li></ul>
-    </div>
   </section><section class="cta-end"><div class="wrap"><h2>لنبدأ من واقع منظمتك</h2><p>أخبرنا بما تحتاجه منظمتك، ونقترح عليك المسار الأنسب لتنمية مواردها واستدامتها.</p>
 <div class="ct-cards">
 <a class="ct" href="https://wa.me/966554070212" target="_blank" rel="noopener"><small>واتساب الأعمال</small><b dir="ltr">+966 55 407 0212</b><span>افتح المحادثة</span></a>
 <a class="ct" href="mailto:hamedalthiabi@gmail.com"><small>البريد الإلكتروني</small><b dir="ltr">hamedalthiabi@gmail.com</b><span>أرسل رسالة</span></a>
-<a class="ct" href="https://www.linkedin.com/in/HAMEDALTHIABI" target="_blank" rel="noopener"><small>لينكدإن</small><b dir="ltr">HAMEDALTHIABI</b><span>زيارة الحساب</span></a>
+
 </div></div></section><div hidden=""><span id="m-eyebrow"></span><ul id="home-days"></ul><ul id="home-events"></ul></div></div>
 
 <div class="page" id="about" data-page="about" hidden="">
@@ -929,60 +965,41 @@ section .eyebrow{color:var(--coral);font-weight:600;font-size:15px}
       </div></div>
     </div>
   </section>
+<section class="cv-exp"><div class="wrap"><div class="sec-head"><small>الخبرات</small><h2>المسيرة المهنية</h2></div>
+<ol class="tl">
+<li><span class="yr">٢٠٢٤ – الآن</span><div><h3>لجنة حكومية</h3><p>قيادة حملات جمع التبرعات وتنمية الموارد، وبناء الشراكات مع الجهات الحكومية والخاصة وغير الربحية.</p></div></li>
+<li><span class="yr">٢٠٢٣ – ٢٠٢٥</span><div><h3>وزارة البلديات والإسكان · مدير علاقات الشركاء</h3><p>إدارة شبكة الشركاء والمانحين، وتطوير مبادرات المسؤولية الاجتماعية وتجربة المانحين.</p></div></li>
+<li><span class="yr">٢٠٢٢ – ٢٠٢٣</span><div><h3>اللجنة الوطنية لرعاية السجناء والمفرج عنهم وأسرهم (تراحم) · مدير التسويق وتنمية الموارد والشراكات</h3><p>قاد حملة رمضان التي حققت <b>أكثر من ٣٣ مليون ريال</b>، وأسهم في تأسيس وقف تراحم.</p></div></li>
+<li><span class="yr">٢٠٢٠ – ٢٠٢٢</span><div><h3>مركز الأثر · مدير الشراكات والخدمات المساندة</h3><p>بناء شراكات ذات أثر مرتفع، وتمكين المنظمات غير الربحية، والإشراف على مبادرات الحوكمة والاستدامة.</p></div></li>
+<li><span class="yr">٢٠١٧ – ٢٠٢٠</span><div><h3>جمعية البر الخيرية بأم الدوم · المدير التنفيذي</h3><p>رفع الإيرادات السنوية من <b>٦٠٠ ألف إلى ٦ ملايين ريال</b>، وأبرم أكثر من ٣٠ شراكة مع جهات داعمة.</p></div></li>
+<li><span class="yr">٢٠١٣ – ٢٠١٧</span><div><h3>جمعية البر الخيرية بأم الدوم · رئيس العلاقات العامة والإعلام</h3><p>إعداد أول خطة استراتيجية للجمعية، وبناء الهيكل المؤسسي.</p></div></li>
+</ol></div></section>
+<section class="cv-q"><div class="wrap cv-2">
+<div><div class="sec-head"><small>المؤهلات</small><h2>الشهادات الدراسية</h2></div><ul class="cv-list">
+<li><b>زمالة قيادة العمل التشاركي</b><span>جامعة مانشستر، ٢٠٢٥</span></li><li><b>الزمالة العربية الأوروبية في الاقتصاد الاجتماعي</b><span>جامعة غرناطة، ٢٠٢٤</span></li><li><b>ماجستير إدارة المنظمات غير الربحية التنفيذي</b><span>جامعة حائل، ٢٠٢٢، بتقدير ممتاز مع مرتبة الشرف الأولى</span></li><li><b>بكالوريوس الشريعة</b><span>جامعة الإمام محمد بن سعود الإسلامية، ٢٠١٧</span></li><li><b>زمالة الاستثمار</b></li>
+</ul></div>
+<div><div class="sec-head"><small>الشهادات المهنية</small><h2>تأهيل مهني</h2></div><ul class="cv-list">
+<li><b>إدارة المشاريع الاحترافية (PMP)</b><span>معهد إدارة المشاريع PMI، الولايات المتحدة</span></li><li><b>برنامج القيادة المرنة للمنظمات غير الربحية</b><span>جامعة باث، بريطانيا</span></li><li><b>دبلوم القيادة الوسطى للمنظمات غير الربحية</b><span>جامعة برثاي، بريطانيا</span></li><li><b>دبلوم التقييم التنموي</b><span>جامعة إيناب الكندية</span></li><li><b>القيادة للرؤساء التنفيذيين في القطاع غير الربحي</b><span>جامعة الملك فهد للبترول والمعادن</span></li><li><b>الدبلوم التطبيقي المصغر للمنظمات غير الربحية</b><span>مؤسسة الأميرة العنود</span></li><li><b>بيمرا لتصميم تجارب العملاء المحترفين</b><span>معهد بيمرا، ٢٠٢٥</span></li><li><b>أساسيات المشاركة المجتمعية</b><span>الرابطة الدولية للمشاركة العامة، ٢٠٢٥</span></li><li><b>شهادة محترف مؤشرات الأداء</b><span>معهد مؤشرات الأداء</span></li><li><b>شهادة الأيزو في إدارة الشراكات والتعاونيات</b></li><li><b>قيادة الريادة نحو المستقبل</b><span>أكاديمية تأهيل القيادات، لندن</span></li><li><b>دبلوم ربان للقيادات الشابة للقطاع الخيري</b><span>المركز العالمي الكندي</span></li><li><b>برنامج تمكين القيادة</b><span>GOOSTA</span></li><li><b>برنامج MDLP</b><span>معهد SAP</span></li>
+</ul></div></div></section>
+<section class="cv-aw"><div class="wrap"><div class="sec-head"><small>الجوائز</small><h2>جوائز وتكريمات</h2></div>
+<ul class="cv-awl"><li><b>جائزة Stevie الدولية</b><span>المستوى الذهبي لأفضل مشروع إنساني شارك في إنتاجه</span></li><li><b>موسوعة جينيس</b><span>أكبر صف تبرعات في العالم، حملة «أواني الخير»</span></li><li><b>تكريم أمير المنطقة الشرقية</b><span>تكريم من صاحب السمو الملكي أمير المنطقة الشرقية</span></li><li><b>جائزة العمل التطوعي ٢٠٢٥</b><span>الجائزة الوطنية للعمل التطوعي</span></li><li><b>تطوع احترافي</b><span>المركز الوطني لتنمية القطاع غير الربحي</span></li><li><b>من أبرز ١٠ مؤثرين</b><span>على منصة لينكدإن</span></li><li><b>جائزة رواد التسويق</b><span>المركز الثاني على مستوى المملكة</span></li><li><b>أبطال العدالة الاجتماعية</b><span>مؤسسة الملك خالد</span></li><li><b>هاكثون التنمية الاجتماعية الأول</b><span>المركز الثاني، مشروع «تعزيز»</span></li></ul></div></section>
+<section class="cv-roles"><div class="wrap cv-3">
+<div><h3 class="cv-h">الاستشارات</h3><ul class="cv-list sm"><li><b>مستشار مسرعة مسك في الاستدامة المالية</b></li><li><b>مستشار برنامج سند محمد بن سلمان في التسويق الخيري</b></li><li><b>مستشار حاضنة جدارة</b></li><li><b>مستشار لعدد من الجهات غير الربحية</b></li></ul></div>
+<div><h3 class="cv-h">الكيانات المؤسسة</h3><ul class="cv-list sm"><li><b>مؤسسة درب غير الربحية</b><span>رئيس مجلس الأمناء</span></li><li><b>شركة ذا فورث أتش</b><span>شريك مؤسس</span></li><li><b>جمعية أصالة الجوان الأهلية</b><span>رئيس مجلس الإدارة</span></li><li><b>جمعية ضفاف الأهلية</b><span>عضو مؤسس</span></li><li><b>جمعية الخدمات الاجتماعية بنمران</b><span>عضو مؤسس</span></li><li><b>صندوق عون لنا العائلي</b><span>عضو مؤسس</span></li></ul></div>
+<div><h3 class="cv-h">العضويات</h3><ul class="cv-list sm"><li><b>عضو هيئة تدريس</b><span>جامعة المجمعة، وجامعة الحدود الشمالية</span></li><li><b>عضو ممارس مهني</b><span>جامعة الأميرة نورة</span></li><li><b>عضو مجلس أثر الشباب</b><span>مجتمع مسك</span></li><li><b>عضو لجنة الاستثمار وتنمية الموارد</b><span>جمعية أجواد</span></li><li><b>عضو لجنة التسويق</b><span>جمعية زمزم الصحية</span></li><li><b>عضو جمعيات</b><span>الاستشارات التسويقية، تجربة العميل، الادخار، تطوير القطاع غير الربحي</span></li></ul></div>
+</div></section>
+<section class="cv-more"><div class="wrap cv-2">
+<div><h3 class="cv-h">مشاركات وأعمال</h3><ul class="cv-list sm"><li><b>المشاركة في تأسيس منصة تعزيز</b><span>أول منصة تمويل اجتماعي قائم على المكافآت</span></li><li><b>تصميم تجربة العميل لإحدى جوائز التميز</b></li><li><b>تصميم وثيقة الإعلام الرقمي لمؤسسة مانحة</b></li><li><b>تطوير تجربة المتبرع لمجموعة من متاجر الجمعيات</b></li><li><b>تحكيم مبادرات حاضنة مسك، ومرشد برنامج مسك ١٠</b></li></ul></div>
+<div><h3 class="cv-h">ملتقيات شارك فيها</h3><ul class="cv-chips"><li>ملتقى القطاع الثقافي غير الربحي</li><li>ملتقى المتاجر الإلكترونية</li><li>ملتقى التسويق الخيري</li><li>ملتقى تنمية الموارد المالية، الخبر</li><li>ميسّر ملتقى أثر الشباب، مسك</li><li>قمة Next Gen</li><li>منتدى تجربة المستفيد</li></ul>
+<div class="cv-vol"><b>٨٥٥</b><span>ساعة تطوعية مع ٢٠ جهة</span></div></div>
+</div></section>
 
 
-  <section class="creds">
-    <div class="wrap creds-grid">
-      <div>
-        <div class="eyebrow">المؤهلات</div>
-        <h2 class="h2">تأهيل أكاديمي ومهني</h2>
-        <ul class="cr-list">
-          <li><b>زمالة قيادة العمل التشاركي</b><span>جامعة مانشستر، ٢٠٢٥</span></li>
-          <li><b>الزمالة العربية الأوروبية في الاقتصاد الاجتماعي</b><span>جامعة غرناطة، ٢٠٢٤</span></li>
-          <li><b>ماجستير إدارة المنظمات غير الربحية التنفيذي</b><span>جامعة حائل، ٢٠٢٢، بتقدير ممتاز مع مرتبة الشرف الأولى</span></li>
-        </ul>
-      </div>
-      <div>
-        <div class="eyebrow">أدوار استشارية</div>
-        <h2 class="h2">مستشار لبرامج رائدة</h2>
-        <ul class="cr-list">
-          <li><b>مسرعة مسك</b><span>مستشار في الاستدامة المالية</span></li>
-          <li><b>برنامج سند محمد بن سلمان</b><span>مستشار في التسويق الخيري</span></li>
-          <li><b>حاضنة جدارة</b><span>مستشار</span></li>
-          <li><b>مؤسسة درب غير الربحية</b><span>رئيس مجلس الأمناء</span></li>
-        </ul>
-      </div>
-    </div>
-  </section>
+  
 
-  <section class="method">
-    <div class="wrap">
-      <div class="eyebrow">المنهجية</div>
-      <h2 class="h2">كيف نعمل معك</h2>
-      <p class="intro">لا نقدّم إجابات جاهزة، بل نساعدك على رؤية الصورة كاملة واتخاذ قرار أفضل.</p>
-      <div class="steps">
-        <div class="step"><div class="n">٠١</div><h3>التشخيص</h3><p>نقرأ واقع المنظمة: مصادر الدخل الحالية، ونقاط القوة، والمخاطر.</p></div>
-        <div class="step"><div class="n">٠٢</div><h3>التصميم</h3><p>نختار مصادر الدخل الأنسب لطبيعة المنظمة ونبني خطة واضحة.</p></div>
-        <div class="step"><div class="n">٠٣</div><h3>التمكين</h3><p>نسلّم الفريق الأدوات والمنهجيات، وندرّبه على التطبيق.</p></div>
-        <div class="step"><div class="n">٠٤</div><h3>القياس</h3><p>نتابع النتائج بالمؤشرات، ونحسّن المسار حتى تستقر القدرة.</p></div>
-      </div>
-    </div>
-  </section>
+  
 
-  <section class="aud-sec">
-    <div class="wrap">
-      <div class="eyebrow">لمن نعمل</div>
-      <h2 class="h2">شركاء في استدامة القطاع</h2>
-      <div class="aud-grid">
-        <div class="aud"><h3>قيادات المنظمات غير الربحية</h3><div class="tags">الاستقرار المالي · تنويع الدخل · الأثر</div><p>الاستدامة المالية تمنح منظمتك قدرة أكبر على خدمة قضيتها واتخاذ قراراتها بثقة.</p></div>
-        <div class="aud"><h3>مجالس الإدارات</h3><div class="tags">الحوكمة · المخاطر · وضوح القرار</div><p>الاستدامة ليست مسؤولية إدارة تنمية الموارد وحدها، بل قرار استراتيجي يبدأ من مجلس الإدارة.</p></div>
-        <div class="aud"><h3>الجهات المانحة</h3><div class="tags">كفاءة التمويل · قياس النتائج</div><p>التمويل الأكثر أثرًا هو الذي يساعد المنظمة على بناء قدرتها والاستمرار بعد انتهاء المنحة.</p></div>
-        <div class="aud"><h3>الجهات الداعمة والمنظِّمة</h3><div class="tags">تطوير القطاع · النضج المؤسسي</div><p>قطاع غير ربحي أكثر استدامة ماليًا هو قطاع أكثر قدرة على المساهمة في التنمية.</p></div>
-        <div class="aud"><h3>الإعلام وصنّاع المحتوى</h3><div class="tags">القضايا · الأرقام · مستقبل القطاع</div><p>الاستدامة المالية ليست قضية مالية فقط؛ بل قضية تنمية ومستقبل وأثر مجتمعي.</p></div>
-        <div class="aud"><h3>الباحثون والأكاديميون</h3><div class="tags">المعرفة · البيانات · النماذج</div><p>الميدان يقدّم أسئلة حقيقية، والبحث يحوّلها إلى معرفة ومنهجيات تساعد القطاع.</p></div>
-      </div>
-    </div>
-  </section>
+  
 
 </div>
 
@@ -1041,7 +1058,7 @@ section .eyebrow{color:var(--coral);font-weight:600;font-size:15px}
       <div class="eyebrow">الإصدارات</div>
       <h2 class="h2">مكتبة الإصدارات</h2>
       <p class="intro">كتاب وأدلة وبحوث وتقارير ونماذج في التسويق والاستدامة المالية للقطاع غير الربحي، إلى جانب مشاركاتنا الإعلامية.</p>
-      <nav class="pub-jump" aria-label="أقسام الإصدارات"><a href="#pubs" data-jump="own">الإصدارات</a><a href="#pubs" data-jump="trans">ترجمات الاستدامة</a><a href="#pubs" data-jump="guides">أدلة مصوّرة</a><a href="#pubs" data-jump="contrib">إصدارات شارك فيها</a><a href="#pubs" data-jump="media">الإعلام والمشاركات</a></nav>
+      <nav class="pub-jump" aria-label="أقسام الإصدارات"><a href="#pubs" data-jump="own">الإصدارات</a><a href="#pubs" data-jump="articles">المقالات</a><a href="#pubs" data-jump="courses">الدورات</a><a href="#pubs" data-jump="trans">ترجمات الاستدامة</a><a href="#pubs" data-jump="guides">أدلة مصوّرة</a><a href="#pubs" data-jump="contrib">إصدارات شارك فيها</a><a href="#pubs" data-jump="media">الإعلام والمشاركات</a></nav>
       <div class="pub-head" id="sec-own"><h2 class="h3x">الإصدارات</h2></div>
       <div class="pub-grid"><article class="pub tall"><img src="pubs/cover16.webp" alt="غلاف: تطوير أدوات تمويل مبتكرة لتعزيز الاستدامة المالية للمنظمات غير الربحية" width="900" height="1200" loading="lazy"><div class="pub-body"><span class="pub-tag">دراسة محكّمة · ٢٠٢٦</span><h3>تطوير أدوات تمويل مبتكرة لتعزيز الاستدامة المالية للمنظمات غير الربحية</h3><p>دراسة منشورة في مجلة البحوث والدراسات الاجتماعية، تقترح إطارًا عمليًا لتطبيق أدوات التمويل المبتكرة في السياق السعودي.</p></div><a class="btn btn-coral" href="https://rssj.ncss.gov.sa/index.php/rssj/article/view/257" target="_blank" rel="noopener">قراءة الدراسة</a></article>
         <article class="pub tall">
@@ -1049,11 +1066,7 @@ section .eyebrow{color:var(--coral);font-weight:600;font-size:15px}
           <div class="pub-body"><span class="pub-tag">كتاب</span><h3>استدامة العطاء</h3><p>كيف تخلق التجارب المميزة الاستدامة.</p></div>
           <a class="btn btn-coral" href="https://rushd.sa/products/%D8%A7%D8%B3%D8%AA%D8%AF%D8%A7%D9%85%D8%A9-%D8%A7%D9%84%D8%B9%D8%B7%D8%A7%D8%A1-%D9%80%D9%80-%D9%83%D9%8A%D9%81-%D8%AA%D8%AE%D9%84%D9%82-%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A8-%D8%A7%D9%84%D9%85%D9%85%D9%8A%D8%B2%D8%A9-%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%AF%D8%A7%D9%85%D8%A9" target="_blank" rel="noopener">شراء الكتاب</a>
         </article>
-        <article class="pub tall">
-          <img src="pubs/newsletter.webp" alt="النشرة البريدية: الاستدامة المالية" width="600" height="800" loading="lazy">
-          <div class="pub-body"><span class="pub-tag">نشرة بريدية · +٢٨٠٠ مشترك</span><h3>نشرة «الاستدامة المالية»</h3><p>نشرة دورية على لينكدإن في الاستدامة المالية للقطاع غير الربحي.</p></div>
-          <a class="btn btn-coral" href="https://www.linkedin.com/newsletters/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%AF%D8%A7%D9%85%D8%A9-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9-7063422465699409920" target="_blank" rel="noopener">اشترك في النشرة</a>
-        </article>
+        
         <article class="pub tall">
           <img src="pubs/cover09.webp" alt="غلاف: التسويق للمنظمات غير الربحية" width="637" height="900" loading="lazy">
           <div class="pub-body"><span class="pub-tag">دليل · ٢٨ صفحة</span><h3>التسويق للمنظمات غير الربحية</h3><p>مفاهيم ونماذج وممارسات في تسويق المنظمات غير الربحية.</p></div>
@@ -1074,10 +1087,20 @@ section .eyebrow{color:var(--coral);font-weight:600;font-size:15px}
           <div class="pub-body"><span class="pub-tag">تقرير · ٢٧ صفحة</span><h3>أبرز ١٠ حملات تسويقية في رمضان ١٤٤٦هـ</h3><p>تقرير يرصد أبرز الحملات التسويقية في رمضان، مع خاتمة وتوصيات.</p></div>
           <a class="btn btn-navy read-pub" href="pubs/pub12.pdf" target="_blank" rel="noopener" data-pdf="pubs/pub12.pdf">قراءة الإصدار</a>
         </article>
-      </div>
+      <article class="pub tall"><img src="pubs/cover17.webp" alt="غلاف: تقرير حملات رمضان ٢٠٢٤" width="900" height="1200" loading="lazy"><div class="pub-body"><span class="pub-tag">تقرير · ٢٠٢٤</span><h3>تقرير حملات رمضان ٢٠٢٤</h3><p>قراءة في حملات القطاع غير الربحي خلال رمضان، صادر عن مؤسسة درب.</p></div><a class="btn btn-navy" href="https://darb-hub.com/pdf-files/%d8%aa%d9%82%d8%b1%d9%8a%d8%b1-%d8%ad%d9%85%d9%84%d8%a7%d8%aa-%d8%b1%d9%85%d8%b6%d8%a7%d9%86-2024/" target="_blank" rel="noopener">قراءة التقرير</a></article></div>
     </div>
   </section>
-  <section class="pubs-sec" id="sec-trans">
+  
+<section class="pubs-sec" id="sec-articles"><div class="wrap"><div class="pub-head"><h2 class="h3x">المقالات</h2></div>
+<p class="intro sm">مقالات أ. حامد الذيابي في الاستدامة المالية والتسويق والتحول الرقمي للقطاع غير الربحي.</p>
+<div class="art-grid" id="art-grid"></div>
+<div class="nl-card"><img src="pubs/newsletter.webp" alt="نشرة الاستدامة المالية" loading="lazy"><div><small>النشرة البريدية على لينكدإن</small><h3>نشرة «الاستدامة المالية»</h3><p>نشرة دورية بأكثر من ٢٨٠٠ مشترك، تصلك فيها المقالات الجديدة أولًا بأول.</p><a class="btn btn-coral" href="https://www.linkedin.com/newsletters/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%AF%D8%A7%D9%85%D8%A9-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9-7063422465699409920" target="_blank" rel="noopener">اشترك في النشرة</a></div></div>
+</div></section>
+<section class="pubs-sec" id="sec-courses"><div class="wrap"><div class="pub-head"><h2 class="h3x">الدورات</h2></div>
+<p class="intro sm">الدورات التدريبية التي يقدّمها أ. حامد الذيابي، ومقاطع منها.</p>
+<div class="crs-grid"><article class="crs"><span class="crs-n">٠١</span><h3>التسويق الخيري</h3><p>أسس تسويق الجهات غير الربحية وبناء علاقتها بالداعمين.</p><a class="crs-go" href="https://wa.me/966554070212?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%AF%D9%88%D8%B1%D8%A9%3A%20%D8%A7%D9%84%D8%AA%D8%B3%D9%88%D9%8A%D9%82%20%D8%A7%D9%84%D8%AE%D9%8A%D8%B1%D9%8A" target="_blank" rel="noopener">اطلب الدورة</a></article><article class="crs"><span class="crs-n">٠٢</span><h3>صناعة الخطة التسويقية</h3><p>دورة تطبيقية يخرج منها المتدرب بخطة تسويقية لجهته.</p><a class="crs-go" href="https://wa.me/966554070212?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%AF%D9%88%D8%B1%D8%A9%3A%20%D8%B5%D9%86%D8%A7%D8%B9%D8%A9%20%D8%A7%D9%84%D8%AE%D8%B7%D8%A9%20%D8%A7%D9%84%D8%AA%D8%B3%D9%88%D9%8A%D9%82%D9%8A%D8%A9" target="_blank" rel="noopener">اطلب الدورة</a></article><article class="crs"><span class="crs-n">٠٣</span><h3>تصميم تجربة المتبرع</h3><p>تحسين تجربة المتبرع لرفع رضاه وولائه.</p><a class="crs-go" href="https://wa.me/966554070212?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%AF%D9%88%D8%B1%D8%A9%3A%20%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9%20%D8%A7%D9%84%D9%85%D8%AA%D8%A8%D8%B1%D8%B9" target="_blank" rel="noopener">اطلب الدورة</a></article><article class="crs"><span class="crs-n">٠٤</span><h3>الاستدامة المالية</h3><p>بناء الاستدامة المالية وتنويع مصادر الدخل.</p><a class="crs-go" href="https://wa.me/966554070212?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%AF%D9%88%D8%B1%D8%A9%3A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%AF%D8%A7%D9%85%D8%A9%20%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9" target="_blank" rel="noopener">اطلب الدورة</a></article><article class="crs"><span class="crs-n">٠٥</span><h3>خطة تنمية الموارد المالية</h3><p>دورة تطبيقية في إعداد خطة تنمية موارد متكاملة.</p><a class="crs-go" href="https://wa.me/966554070212?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%AF%D9%88%D8%B1%D8%A9%3A%20%D8%AE%D8%B7%D8%A9%20%D8%AA%D9%86%D9%85%D9%8A%D8%A9%20%D8%A7%D9%84%D9%85%D9%88%D8%A7%D8%B1%D8%AF%20%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9" target="_blank" rel="noopener">اطلب الدورة</a></article></div>
+<div class="vid-grid" id="vid-grid"></div>
+</div></section><section class="pubs-sec" id="sec-trans">
     <div class="wrap">
       <div class="pub-head"><h2 class="h3x">ترجمات الاستدامة</h2></div>
       <p class="intro sm">ترجمات عربية ومراجعة أ. حامد الذيابي بتصرّف موائم للسياق المحلي للقطاع غير الربحي في المملكة العربية السعودية، في السرد القصصي وجمع التبرعات.</p>
@@ -1152,7 +1175,7 @@ section .eyebrow{color:var(--coral);font-weight:600;font-size:15px}
   <section class="pubs-sec" id="sec-contrib">
     <div class="wrap">
       <div class="pub-head"><h2 class="h3x">إصدارات شارك فيها</h2></div>
-      <ul class="link-list"><li><div><b>المؤشر الوطني للعطاء</b><span>إصدار شارك فيه</span></div><a href="https://drive.google.com/file/d/10Rkdy_gChBtJwDIpBTfzv14kDax3aVmA/view?usp=sharing" target="_blank" rel="noopener">فتح</a></li><li><div><b>دراسة تحسين تجربة المتبرعين</b><span>دراسة شارك فيها</span></div><a href="https://jmihdom.sa/%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9-%D8%AA%D8%AD%D8%B3%D9%8A%D9%86-%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9-%D8%A7%D9%84%D9%85%D8%AA%D8%A8%D8%B1%D8%B9%D9%8A%D9%86/" target="_blank" rel="noopener">فتح</a></li><li><div><b>دليل التخصص في القطاع غير الربحي</b><span>مؤسسة درب</span></div><a href="https://darb-hub.com/ar/pdf-files/%D8%AF%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%AA%D8%AE%D8%B5%D8%B5-%D9%85%D8%B9-%D8%A7%D9%84%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A-2/" target="_blank" rel="noopener">فتح</a></li><li><div><b>تقرير حملات رمضان ٢٠٢٤</b><span>مؤسسة درب</span></div><a href="https://darb-hub.com/pdf-files/%d8%aa%d9%82%d8%b1%d9%8a%d8%b1-%d8%ad%d9%85%d9%84%d8%a7%d8%aa-%d8%b1%d9%85%d8%b6%d8%a7%d9%86-2024/" target="_blank" rel="noopener">فتح</a></li></ul>
+      <ul class="link-list"><li><div><b>المؤشر الوطني للعطاء</b><span>إصدار شارك فيه</span></div><a href="https://drive.google.com/file/d/10Rkdy_gChBtJwDIpBTfzv14kDax3aVmA/view?usp=sharing" target="_blank" rel="noopener">فتح</a></li><li><div><b>دراسة تحسين تجربة المتبرعين</b><span>دراسة شارك فيها</span></div><a href="https://jmihdom.sa/%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9-%D8%AA%D8%AD%D8%B3%D9%8A%D9%86-%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9-%D8%A7%D9%84%D9%85%D8%AA%D8%A8%D8%B1%D8%B9%D9%8A%D9%86/" target="_blank" rel="noopener">فتح</a></li><li><div><b>دليل التخصص في القطاع غير الربحي</b><span>مع المركز الوطني لتنمية القطاع غير الربحي</span></div><a href="https://darb-hub.com/ar/pdf-files/%D8%AF%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%AA%D8%AE%D8%B5%D8%B5-%D9%85%D8%B9-%D8%A7%D9%84%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A-2/" target="_blank" rel="noopener">فتح</a></li></ul>
     </div>
   </section>
 
