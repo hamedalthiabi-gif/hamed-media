@@ -98,6 +98,11 @@ $('#sec-trans').insertAdjacentHTML('beforebegin', `
 <div class="crs-grid">${COURSES.map(([t, p], i) => `<article class="crs"><span class="crs-n">${['٠١','٠٢','٠٣','٠٤','٠٥','٠٦'][i]}</span><h3>${t}</h3><p>${p}</p></article>`).join('')}</div>
 <div class="vid-grid" id="vid-grid"></div>
 </div></section>`);
+const ARTICLES = [
+  ['منصة مزن', 'كيف تبني حملات تسويقية مؤثرة لمنظمتك؟', 'https://www.mozn.ws/%D9%83%D9%8A%D9%81-%D8%AA%D8%A8%D9%86%D9%8A-%D8%AD%D9%85%D9%84%D8%A7%D8%AA-%D8%AA%D8%B3%D9%88%D9%8A%D9%82%D9%8A%D8%A9-%D9%85%D8%A4%D8%AB%D8%B1%D8%A9-%D9%84%D9%85%D9%86%D8%B8%D9%85%D8%AA%D9%83%D8%9F/'],
+  ['مجتمع Hive Mind', 'كيف يدعم الذكاء الاصطناعي رحلة المانح في منظمتك غير الربحية؟', 'https://ar.hive-mind.community/blog/1258,kyf-ydaam-althkaaa-alastnaaay-rhl-almanh-fy-mnthmtk-ghyr-alrbhy'],
+];
+$('#art-grid').innerHTML = ARTICLES.map(([src, t, u]) => `<a class="art" href="${u}" target="_blank" rel="noopener"><small>${src}</small><h3>${t}</h3><span>اقرأ المقال ←</span></a>`).join('');
 $('#pubs .pub-jump').innerHTML = [['own', 'الإصدارات'], ['articles', 'المقالات'], ['courses', 'الدورات'], ['trans', 'ترجمات الاستدامة'], ['guides', 'أدلة مصوّرة'], ['contrib', 'إصدارات شارك فيها'], ['media', 'الإعلام والمشاركات']].map(([k, t]) => `<a href="#pubs" data-jump="${k}">${t}</a>`).join('');
 // hide empty article/video grids until links are added
 // (cards are added later as <a class="art"> / <a class="vid">)
@@ -164,6 +169,13 @@ $$('style').pop().textContent += `
 /* pubs: articles + courses */
 .art-grid:empty,.vid-grid:empty{display:none}
 .art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+.art{display:grid;gap:8px;align-content:start;background:#fff;border-radius:6px;box-shadow:var(--shadow);padding:24px;text-decoration:none;border-top:3px solid var(--coral);transition:transform .3s}
+.art:hover{transform:translateY(-4px)}
+.art small{color:var(--coral);font-weight:600;font-size:13.5px}
+.art h3{color:var(--navy);font-size:19px;line-height:1.6}
+.art span{color:var(--navy);font-weight:600;font-size:14.5px;margin-top:4px}
+@media (max-width:900px){.art-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.art-grid{grid-template-columns:1fr}}
 .nl-card{display:grid;grid-template-columns:180px 1fr;gap:24px;align-items:center;margin-top:24px;background:#fff;border-radius:6px;box-shadow:var(--shadow);padding:20px}
 .nl-card img{width:100%;border-radius:6px}
 .nl-card small{color:var(--coral);font-weight:600;font-size:13.5px}

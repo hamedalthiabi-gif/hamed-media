@@ -832,6 +832,13 @@ section .eyebrow{color:var(--coral);font-weight:600;font-size:15px}
 /* pubs: articles + courses */
 .art-grid:empty,.vid-grid:empty{display:none}
 .art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+.art{display:grid;gap:8px;align-content:start;background:#fff;border-radius:6px;box-shadow:var(--shadow);padding:24px;text-decoration:none;border-top:3px solid var(--coral);transition:transform .3s}
+.art:hover{transform:translateY(-4px)}
+.art small{color:var(--coral);font-weight:600;font-size:13.5px}
+.art h3{color:var(--navy);font-size:19px;line-height:1.6}
+.art span{color:var(--navy);font-weight:600;font-size:14.5px;margin-top:4px}
+@media (max-width:900px){.art-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.art-grid{grid-template-columns:1fr}}
 .nl-card{display:grid;grid-template-columns:180px 1fr;gap:24px;align-items:center;margin-top:24px;background:#fff;border-radius:6px;box-shadow:var(--shadow);padding:20px}
 .nl-card img{width:100%;border-radius:6px}
 .nl-card small{color:var(--coral);font-weight:600;font-size:13.5px}
@@ -1093,7 +1100,7 @@ section .eyebrow{color:var(--coral);font-weight:600;font-size:15px}
   
 <section class="pubs-sec" id="sec-articles"><div class="wrap"><div class="pub-head"><h2 class="h3x">المقالات</h2></div>
 <p class="intro sm">مقالات أ. حامد الذيابي في الاستدامة المالية والتسويق والتحول الرقمي للقطاع غير الربحي.</p>
-<div class="art-grid" id="art-grid"></div>
+<div class="art-grid" id="art-grid"><a class="art" href="https://www.mozn.ws/%D9%83%D9%8A%D9%81-%D8%AA%D8%A8%D9%86%D9%8A-%D8%AD%D9%85%D9%84%D8%A7%D8%AA-%D8%AA%D8%B3%D9%88%D9%8A%D9%82%D9%8A%D8%A9-%D9%85%D8%A4%D8%AB%D8%B1%D8%A9-%D9%84%D9%85%D9%86%D8%B8%D9%85%D8%AA%D9%83%D8%9F/" target="_blank" rel="noopener"><small>منصة مزن</small><h3>كيف تبني حملات تسويقية مؤثرة لمنظمتك؟</h3><span>اقرأ المقال ←</span></a><a class="art" href="https://ar.hive-mind.community/blog/1258,kyf-ydaam-althkaaa-alastnaaay-rhl-almanh-fy-mnthmtk-ghyr-alrbhy" target="_blank" rel="noopener"><small>مجتمع Hive Mind</small><h3>كيف يدعم الذكاء الاصطناعي رحلة المانح في منظمتك غير الربحية؟</h3><span>اقرأ المقال ←</span></a></div>
 <div class="nl-card"><img src="pubs/newsletter.webp" alt="نشرة الاستدامة المالية" loading="lazy"><div><small>النشرة البريدية على لينكدإن</small><h3>نشرة «الاستدامة المالية»</h3><p>نشرة دورية بأكثر من ٢٨٠٠ مشترك، تصلك فيها المقالات الجديدة أولًا بأول.</p><a class="btn btn-coral" href="https://www.linkedin.com/newsletters/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%AF%D8%A7%D9%85%D8%A9-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9-7063422465699409920" target="_blank" rel="noopener">اشترك في النشرة</a></div></div>
 </div></section>
 <section class="pubs-sec" id="sec-courses"><div class="wrap"><div class="pub-head"><h2 class="h3x">الدورات</h2></div>
