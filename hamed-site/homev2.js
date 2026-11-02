@@ -187,7 +187,10 @@ $$('style').pop().textContent += `
 .gal figure:hover img{transform:scale(1.05)}
 .gal figcaption{position:absolute;inset:auto 0 0 0;padding:26px 14px 12px;background:linear-gradient(transparent,rgba(0,22,41,.85));color:#fff;font-size:14px;font-weight:600}
 @media (max-width:820px){.gal{grid-template-columns:1fr 1fr;grid-template-rows:none;grid-auto-rows:170px}.gal .g-big{grid-column:span 2;grid-row:span 1;height:240px}}
-.field .aw-list{margin-top:40px}
+.field .aw-list{margin-top:40px;grid-template-columns:repeat(4,1fr);gap:18px}
+.field .aw-list li{padding:26px 16px 22px}
+@media (max-width:900px){.field .aw-list{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.field .aw-list{grid-template-columns:1fr}}
 .ct-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:980px;margin:30px auto 0}
 .ct{display:grid;gap:4px;padding:22px;border:1px solid rgba(255,255,255,.2);text-decoration:none;color:#fff;transition:border-color .2s,background .2s;min-width:0}
 .ct:hover{border-color:var(--coral);background:rgba(255,255,255,.05)}
