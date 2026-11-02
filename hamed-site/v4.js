@@ -93,8 +93,7 @@ $('#sec-trans').insertAdjacentHTML('beforebegin', `
 <div class="nl-card"><img src="pubs/newsletter.webp" alt="نشرة الاستدامة المالية" loading="lazy"><div><small>النشرة البريدية على لينكدإن</small><h3>نشرة «الاستدامة المالية»</h3><p>نشرة دورية بأكثر من ٢٨٠٠ مشترك، تصلك فيها المقالات الجديدة أولًا بأول.</p><a class="btn btn-coral" href="${nlUrl}" target="_blank" rel="noopener">اشترك في النشرة</a></div></div>
 </div></section>
 <section class="pubs-sec" id="sec-courses"><div class="wrap"><div class="pub-head"><h2 class="h3x">الدورات</h2></div>
-<p class="intro sm">من الدورات والبرامج التدريبية التي قدّمناها، ومقاطع منها.</p>
-<div class="crs-grid">${COURSES.map(([t, p], i) => `<article class="crs"><span class="crs-n">${['٠١','٠٢','٠٣','٠٤','٠٥','٠٦'][i]}</span><h3>${t}</h3><p>${p}</p></article>`).join('')}</div>
+<p class="intro sm">دورات ولقاءات مسجّلة قدّمها أ. حامد الذيابي، متاحة للمشاهدة.</p>
 <div class="vid-grid" id="vid-grid"></div>
 </div></section>`);
 const ARTICLES = [
@@ -120,7 +119,7 @@ const VIDS = [
   ['كيف تبني حملات تسويقية لمنظمتك؟', 'منصة مزن', 'https://mozn.ws/95286', null],
   ['فيديوهات المنتج التسويقي', '٧ مقاطع قصيرة', '#mp', 'MP'],
 ];
-$('#vid-grid').innerHTML = '<h3 class="vid-h">دورات ولقاءات مسجّلة</h3>' + VIDS.map(([t, src, u, id], i) => `<a class="vid${i === 0 ? ' feat' : ''}${id === 'MP' ? ' mp-open' : ''}" href="${u}"${id === 'MP' ? '' : ' target="_blank" rel="noopener"'}><span class="vid-th">${id === 'MP' ? `<img src="vid/mp3.jpg" alt="" loading="lazy" style="object-position:center 35%"><i aria-hidden="true"></i>` : id ? `<img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" loading="lazy"><i aria-hidden="true"></i>` : `<b>${i === 0 ? 'سديم' : src}</b>`}</span><small>${src}</small><strong>${t}</strong></a>`).join('');
+$('#vid-grid').innerHTML = VIDS.map(([t, src, u, id], i) => `<a class="vid${i === 0 ? ' feat' : ''}${id === 'MP' ? ' mp-open' : ''}" href="${u}"${id === 'MP' ? '' : ' target="_blank" rel="noopener"'}><span class="vid-th">${id === 'MP' ? `<img src="vid/mp3.jpg" alt="" loading="lazy" style="object-position:center 35%"><i aria-hidden="true"></i>` : id ? `<img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" loading="lazy"><i aria-hidden="true"></i>` : `<b>${i === 0 ? 'سديم' : src}</b>`}</span><small>${src}</small><strong>${t}</strong></a>`).join('');
 $('#pubs .pub-jump').innerHTML = [['own', 'الإصدارات'], ['articles', 'المقالات'], ['courses', 'الدورات'], ['trans', 'ترجمات الاستدامة'], ['guides', 'أدلة مصوّرة'], ['contrib', 'إصدارات شارك فيها'], ['media', 'الإعلام والمشاركات']].map(([k, t]) => `<a href="#pubs" data-jump="${k}">${t}</a>`).join('');
 // hide empty article/video grids until links are added
 // (cards are added later as <a class="art"> / <a class="vid">)
@@ -207,7 +206,7 @@ $$('style').pop().textContent += `
 .nl-card p{color:var(--muted);font-size:15px;margin-bottom:14px}
 @media (max-width:600px){.nl-card{grid-template-columns:1fr}.nl-card img{max-width:200px}}
 #sec-courses .crs-grid{margin-top:22px}
-.vid-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:34px}
+.vid-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:22px}
 .vid-h{grid-column:1/-1;color:var(--navy);font-size:21px}
 .vid{display:grid;gap:4px;align-content:start;background:#fff;border-radius:6px;box-shadow:var(--shadow);overflow:hidden;text-decoration:none;padding-bottom:14px;transition:transform .3s}
 .vid:hover{transform:translateY(-4px)}
