@@ -12,7 +12,10 @@ $('#about .about .eyebrow').textContent = 'من هو حامد الذيابي';
 
 // Contact: three info cards + social row (no dark block, no dot ornament)
 const ct = $('#contact section.contact');
-const socials = [...ct.querySelectorAll('.soc-list a')].map(a => `<a href="${a.href}" target="_blank" rel="noopener">${a.querySelector('b').textContent}</a>`).join('');
+const fsoc = [...d.querySelectorAll('.f2 .soc a')];
+const waIcon = fsoc.find(a => /wa\.me/.test(a.href)).querySelector('svg').outerHTML;
+const socials = fsoc.filter(a => !/wa\.me/.test(a.href)).map(a => `<a href="${a.href}" target="_blank" rel="noopener" aria-label="${a.getAttribute('aria-label')}">${a.querySelector('svg').outerHTML}</a>`).join('')
+  + `<a href="https://whatsapp.com/channel/0029VaDG6R49Gv7Okjpy860R" target="_blank" rel="noopener" aria-label="قناة واتساب: درب الاستدامة المالية">${waIcon}</a>`;
 const ic = p => `<span class="ci-ic"><svg viewBox="0 0 24 24"><path d="${p}"/></svg></span>`;
 ct.innerHTML = `<div class="wrap">
 <div class="sec-head"><small>تواصل معنا</small><h2>لنبدأ من واقع منظمتك</h2><p>يسعدنا تواصلك للاستفسار عن خدماتنا، أو لنتعرّف على واقع منظمتك ونقترح المسار الأنسب لها.</p></div>
@@ -90,8 +93,9 @@ section .eyebrow{color:var(--coral);font-weight:600;font-size:15px}
 .cinfo .copy{background:#fff;color:var(--navy);border:1px solid var(--line);border-radius:4px;padding:8px 16px}
 .ci-soc{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;margin-top:34px}
 .ci-soc b{color:var(--navy);margin-inline-end:6px}
-.ci-soc a{padding:7px 16px;border-radius:30px;background:var(--navy);color:#fff;text-decoration:none;font-size:14px}
-.ci-soc a:hover{background:var(--coral)}
+.ci-soc a{width:46px;height:46px;display:grid;place-items:center;background:var(--coral);color:#fff;text-decoration:none;border-radius:4px;transition:background .2s}
+.ci-soc a svg{width:21px;fill:currentColor}
+.ci-soc a:hover{background:var(--navy)}
 .contact{background:var(--cream)}
 @media (max-width:820px){.about .wrap{grid-template-columns:1fr}}
 @media (max-width:760px){.ci-grid{grid-template-columns:1fr}}
