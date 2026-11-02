@@ -9,12 +9,12 @@ const WA = n => 'https://wa.me/966554070212?text=' + encodeURIComponent('الس�
 
 // ---------- data ----------
 const COURSES = [
+  ['دورة تنمية الموارد المالية واستدامتها', 'برنامج تمكين نخبة القطاع الثالث، بدعم بنك الجزيرة.'],
+  ['برنامج كفاءة', 'جمعية نمو للوعي المالي.'],
+  ['مسار تطوير إدارة تنمية الموارد المالية', 'جمعية البيضاء للتنمية.'],
+  ['برنامج صنّاع المحتوى', 'تدريب صنّاع المحتوى في القطاع غير الربحي.'],
   ['التسويق الخيري', 'أسس تسويق الجهات غير الربحية وبناء علاقتها بالداعمين.'],
-  ['صناعة الخطة التسويقية', 'دورة تطبيقية يخرج منها المتدرب بخطة تسويقية لجهته.'],
   ['تصميم تجربة المتبرع', 'تحسين تجربة المتبرع لرفع رضاه وولائه.'],
-  ['الاستدامة المالية', 'بناء الاستدامة المالية وتنويع مصادر الدخل.'],
-  ['خطة تنمية الموارد المالية', 'دورة تطبيقية في إعداد خطة تنمية موارد متكاملة.'],
-  ['برنامج تدريبي حسب احتياجك', 'نصمّم برنامجًا تدريبيًا يناسب فريق منظمتك وأهدافها.'],
 ];
 const AWARDS6 = [
   ['img/aw-stevie.webp', 'جائزة Stevie الدولية', 'المستوى الذهبي لأفضل مشروع إنساني شارك في إنتاجه'],
@@ -48,8 +48,8 @@ const abp = ab.querySelectorAll('.ab-txt p');
 abp[1].textContent = 'حوّل خبرته الميدانية إلى منهجيات عملية تساعد المنظمات على خدمة قضاياها وتعظيم أثرها.';
 
 // courses
-const courses = H(`<section class="crs-sec"><div class="wrap"><div class="sec-head rv"><small>الدورات التدريبية</small><h2>دورات نقدّمها للعاملين في القطاع</h2><p>برامج تطبيقية في التسويق والاستدامة المالية وتنمية الموارد، حضوريًا أو عن بُعد.</p></div>
-<div class="crs-grid">${COURSES.map(([t, p], i) => `<article class="crs"><span class="crs-n">${['٠١','٠٢','٠٣','٠٤','٠٥','٠٦'][i]}</span><h3>${t}</h3><p>${p}</p><a class="crs-go" href="${WA(i === 5 ? 'برنامج تدريبي لمنظمتنا' : 'دورة: ' + t)}" target="_blank" rel="noopener">اطلب الدورة</a></article>`).join('')}</div>
+const courses = H(`<section class="crs-sec"><div class="wrap"><div class="sec-head rv"><small>الدورات التدريبية</small><h2>دورات قدّمناها</h2><p>من أكثر من ١١٨ دورة وبرنامجًا تدريبيًا قدّمناها للعاملين في القطاع غير الربحي.</p></div>
+<div class="crs-grid">${COURSES.map(([t, p], i) => `<article class="crs"><span class="crs-n">${['٠١','٠٢','٠٣','٠٤','٠٥','٠٦'][i]}</span><h3>${t}</h3><p>${p}</p></article>`).join('')}</div>
 <div class="more-c"><a class="btn btn-navy" href="#pubs" data-sec="courses">مقاطع من الدورات</a></div></div></section>`);
 
 // publications: 6 only
@@ -93,8 +93,8 @@ $('#sec-trans').insertAdjacentHTML('beforebegin', `
 <div class="nl-card"><img src="pubs/newsletter.webp" alt="نشرة الاستدامة المالية" loading="lazy"><div><small>النشرة البريدية على لينكدإن</small><h3>نشرة «الاستدامة المالية»</h3><p>نشرة دورية بأكثر من ٢٨٠٠ مشترك، تصلك فيها المقالات الجديدة أولًا بأول.</p><a class="btn btn-coral" href="${nlUrl}" target="_blank" rel="noopener">اشترك في النشرة</a></div></div>
 </div></section>
 <section class="pubs-sec" id="sec-courses"><div class="wrap"><div class="pub-head"><h2 class="h3x">الدورات</h2></div>
-<p class="intro sm">الدورات التدريبية التي يقدّمها أ. حامد الذيابي، ومقاطع منها.</p>
-<div class="crs-grid">${COURSES.slice(0, 5).map(([t, p], i) => `<article class="crs"><span class="crs-n">${['٠١','٠٢','٠٣','٠٤','٠٥'][i]}</span><h3>${t}</h3><p>${p}</p><a class="crs-go" href="${WA('دورة: ' + t)}" target="_blank" rel="noopener">اطلب الدورة</a></article>`).join('')}</div>
+<p class="intro sm">من الدورات والبرامج التدريبية التي قدّمناها، ومقاطع منها.</p>
+<div class="crs-grid">${COURSES.map(([t, p], i) => `<article class="crs"><span class="crs-n">${['٠١','٠٢','٠٣','٠٤','٠٥','٠٦'][i]}</span><h3>${t}</h3><p>${p}</p></article>`).join('')}</div>
 <div class="vid-grid" id="vid-grid"></div>
 </div></section>`);
 $('#pubs .pub-jump').innerHTML = [['own', 'الإصدارات'], ['articles', 'المقالات'], ['courses', 'الدورات'], ['trans', 'ترجمات الاستدامة'], ['guides', 'أدلة مصوّرة'], ['contrib', 'إصدارات شارك فيها'], ['media', 'الإعلام والمشاركات']].map(([k, t]) => `<a href="#pubs" data-jump="${k}">${t}</a>`).join('');
