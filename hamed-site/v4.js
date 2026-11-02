@@ -166,6 +166,26 @@ ${li('إدارة المشاريع الاحترافية (PMP)', 'معهد إدا�
 // ---------- styles ----------
 $$('style').pop().textContent += `
 /* ===== v4 ===== */
+/* services as a grid on phones too */
+@media (max-width:600px){
+.cards{grid-template-columns:1fr 1fr!important;gap:12px}
+.card{padding:0 14px 16px}
+.card .ic{width:52px;height:52px;margin-bottom:12px}
+.card .ic svg{width:26px}
+.card h3{font-size:16px;margin-bottom:6px}
+.card p{font-size:13px;line-height:1.7}
+.card .more{font-size:13px;margin-top:10px}
+.prod-grid{grid-template-columns:1fr 1fr!important;gap:12px}
+.prod{padding:14px;gap:8px}
+.prod .cat{font-size:11px}
+.prod h3{font-size:15px;line-height:1.5}
+.prod .pdesc{font-size:12.5px;line-height:1.7}
+.prod .price small{font-size:11px}.prod .price b{font-size:13px}
+.prod .btn{padding:9px 8px;font-size:13px}
+.fchips{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;scrollbar-width:none;padding-bottom:4px}
+.fchip{flex:none}
+}
+
 .crs-sec{background:#fff}
 .crs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .crs{background:#fff;border-radius:6px;box-shadow:var(--shadow);padding:26px 24px;display:grid;gap:8px;align-content:start;border-top:3px solid var(--navy);transition:transform .3s,border-color .3s}
