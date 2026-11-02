@@ -116,7 +116,6 @@ const VIDS = [
   ['العلامة الخيرية', 'ويبينار إيسام', 'https://www.youtube.com/live/_sjl6N_cukQ', '_sjl6N_cukQ'],
   ['الملف التسويقي للمانحين', 'ويبينار إيسام', 'https://www.youtube.com/live/F_nBbgdoT8k', 'F_nBbgdoT8k'],
   ['بوصلة القطاع غير الربحي والتوجهات الحديثة', 'يوتيوب', 'https://youtu.be/i8CCDGlyRUw', 'i8CCDGlyRUw'],
-  ['كيف تبني حملات تسويقية لمنظمتك؟', 'منصة مزن', 'https://mozn.ws/95286', null],
   ['فيديوهات المنتج التسويقي', '٧ مقاطع قصيرة', '#mp', 'MP'],
 ];
 $('#vid-grid').innerHTML = VIDS.map(([t, src, u, id], i) => `<a class="vid${i === 0 ? ' feat' : ''}${id === 'MP' ? ' mp-open' : ''}" href="${u}"${id === 'MP' ? '' : ' target="_blank" rel="noopener"'}><span class="vid-th">${id === 'MP' ? `<img src="vid/mp3.jpg" alt="" loading="lazy" style="object-position:center 35%"><i aria-hidden="true"></i>` : id ? `<img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" loading="lazy"><i aria-hidden="true"></i>` : `<b>${i === 0 ? 'سديم' : src}</b>`}</span><small>${src}</small><strong>${t}</strong></a>`).join('');
