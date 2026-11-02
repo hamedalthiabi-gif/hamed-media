@@ -694,6 +694,23 @@ body.ready #loader{opacity:0;visibility:hidden}
 .ct b{font-size:17px;overflow-wrap:anywhere}
 .ct span{font-size:13.5px;color:#C9D1DC}
 @media (max-width:760px){.ct-cards{grid-template-columns:1fr}}
+
+.sr-modal{position:fixed;inset:0;z-index:60;background:rgba(0,18,34,.82);display:grid;place-items:center;padding:16px}
+.sr-modal[hidden]{display:none!important}
+.sr-box{position:relative;background:#fff;border-radius:8px;display:grid;grid-template-columns:auto 300px;max-height:92vh;overflow:auto;max-width:860px;width:auto}
+.sr-img{position:relative;align-self:start;width:fit-content;line-height:0}
+.sr-img img{display:block;height:min(86vh,900px);width:auto;max-width:100%}
+.sr-hot{position:absolute;border-radius:6px;outline:2px solid transparent;transition:outline-color .2s,background .2s}
+.sr-hot:hover,.sr-hot:focus-visible{outline-color:var(--coral);background:rgba(187,104,65,.12)}
+.sr-side{padding:26px 22px}
+.sr-side h3{color:var(--navy);font-size:21px}
+.sr-side p{color:var(--muted);font-size:14.5px;margin-top:6px}
+.sr-side ol{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:8px}
+.sr-side li a{display:grid;padding:10px 12px;border:1px solid var(--line);border-radius:6px;text-decoration:none;color:var(--ink);font-size:14.5px}
+.sr-side li a:hover{border-color:var(--coral)}
+.sr-side li b{color:var(--coral);font-size:12.5px}
+.sr-x{position:absolute;top:8px;left:8px;z-index:2;width:36px;height:36px;border:0;border-radius:50%;background:var(--navy);color:#fff;cursor:pointer;font-size:16px}
+@media (max-width:760px){.sr-box{grid-template-columns:1fr}.sr-img img{height:auto;width:100%}}
 </style>
 </head>
 <body>
@@ -761,10 +778,10 @@ body.ready #loader{opacity:0;visibility:hidden}
           <img src="pubs/cover13.webp" alt="غلاف: بوصلة البداية" width="507" height="900" loading="lazy">
           <div class="pub-body"><span class="pub-tag">دليل مصوّر · ٢٠٢٥ · صفحة واحدة</span><h3>بوصلة البداية</h3><p>خارطة موجهة للمنضمين حديثًا إلى القطاع غير الربحي.</p></div>
           <a class="btn btn-navy read-pub" href="pubs/pub13.pdf" target="_blank" rel="noopener" data-pdf="pubs/pub13.pdf">قراءة الإصدار</a>
-        </article><article class="pub">
-          <img src="pubs/cover14.webp" alt="غلاف: سلسلة القطاع الجديد" width="507" height="900" loading="lazy">
-          <div class="pub-body"><span class="pub-tag">دليل مصوّر · صفحة واحدة</span><h3>سلسلة القطاع الجديد</h3><p>تعريف بالقطاع غير الربحي وأشكاله المختلفة والمتنوعة.</p></div>
-          <a class="btn btn-navy read-pub" href="pubs/pub14.pdf" target="_blank" rel="noopener" data-pdf="pubs/pub14.pdf">قراءة الإصدار</a>
+        </article><article class="pub series-card">
+          <img src="pubs/cover14.webp" alt="غلاف: سلسلة القطاع الجديد" width="507" height="900" loading="lazy" class="series-open" style="cursor: pointer;">
+          <div class="pub-body"><span class="pub-tag">سلسلة مرئية · ٦ حلقات</span><h3>سلسلة القطاع الجديد</h3><p>تعريف بالقطاع غير الربحي وأشكاله المختلفة والمتنوعة.</p></div>
+          <a class="btn btn-coral series-open" href="https://www.youtube.com/shorts/43YCmPw_OUU" target="_blank" rel="noopener">شاهد الحلقات</a>
         </article></div><div class="more-c"><a class="btn btn-navy" href="#pubs">كل الإصدارات</a></div></div></section><section class="nl-band">
     <div class="wrap">
       <div class="nl-text">
@@ -1031,10 +1048,10 @@ body.ready #loader{opacity:0;visibility:hidden}
           <div class="pub-body"><span class="pub-tag">دليل مصوّر · ٢٠٢٥ · صفحة واحدة</span><h3>بوصلة البداية</h3><p>خارطة موجهة للمنضمين حديثًا إلى القطاع غير الربحي.</p></div>
           <a class="btn btn-navy read-pub" href="pubs/pub13.pdf" target="_blank" rel="noopener" data-pdf="pubs/pub13.pdf">قراءة الإصدار</a>
         </article>
-        <article class="pub tall">
-          <img src="pubs/cover14.webp" alt="غلاف: سلسلة القطاع الجديد" width="507" height="900" loading="lazy">
-          <div class="pub-body"><span class="pub-tag">دليل مصوّر · صفحة واحدة</span><h3>سلسلة القطاع الجديد</h3><p>تعريف بالقطاع غير الربحي وأشكاله المختلفة والمتنوعة.</p></div>
-          <a class="btn btn-navy read-pub" href="pubs/pub14.pdf" target="_blank" rel="noopener" data-pdf="pubs/pub14.pdf">قراءة الإصدار</a>
+        <article class="pub tall series-card">
+          <img src="pubs/cover14.webp" alt="غلاف: سلسلة القطاع الجديد" width="507" height="900" loading="lazy" class="series-open" style="cursor: pointer;">
+          <div class="pub-body"><span class="pub-tag">سلسلة مرئية · ٦ حلقات</span><h3>سلسلة القطاع الجديد</h3><p>تعريف بالقطاع غير الربحي وأشكاله المختلفة والمتنوعة.</p></div>
+          <a class="btn btn-coral series-open" href="https://www.youtube.com/shorts/43YCmPw_OUU" target="_blank" rel="noopener">شاهد الحلقات</a>
         </article>
       </div>
     </div>
@@ -1277,4 +1294,4 @@ addEventListener('hashchange',()=>document.querySelectorAll('.rv').forEach(el=>{
 
 
 
-<script>document.querySelectorAll('.prod .btn').forEach(function(a){var n=a.closest('.prod').querySelector('h3').textContent;a.href='https://wa.me/966554070212?text='+encodeURIComponent('السلام عليكم، أرغب في طلب خدمة: '+n);a.target='_blank';a.rel='noopener'});</script></body></html>
+<script>document.querySelectorAll('.prod .btn').forEach(function(a){var n=a.closest('.prod').querySelector('h3').textContent;a.href='https://wa.me/966554070212?text='+encodeURIComponent('السلام عليكم، أرغب في طلب خدمة: '+n);a.target='_blank';a.rel='noopener'});</script><div class="sr-modal" id="sr-modal" hidden="" role="dialog" aria-modal="true" aria-label="سلسلة القطاع الجديد"><div class="sr-box"><button class="sr-x" type="button" aria-label="إغلاق">✕</button><div class="sr-img"><img src="pubs/cover14.webp" alt="سلسلة القطاع الجديد، تقديم أ. حامد الذيابي"><a class="sr-hot" href="https://www.youtube.com/shorts/43YCmPw_OUU" target="_blank" rel="noopener" aria-label="الحلقة 1: مقدمة وتعريف" style="left:63.43%;top:45.36%;width:22.59%;height:23.13%"></a><a class="sr-hot" href="https://www.youtube.com/shorts/pmYVmBpLEEs" target="_blank" rel="noopener" aria-label="الحلقة 2: الشركات غير الربحية" style="left:38.70%;top:45.36%;width:22.59%;height:23.13%"></a><a class="sr-hot" href="https://www.youtube.com/shorts/J_Xl9wlomyk" target="_blank" rel="noopener" aria-label="الحلقة 3: التعليم غير الربحي" style="left:13.98%;top:45.36%;width:22.59%;height:23.13%"></a><a class="sr-hot" href="https://www.youtube.com/shorts/vv4LjQkQe7o" target="_blank" rel="noopener" aria-label="الحلقة 4: الصناديق العائلية" style="left:63.43%;top:69.32%;width:22.59%;height:23.13%"></a><a class="sr-hot" href="https://www.youtube.com/shorts/Ay5vihgoEAk" target="_blank" rel="noopener" aria-label="الحلقة 5: الجمعيات الأهلية" style="left:38.70%;top:69.32%;width:22.59%;height:23.13%"></a><a class="sr-hot" href="https://www.youtube.com/shorts/H2M-XqO0dmI" target="_blank" rel="noopener" aria-label="الحلقة 6: المؤسسات الأهلية" style="left:13.98%;top:69.32%;width:22.59%;height:23.13%"></a></div><div class="sr-side"><h3>سلسلة القطاع الجديد</h3><p>حلقات قصيرة تعرّف بالقطاع غير الربحي وأشكاله المختلفة، تقديم أ. حامد الذيابي.</p><ol><li><a href="https://www.youtube.com/shorts/43YCmPw_OUU" target="_blank" rel="noopener"><b>الحلقة الأولى</b>مقدمة وتعريف</a></li><li><a href="https://www.youtube.com/shorts/pmYVmBpLEEs" target="_blank" rel="noopener"><b>الحلقة الثانية</b>الشركات غير الربحية</a></li><li><a href="https://www.youtube.com/shorts/J_Xl9wlomyk" target="_blank" rel="noopener"><b>الحلقة الثالثة</b>التعليم غير الربحي</a></li><li><a href="https://www.youtube.com/shorts/vv4LjQkQe7o" target="_blank" rel="noopener"><b>الحلقة الرابعة</b>الصناديق العائلية</a></li><li><a href="https://www.youtube.com/shorts/Ay5vihgoEAk" target="_blank" rel="noopener"><b>الحلقة الخامسة</b>الجمعيات الأهلية</a></li><li><a href="https://www.youtube.com/shorts/H2M-XqO0dmI" target="_blank" rel="noopener"><b>الحلقة السادسة</b>المؤسسات الأهلية</a></li></ol></div></div></div><script>(function(){var m=document.getElementById('sr-modal');function o(e){e.preventDefault();m.hidden=false;document.body.style.overflow='hidden'}function c(){m.hidden=true;document.body.style.overflow=''}document.querySelectorAll('.series-open').forEach(function(x){x.addEventListener('click',o)});m.querySelector('.sr-x').addEventListener('click',c);m.addEventListener('click',function(e){if(e.target===m)c()});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden)c()})})();</script></body></html>
