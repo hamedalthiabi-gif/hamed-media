@@ -1297,7 +1297,7 @@ var T=[
 ["صيف","في ذروة الصيف، يحلّ اليوم العالمي للعمل الإنساني.","drink",["#E3F5F7","#12454D","#7FD1DB","#E86A4F","#2FA6B5"]],
 ["خريف","موسم التمور واليوم الوطني.","palm",["#F6EEDC","#3D2E14","#6E9A4E","#7C5A2F","#9C4A2A"]],
 ["خريف","الأوراق تتبدّل، والخطط تُراجع.","leaves",["#FBEBDD","#4A2614","#D9733B","#9A4A22","#E9A23B"]],
-["بدايات الشتاء","مع أولى غيوم الشتاء، تكثر ملتقيات القطاع غير الربحي.","cloud",["#E9EDF3","#1E2C44","#9AA9C2","#4C5D7C","#C46A4A"]],
+["بدايات الشتاء","مع أولى غيوم الشتاء، يحلّ اليوم العالمي للطفل.","cloud",["#E9EDF3","#1E2C44","#9AA9C2","#4C5D7C","#C46A4A"]],
 ["شتاء","ليالي الشتاء الطويلة، ونار تجمع الناس.","fire",["#2A1E1A","#F7E3D0","#E6863A","#6B3F28","#F6C35B"]]];
 var box=document.getElementById('season');
 window.__season=function(m,y){var t=T[m],p=t[3];if(!box)return;
@@ -1318,12 +1318,14 @@ const FIXED=[
  [8,12,"اليوم الدولي للشباب","شباب"],[8,19,"اليوم العالمي للعمل الإنساني","إنساني"],
  [9,5,"اليوم الدولي للعمل الخيري","العمل الخيري"],[9,8,"اليوم الدولي لمحو الأمية","تعليم"],[9,23,"اليوم الوطني السعودي","وطني"],
  [10,1,"اليوم الدولي لكبار السن","مجتمع"],[10,5,"اليوم العالمي للمعلم","تعليم"],[10,10,"اليوم العالمي للصحة النفسية","صحة"],[10,16,"يوم الأغذية العالمي","إنساني"],[10,17,"اليوم الدولي للقضاء على الفقر","تنمية"],
- [11,14,"اليوم العالمي للسكري","صحة"],[11,20,"اليوم العالمي للطفل","طفولة"],
+ [11,14,"اليوم العالمي للسكري","صحة"],[11,16,"اليوم الدولي للتسامح","مجتمع"],[11,20,"اليوم العالمي للطفل","طفولة"],[11,25,"اليوم الدولي للقضاء على العنف ضد المرأة","مجتمع"],[11,29,"اليوم الدولي للتضامن مع الشعب الفلسطيني","إنساني"],
  [12,3,"اليوم الدولي للأشخاص ذوي الإعاقة","مجتمع"],[12,5,"اليوم الدولي للمتطوعين","تطوع"],[12,18,"اليوم العالمي للغة العربية","ثقافة"],[12,20,"اليوم الدولي للتضامن الإنساني","إنساني"]
 ];
 let EVENTS=[
  {type:"ملتقى",name:"ملتقى القطاع غير الربحي في التعليم والتدريب، النسخة الثالثة",org:"وزارة التعليم",city:"الرياض، جامعة الأميرة نورة بنت عبدالرحمن",from:"2026-10-20",to:"2026-10-21",url:"https://sabq.org/article/k8naqj7"},
- {type:"ملتقى",name:"ملتقى مستقبل القطاع غير الربحي، النسخة الخامسة",org:"برعاية وزير البلديات والإسكان",city:"الرياض، مركز الملك عبدالله المالي",from:"2026-11-02",to:"2026-11-02",url:"https://annahar-news.com/news/single/38396"}
+ {type:"ملتقى",name:"ملتقى مستقبل القطاع غير الربحي، النسخة الخامسة",org:"برعاية وزير البلديات والإسكان",city:"الرياض، مركز الملك عبدالله المالي",from:"2026-11-02",to:"2026-11-02",url:"https://annahar-news.com/news/single/38396"},
+ {type:"مؤتمر ومعرض",name:"مؤتمر ومعرض الحج، النسخة السادسة",org:"وزارة الحج والعمرة",city:"جدة",from:"2026-11-08",to:"2026-11-11",url:"https://sabq.org/article/ms64jk6"},
+ {type:"ملتقى",name:"ملتقى الاقتصاد والمجتمع",org:"من ١٢ ظهرًا حتى ٨ مساءً",city:"الرياض، قاعة مداريم كراون",from:"2026-11-17",to:"2026-11-17",url:""}
 ];
 let hijriFmt=null; try{hijriFmt=new Intl.DateTimeFormat('en-u-ca-islamic-umalqura-nu-latn',{day:'numeric',month:'numeric'})}catch(e){}
 let hijriTxt=null; try{hijriTxt=new Intl.DateTimeFormat('ar-SA-u-ca-islamic-umalqura',{day:'numeric',month:'long'})}catch(e){}
@@ -1353,7 +1355,7 @@ function dayLi(x){
   return li;
 }
 function fmtRange(e){const a=new Date(e.from+'T00:00'),b=new Date(e.to+'T00:00');return e.from===e.to?DAYS[a.getDay()]+' '+AR(a.getDate())+' '+MONTHS[a.getMonth()]+' '+AR(a.getFullYear()):AR(a.getDate())+'–'+AR(b.getDate())+' '+MONTHS[b.getMonth()]+' '+AR(b.getFullYear())}
-function evLi(e){const li=document.createElement('li');li.innerHTML='<span class="ev-when"><i class="ev-type"></i></span><strong></strong><span class="ev-where"></span><a target="_blank" rel="noopener">التفاصيل</a>';li.querySelector('.ev-when').append(fmtRange(e));li.querySelector('.ev-type').textContent=e.type;li.querySelector('strong').textContent=e.name;li.querySelector('.ev-where').textContent=e.org+' · '+e.city;li.querySelector('a').href=e.url;return li}
+function evLi(e){const li=document.createElement('li');li.innerHTML='<span class="ev-when"><i class="ev-type"></i></span><strong></strong><span class="ev-where"></span><a target="_blank" rel="noopener">التفاصيل</a>';li.querySelector('.ev-when').append(fmtRange(e));li.querySelector('.ev-type').textContent=e.type;li.querySelector('strong').textContent=e.name;li.querySelector('.ev-where').textContent=e.org+' · '+e.city;if(e.url&&/^https?:/.test(e.url))li.querySelector('a').href=e.url;else li.querySelector('a').remove();return li}
 function fill(ul,items,empty){ul.innerHTML='';if(!items.length){const li=document.createElement('li');li.className='empty-li';li.textContent=empty;ul.appendChild(li);return}items.forEach(i=>ul.appendChild(i))}
 // home: this month
 const y=today.getFullYear(),m=today.getMonth();
@@ -1381,7 +1383,7 @@ fetch('https://docs.google.com/spreadsheets/d/'+SHEET_ID+'/gviz/tq?tqx=out:json&
   const j=JSON.parse(t.slice(t.indexOf('{'),t.lastIndexOf('}')+1)); const cols=j.table.cols.map(c=>(c.label||'').trim().toLowerCase());
   const ix=k=>cols.indexOf(k); const rows=[];
   (j.table.rows||[]).forEach(r=>{const g=k=>{const c=r.c[ix(k)];return c?(c.v!=null?c.v:c.f):null};const from=iso(g('from')),to=iso(g('to'))||from,name=g('name');
-    if(name&&from&&/^https?:\/\//.test(String(g('url')||'https://x')))rows.push({type:String(g('type')||'فعالية'),name:String(name),org:String(g('org')||''),city:String(g('city')||''),from,to,url:String(g('url')||'#')})});
+    if(name&&from&&/^https?:\/\//.test(String(g('url')||'https://x')))rows.push({type:String(g('type')||'فعالية'),name:String(name),org:String(g('org')||''),city:String(g('city')||''),from,to,url:String(g('url')||'')})});
   if(rows.length){EVENTS=rows;renderHomeEvents();renderCal()}
 }).catch(()=>{});
 })();

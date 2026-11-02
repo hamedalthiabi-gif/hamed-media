@@ -6,6 +6,14 @@ const $ = s => { const e = d.querySelector(s); if (!e) throw new Error('missing 
 // hook into the existing calendar renderer
 const calScript = [...d.querySelectorAll('script')].find(s => s.textContent.includes("document.getElementById('cal-days-h').textContent="));
 if (!calScript) throw new Error('calendar script');
+{ let t = calScript.textContent; const R = (a, b) => { if (!t.includes(a)) throw new Error('cal patch: ' + a.slice(0, 40)); t = t.replace(a, b); };
+  R('[11,14,"اليوم العالمي للسكري","صحة"],', '[11,14,"اليوم العالمي للسكري","صحة"],[11,16,"اليوم الدولي للتسامح","مجتمع"],');
+  R('[11,20,"اليوم العالمي للطفل","طفولة"]', '[11,20,"اليوم العالمي للطفل","طفولة"],[11,25,"اليوم الدولي للقضاء على العنف ضد المرأة","مجتمع"],[11,29,"اليوم الدولي للتضامن مع الشعب الفلسطيني","إنساني"]');
+  R('url:"https://annahar-news.com/news/single/38396"}', 'url:"https://annahar-news.com/news/single/38396"},\n {type:"مؤتمر ومعرض",name:"مؤتمر ومعرض الحج، النسخة السادسة",org:"وزارة الحج والعمرة",city:"جدة",from:"2026-11-08",to:"2026-11-11",url:"https://sabq.org/article/ms64jk6"},\n {type:"ملتقى",name:"ملتقى الاقتصاد والمجتمع",org:"من ١٢ ظهرًا حتى ٨ مساءً",city:"الرياض، قاعة مداريم كراون",from:"2026-11-17",to:"2026-11-17",url:""}');
+  R("li.querySelector('a').href=e.url;", "if(e.url&&/^https?:/.test(e.url))li.querySelector('a').href=e.url;else li.querySelector('a').remove();");
+  R("rows.push({type:String(g('type')||'فعالية'),name:String(name),org:String(g('org')||''),city:String(g('city')||''),from,to,url:String(g('url')||'#')})", "rows.push({type:String(g('type')||'فعالية'),name:String(name),org:String(g('org')||''),city:String(g('city')||''),from,to,url:String(g('url')||'')})");
+  calScript.textContent = t; }
+
 calScript.textContent = calScript.textContent.replace("document.getElementById('cal-days-h').textContent=", "if(window.__season)window.__season(sel.m,sel.y);document.getElementById('cal-days-h').textContent=");
 
 // banner slot above the month tabs
@@ -42,7 +50,7 @@ var T=[
 ["صيف","في ذروة الصيف، يحلّ اليوم العالمي للعمل الإنساني.","drink",["#E3F5F7","#12454D","#7FD1DB","#E86A4F","#2FA6B5"]],
 ["خريف","موسم التمور واليوم الوطني.","palm",["#F6EEDC","#3D2E14","#6E9A4E","#7C5A2F","#9C4A2A"]],
 ["خريف","الأوراق تتبدّل، والخطط تُراجع.","leaves",["#FBEBDD","#4A2614","#D9733B","#9A4A22","#E9A23B"]],
-["بدايات الشتاء","مع أولى غيوم الشتاء، تكثر ملتقيات القطاع غير الربحي.","cloud",["#E9EDF3","#1E2C44","#9AA9C2","#4C5D7C","#C46A4A"]],
+["بدايات الشتاء","مع أولى غيوم الشتاء، يحلّ اليوم العالمي للطفل.","cloud",["#E9EDF3","#1E2C44","#9AA9C2","#4C5D7C","#C46A4A"]],
 ["شتاء","ليالي الشتاء الطويلة، ونار تجمع الناس.","fire",["#2A1E1A","#F7E3D0","#E6863A","#6B3F28","#F6C35B"]]];
 var box=document.getElementById('season');
 window.__season=function(m,y){var t=T[m],p=t[3];if(!box)return;
