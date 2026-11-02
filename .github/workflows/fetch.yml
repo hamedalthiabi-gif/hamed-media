@@ -1,0 +1,30 @@
+name: fetch
+on:
+  push:
+    paths: [ "fetch/urls.txt" ]
+permissions:
+  contents: write
+jobs:
+  get:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch pages, og images and PDFs
+        run: |
+          sudo apt-get -qq install -y poppler-utils >/dev/null
+          cd fetch
+          while read name url; do
+            [ -z "$name" ] && continue
+            curl -fsSL -A "Mozilla/5.0" "$url" -o "$name.html" || continue
+            og=$(grep -oiE 'property="og:image"[^>]*content="[^"]+"' "$name.html" | head -1 | sed -E 's/.*content="([^"]+)".*/\1/')
+            [ -n "$og" ] && curl -fsSL -A "Mozilla/5.0" "$og" -o "$name-og.${og##*.}" || true
+            pdf=$(grep -oiE 'https?://[^"'"'"' ]+\.pdf' "$name.html" | head -1)
+            if [ -n "$pdf" ]; then curl -fsSL -A "Mozilla/5.0" "$pdf" -o "$name.pdf" && pdftoppm -r 110 -f 1 -l 1 -png "$name.pdf" "$name-p1" || true; fi
+            echo "$name og=$og pdf=$pdf" >> log.txt
+          done < urls.txt
+          ls -la
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
+          git add fetch && git commit -m "جلب ملفات" || true
+          git pull --rebase && git push
