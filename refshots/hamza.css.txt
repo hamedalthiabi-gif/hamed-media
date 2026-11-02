@@ -1,0 +1,61 @@
+P.font-normal text-xl md:text-3xl text-neu | font:"IBM Plex Sans Arabic" 30px 400 lh:36px | color:lab(48.496 0 0) bg:rgba(0, 0, 0, 0) | pad:0px | أهــلا بـك
+H1.text-3xl md:text-5xl font-bold max-md:te | font:"IBM Plex Sans Arabic" 48px 700 lh:48px | color:lab(2.51107 0.242703 -0.886115) bg:rgba(0, 0, 0, 0) | pad:0px | حمزة نادي العديلي
+P.text-sm md:text-xl font-medium max-w-4xl | font:"IBM Plex Sans Arabic" 20px 500 lh:28px | color:lab(2.51107 0.242703 -0.886115) bg:rgba(0, 0, 0, 0) | pad:0px | أساعد الجهات الحكومية والخاصة وغير الربح
+H2.font-bold text-center text-2xl md:text-5 | font:ui-sans-serif 48px 700 lh:48px | color:lab(2.51107 0.242703 -0.886115) bg:rgba(0, 0, 0, 0) | pad:0px | أبرز المشاريع في القطاعين العام والخاص
+SECTION.space-y-6 | font:ui-sans-serif 16px 400 lh:24px | color:lab(2.51107 0.242703 -0.886115) bg:rgba(0, 0, 0, 0) | pad:0px | الخدماتتطوير الاستراتيجية وخطة التواصل ا
+HEADER.text-center space-y-2 font-arabic | font:"IBM Plex Sans Arabic" 16px 400 lh:24px | color:lab(2.51107 0.242703 -0.886115) bg:rgba(0, 0, 0, 0) | pad:0px | الخدمات
+H2.font-bold text-2xl md:text-5xl | font:"IBM Plex Sans Arabic" 48px 700 lh:48px | color:lab(2.51107 0.242703 -0.886115) bg:rgba(0, 0, 0, 0) | pad:0px | الخدمات
+BUTTON.cursor-pointer border bg-white shadow da | font:ui-sans-serif 14px 500 lh:20px | color:rgb(13, 67, 99) bg:lab(26.3602 -7.75534 -24.1274 / 0.1) | pad:4px 8px | منشورات
+BUTTON.cursor-pointer border bg-white shadow da | font:ui-sans-serif 14px 500 lh:20px | color:lab(2.51107 0.242703 -0.886115) bg:rgb(255, 255, 255) | pad:4px 8px | تقارير
+BUTTON.cursor-pointer border bg-white shadow da | font:ui-sans-serif 14px 500 lh:20px | color:lab(2.51107 0.242703 -0.886115) bg:rgb(255, 255, 255) | pad:4px 8px | مقالات
+SECTION.grid grid-cols-1 md:grid-cols-2 lg:grid- | font:ui-sans-serif 16px 400 lh:24px | color:lab(2.51107 0.242703 -0.886115) bg:rgba(0, 0, 0, 0) | pad:0px | تحميلقراءة المزيدالمشاركة بالدخل PPPتحمي
+BUTTON.inline-flex font-arabic items-center cur | font:"IBM Plex Sans Arabic" 14px 500 lh:20px | color:lab(98.26 0 0) bg:lab(44.2604 37.4237 23.4933) | pad:8px 12px | تحميل
+H3.text-center font-arabic text-xl | font:"IBM Plex Sans Arabic" 20px 400 lh:28px | color:lab(2.51107 0.242703 -0.886115) bg:rgba(0, 0, 0, 0) | pad:0px | المشاركة بالدخل PPP
+BUTTON.inline-flex font-arabic items-center cur | font:"IBM Plex Sans Arabic" 14px 500 lh:20px | color:lab(98.26 0 0) bg:lab(44.2604 37.4237 23.4933) | pad:8px 12px | تحميل
+H3.text-center font-arabic text-xl | font:"IBM Plex Sans Arabic" 20px 400 lh:28px | color:lab(2.51107 0.242703 -0.886115) bg:rgba(0, 0, 0, 0) | pad:0px | ♟️🤝 التفاوض ♟️🤝
+BUTTON.inline-flex font-arabic items-center cur | font:"IBM Plex Sans Arabic" 14px 500 lh:20px | color:lab(98.26 0 0) bg:lab(44.2604 37.4237 23.4933) | pad:8px 12px | تحميل
+H3.text-center font-arabic text-xl | font:"IBM Plex Sans Arabic" 20px 400 lh:28px | color:lab(2.51107 0.242703 -0.886115) bg:rgba(0, 0, 0, 0) | pad:0px | 💰💲النماذج المالية 💲💰
+HEADER.text-center space-y-2 font-arabic mb-5 m | font:"IBM Plex Sans Arabic" 16px 400 lh:24px | color:lab(2.51107 0.242703 -0.886115) bg:rgba(0, 0, 0, 0) | pad:0px | أحدث منشورات لينكدإن
+H2.font-bold py-3 text-2xl md:text-5xl | font:"IBM Plex Sans Arabic" 48px 700 lh:48px | color:lab(2.51107 0.242703 -0.886115) bg:rgba(0, 0, 0, 0) | pad:12px 0px | أحدث منشورات لينكدإن
+BUTTON.PostKeyboardOpenControl__OpenControl-sc- | font:ui-sans-serif 0px 400 lh:0px | color:rgba(0, 0, 0, 0) bg:rgba(0, 0, 0, 0) | pad:0px | 
+BUTTON.ShareButton__Button-sc-12685088-1 jYCerh | font:ui-sans-serif 13px 400 lh:19.5px | color:rgb(17, 17, 17) bg:rgba(0, 0, 0, 0) | pad:0px | مشاركة
+BUTTON.PostKeyboardOpenControl__OpenControl-sc- | font:ui-sans-serif 0px 400 lh:0px | color:rgba(0, 0, 0, 0) bg:rgba(0, 0, 0, 0) | pad:0px | 
+BUTTON.ShareButton__Button-sc-12685088-1 jYCerh | font:ui-sans-serif 13px 400 lh:19.5px | color:rgb(17, 17, 17) bg:rgba(0, 0, 0, 0) | pad:0px | مشاركة
+BUTTON.PostKeyboardOpenControl__OpenControl-sc- | font:ui-sans-serif 0px 400 lh:0px | color:rgba(0, 0, 0, 0) bg:rgba(0, 0, 0, 0) | pad:0px | 
+BUTTON.ShareButton__Button-sc-12685088-1 jYCerh | font:ui-sans-serif 13px 400 lh:19.5px | color:rgb(17, 17, 17) bg:rgba(0, 0, 0, 0) | pad:0px | مشاركة
+BUTTON.PostKeyboardOpenControl__OpenControl-sc- | font:ui-sans-serif 0px 400 lh:0px | color:rgba(0, 0, 0, 0) bg:rgba(0, 0, 0, 0) | pad:0px | 
+BUTTON.ShareButton__Button-sc-12685088-1 jYCerh | font:ui-sans-serif 13px 400 lh:19.5px | color:rgb(17, 17, 17) bg:rgba(0, 0, 0, 0) | pad:0px | مشاركة
+BUTTON.PostKeyboardOpenControl__OpenControl-sc- | font:ui-sans-serif 0px 400 lh:0px | color:rgba(0, 0, 0, 0) bg:rgba(0, 0, 0, 0) | pad:0px | 
+BUTTON.ShareButton__Button-sc-12685088-1 jYCerh | font:ui-sans-serif 13px 400 lh:19.5px | color:rgb(17, 17, 17) bg:rgba(0, 0, 0, 0) | pad:0px | مشاركة
+BUTTON.PostKeyboardOpenControl__OpenControl-sc- | font:ui-sans-serif 0px 400 lh:0px | color:rgba(0, 0, 0, 0) bg:rgba(0, 0, 0, 0) | pad:0px | 
+BUTTON.ShareButton__Button-sc-12685088-1 jYCerh | font:ui-sans-serif 13px 400 lh:19.5px | color:rgb(17, 17, 17) bg:rgba(0, 0, 0, 0) | pad:0px | مشاركة
+BUTTON.PostKeyboardOpenControl__OpenControl-sc- | font:ui-sans-serif 0px 400 lh:0px | color:rgba(0, 0, 0, 0) bg:rgba(0, 0, 0, 0) | pad:0px | 
+BUTTON.ShareButton__Button-sc-12685088-1 jYCerh | font:ui-sans-serif 13px 400 lh:19.5px | color:rgb(17, 17, 17) bg:rgba(0, 0, 0, 0) | pad:0px | مشاركة
+BUTTON.PostKeyboardOpenControl__OpenControl-sc- | font:ui-sans-serif 0px 400 lh:0px | color:rgba(0, 0, 0, 0) bg:rgba(0, 0, 0, 0) | pad:0px | 
+BUTTON.ShareButton__Button-sc-12685088-1 jYCerh | font:ui-sans-serif 13px 400 lh:19.5px | color:rgb(17, 17, 17) bg:rgba(0, 0, 0, 0) | pad:0px | مشاركة
+BUTTON.PostKeyboardOpenControl__OpenControl-sc- | font:ui-sans-serif 0px 400 lh:0px | color:rgba(0, 0, 0, 0) bg:rgba(0, 0, 0, 0) | pad:0px | 
+BUTTON.ShareButton__Button-sc-12685088-1 jYCerh | font:ui-sans-serif 13px 400 lh:19.5px | color:rgb(17, 17, 17) bg:rgba(0, 0, 0, 0) | pad:0px | مشاركة
+BUTTON.PostKeyboardOpenControl__OpenControl-sc- | font:ui-sans-serif 0px 400 lh:0px | color:rgba(0, 0, 0, 0) bg:rgba(0, 0, 0, 0) | pad:0px | 
+BUTTON.ShareButton__Button-sc-12685088-1 jYCerh | font:ui-sans-serif 13px 400 lh:19.5px | color:rgb(17, 17, 17) bg:rgba(0, 0, 0, 0) | pad:0px | مشاركة
+BUTTON.PostKeyboardOpenControl__OpenControl-sc- | font:ui-sans-serif 0px 400 lh:0px | color:rgba(0, 0, 0, 0) bg:rgba(0, 0, 0, 0) | pad:0px | 
+BUTTON.ShareButton__Button-sc-12685088-1 jYCerh | font:ui-sans-serif 13px 400 lh:19.5px | color:rgb(17, 17, 17) bg:rgba(0, 0, 0, 0) | pad:0px | مشاركة
+BUTTON.PostKeyboardOpenControl__OpenControl-sc- | font:ui-sans-serif 0px 400 lh:0px | color:rgba(0, 0, 0, 0) bg:rgba(0, 0, 0, 0) | pad:0px | 
+BUTTON.ShareButton__Button-sc-12685088-1 jYCerh | font:ui-sans-serif 13px 400 lh:19.5px | color:rgb(17, 17, 17) bg:rgba(0, 0, 0, 0) | pad:0px | مشاركة
+BUTTON.ButtonBase__ButtonContainer-sc-9c42ff7d- | font:ui-sans-serif 13px 700 lh:16px | color:rgb(17, 17, 17) bg:rgba(17, 17, 17, 0.05) | pad:0px | تحميل المزيد
+SECTION.space-y-6 mb-10 | font:ui-sans-serif 16px 400 lh:24px | color:lab(2.51107 0.242703 -0.886115) bg:rgba(0, 0, 0, 0) | pad:0px | تواصل معيلديك تحدي؟ مشروع جديد؟ احتياج م
+HEADER.text-center space-y-2 font-arabic | font:"IBM Plex Sans Arabic" 16px 400 lh:24px | color:lab(2.51107 0.242703 -0.886115) bg:rgba(0, 0, 0, 0) | pad:0px | تواصل معيلديك تحدي؟ مشروع جديد؟ احتياج م
+H2.font-bold text-2xl md:text-5xl mb-10 | font:"IBM Plex Sans Arabic" 48px 700 lh:48px | color:lab(2.51107 0.242703 -0.886115) bg:rgba(0, 0, 0, 0) | pad:0px | تواصل معي
+P.text-lg md:text-2xl | font:"IBM Plex Sans Arabic" 24px 400 lh:32px | color:lab(2.51107 0.242703 -0.886115) bg:rgba(0, 0, 0, 0) | pad:0px | لديك تحدي؟ مشروع جديد؟ احتياج معين؟ أنا 
+P.text-lg md:text-2xl font-bold italic | font:"IBM Plex Sans Arabic" 24px 700 lh:32px | color:lab(2.51107 0.242703 -0.886115) bg:rgba(0, 0, 0, 0) | pad:0px | “أقوى العلاقات تبدأ برسالة بسيطة.”
+H4.text-lg font-semibold | font:"IBM Plex Sans Arabic" 18px 600 lh:28px | color:lab(2.51107 0.242703 -0.886115) bg:rgba(0, 0, 0, 0) | pad:0px | البريد الالكتروني
+H4.text-lg font-semibold | font:"IBM Plex Sans Arabic" 18px 600 lh:28px | color:lab(2.51107 0.242703 -0.886115) bg:rgba(0, 0, 0, 0) | pad:0px | واتســاب
+H4.text-lg font-semibold | font:"IBM Plex Sans Arabic" 18px 600 lh:28px | color:lab(2.51107 0.242703 -0.886115) bg:rgba(0, 0, 0, 0) | pad:0px | لينكدان
+FOOTER.bg-[#01203B] font-arabic py-6 | font:"IBM Plex Sans Arabic" 16px 400 lh:24px | color:lab(2.51107 0.242703 -0.886115) bg:rgb(1, 32, 59) | pad:24px 0px | Hamza Nadi حمزة نادي العديليأساعد الجهات
+H4.text-secondary font-medium text-base sm: | font:"IBM Plex Sans Arabic" 18px 500 lh:28px | color:lab(80.9022 11.0718 53.1295) bg:rgba(0, 0, 0, 0) | pad:0px | Hamza Nadi حمزة نادي العديلي
+P.text-sm text-justify md:text-base | font:"IBM Plex Sans Arabic" 16px 400 lh:24px | color:rgb(255, 255, 255) bg:rgba(0, 0, 0, 0) | pad:0px | أساعد الجهات الحكومية والخاصة وغير الربح
+H4.text-secondary font-medium text-base sm: | font:"IBM Plex Sans Arabic" 18px 500 lh:28px | color:lab(80.9022 11.0718 53.1295) bg:rgba(0, 0, 0, 0) | pad:0px | روابط سريعة
+H4.text-secondary font-medium text-base sm: | font:"IBM Plex Sans Arabic" 18px 500 lh:28px | color:lab(80.9022 11.0718 53.1295) bg:rgba(0, 0, 0, 0) | pad:0px | النشرة البريدية
+P.text-sm md:text-base | font:"IBM Plex Sans Arabic" 16px 400 lh:24px | color:rgb(255, 255, 255) bg:rgba(0, 0, 0, 0) | pad:0px | اشترك ليصلك آخر المقالات والنصائح مباشرة
+BUTTON.inline-flex font-arabic items-center cur | font:"IBM Plex Sans Arabic" 14px 500 lh:20px | color:lab(8.30603 0.618205 -2.16572) bg:lab(80.9022 11.0718 53.1295) | pad:0px 32px | اشترك
+P.font-bold | font:"IBM Plex Sans Arabic" 16px 700 lh:24px | color:rgb(255, 255, 255) bg:rgba(0, 0, 0, 0) | pad:0px | © 2025 جميع الحقوق محفوظة | حمزة نادي
+SECTION. | font:ui-sans-serif 16px 400 lh:24px | color:lab(2.51107 0.242703 -0.886115) bg:rgba(0, 0, 0, 0) | pad:0px | 

@@ -1,0 +1,95 @@
+HEADER.top | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:color(srgb 0.945098 0.956863 0.956863 / 0.86) | pad:0px | من أنا ماذا أقدم أبرز الأعما
+A.btn btn-solid btn-sm | font:Lyon 13.6px 700 lh:19.04px | color:rgb(241, 246, 248) bg:rgb(47, 67, 88) | pad:6.08px 15.2px | تواصل معي
+SECTION.hero | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | حسام الحربيمستشار الاتصال والتسويق 
+H1. | font:Lyon 83.2px 900 lh:95.68px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | حسام الحربي
+P.hero-role | font:Lyon 24px 700 lh:44.4px | color:rgb(44, 127, 150) bg:rgba(0, 0, 0, 0) | pad:0px | مستشار الاتصال والتسويق
+P.hero-tag | font:Lyon 28.8px 700 lh:46.08px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | اتصال يعزز الثقة، وتسويق يصنع الأثر.
+P.hero-lede | font:Lyon 17.6px 400 lh:32.56px | color:rgb(91, 105, 117) bg:rgba(0, 0, 0, 0) | pad:0px | أساعد الجهات الحكومية وغير الربحية على ب
+A.btn btn-solid | font:Lyon 15.68px 700 lh:21.952px | color:rgb(241, 246, 248) bg:rgb(47, 67, 88) | pad:11.2px 20.8px | ابدأ مشروعك معي
+A.btn btn-line | font:Lyon 15.68px 700 lh:21.952px | color:rgb(31, 46, 59) bg:rgb(255, 255, 255) | pad:11.2px 20.8px | شاهد الأعمال
+SECTION.reach | font:Lyon 18px 400 lh:33.3px | color:rgb(241, 246, 248) bg:rgb(47, 67, 88) | pad:0px | 9+سنوات خبرة 40M+وصول الحملات 
+SECTION.sec about | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:120px 0px | من أنا حسام الحربي، متخص
+P.big | font:Lyon 18.4px 400 lh:35.88px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | حسام الحربي، متخصص في الاتصال المؤسسي وا
+P. | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | شملت تجربتي قيادة الحملات الاتصالية والت
+SECTION.sec services | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgb(255, 255, 255) | pad:120px 0px | ماذا أقدم؟ 
+H3. | font:Lyon 21.6px 900 lh:29.16px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | الاتصال المؤسسي
+P. | font:Lyon 16px 400 lh:29.6px | color:rgb(91, 105, 117) bg:rgba(0, 0, 0, 0) | pad:0px | استراتيجيات الاتصال، والرسائل المؤسسية، 
+H3. | font:Lyon 21.6px 900 lh:29.16px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | التسويق والحملات
+P. | font:Lyon 16px 400 lh:29.6px | color:rgb(91, 105, 117) bg:rgba(0, 0, 0, 0) | pad:0px | الخطط التسويقية، وقيادة الحملات، وتسويق 
+H3. | font:Lyon 21.6px 900 lh:29.16px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | الإعلام والمحتوى
+P. | font:Lyon 16px 400 lh:29.6px | color:rgb(91, 105, 117) bg:rgba(0, 0, 0, 0) | pad:0px | المحتوى الإعلامي والرقمي، والإشراف على ا
+H3. | font:Lyon 21.6px 900 lh:29.16px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | العلاقات العامة والشراكات
+P. | font:Lyon 16px 400 lh:29.6px | color:rgb(91, 105, 117) bg:rgba(0, 0, 0, 0) | pad:0px | تطوير الشراكات، وإدارة العلاقات مع الجها
+H3. | font:Lyon 21.6px 900 lh:29.16px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | إدارة المشاريع
+P. | font:Lyon 16px 400 lh:29.6px | color:rgb(91, 105, 117) bg:rgba(0, 0, 0, 0) | pad:0px | تخطيط المشاريع الاتصالية والتسويقية، وقي
+SECTION.sec process | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:120px 0px | كيف نعمل معًا؟ 01نفهم ال
+H3. | font:Lyon 20.8px 900 lh:28.08px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | نفهم التحدي
+P. | font:Lyon 16px 400 lh:29.6px | color:rgb(91, 105, 117) bg:rgba(0, 0, 0, 0) | pad:0px | نحدد احتياج الجهة وأهدافها والجمهور الذي
+H3. | font:Lyon 20.8px 900 lh:28.08px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | نضع الخطة
+P. | font:Lyon 16px 400 lh:29.6px | color:rgb(91, 105, 117) bg:rgba(0, 0, 0, 0) | pad:0px | نصمم المسار والرسائل والقنوات والمخرجات 
+H3. | font:Lyon 20.8px 900 lh:28.08px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | ننفذ ونتابع
+P. | font:Lyon 16px 400 lh:29.6px | color:rgb(91, 105, 117) bg:rgba(0, 0, 0, 0) | pad:0px | ندير التنفيذ مع الفرق والشركاء ونضبط الج
+H3. | font:Lyon 20.8px 900 lh:28.08px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | نقيس ونطور
+P. | font:Lyon 16px 400 lh:29.6px | color:rgb(91, 105, 117) bg:rgba(0, 0, 0, 0) | pad:0px | نراجع النتائج والوصول، ونحدد فرص التحسين
+SECTION.sec work | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgb(255, 255, 255) | pad:120px 0px | أبرز الأعمال 
+H3. | font:Lyon 35.2px 900 lh:47.52px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | حملة المدن الصحية
+P.case-lede | font:Lyon 18px 400 lh:33.3px | color:rgb(91, 105, 117) bg:rgba(0, 0, 0, 0) | pad:0px | حملة إبداعية تخاطب المواطنين والمقيمين ف
+A.btn btn-line btn-sm | font:Lyon 14.4px 700 lh:20.16px | color:rgb(31, 46, 59) bg:rgb(255, 255, 255) | pad:8px 16px | شاهد فيديو الحملة
+BUTTON. | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgb(241, 244, 244) | pad:0px | 
+BUTTON. | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgb(241, 244, 244) | pad:0px | 
+H3. | font:Lyon 35.2px 900 lh:47.52px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | موسم الحج 1447
+P.case-lede | font:Lyon 18px 400 lh:33.3px | color:rgb(91, 105, 117) bg:rgba(0, 0, 0, 0) | pad:0px | محتوى وزارة الصحة لموسم الحج: فيلم وثائق
+BUTTON. | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgb(241, 244, 244) | pad:0px | 
+BUTTON. | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgb(241, 244, 244) | pad:0px | 
+H3. | font:Lyon 35.2px 900 lh:47.52px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | مشروع السلامة والصحة المهنية
+P.case-lede | font:Lyon 18px 400 lh:33.3px | color:rgb(91, 105, 117) bg:rgba(0, 0, 0, 0) | pad:0px | إدارة الحملات الاتصالية للمشروع، وتنظيم 
+BUTTON.wide | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgb(241, 244, 244) | pad:0px | 
+BUTTON. | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgb(241, 244, 244) | pad:0px | 
+BUTTON. | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgb(241, 244, 244) | pad:0px | 
+BUTTON. | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgb(241, 244, 244) | pad:0px | 
+BUTTON. | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgb(241, 244, 244) | pad:0px | 
+H3. | font:Lyon 35.2px 900 lh:47.52px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | الحملات الاتصالية والتسويقية لمنصة جود ا
+P.case-lede | font:Lyon 18px 400 lh:33.3px | color:rgb(91, 105, 117) bg:rgba(0, 0, 0, 0) | pad:0px | تخطيط وإدارة الحملات الاتصالية، وتطوير ا
+A.btn btn-line btn-sm | font:Lyon 14.4px 700 lh:20.16px | color:rgb(31, 46, 59) bg:rgb(255, 255, 255) | pad:8px 16px | حملة اكتتاب جود
+A.btn btn-line btn-sm | font:Lyon 14.4px 700 lh:20.16px | color:rgb(31, 46, 59) bg:rgb(255, 255, 255) | pad:8px 16px | جود مع حمود
+BUTTON.wide | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgb(241, 244, 244) | pad:0px | 
+BUTTON. | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgb(241, 244, 244) | pad:0px | 
+BUTTON. | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgb(241, 244, 244) | pad:0px | 
+BUTTON. | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgb(241, 244, 244) | pad:0px | 
+BUTTON. | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgb(241, 244, 244) | pad:0px | 
+H3. | font:Lyon 35.2px 900 lh:47.52px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | المركز الإعلامي والتسويق عبر المؤثرين
+P.case-lede | font:Lyon 18px 400 lh:33.3px | color:rgb(91, 105, 117) bg:rgba(0, 0, 0, 0) | pad:0px | إدارة المركز الإعلامي لمنتدى مسك العالمي
+A.btn btn-line btn-sm | font:Lyon 14.4px 700 lh:20.16px | color:rgb(31, 46, 59) bg:rgb(255, 255, 255) | pad:8px 16px | عن المركز الإعلامي
+BUTTON. | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgb(241, 244, 244) | pad:0px | 
+BUTTON. | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgb(241, 244, 244) | pad:0px | 
+BUTTON.wide | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgb(241, 244, 244) | pad:0px | 
+H3. | font:Lyon 35.2px 900 lh:47.52px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | بودكاست صوت
+P.case-lede | font:Lyon 18px 400 lh:33.3px | color:rgb(91, 105, 117) bg:rgba(0, 0, 0, 0) | pad:0px | مشروع بودكاست ضمن مبادرات ميدياثون، يناق
+BUTTON.wide | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgb(241, 244, 244) | pad:0px | 
+BUTTON.wide | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgb(241, 244, 244) | pad:0px | 
+H3. | font:Lyon 35.2px 900 lh:47.52px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | حملة «لأنك من أهلي» في رمضان
+P.case-lede | font:Lyon 18px 400 lh:33.3px | color:rgb(91, 105, 117) bg:rgba(0, 0, 0, 0) | pad:0px | قيادة الحملة التسويقية لجمع التبرعات عبر
+A.btn btn-line btn-sm | font:Lyon 14.4px 700 lh:20.16px | color:rgb(31, 46, 59) bg:rgb(255, 255, 255) | pad:8px 16px | شاهد فيلم الحملة
+BUTTON.wide | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgb(241, 244, 244) | pad:0px | 
+BUTTON.wide | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgb(241, 244, 244) | pad:0px | 
+H3. | font:Lyon 28.8px 900 lh:38.88px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | صندوق الوقف الصحي
+P.case-lede | font:Lyon 18px 400 lh:33.3px | color:rgb(91, 105, 117) bg:rgba(0, 0, 0, 0) | pad:0px | Health Endowment Fund
+SECTION.sec field | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:120px 0px | من الميدان لقطات من رحلتي المهنية 
+H2. | font:Lyon 46.4px 900 lh:62.64px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | لقطات من رحلتي المهنية
+P. | font:Lyon 18px 400 lh:33.3px | color:rgb(91, 105, 117) bg:rgba(0, 0, 0, 0) | pad:0px | تجارب جمعتني بفرق وشركاء النجاح.
+BUTTON. | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | 
+BUTTON. | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | 
+BUTTON. | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | 
+BUTTON. | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | 
+BUTTON. | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | 
+BUTTON. | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | 
+BUTTON. | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | 
+BUTTON. | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | 
+BUTTON. | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px | 
+SECTION.sec ideas | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgba(0, 0, 0, 0) | pad:0px 0px 120px | أفكار أشاركها منشور · ل
+SECTION.contact | font:Lyon 18px 400 lh:33.3px | color:rgb(241, 246, 248) bg:rgb(47, 67, 88) | pad:0px | تواصل معي الأثر يبدأ باتصال. 
+H2. | font:Lyon 70.4px 900 lh:95.04px | color:rgb(255, 255, 255) bg:rgba(0, 0, 0, 0) | pad:0px | الأثر يبدأ باتصال.
+BUTTON. | font:Lyon 14.08px 700 lh:26.048px | color:rgb(255, 255, 255) bg:rgba(255, 255, 255, 0.12) | pad:5.6px 14.4px | نسخ الرقم
+BUTTON. | font:Lyon 14.08px 700 lh:26.048px | color:rgb(255, 255, 255) bg:rgba(255, 255, 255, 0.12) | pad:5.6px 14.4px | نسخ البريد
+FOOTER. | font:Lyon 18px 400 lh:33.3px | color:rgb(31, 46, 59) bg:rgb(241, 244, 244) | pad:0px | تصميم وبرمجة
+BUTTON. | font:Arial 22.4px 400 lh:normal | color:rgb(255, 255, 255) bg:rgba(255, 255, 255, 0.14) | pad:1px 6px | ×

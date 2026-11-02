@@ -1,0 +1,79 @@
+A.btn btn-primary btn-square border border | font:sky-bold 16px 400 lh:24px | color:rgb(255, 255, 255) bg:rgb(146, 90, 227) | pad:0px | 
+A.btn btn-primary btn-square border border | font:sky-bold 16px 400 lh:24px | color:rgb(255, 255, 255) bg:rgb(146, 90, 227) | pad:0px | 
+A.btn btn-primary btn-square border border | font:sky-bold 16px 400 lh:24px | color:rgb(255, 255, 255) bg:rgb(146, 90, 227) | pad:0px | 
+A.btn btn-primary btn-square border border | font:sky-bold 16px 400 lh:24px | color:rgb(255, 255, 255) bg:rgb(146, 90, 227) | pad:0px | 
+BUTTON.navbar-toggler | font:sky-bold 20px 400 lh:20px | color:rgb(0, 18, 72) bg:rgb(124, 47, 232) | pad:8px 15px | 
+BUTTON.btn btn-primary py-2 px-3 | font:sky-bold 16px 600 lh:24px | color:rgb(255, 255, 255) bg:rgb(146, 90, 227) | pad:8px 16px | 
+H4.modal-title mb-0 | font:sky-bold 24px 500 lh:36px | color:rgb(0, 18, 72) bg:rgba(0, 0, 0, 0) | pad:0px | البحث عن
+BUTTON.btn-close | font:sky-bold 16px 400 lh:24px | color:rgb(0, 0, 0) bg:rgba(0, 0, 0, 0) | pad:8px | 
+H1.display-1 text-capitalize text-white mb- | font:sky-bold 80px 700 lh:96px | color:rgb(255, 255, 255) bg:rgba(0, 0, 0, 0) | pad:0px | بناء الجماهير
+P.text-uppercase fs-4 mb-3 fadeInUp animat | font:sky-bold 24px 400 lh:36px | color:rgb(255, 255, 255) bg:rgba(0, 0, 0, 0) | pad:0px | نحــن نحــول التجمعــات إلى مجتمعــات مز
+A.btn btn-primary d-flex py-3 px-5 me-2 fl | font:sky-bold 16px 600 lh:24px | color:rgb(255, 255, 255) bg:rgb(146, 90, 227) | pad:16px 48px | تواصل معنا
+H1.display-1 text-capitalize text-white mb- | font:sky-bold 80px 700 lh:96px | color:rgb(255, 255, 255) bg:rgba(0, 0, 0, 0) | pad:0px | لحظات ملهمة أحداث استثنائية
+P.text-uppercase fs-4 mb-3 fadeInUp animat | font:sky-bold 24px 400 lh:36px | color:rgb(255, 255, 255) bg:rgba(0, 0, 0, 0) | pad:0px | أحد الأسماء المشرقة في المعارض والمؤتمرا
+A.btn btn-primary d-flex py-3 px-5 me-2 fl | font:sky-bold 16px 600 lh:24px | color:rgb(255, 255, 255) bg:rgb(146, 90, 227) | pad:16px 48px | تواصل معنا
+H1.display-1 text-capitalize text-white mb- | font:sky-bold 80px 700 lh:96px | color:rgb(255, 255, 255) bg:rgba(0, 0, 0, 0) | pad:0px | تجاوز توقعات العميل
+P.text-uppercase fs-4 mb-3 fadeInUp animat | font:sky-bold 24px 400 lh:36px | color:rgb(255, 255, 255) bg:rgba(0, 0, 0, 0) | pad:0px | نحن نذهب إلى أبعد الحدود لتجاوز توقعات ع
+A.btn btn-primary d-flex py-3 px-5 me-2 fl | font:sky-bold 16px 600 lh:24px | color:rgb(255, 255, 255) bg:rgb(146, 90, 227) | pad:16px 48px | تواصل معنا
+BUTTON.carousel-control-prev | font:sky-bold 16px 400 lh:24px | color:rgb(255, 255, 255) bg:rgba(0, 0, 0, 0) | pad:0px | Previous
+BUTTON.carousel-control-next | font:sky-bold 16px 400 lh:24px | color:rgb(255, 255, 255) bg:rgba(0, 0, 0, 0) | pad:0px | Next
+H2.display-4 mb-4 | font:sky-bold 56px 700 lh:67.2px | color:rgb(0, 18, 72) bg:rgba(0, 0, 0, 0) | pad:0px | نحـن نـروي قصتـك كما أنت تريـد أن يراهـا
+H4.mb-4 | font:sky-bold 24px 500 lh:28.8px | color:rgb(0, 18, 72) bg:rgba(0, 0, 0, 0) | pad:0px | قيمنا
+P.mb-4 | font:sky-bold 16px 400 lh:24px | color:rgb(125, 125, 125) bg:rgba(0, 0, 0, 0) | pad:0px | التفرد الالتزام بكوننا استثنائيون ولا مث
+H4.mb-4 | font:sky-bold 24px 500 lh:28.8px | color:rgb(0, 18, 72) bg:rgba(0, 0, 0, 0) | pad:0px | رؤيتنا
+P.mb-4 | font:sky-bold 16px 400 lh:24px | color:rgb(125, 125, 125) bg:rgba(0, 0, 0, 0) | pad:0px | رؤيــة وهــج العربيــة لعــام ٢٠٣٠ هــي 
+H4.mb-4 | font:sky-bold 24px 500 lh:28.8px | color:rgb(0, 18, 72) bg:rgba(0, 0, 0, 0) | pad:0px | رسالتنا
+P.mb-4 | font:sky-bold 16px 400 lh:24px | color:rgb(125, 125, 125) bg:rgba(0, 0, 0, 0) | pad:0px | مـع دافـع لا يتزعـزع للتـميز وإرث قـوي، 
+P.text-uppercase text-secondary fs-5 mb-0 | font:sky-bold 20px 400 lh:30px | color:rgb(109, 15, 232) bg:rgba(0, 0, 0, 0) | pad:0px | من نحن
+H2.display-4 text-capitalize mb-3 | font:sky-bold 56px 700 lh:67.2px | color:rgb(0, 18, 72) bg:rgba(0, 0, 0, 0) | pad:0px | عن وهج
+P.mb-4 | font:sky-bold 14px 400 lh:21px | color:rgb(125, 125, 125) bg:rgba(0, 0, 0, 0) | pad:0px | من خلال تقديم أعلى جودة في إدارة الفعالي
+A.btn btn-primary d-inline-block py-3 px-5 | font:sky-bold 16px 600 lh:24px | color:rgb(255, 255, 255) bg:rgb(146, 90, 227) | pad:16px 48px | المزيد عنا
+P.fs-5 fw-bold text-primary | font:sky-bold 20px 700 lh:30px | color:rgb(0, 22, 89) bg:rgba(0, 0, 0, 0) | pad:0px | خدمتنا
+H1.display-5 mb-5 | font:sky-bold 48px 700 lh:57.6px | color:rgb(0, 18, 72) bg:rgba(0, 0, 0, 0) | pad:0px | ماتقدمه وهج.
+H4.mb-3 | font:sky-bold 24px 500 lh:28.8px | color:rgb(0, 18, 72) bg:rgba(0, 0, 0, 0) | pad:0px | مفاهيم مبتكرة
+P.mb-4 | font:sky-bold 16px 400 lh:24px | color:rgb(125, 125, 125) bg:rgba(0, 0, 0, 0) | pad:0px | حصـل علـى الإلهـام مـن خلال مفاهيمنـا ال
+A.btn btn-sm | font:sky-bold 14px 600 lh:21px | color:rgb(125, 125, 125) bg:rgba(0, 0, 0, 0) | pad:4px 8px | المزيد
+H4.mb-3 | font:sky-bold 24px 500 lh:28.8px | color:rgb(0, 18, 72) bg:rgba(0, 0, 0, 0) | pad:0px | تصميم وإنشاء المساحات
+P.mb-4 | font:sky-bold 16px 400 lh:24px | color:rgb(125, 125, 125) bg:rgba(0, 0, 0, 0) | pad:0px | أطلــق العنــان للإبــداع مــن خلال خدمـ
+A.btn btn-sm | font:sky-bold 14px 600 lh:21px | color:rgb(125, 125, 125) bg:rgba(0, 0, 0, 0) | pad:4px 8px | المزيد
+H4.mb-3 | font:sky-bold 24px 500 lh:28.8px | color:rgb(0, 18, 72) bg:rgba(0, 0, 0, 0) | pad:0px | التقنيات المتقدمة
+P.mb-4 | font:sky-bold 16px 400 lh:24px | color:rgb(125, 125, 125) bg:rgba(0, 0, 0, 0) | pad:0px | اسـتفد مـن قـوة أحـدث تقنيـات الأحـداث، 
+A.btn btn-sm | font:sky-bold 14px 600 lh:21px | color:rgb(125, 125, 125) bg:rgba(0, 0, 0, 0) | pad:4px 8px | المزيد
+H4.mb-3 | font:sky-bold 24px 500 lh:28.8px | color:rgb(0, 18, 72) bg:rgba(0, 0, 0, 0) | pad:0px | إنتاج المحتوى المرئي
+P.mb-4 | font:sky-bold 16px 400 lh:24px | color:rgb(125, 125, 125) bg:rgba(0, 0, 0, 0) | pad:0px | عــزز رؤيــة وهويــة علامتــك التجاريــة
+A.btn btn-sm | font:sky-bold 14px 600 lh:21px | color:rgb(125, 125, 125) bg:rgba(0, 0, 0, 0) | pad:4px 8px | المزيد
+H4.mb-3 | font:sky-bold 24px 500 lh:28.8px | color:rgb(0, 18, 72) bg:rgba(0, 0, 0, 0) | pad:0px | خدمات الضيافة
+P.mb-4 | font:sky-bold 16px 400 lh:24px | color:rgb(125, 125, 125) bg:rgba(0, 0, 0, 0) | pad:0px | ضمـان راحـة الحضـور والرضـا التـام عـن خ
+A.btn btn-sm | font:sky-bold 14px 600 lh:21px | color:rgb(125, 125, 125) bg:rgba(0, 0, 0, 0) | pad:4px 8px | المزيد
+H4.mb-3 | font:sky-bold 24px 500 lh:28.8px | color:rgb(0, 18, 72) bg:rgba(0, 0, 0, 0) | pad:0px | تغطية الحدث
+P.mb-4 | font:sky-bold 16px 400 lh:24px | color:rgb(125, 125, 125) bg:rgba(0, 0, 0, 0) | pad:0px | أســعد الحضــور بتجــارب ترفيهيــة ممتعـ
+A.btn btn-sm | font:sky-bold 14px 600 lh:21px | color:rgb(125, 125, 125) bg:rgba(0, 0, 0, 0) | pad:4px 8px | المزيد
+H4.text-dark my-4 | font:sky-bold 24px 500 lh:28.8px | color:rgb(0, 18, 72) bg:rgba(0, 0, 0, 0) | pad:0px | الانجاز
+H4.text-dark my-4 | font:sky-bold 24px 500 lh:28.8px | color:rgb(0, 18, 72) bg:rgba(0, 0, 0, 0) | pad:0px | عملاء سعداء
+H4.text-dark my-4 | font:sky-bold 24px 500 lh:28.8px | color:rgb(0, 18, 72) bg:rgba(0, 0, 0, 0) | pad:0px | الفعاليات
+H4.text-dark my-4 | font:sky-bold 24px 500 lh:28.8px | color:rgb(0, 18, 72) bg:rgba(0, 0, 0, 0) | pad:0px | الضمان
+H1.display-5 mb-4 | font:sky-bold 48px 700 lh:57.6px | color:rgb(0, 18, 72) bg:rgba(0, 0, 0, 0) | pad:0px | لماذا تختار وهج ؟؟
+P.mb-4 | font:sky-bold 16px 400 lh:24px | color:rgb(125, 125, 125) bg:rgba(0, 0, 0, 0) | pad:0px | إتقان التخطيط: نضع استراتيجيات مدروسة بع
+A.btn btn-primary py-3 px-4 | font:sky-bold 16px 600 lh:24px | color:rgb(255, 255, 255) bg:rgb(146, 90, 227) | pad:16px 24px | استكشف المزيد
+H4.mb-0 | font:sky-bold 24px 500 lh:28.8px | color:rgb(0, 18, 72) bg:rgba(0, 0, 0, 0) | pad:0px | أحداث فريدة من نوعها
+P. | font:sky-bold 16px 400 lh:24px | color:rgb(125, 125, 125) bg:rgba(0, 0, 0, 0) | pad:0px | ً نحن متخصصون في إنشاء أحداث فريدة من نو
+H4.mb-0 | font:sky-bold 24px 500 lh:28.8px | color:rgb(0, 18, 72) bg:rgba(0, 0, 0, 0) | pad:0px | التكنولوجيا المبتكرة
+P. | font:sky-bold 16px 400 lh:24px | color:rgb(125, 125, 125) bg:rgba(0, 0, 0, 0) | pad:0px | نحن نبقى في طليعة تكنولوجيا الأحداث لتزو
+H4.mb-0 | font:sky-bold 24px 500 lh:28.8px | color:rgb(0, 18, 72) bg:rgba(0, 0, 0, 0) | pad:0px | استراتيجيات التسويق الإبداعي
+P. | font:sky-bold 16px 400 lh:24px | color:rgb(125, 125, 125) bg:rgba(0, 0, 0, 0) | pad:0px | نحن نفكر خارج الصندوق وننفذ استراتيجيات 
+P.text-uppercase text-secondary fs-5 mb-0 | font:sky-bold 20px 400 lh:30px | color:rgb(109, 15, 232) bg:rgba(0, 0, 0, 0) | pad:0px | كيف نعمل
+H2.display-4 text-capitalize mb-3 | font:sky-bold 56px 700 lh:67.2px | color:rgb(0, 18, 72) bg:rgba(0, 0, 0, 0) | pad:0px | نجعل من السهل إنشاء فعاليتك.
+H4.me-3 | font:sky-bold 24px 500 lh:28.8px | color:rgb(0, 18, 72) bg:rgba(0, 0, 0, 0) | pad:0px | استشارة
+P.me-3 | font:sky-bold 16px 400 lh:24px | color:rgb(125, 125, 125) bg:rgba(0, 0, 0, 0) | pad:0px | خدمات استشارتنا تقدم إرشادات ونصائح خبير
+H4.me-3 | font:sky-bold 24px 500 lh:28.8px | color:rgb(0, 18, 72) bg:rgba(0, 0, 0, 0) | pad:0px | تخطيط
+P.me-3 | font:sky-bold 16px 400 lh:24px | color:rgb(125, 125, 125) bg:rgba(0, 0, 0, 0) | pad:0px | يضمن عملية التخطيط الدقيقة لدينا أن يتم 
+H4.me-3 | font:sky-bold 24px 500 lh:28.8px | color:rgb(0, 18, 72) bg:rgba(0, 0, 0, 0) | pad:0px | تنفيذ
+P.me-3 | font:sky-bold 16px 400 lh:24px | color:rgb(125, 125, 125) bg:rgba(0, 0, 0, 0) | pad:0px | بانتباه دقيق للتفاصيل، يجسد فريقنا ذو ال
+P.mb-3 | font:sky-bold 16px 400 lh:35px | color:rgb(125, 125, 125) bg:rgba(0, 0, 0, 0) | pad:0px | لقد أنشأنا تجارب أحداث لا تُنسى تعمل على
+H4.text-white mb-4 | font:sky-bold 24px 500 lh:28.8px | color:rgb(255, 255, 255) bg:rgba(0, 0, 0, 0) | pad:0px | روابط سريعه
+H4.text-white mb-4 | font:sky-bold 24px 500 lh:28.8px | color:rgb(255, 255, 255) bg:rgba(0, 0, 0, 0) | pad:0px | معلومات الاتصال
+A.btn btn-primary btn-md-square me-2 | font:sky-bold 16px 400 lh:35px | color:rgb(125, 125, 125) bg:rgb(146, 90, 227) | pad:0px | 
+A.btn btn-primary btn-md-square me-2 | font:sky-bold 16px 400 lh:35px | color:rgb(125, 125, 125) bg:rgb(146, 90, 227) | pad:0px | 
+A.btn btn-primary btn-md-square me-2 | font:sky-bold 16px 400 lh:35px | color:rgb(125, 125, 125) bg:rgb(146, 90, 227) | pad:0px | 
+A.btn btn-primary btn-md-square me-2 | font:sky-bold 16px 400 lh:35px | color:rgb(125, 125, 125) bg:rgb(146, 90, 227) | pad:0px | 
+A.btn btn-primary btn-lg-square back-to-to | font:sky-bold 16px 400 lh:24px | color:rgb(255, 255, 255) bg:rgb(146, 90, 227) | pad:0px | 
