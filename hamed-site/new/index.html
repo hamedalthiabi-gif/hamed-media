@@ -1,5 +1,4 @@
-<!doctype html>
-<html lang="ar" dir="rtl"><head>
+<!DOCTYPE html><html lang="ar" dir="rtl"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="إصدارات مجانية وتقويم للقطاع غير الربحي، وخدمات استشارية وتدريبية في التسويق والاستدامة المالية للمنظمات غير الربحية.">
@@ -922,7 +921,50 @@ section .eyebrow{color:var(--coral);font-weight:600;font-size:15px}
 .hc-empty{text-align:center;color:var(--muted)}
 @media (max-width:640px){.hc{grid-template-columns:70px 1fr}.hc-go{grid-column:1/-1}.hc-go .btn{width:100%;justify-content:center}}
 </style>
-</head>
+<style>
+#readiness.hr{--hr-navy:#002544;--hr-coral:#BB6841;--hr-peach:#E9A57F;--hr-cream:#F8F5EF;--hr-line:#E3DCCF;--hr-muted:#5E6673;--hr-pale:#C9D1DC;background:var(--hr-cream);color:#1B2433;padding:72px 0;font-family:inherit;line-height:1.8}
+.hr *{box-sizing:border-box}
+.hr-wrap{max-width:1100px;margin:0 auto}
+.hr-head{text-align:center;max-width:640px;margin:0 auto 36px}
+.hr-eye{display:inline-flex;align-items:center;gap:8px;color:var(--hr-coral);font-weight:600;font-size:14px}
+.hr-eye::before{content:"";width:8px;height:8px;background:var(--hr-coral);transform:rotate(45deg)}
+.hr h2{margin:6px 0 8px;color:var(--hr-navy);font-size:clamp(24px,3.4vw,32px);line-height:1.4}
+.hr-head p{margin:0;color:var(--hr-muted)}
+.hr-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:22px;align-items:start}
+.hr-card{background:#fff;border:1px solid var(--hr-line);border-radius:12px;padding:8px 22px 18px}
+.hr-axis{display:flex;align-items:center;gap:10px;margin:20px 0 2px;color:var(--hr-navy);font-weight:700}
+.hr-axis i{font-style:normal;background:var(--hr-coral);color:#fff;border-radius:6px;padding:0 10px;font-size:13px}
+.hr-q{padding:14px 0;border-bottom:1px solid var(--hr-line)}
+.hr-q:last-child{border-bottom:0}
+.hr-q p{margin:0 0 8px;font-weight:500}
+.hr-opts{display:flex;flex-wrap:wrap;gap:6px}
+.hr-opts button{flex:1 1 100px;background:var(--hr-cream);border:1px solid var(--hr-line);border-radius:8px;padding:7px 10px;cursor:pointer;font:inherit;font-size:14px;color:inherit}
+.hr-opts button:hover{border-color:var(--hr-coral)}
+.hr-opts button[aria-pressed="true"]{background:var(--hr-navy);border-color:var(--hr-navy);color:#fff}
+.hr-side{position:sticky;top:90px}
+.hr-prog{background:#fff;border:1px solid var(--hr-line);border-radius:12px;padding:22px}
+.hr-prog h3{margin:4px 0 10px;color:var(--hr-navy);font-size:18px}
+.hr-bar{height:8px;background:#F1ECE3;border-radius:4px;overflow:hidden}
+.hr-bar i{display:block;height:100%;background:var(--hr-coral);border-radius:4px;transition:width .4s}
+.hr-res{background:var(--hr-navy);color:var(--hr-cream);border-radius:12px;padding:26px;display:grid;gap:14px}
+.hr-res .hr-eye{color:var(--hr-peach)}.hr-res .hr-eye::before{background:var(--hr-peach)}
+.hr-score{font-size:56px;font-weight:700;color:var(--hr-peach);line-height:1}
+.hr-res h3{margin:0;font-size:22px;color:#fff}
+.hr-res p{margin:0;color:var(--hr-pale)}
+.hr-ax{display:grid;grid-template-columns:130px 1fr 44px;gap:10px;align-items:center;font-size:14px}
+.hr-res .hr-bar{background:rgba(255,255,255,.12)}
+.hr-pri b{color:var(--hr-peach)}
+.hr-pri ul{margin:6px 0 0;padding-inline-start:20px;color:var(--hr-pale)}
+.hr-pri li{margin-bottom:4px}
+.hr-pri li a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.hr-btns{display:flex;gap:10px;flex-wrap:wrap}
+.hr-btn{background:var(--hr-coral);color:#fff;border:0;border-radius:8px;padding:10px 20px;font:inherit;font-weight:600;cursor:pointer;text-decoration:none;display:inline-block}
+.hr-btn:hover{background:#A85A36}
+.hr-btn.ghost{background:transparent;border:1px solid var(--hr-pale);color:var(--hr-cream)}
+.hr :focus-visible{outline:2px solid var(--hr-coral);outline-offset:2px}
+@media (max-width:860px){#readiness.hr{padding:52px 0}.hr-grid{grid-template-columns:1fr}.hr-side{position:static;order:-1}.hr-side.done{order:1}.hr-ax{grid-template-columns:110px 1fr 40px}}
+@media (prefers-reduced-motion:reduce){.hr-bar i{transition:none}}
+.hr-teaser{margin:6px 0 18px;color:var(--muted);text-align:center}.hr-teaser a{color:var(--coral);font-weight:600;text-decoration:underline;text-underline-offset:4px}</style></head>
 <body>
 
 
@@ -1063,7 +1105,7 @@ section .eyebrow{color:var(--coral);font-weight:600;font-size:15px}
   <section class="store">
     <div class="wrap">
       <div class="eyebrow">الخدمات</div>
-      <h2 class="h2">اطلب خدمتك</h2>
+      <h2 class="h2">اطلب خدمتك</h2><p class="hr-teaser">لا تعرف من أين تبدأ؟ <a href="#readiness-go">قِس جاهزية جمعيتك للاستدامة المالية</a></p>
       <div class="fchips" role="group" aria-label="تصفية الخدمات"><button class="fchip" data-g="all" aria-pressed="true">الكل</button><button class="fchip" data-g="plans" aria-pressed="false">تصميم الخطط والنماذج</button><button class="fchip" data-g="courses" aria-pressed="false">الدورات التدريبية</button><button class="fchip" data-g="sessions" aria-pressed="false">الجلسات الاستشارية</button><button class="fchip" data-g="review" aria-pressed="false">التقييم والتحكيم وخدمات أخرى</button></div>
       <div class="prod-grid">
         <article class="prod" data-g="plans"><span class="cat">تصميم الخطط والنماذج</span><h3>خطة الاستدامة المالية</h3><p class="pdesc">خطة تبني لجهتك مصادر دخل مستقرة ومتنوعة، وتقلل اعتمادها على التبرعات الموسمية.</p><div class="price"><small>السعر</small><b>حسب الطلب</b></div><a class="btn btn-coral" href="#contact">اطلب الآن</a></article>
@@ -1086,7 +1128,7 @@ section .eyebrow{color:var(--coral);font-weight:600;font-size:15px}
         <article class="prod" data-g="review"><span class="cat">التقييم والتحكيم وخدمات أخرى</span><h3>تجربة المتبرع الخفي</h3><p class="pdesc">نجرّب التبرع لجهتك كمتبرع عادي، ثم نقدّم تقريرًا بما يحتاج تحسينًا.</p><div class="price"><small>السعر</small><b>حسب الطلب</b></div><a class="btn btn-coral" href="#contact">اطلب الآن</a></article>
       </div>
     </div>
-  </section>
+  </section><section id="readiness" class="hr" aria-labelledby="hr-title"><div class="wrap"><div class="hr-head"><span class="hr-eye">مقياس مجاني</span><h2 id="hr-title">ما مدى جاهزية جمعيتك للاستدامة المالية؟</h2><p>اثنا عشر سؤالًا في أربعة محاور، تكشف موقع جمعيتك وأولويات تطويرها في ثلاث دقائق.</p></div><div class="hr-grid"><div class="hr-card" id="hr-quiz"></div><div class="hr-side" id="hr-side"></div></div></div></section>
 
 </div>
 
@@ -1511,4 +1553,65 @@ var today=new Date();today.setHours(0,0,0,0);var out=[];
 if(name&&from&&new Date(to+'T23:59')>=today)out.push({name:String(name),desc:String(g('desc')||''),from:from,to:to,time:String(g('time')||''),place:String(g('place')||''),mode:String(g('mode')||''),status:String(g('status')||''),url:String(g('url')||'')})});
 out.sort(function(a,b){return a.from.localeCompare(b.from)});
 if(!out.length)return empty();box.innerHTML=out.map(card).join('')}).catch(empty);
-})();</script></body></html>
+})();</script><script>
+(function(){
+  var AX=[
+    ['الحوكمة والتخطيط',['لدى الجمعية خطة معتمدة لتنمية الموارد المالية بأهداف رقمية','يتابع مجلس الإدارة مؤشرات الاستدامة المالية دوريًا','توجد إدارة أو موظف متفرغ لتنمية الموارد']],
+    ['تنوع الإيرادات',['لا يتجاوز أكبر مصدر تمويل ٤٠٪ من إيرادات الجمعية','لدى الجمعية مصدر دخل ذاتي (وقف، استثمار، خدمات بمقابل)','لدى الجمعية برنامج للتبرع الدوري أو الاستقطاع الشهري']],
+    ['علاقات الداعمين',['لدى الجمعية قاعدة بيانات محدّثة للداعمين','يصل الداعمَ شكرٌ وتقرير أثر بعد تبرعه','تقيس الجمعية معدل الاحتفاظ بالداعمين سنويًا']],
+    ['الأثر والتسويق',['تقيس الجمعية أثر برامجها بمؤشرات واضحة وتنشره','لدى الجمعية هوية ورسائل تسويقية موحّدة','تنشر الجمعية محتوى منتظمًا على منصاتها']]
+  ];
+  var OPTS=['لا','جزئيًا','غالبًا','نعم تمامًا'];
+  var REC={
+    'الحوكمة والتخطيط':['بناء خطة استدامة مالية وتنمية موارد معتمدة بمؤشرات يتابعها المجلس.','تصميم خطة الاستدامة المالية'],
+    'تنوع الإيرادات':['تنويع مصادر الدخل، وإطلاق مصدر ذاتي وبرنامج عطاء دوري.','تصميم خطة جمع التبرعات'],
+    'علاقات الداعمين':['تصميم رحلة الداعم وقياس الاحتفاظ به بعد تبرعه الأول.','تصميم رحلة المتبرع'],
+    'الأثر والتسويق':['قياس الأثر وتحويله إلى رسائل تسويقية مقنعة بهوية موحّدة.','تصميم الخطة التسويقية']
+  };
+  var A={};
+  var wa=function(s,sc){return 'https://wa.me/966554070212?text='+encodeURIComponent('السلام عليكم، أرغب في طلب خدمة: '+s+(sc!=null?' (نتيجة مقياس الجاهزية: '+sc+'٪)':''))};
+  var num=function(n){return Number(n).toLocaleString('ar-SA')};
+  var quiz=document.getElementById('hr-quiz'), side=document.getElementById('hr-side');
+
+  quiz.innerHTML=AX.map(function(a,ai){
+    return '<div class="hr-axis"><i>'+num(ai+1)+'</i>'+a[0]+'</div>'+a[1].map(function(q,qi){
+      return '<div class="hr-q"><p>'+q+'</p><div class="hr-opts" role="group" data-q="'+ai+'_'+qi+'">'+
+        OPTS.map(function(o,k){return '<button type="button" data-v="'+k+'" aria-pressed="false">'+o+'</button>'}).join('')+'</div></div>';
+    }).join('');
+  }).join('');
+
+  quiz.addEventListener('click',function(e){
+    var b=e.target.closest('.hr-opts button'); if(!b) return;
+    var g=b.parentElement; A[g.getAttribute('data-q')]=+b.getAttribute('data-v');
+    g.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+    render();
+  });
+
+  function render(){
+    var done=Object.keys(A).length, total=12;
+    if(done<total){
+      side.classList.remove('done');
+      side.innerHTML='<div class="hr-prog"><span class="hr-eye">تقدّمك</span><h3>أجبت عن '+num(done)+' من '+num(total)+'</h3><div class="hr-bar"><i style="width:'+(done/total*100)+'%"></i></div></div>';
+      return;
+    }
+    var ax=AX.map(function(a,ai){var s=0;a[1].forEach(function(_,qi){s+=A[ai+'_'+qi]||0});return [a[0],s/9]});
+    var score=Math.round(ax.reduce(function(t,x){return t+x[1]},0)/4*100), lvl, txt;
+    if(score>=75){lvl='جاهزية متقدمة';txt='أسس الاستدامة قائمة لدى جمعيتكم، والفرصة الآن في تعظيم العائد وتوسيع الأثر.'}
+    else if(score>=50){lvl='جاهزية متوسطة';txt='لديكم أساس جيد، وفجوات واضحة إن عولجت ارتفع استقرار الجمعية المالي.'}
+    else if(score>=25){lvl='جاهزية ناشئة';txt='تعتمد الجمعية غالبًا على مصادر محدودة، وتحتاج إلى منظومة متكاملة لتنمية الموارد.'}
+    else{lvl='بداية الطريق';txt='كل جمعية مستدامة بدأت من هنا، والخطوة الأولى خطة واضحة لتنمية الموارد.'}
+    var weak=ax.slice().sort(function(a,b){return a[1]-b[1]}).slice(0,2);
+    side.classList.add('done');
+    side.innerHTML='<div class="hr-res" aria-live="polite"><span class="hr-eye">نتيجة جمعيتكم</span><div class="hr-score">'+num(score)+'٪</div><h3>'+lvl+'</h3><p>'+txt+'</p>'+
+      ax.map(function(x){return '<div class="hr-ax"><span>'+x[0]+'</span><div class="hr-bar"><i style="width:'+(x[1]*100)+'%"></i></div><b>'+num(Math.round(x[1]*100))+'٪</b></div>'}).join('')+
+      '<div class="hr-pri"><b>أولوياتكم</b><ul>'+weak.map(function(w){return '<li>'+REC[w[0]][0]+' <a href="'+wa(REC[w[0]][1])+'" target="_blank" rel="noopener">'+REC[w[0]][1]+'</a></li>'}).join('')+'</ul></div>'+
+      '<div class="hr-btns"><a class="hr-btn" href="'+wa(REC[weak[0][0]][1],num(score))+'" target="_blank" rel="noopener">اطلب الخدمة</a><button type="button" class="hr-btn ghost" id="hr-again">إعادة المقياس</button></div></div>';
+    document.getElementById('hr-again').onclick=function(){
+      A={}; quiz.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed','false')});
+      render(); quiz.scrollIntoView({behavior:'smooth',block:'start'});
+    };
+    if(window.innerWidth<=860) side.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  render();
+})();
+;document.addEventListener('click',function(e){var a=e.target.closest('a[href="#readiness-go"]');if(!a)return;e.preventDefault();document.getElementById('readiness').scrollIntoView({behavior:'smooth',block:'start'})});</script></body></html>
