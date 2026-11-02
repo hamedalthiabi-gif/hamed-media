@@ -66,6 +66,7 @@ const contact = H(`<section class="cta-end"><div class="wrap"><h2>لنبدأ م�
 <div class="ct-cards">
 <a class="ct" href="https://wa.me/966554070212" target="_blank" rel="noopener"><small>واتساب الأعمال</small><b dir="ltr">+966 55 407 0212</b><span>افتح المحادثة</span></a>
 <a class="ct" href="mailto:hamedalthiabi@gmail.com"><small>البريد الإلكتروني</small><b dir="ltr">hamedalthiabi@gmail.com</b><span>أرسل رسالة</span></a>
+<a class="ct" href="https://whatsapp.com/channel/0029VaDG6R49Gv7Okjpy860R" target="_blank" rel="noopener"><small>قناة واتساب</small><b>درب الاستدامة المالية</b><span>متابعة القناة</span></a>
 <a class="ct" href="https://www.linkedin.com/in/HAMEDALTHIABI" target="_blank" rel="noopener"><small>لينكدإن</small><b dir="ltr">HAMEDALTHIABI</b><span>زيارة الحساب</span></a>
 </div></div></section>`);
 
@@ -117,12 +118,13 @@ $$('style').pop().textContent += `
 .awards .aw-list li::before{border-radius:6px}
 @media (max-width:900px){.awards .aw-list{grid-template-columns:1fr 1fr}}
 @media (max-width:480px){.awards .aw-list{grid-template-columns:1fr}}
-.ct-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:980px;margin:30px auto 0}
+.ct-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1100px;margin:30px auto 0}
 .ct{display:grid;gap:4px;padding:22px;border:1px solid rgba(255,255,255,.2);border-radius:6px;text-decoration:none;color:#fff;transition:border-color .2s,background .2s;min-width:0}
 .ct:hover{border-color:var(--coral);background:rgba(255,255,255,.05)}
 .ct small{color:#E9A57F;font-weight:600;font-size:13px}
 .ct b{font-size:17px;overflow-wrap:anywhere}
 .ct span{font-size:13.5px;color:#C9D1DC}
-@media (max-width:760px){.ct-cards{grid-template-columns:1fr}}
+@media (max-width:900px){.ct-cards{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.ct-cards{grid-template-columns:1fr}}
 `;
 fs.writeFileSync(dst, '<!doctype html>\n' + doc.documentElement.outerHTML); console.log('ok');
