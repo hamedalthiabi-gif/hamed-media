@@ -103,6 +103,25 @@ const ARTICLES = [
   ['مجتمع Hive Mind', 'كيف يدعم الذكاء الاصطناعي رحلة المانح في منظمتك غير الربحية؟', 'https://ar.hive-mind.community/blog/1258,kyf-ydaam-althkaaa-alastnaaay-rhl-almanh-fy-mnthmtk-ghyr-alrbhy'],
 ];
 $('#art-grid').innerHTML = ARTICLES.map(([src, t, u]) => `<a class="art" href="${u}" target="_blank" rel="noopener"><small>${src}</small><h3>${t}</h3><span>اقرأ المقال ←</span></a>`).join('');
+const VIDS = [
+  ['تسويق منصات التبرع', 'دورة على منصة سديم', 'https://sdeem.org/courses/2507', null],
+  ['الذكاء التسويقي', 'يوتيوب', 'https://youtu.be/ZYtN2RuYbgc', 'ZYtN2RuYbgc'],
+  ['تجربة المتبرع', 'يوتيوب', 'https://www.youtube.com/live/fumpg6OqlZk', 'fumpg6OqlZk'],
+  ['مفاهيم التسويق الخيري', 'يوتيوب', 'https://www.youtube.com/live/FiNWj60poQI', 'FiNWj60poQI'],
+  ['أساسيات التسويق الخيري', 'يوتيوب', 'https://www.youtube.com/live/r2WYop-6Kaw', 'r2WYop-6Kaw'],
+  ['السرد القصصي', 'يوتيوب', 'https://www.youtube.com/live/teZn_sDhDkw', 'teZn_sDhDkw'],
+  ['كيف تستعد تسويقيًا لعشر ذي الحجة', 'يوتيوب', 'https://www.youtube.com/live/HxRI-QsR4o0', 'HxRI-QsR4o0'],
+  ['السرد القصصي للتأثير على المانحين', 'ويبينار إيسام', 'https://www.youtube.com/live/Vd9G5GIy9F0', 'Vd9G5GIy9F0'],
+  ['بناء المنتج التسويقي', 'ويبينار إيسام', 'https://www.youtube.com/live/PdAXUj0VOu4', 'PdAXUj0VOu4'],
+  ['فرص التمويل للنفقات التشغيلية', 'ويبينار إيسام', 'https://www.youtube.com/live/LKJBjPMGcJ8', 'LKJBjPMGcJ8'],
+  ['تصميم تجربة المتبرع', 'ويبينار إيسام', 'https://www.youtube.com/watch?v=-mKmUvkRbdU', '-mKmUvkRbdU'],
+  ['العلامة الخيرية', 'ويبينار إيسام', 'https://www.youtube.com/live/_sjl6N_cukQ', '_sjl6N_cukQ'],
+  ['الملف التسويقي للمانحين', 'ويبينار إيسام', 'https://www.youtube.com/live/F_nBbgdoT8k', 'F_nBbgdoT8k'],
+  ['بوصلة القطاع غير الربحي والتوجهات الحديثة', 'يوتيوب', 'https://youtu.be/i8CCDGlyRUw', 'i8CCDGlyRUw'],
+  ['كيف تبني حملات تسويقية لمنظمتك؟', 'منصة مزن', 'https://mozn.ws/95286', null],
+  ['فيديوهات المنتج التسويقي', 'مجموعة مقاطع', 'https://drive.google.com/drive/folders/1jE2nI13owKkTubNMWGRxDkFmVTik5HXT', null],
+];
+$('#vid-grid').innerHTML = '<h3 class="vid-h">دورات ولقاءات مسجّلة</h3>' + VIDS.map(([t, src, u, id], i) => `<a class="vid${i === 0 ? ' feat' : ''}" href="${u}" target="_blank" rel="noopener"><span class="vid-th">${id ? `<img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" loading="lazy"><i aria-hidden="true"></i>` : `<b>${i === 0 ? 'سديم' : src}</b>`}</span><small>${src}</small><strong>${t}</strong></a>`).join('');
 $('#pubs .pub-jump').innerHTML = [['own', 'الإصدارات'], ['articles', 'المقالات'], ['courses', 'الدورات'], ['trans', 'ترجمات الاستدامة'], ['guides', 'أدلة مصوّرة'], ['contrib', 'إصدارات شارك فيها'], ['media', 'الإعلام والمشاركات']].map(([k, t]) => `<a href="#pubs" data-jump="${k}">${t}</a>`).join('');
 // hide empty article/video grids until links are added
 // (cards are added later as <a class="art"> / <a class="vid">)
@@ -183,7 +202,24 @@ $$('style').pop().textContent += `
 .nl-card p{color:var(--muted);font-size:15px;margin-bottom:14px}
 @media (max-width:600px){.nl-card{grid-template-columns:1fr}.nl-card img{max-width:200px}}
 #sec-courses .crs-grid{margin-top:22px}
-.vid-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+.vid-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:34px}
+.vid-h{grid-column:1/-1;color:var(--navy);font-size:21px}
+.vid{display:grid;gap:4px;align-content:start;background:#fff;border-radius:6px;box-shadow:var(--shadow);overflow:hidden;text-decoration:none;padding-bottom:14px;transition:transform .3s}
+.vid:hover{transform:translateY(-4px)}
+.vid-th{position:relative;display:grid;place-items:center;aspect-ratio:16/9;background:var(--navy);overflow:hidden}
+.vid-th img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.vid-th b{color:#E9A57F;font-size:18px;padding:0 12px;text-align:center}
+.vid-th i{position:absolute;width:46px;height:46px;border-radius:50%;background:rgba(187,104,65,.92);display:grid;place-items:center}
+.vid-th i::after{content:"";border-style:solid;border-width:9px 0 9px 14px;border-color:transparent transparent transparent #fff;margin-left:4px}
+.vid small{color:var(--coral);font-weight:600;font-size:12.5px;padding:8px 14px 0}
+.vid strong{color:var(--navy);font-size:15.5px;line-height:1.6;padding:0 14px}
+.vid.feat{grid-column:span 2;grid-row:span 2}
+.vid.feat .vid-th{aspect-ratio:auto;flex:1;min-height:200px;height:100%}
+.vid.feat{grid-template-rows:1fr auto auto}
+.vid.feat .vid-th b{font-size:26px}
+.vid.feat strong{font-size:20px}
+@media (max-width:900px){.vid-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.vid-grid{grid-template-columns:1fr}.vid.feat{grid-column:auto;grid-row:auto}}
 #sec-articles{background:#fff}
 #sec-courses{background:var(--cream)}
 /* about: full CV */
