@@ -19,7 +19,6 @@ ct.innerHTML = `<div class="wrap">
 <div class="ci-grid">
 <div class="cinfo">${ic('M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z')}<small>واتساب الأعمال</small><span dir="ltr">+966 55 407 0212</span><div class="ci-act"><a class="btn btn-coral" href="https://wa.me/966554070212" target="_blank" rel="noopener">مراسلة</a></div></div>
 <div class="cinfo">${ic('M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.4 7H4v.4l8 5.6 8-5.6V7h-.4L12 12.2z')}<small>البريد الإلكتروني</small><span dir="ltr">hamedalthiabi@gmail.com</span><div class="ci-act"><a class="btn btn-navy" href="mailto:hamedalthiabi@gmail.com">إرسال</a><button class="copy" data-t="hamedalthiabi@gmail.com">نسخ</button></div></div>
-<div class="cinfo">${ic('M4 4h16v12H5.2L4 17.2V4zm3 4v2h10V8H7zm0 3v2h7v-2H7z')}<small>قناة واتساب</small><span>درب الاستدامة المالية</span><div class="ci-act"><a class="btn btn-coral" href="https://whatsapp.com/channel/0029VaDG6R49Gv7Okjpy860R" target="_blank" rel="noopener">متابعة القناة</a></div></div>
 <div class="cinfo">${ic('M12 2a7 7 0 0 1 7 7c0 5.2-7 13-7 13S5 14.2 5 9a7 7 0 0 1 7-7zm0 4.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z')}<small>الموقع</small><span>الرياض، المملكة العربية السعودية</span></div>
 </div>
 <div class="ci-soc"><b>تابعنا</b>${socials}</div>
@@ -80,7 +79,7 @@ section .eyebrow{color:var(--coral);font-weight:600;font-size:15px}
 .cal-sec{background:var(--cream)}
 /* contact */
 .contact .wrap{display:block}
-.ci-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.ci-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .cinfo{background:#fff;border-radius:6px;box-shadow:var(--shadow);padding:30px 24px;text-align:center;display:grid;justify-items:center;gap:6px;align-content:start}
 .ci-ic{width:64px;height:64px;border-radius:50%;background:var(--cream);display:grid;place-items:center;margin-bottom:8px}
 .ci-ic svg{width:28px;fill:var(--coral)}
@@ -94,8 +93,7 @@ section .eyebrow{color:var(--coral);font-weight:600;font-size:15px}
 .ci-soc a{padding:7px 16px;border-radius:30px;background:var(--navy);color:#fff;text-decoration:none;font-size:14px}
 .ci-soc a:hover{background:var(--coral)}
 .contact{background:var(--cream)}
-@media (max-width:1000px){.ci-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:820px){.about .wrap{grid-template-columns:1fr}}
-@media (max-width:520px){.ci-grid{grid-template-columns:1fr}}
+@media (max-width:760px){.ci-grid{grid-template-columns:1fr}}
 `;
 fs.writeFileSync(f, '<!doctype html>\n' + d.documentElement.outerHTML); console.log('ok');
