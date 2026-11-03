@@ -1,0 +1,209 @@
+<!doctype html><html dir="rtl" lang="ar"><head><meta charset="utf-8"><style>
+@font-face{font-family:Ar;src:url(../agent/brand/plex-600.ttf);font-weight:600}
+@font-face{font-family:Ar;src:url(../agent/brand/plex-400.ttf);font-weight:400}
+@font-face{font-family:La;src:url(../agent/brand/plex-latin-400.ttf)}
+@page{size:A4;margin:0}
+:root{--t:#0F686F;--t2:#13858d;--d:#0b5257;--ink:#243438;--mut:#5f7275;--bg:#f4f6f5;--line:#0F686F22}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Ar,La;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;background:var(--bg);page-break-after:always}
+.page:last-child{page-break-after:auto}
+.dots{position:absolute;inset:0;background-image:radial-gradient(#0F686F14 1.2px,transparent 1.2px);background-size:7mm 7mm;mask-image:linear-gradient(180deg,#0000 0,#0000 60%,#000)}
+.hdr{position:relative;height:34mm;background:linear-gradient(120deg,var(--t2),var(--t) 55%,var(--d));color:#fff;padding:0 16mm;display:flex;align-items:center;justify-content:space-between}
+.hdr .k{font-size:9pt;opacity:.8}.hdr h2{font-size:21pt;font-weight:600;line-height:1.2}
+.hdr .n{font-family:La;font-size:30pt;opacity:.25}
+.body{position:relative;padding:11mm 16mm 0}
+.foot{position:absolute;bottom:0;left:0;right:0;height:11mm;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 16mm;font-size:8pt;color:var(--mut);background:#fff}
+.foot b{color:var(--t)}
+p{font-size:11.8pt;line-height:1.9;color:var(--ink)}
+p+p{margin-top:2.5mm}
+h3{font-size:15.5pt;color:var(--t);font-weight:600;margin:9mm 0 3.5mm;display:flex;align-items:center;gap:3mm}
+h3 .no{width:8mm;height:8mm;border-radius:50%;background:var(--t);color:#fff;font-size:10pt;display:flex;align-items:center;justify-content:center;flex:none}
+.row{display:flex;gap:7mm;align-items:flex-start}
+.row .txt{flex:1}
+.fig{width:72mm;flex:none;border-radius:4mm;box-shadow:0 3mm 7mm -4mm #0F686F77;display:block}
+.stats{display:flex;gap:4mm;margin:5mm 0}
+.st{flex:1;background:#fff;border:1px solid var(--line);border-radius:4mm;padding:5mm 5mm;box-shadow:0 2mm 5mm -4mm #0F686F55}
+.st b{display:block;font-family:La,Ar;font-size:25pt;color:var(--t);line-height:1.1;font-weight:400}
+.st span{font-size:9.8pt;color:var(--mut);line-height:1.5;display:block;margin-top:1mm}
+.note{background:#0F686F0e;border-right:1.2mm solid var(--t);border-radius:2mm;padding:4mm 5mm;font-size:11.2pt;line-height:1.85;margin-top:5mm}
+.note b{color:var(--t)}
+ul.rec{list-style:none;margin-top:2mm}
+ul.rec li{background:#fff;border:1px solid var(--line);border-radius:3.5mm;padding:4.4mm 5mm;margin-bottom:3.4mm;display:flex;gap:4mm;align-items:center;font-size:11.8pt;line-height:1.6}
+ul.rec li i{font-style:normal;width:7.5mm;height:7.5mm;border-radius:2.2mm;background:linear-gradient(145deg,var(--t2),var(--t));color:#fff;display:flex;align-items:center;justify-content:center;font-size:9.5pt;flex:none}
+.bars{background:#fff;border:1px solid var(--line);border-radius:4mm;padding:5mm 6mm;margin-top:4mm}
+.bar{display:flex;align-items:center;gap:3mm;font-size:10.8pt;margin:3mm 0}
+.bar .l{width:42mm}.bar .tr{flex:1;height:4.2mm;background:#0F686F12;border-radius:9mm;overflow:hidden}
+.bar .tr div{height:100%;background:linear-gradient(90deg,var(--t2),var(--t));border-radius:9mm;margin-right:0}
+.bar .v{width:11mm;font-family:La;color:var(--t);text-align:left}
+/* cover */
+.cover{background:linear-gradient(160deg,#16898f,var(--t) 45%,var(--d));color:#fff}
+.cover .pat{position:absolute;inset:0;background-image:radial-gradient(#ffffff16 1.3px,transparent 1.3px);background-size:7mm 7mm}
+.cover .ring{position:absolute;border-radius:50%;border:1px solid #ffffff22}
+.cover .logo{position:absolute;top:16mm;right:16mm;width:44mm;background:#fff;border-radius:3mm;padding:2mm}
+.cover .tag{position:absolute;top:66mm;right:16mm;font-size:11pt;background:#ffffff22;border:1px solid #ffffff33;border-radius:9mm;padding:1.5mm 5mm}
+.cover h1{position:absolute;top:80mm;right:16mm;left:20mm;font-size:30pt;line-height:1.35;font-weight:600}
+.cover .sub{position:absolute;top:142mm;right:16mm;left:30mm;font-size:12pt;line-height:1.8;opacity:.9}
+.cover .cst{position:absolute;top:178mm;right:16mm;left:16mm;display:flex;gap:5mm}
+.cover .cst div{flex:1;background:#ffffff;color:var(--ink);border-radius:5mm;padding:5mm;text-align:center;box-shadow:0 4mm 9mm -5mm #0008}
+.cover .cst b{display:block;font-family:La;font-size:28pt;color:var(--t);font-weight:400;line-height:1.1}
+.cover .cst span{font-size:9.5pt;color:var(--mut)}
+.cover .meta{position:absolute;bottom:26mm;right:16mm;left:16mm;border-top:1px solid #ffffff33;padding-top:6mm;font-size:10pt;line-height:1.9}
+.cover .meta b{font-size:11.5pt}
+.cover .hash{position:absolute;bottom:12mm;left:16mm;font-size:10pt;opacity:.8}
+.link{direction:ltr;font-family:La;font-size:8.6pt;color:var(--t);word-break:break-all}
+.cta{background:linear-gradient(130deg,var(--t2),var(--t) 60%,var(--d));color:#fff;border-radius:5mm;padding:7mm 8mm;margin-top:6mm}
+.cta h4{font-size:15pt;font-weight:600;line-height:1.5}
+.cta p{color:#ffffffdd;font-size:10pt;margin-top:2mm}
+.cta .link{color:#fff;display:block;margin-top:3mm;background:#ffffff1c;border-radius:2mm;padding:2mm 3mm}
+</style></head><body>
+
+<!-- 1 cover -->
+<section class="page cover">
+ <div class="pat"></div>
+ <div class="ring" style="width:150mm;height:150mm;left:-60mm;top:-40mm"></div>
+ <div class="ring" style="width:110mm;height:110mm;left:-40mm;top:-20mm"></div>
+ <img class="logo" src="../agent/brand/old_logo.png">
+ <div class="tag">ملخص تنفيذي لدراسة علمية محكّمة</div>
+ <h1>تطوير أدوات تمويل مبتكرة لتعزيز الاستدامة المالية للمنظمات غير الربحية</h1>
+ <div class="sub">أبرز النتائج والتوصيات من دراسة ميدانية على المنظمات غير الربحية في المملكة العربية السعودية</div>
+ <div class="cst"><div><b>370</b><span>منظمة غير ربحية</span></div><div><b>13</b><span>منطقة في المملكة</span></div><div><b>5</b><span>محاور للتحليل</span></div></div>
+ <div class="meta"><b>أ. حامد حنيف الذيابي &nbsp;·&nbsp; أ. عمر حسن الخيري</b><br>منشورة في مجلة البحوث والدراسات الاجتماعية، ضمن أول إصدار خاص بالقطاع غير الربحي<br>الصادرة عن المركز الوطني للدراسات والبحوث الاجتماعية</div>
+ <div class="hash">#تمويل_يدوم</div>
+</section>
+
+<!-- 2 about + overall -->
+<section class="page"><div class="dots"></div>
+ <div class="hdr"><div><div class="k">مدخل</div><h2>لماذا هذه الدراسة؟</h2></div><div class="n">01</div></div>
+ <div class="body">
+  <p>تعتمد معظم الجمعيات في المملكة على التبرعات والمنح، وهي مصادر مهمة لكنها موسمية ومتقلبة. ومن هنا انطلقت الدراسة لتسأل 370 منظمة غير ربحية في 13 منطقة عن واقع تمويلها، وعن استعدادها للانتقال إلى أدوات تمويل أحدث تمنحها استقرارًا أطول.</p>
+  <p>وحللت الدراسة هذا الواقع عبر خمسة محاور: الاستدامة المالية، وأدوات التمويل التقليدية، وأدوات التمويل المبتكرة، والتحديات، وسبل تعزيز الاستدامة.</p>
+  <h3>الخلاصة في رقم واحد</h3>
+  <div class="row">
+   <div class="txt">
+    <p>بلغت النتيجة العامة لمحاور الدراسة الخمسة <b style="color:var(--t)">77.2%</b>، وهو متوسط موافقة المنظمات على عبارات كل محور.</p>
+    <div class="bars">
+     <div class="bar"><span class="l">سبل تعزيز الاستدامة</span><span class="tr"><div style="width:92%"></div></span><span class="v">92%</span></div>
+     <div class="bar"><span class="l">التحديات</span><span class="tr"><div style="width:82%"></div></span><span class="v">82%</span></div>
+     <div class="bar"><span class="l">أدوات التمويل المبتكرة</span><span class="tr"><div style="width:74%"></div></span><span class="v">74%</span></div>
+     <div class="bar"><span class="l">الاستدامة المالية</span><span class="tr"><div style="width:70%"></div></span><span class="v">70%</span></div>
+     <div class="bar"><span class="l">أدوات التمويل التقليدية</span><span class="tr"><div style="width:68%"></div></span><span class="v">68%</span></div>
+    </div>
+    <div class="note"><b>القراءة:</b> المنظمات تعرف الطريق جيدًا؛ فأعلى المحاور «سبل تعزيز الاستدامة» بالحوكمة والتنويع والشراكات، وأدناها «الأدوات التقليدية» التي لم تعد تكفي وحدها. والمطلوب تمكين مؤسسي يحوّل هذا الوعي إلى ممارسة.</div>
+   </div>
+   <img class="fig" src="../img/study-06-axes.png">
+  </div>
+ </div>
+ <div class="foot"><span>تطوير أدوات تمويل مبتكرة لتعزيز الاستدامة المالية للمنظمات غير الربحية</span><b>#تمويل_يدوم</b></div>
+</section>
+
+<!-- 3 reserve + unrestricted -->
+<section class="page"><div class="dots"></div>
+ <div class="hdr"><div><div class="k">النتائج</div><h2>هشاشة الاحتياطي ومحدودية المرونة</h2></div><div class="n">02</div></div>
+ <div class="body">
+  <h3><span class="no">١</span>الاحتياطي نقطة الضعف الأولى</h3>
+  <div class="row">
+   <div class="txt">
+    <p>39% من الجمعيات لا تملك أي احتياطي مالي لمواجهة الأزمات، وأغلب من يملكه لا يتجاوز احتياطيه 10% من ميزانيته التشغيلية.</p>
+    <p>وحين سُئلت المنظمات: لو توقفت التبرعات اليوم، كم شهرًا تغطي نفقاتك التشغيلية؟ جاءت الإجابات:</p>
+    <div class="bars">
+     <div class="bar"><span class="l">أقل من 3 أشهر</span><span class="tr"><div style="width:19%"></div></span><span class="v">19%</span></div>
+     <div class="bar"><span class="l">من 4 إلى 6 أشهر</span><span class="tr"><div style="width:29%"></div></span><span class="v">29%</span></div>
+     <div class="bar"><span class="l">من 7 إلى 12 شهرًا</span><span class="tr"><div style="width:22%"></div></span><span class="v">22%</span></div>
+     <div class="bar"><span class="l">أكثر من سنة</span><span class="tr"><div style="width:16%"></div></span><span class="v">16%</span></div>
+     <div class="bar"><span class="l">لا تغطي نفقاتها أصلًا</span><span class="tr"><div style="width:14%;background:#9aa8aa"></div></span><span class="v">14%</span></div>
+    </div>
+    <div class="note">أي أن نحو ثلث المنظمات لا تصمد أكثر من ثلاثة أشهر.</div>
+   </div>
+   <img class="fig" src="../img/study-02-reserve.png">
+  </div>
+  <h3><span class="no">٢</span>التبرعات غير المقيدة محدودة</h3>
+  <div class="row">
+   <div class="txt">
+    <p>لدى 47% من الجمعيات لا تتجاوز التبرعات غير المقيدة 5% من إجمالي تبرعاتها؛ أي أن الرواتب والتشغيل والتطوير تُموَّل من هامش ضيق جدًا.</p>
+    <div class="note"><b>التبرع المقيد</b> يبني مشروعًا، و<b>غير المقيد</b> يُبقي المنظمة قائمة. وتوصي الدراسة ببناء ثقافة التبرع غير المقيد عبر الشفافية وإثبات كفاءة الإدارة.</div>
+   </div>
+   <img class="fig" src="../img/study-04-unrestricted.png">
+  </div>
+ </div>
+ <div class="foot"><span>تطوير أدوات تمويل مبتكرة لتعزيز الاستدامة المالية للمنظمات غير الربحية</span><b>#تمويل_يدوم</b></div>
+</section>
+
+<!-- 4 traditional + challenges -->
+<section class="page"><div class="dots"></div>
+ <div class="hdr"><div><div class="k">النتائج</div><h2>لماذا لا تكفي الأدوات التقليدية؟</h2></div><div class="n">03</div></div>
+ <div class="body">
+  <h3><span class="no">٣</span>الأدوات التقليدية وحدها لا تكفي</h3>
+  <div class="stats">
+   <div class="st"><b>56%</b><span>فقط توافق على أن «الأدوات التقليدية كافية لتحقيق الاستقرار المالي»، وهي أقل نسبة موافقة في الدراسة</span></div>
+   <div class="st"><b>82%</b><span>ترى أن محدودية التمويل التقليدي تعيق التخطيط طويل المدى</span></div>
+   <div class="st"><b>92%</b><span>تؤكد أهمية الجمع بين الأدوات التقليدية والمبتكرة</span></div>
+  </div>
+  <h3><span class="no">٤</span>أكبر أربعة تحديات</h3>
+  <div class="row">
+   <div class="txt">
+    <ul class="rec">
+     <li><i>86%</i>محدودية تنوع مصادر التمويل</li>
+     <li><i>86%</i>المنافسة العالية بين الجمعيات على الموارد نفسها</li>
+     <li><i>84%</i>ضعف الكفاءات المالية والإدارية</li>
+     <li><i>84%</i>قلة وعي المجتمع بأدوات التمويل المبتكرة</li>
+    </ul>
+    <div class="note">اللافت أن صعوبة المواءمة مع المتطلبات التنظيمية جاءت أقل حدة (74%)؛ أي أن <b>العائق الأكبر داخل المنظمات لا خارجها.</b></div>
+   </div>
+   <img class="fig" src="../img/study-05-1.png">
+  </div>
+ </div>
+ <div class="foot"><span>تطوير أدوات تمويل مبتكرة لتعزيز الاستدامة المالية للمنظمات غير الربحية</span><b>#تمويل_يدوم</b></div>
+</section>
+
+<!-- 5 innovative tools -->
+<section class="page"><div class="dots"></div>
+ <div class="hdr"><div><div class="k">النتائج</div><h2>التوجه نحو الابتكار</h2></div><div class="n">04</div></div>
+ <div class="body">
+  <h3><span class="no">٥</span>خمس أدوات تمويل مبتكرة</h3>
+  <div class="row">
+   <div class="txt">
+    <p>ترصد الدراسة خمس أدوات تتجه إليها المنظمات وتوصي بها:</p>
+    <ul class="rec">
+     <li><i>١</i>التمويل الجماعي عبر المنصات الرقمية</li>
+     <li><i>٢</i>الصكوك الوقفية</li>
+     <li><i>٣</i>التمويل القائم على النتائج</li>
+     <li><i>٤</i>الشراكات الاستثمارية مع القطاع الخاص</li>
+     <li><i>٥</i>المتاجر الإلكترونية</li>
+    </ul>
+   </div>
+   <img class="fig" src="../img/study-07-tools.png">
+  </div>
+  <div class="stats">
+   <div class="st"><b>82%</b><span>ترى أن الأدوات المبتكرة تعزز الاستقلال المالي وتقلل الاعتماد على التبرعات الموسمية</span></div>
+   <div class="st"><b>86%</b><span>تربط هذه الأدوات بمستهدفات رؤية 2030</span></div>
+   <div class="st"><b>60%</b><span>الصكوك الوقفية: الأقل تطبيقًا بين الأدوات المبتكرة</span></div>
+  </div>
+  <div class="note">الأوقاف جزء أصيل من ثقافة العطاء في مجتمعنا، ومع ذلك جاءت الصكوك الوقفية الأقل تطبيقًا. فالتوجه نحو الابتكار واضح، لكن التطبيق ما زال محدودًا.</div>
+ </div>
+ <div class="foot"><span>تطوير أدوات تمويل مبتكرة لتعزيز الاستدامة المالية للمنظمات غير الربحية</span><b>#تمويل_يدوم</b></div>
+</section>
+
+<!-- 6 recommendations -->
+<section class="page"><div class="dots"></div>
+ <div class="hdr"><div><div class="k">التوصيات</div><h2>ما الذي توصي به الدراسة؟</h2></div><div class="n">05</div></div>
+ <div class="body">
+  <ul class="rec">
+   <li><i>١</i>إنشاء وحدة للتمويل المبتكر داخل كل منظمة، تتولى تصميم الأدوات المبتكرة وتجربتها.</li>
+   <li><i>٢</i>إقرار احتياطي مالي إلزامي بنسبة ثابتة في كل ميزانية سنوية، حتى لا تتوقف الخدمات عند أول أزمة.</li>
+   <li><i>٣</i>سياسات تمويل متنوعة تجمع بين الأدوات التقليدية والمبتكرة، ونماذج تمويل مرتبطة بالنتائج والأثر.</li>
+   <li><i>٤</i>برامج تدريبية متخصصة في التخطيط المالي وإدارة المخاطر لبناء قدرات الكوادر المالية والإدارية.</li>
+   <li><i>٥</i>شراكات مجتمعية ومع القطاع الخاص عبر اتفاقيات استثمار اجتماعي.</li>
+   <li><i>٦</i>توسيع العمل الوقفي عبر محافظ استثمارية وقفية، وتسهيلات تجعل المساهمات الوقفية أجذب للأفراد والقطاع الخاص.</li>
+   <li><i>٧</i>بناء ثقافة التبرع غير المقيد، وحملات توعية وطنية بالاستدامة المالية والتمويل المبتكر.</li>
+  </ul>
+  <div class="cta">
+   <h4>الاستدامة المالية ليست ترفًا، بل شرط لبقاء المنظمات وتعظيم أثرها.</h4>
+   <p>اقرأ الدراسة كاملة في مجلة البحوث والدراسات الاجتماعية:</p>
+   <span class="link">https://rssj.ncss.gov.sa/index.php/rssj/article/view/257/116</span>
+  </div>
+  <p style="margin-top:5mm;font-size:10pt;color:var(--mut)">إعداد: أ. حامد حنيف الذيابي &nbsp;·&nbsp; أ. عمر حسن الخيري</p>
+ </div>
+ <div class="foot"><span>تطوير أدوات تمويل مبتكرة لتعزيز الاستدامة المالية للمنظمات غير الربحية</span><b>#تمويل_يدوم</b></div>
+</section>
+</body></html>
