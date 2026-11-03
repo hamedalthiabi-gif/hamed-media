@@ -292,6 +292,18 @@ pre.tpl{white-space:pre-wrap;direction:ltr;text-align:left;font-family:var(--lat
 .toast.on{opacity:1}
 @media (max-width:600px){h1{font-size:23px}.hero{padding:20px 18px}.meta{grid-template-columns:1fr 1fr 1fr}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+/* خلفية بوصلة المتحركة */
+.bosla-bg{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.bosla-bg .blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;will-change:transform}
+.bosla-bg .b1{width:46vmax;height:46vmax;background:var(--copper-soft);top:-12vmax;inset-inline-start:-10vmax;animation:bDrift1 26s ease-in-out infinite alternate}
+.bosla-bg .b2{width:40vmax;height:40vmax;background:var(--sage-soft);bottom:-14vmax;inset-inline-end:-8vmax;animation:bDrift2 32s ease-in-out infinite alternate}
+.bosla-bg .b3{width:30vmax;height:30vmax;background:#E8EEF4;top:30%;left:35%;animation:bDrift3 38s ease-in-out infinite alternate}
+.bosla-bg canvas{position:absolute;inset:0;width:100%;height:100%}
+@keyframes bDrift1{to{transform:translate(8vmax,6vmax) scale(1.1)}}
+@keyframes bDrift2{to{transform:translate(-7vmax,-8vmax) scale(1.15)}}
+@keyframes bDrift3{to{transform:translate(-6vmax,5vmax) scale(.9)}}
+@media (prefers-reduced-motion:reduce){.bosla-bg .blob{animation:none}}
+main,footer{position:relative;z-index:1}
 </style>
 <style>
 .hicons{display:flex;align-items:center;gap:8px}
@@ -460,6 +472,10 @@ pre.tpl{white-space:pre-wrap;direction:ltr;text-align:left;font-family:var(--lat
 </style>
 
 <div id="app" dir="rtl" lang="ar">
+<div class="bosla-bg" aria-hidden="true">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <canvas id="boslaBg"></canvas>
+</div>
 <header><div class="wrap">
   <div class="top">
     <div class="brand">
@@ -1262,4 +1278,119 @@ render();
 })();
 </script>
 
+<script>
+(function(){
+  var cv=document.getElementById('boslaBg'); if(!cv) return;
+  var ctx=cv.getContext('2d');
+  var NAVY='15,53,87', COPPER='186,103,64', SAGE='94,139,110';
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var W,H,DPR,nodes=[],pulses=[],mouse={x:-9999,y:-9999,tx:-9999,ty:-9999};
+  var rot=0,needle=0,needleT=0,LINK;
+
+  function resize(){
+    DPR=Math.min(window.devicePixelRatio||1,2);
+    W=innerWidth; H=innerHeight;
+    cv.width=W*DPR; cv.height=H*DPR; ctx.setTransform(DPR,0,0,DPR,0,0);
+    LINK=Math.max(110,Math.min(170,W/8));
+    var n=Math.round(Math.min(70,Math.max(26,W*H/22000)));
+    nodes=[];
+    for(var i=0;i<n;i++){
+      var r=Math.random();
+      nodes.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,
+        s:1.2+Math.random()*1.8,c:r<.18?COPPER:(r<.36?SAGE:NAVY)});
+    }
+  }
+
+  // البوصلة: حلقات، تدريجات، ونجمة الاتجاهات
+  function compass(cx,cy,R){
+    ctx.save(); ctx.translate(cx,cy);
+    ctx.strokeStyle='rgba('+NAVY+',.10)'; ctx.lineWidth=1;
+    [1,.82,.5].forEach(function(k){ctx.beginPath();ctx.arc(0,0,R*k,0,7);ctx.stroke();});
+    ctx.save(); ctx.rotate(rot);
+    for(var i=0;i<72;i++){
+      var a=i*Math.PI/36, big=i%9===0, L=big?R*.09:R*.04;
+      ctx.strokeStyle='rgba('+NAVY+','+(big?.18:.09)+')';
+      ctx.beginPath();ctx.moveTo(Math.cos(a)*R,Math.sin(a)*R);ctx.lineTo(Math.cos(a)*(R-L),Math.sin(a)*(R-L));ctx.stroke();
+    }
+    // نجمة ثمانية الأطراف
+    for(var j=0;j<8;j++){
+      var A=j*Math.PI/4, len=j%2?R*.42:R*.74, w=j%2?R*.05:R*.08;
+      ctx.save(); ctx.rotate(A);
+      ctx.fillStyle='rgba('+(j%2?SAGE:NAVY)+','+(j%2?.07:.06)+')';
+      ctx.beginPath();ctx.moveTo(0,-len);ctx.lineTo(w,0);ctx.lineTo(-w,0);ctx.closePath();ctx.fill();
+      ctx.restore();
+    }
+    ctx.restore();
+    // الإبرة تتجه نحو المؤشر
+    ctx.rotate(needle);
+    ctx.fillStyle='rgba('+COPPER+',.32)';
+    ctx.beginPath();ctx.moveTo(0,-R*.62);ctx.lineTo(R*.035,0);ctx.lineTo(-R*.035,0);ctx.closePath();ctx.fill();
+    ctx.fillStyle='rgba('+NAVY+',.14)';
+    ctx.beginPath();ctx.moveTo(0,R*.62);ctx.lineTo(R*.035,0);ctx.lineTo(-R*.035,0);ctx.closePath();ctx.fill();
+    ctx.fillStyle='rgba('+COPPER+',.5)';ctx.beginPath();ctx.arc(0,0,R*.02+2,0,7);ctx.fill();
+    ctx.restore();
+  }
+
+  function frame(t){
+    ctx.clearRect(0,0,W,H);
+    mouse.x+=(mouse.tx-mouse.x)*.08; mouse.y+=(mouse.ty-mouse.y)*.08;
+
+    // البوصلة الكبيرة: بعيدًا عن جهة النص على الشاشات العريضة، ومنتصفها على الجوال
+    var R=Math.min(W,H)*(W>760?.36:.42);
+    var cx=W>760?(document.dir==="rtl"?W*.24:W*.76):W*.5, cy=W>760?H*.42:H*.55;
+    var px=(mouse.tx>-999?(mouse.x-W/2)*.012:0), py=(mouse.ty>-999?(mouse.y-H/2)*.012:0);
+    if(!reduce) rot+=.0006;
+    if(mouse.tx>-999) needleT=Math.atan2(mouse.y-cy,mouse.x-cx)+Math.PI/2;
+    else needleT=Math.sin(t/4000)*.5;
+    var d=needleT-needle; d=Math.atan2(Math.sin(d),Math.cos(d)); needle+=d*.04;
+    compass(cx-px,cy-py,R);
+
+    // العُقد: تتحرك ببطء وتتصل بخطوط كأنها مسارات
+    for(var i=0;i<nodes.length;i++){
+      var a=nodes[i];
+      if(!reduce){a.x+=a.vx;a.y+=a.vy;}
+      if(a.x<-20)a.x=W+20; if(a.x>W+20)a.x=-20; if(a.y<-20)a.y=H+20; if(a.y>H+20)a.y=-20;
+    }
+    for(i=0;i<nodes.length;i++){
+      a=nodes[i];
+      for(var j=i+1;j<nodes.length;j++){
+        var b=nodes[j], dx=a.x-b.x, dy=a.y-b.y, dist=Math.sqrt(dx*dx+dy*dy);
+        if(dist<LINK){
+          ctx.strokeStyle='rgba('+NAVY+','+(.13*(1-dist/LINK))+')'; ctx.lineWidth=1;
+          ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();
+          if(!reduce&&pulses.length<5&&Math.random()<.0004) pulses.push({a:a,b:b,p:0});
+        }
+      }
+      var mdx=a.x-mouse.x, mdy=a.y-mouse.y, md=Math.sqrt(mdx*mdx+mdy*mdy);
+      if(md<LINK*1.4){
+        ctx.strokeStyle='rgba('+COPPER+','+(.35*(1-md/(LINK*1.4)))+')';
+        ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(mouse.x,mouse.y);ctx.stroke();
+      }
+      ctx.fillStyle='rgba('+a.c+','+(a.c===NAVY?.35:.6)+')';
+      ctx.beginPath();ctx.arc(a.x,a.y,a.s,0,7);ctx.fill();
+    }
+
+    // نبضات نحاسية تنتقل على المسارات
+    for(i=pulses.length-1;i>=0;i--){
+      var P=pulses[i]; P.p+=.012;
+      if(P.p>=1){pulses.splice(i,1);continue;}
+      var x=P.a.x+(P.b.x-P.a.x)*P.p, y=P.a.y+(P.b.y-P.a.y)*P.p;
+      var g=ctx.createRadialGradient(x,y,0,x,y,10);
+      g.addColorStop(0,'rgba('+COPPER+',.75)'); g.addColorStop(1,'rgba('+COPPER+',0)');
+      ctx.fillStyle=g; ctx.beginPath(); ctx.arc(x,y,10,0,7); ctx.fill();
+    }
+    if(!reduce) raf=requestAnimationFrame(frame);
+  }
+
+  var raf;
+  addEventListener('resize',function(){resize(); if(reduce) frame(0);});
+  addEventListener('pointermove',function(e){mouse.tx=e.clientX;mouse.ty=e.clientY;if(mouse.x<-999){mouse.x=e.clientX;mouse.y=e.clientY;}},{passive:true});
+  document.addEventListener('pointerleave',function(){mouse.tx=mouse.ty=mouse.x=mouse.y=-9999;});
+  document.addEventListener('visibilitychange',function(){
+    if(reduce) return;
+    if(document.hidden) cancelAnimationFrame(raf); else raf=requestAnimationFrame(frame);
+  });
+  resize(); raf=requestAnimationFrame(frame);
+})();
+</script>
 </body></html>
