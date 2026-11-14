@@ -157,3 +157,6 @@ queue.json → GitHub Actions (.github/workflows/buffer.yml: عند كل رفع 
 → المنصات في موعد كل منشور. المجدول يُسجَّل في agent/buffer_scheduled.json حتى لا يتكرر.
 قنوات Buffer (المنظمة 6a4bdb54a23c84347c8879d3): لينكدإن 6a4bdb7040483446287754cf، إكس 6a4bdb9c4048344628775568، تيك توك 6a4bdc5f404834462877580e.
 الوسائط تُرسل برابط raw.githubusercontent.com/hamedalthiabi-gif/hamed-media/main/<media>. خلاصات RSS لم تعد مستخدمة.
+
+## دروس المشرف
+قواعد يضيفها «الوكيل المشرف» (agent/SUPERVISOR.md) بعد رصد خطأ، حتى لا يتكرر. طبّقها مثل بقية القواعد.
