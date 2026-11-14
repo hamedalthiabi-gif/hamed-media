@@ -39,6 +39,30 @@ def channels():
     return data['channels'], {p: found.get(svc, FALLBACK[p]) for p, svc in SERVICE.items()}
 
 
+def norm(t):  # أول ٦٠ حرفًا بلا مسافات زائدة، للمقارنة
+    return ' '.join((t or '').split())[:60]
+
+
+def existing(channel_ids, now):
+    """نصوص المنشورات الموجودة فعلًا في Buffer (المجدولة والمرسلة والجاري إرسالها) لكل قناة.
+    Buffer نفسه هو المرجع لمنع التكرار، لا ملف السجل وحده. أي فشل هنا يوقف الجدولة كلها."""
+    since = (now - datetime.timedelta(days=3)).strftime('%Y-%m-%dT%H:%M:%SZ')
+    seen = {}
+    for cid in set(channel_ids):
+        texts, after = set(), None
+        for _ in range(10):
+            q = ('query { posts(first: 100%s, input: { organizationId: %s, filter: { status: [scheduled, sent], '
+                 'channelIds: [%s], dueAt: { start: %s } } }) { edges { node { text } } pageInfo { hasNextPage endCursor } } }'
+                 % (', after: %s' % s(after) if after else '', s(ORG), s(cid), s(since)))
+            res = gql(q)['posts']
+            texts |= {norm(e['node']['text']) for e in res['edges']}
+            if not res['pageInfo']['hasNextPage']:
+                break
+            after = res['pageInfo']['endCursor']
+        seen[cid] = texts
+    return seen
+
+
 def asset(media):  # ملف واحد أو قائمة صور (كاروسيل بترتيبها)
     items = media if isinstance(media, list) else [media]
     out = []
@@ -70,8 +94,19 @@ def main():
         print('لا منشورات جديدة للجدولة.')
         return
     _, ch = channels()
+    try:
+        seen = existing([ch[p['platform']] for p in todo], now)
+    except Exception as e:  # لا نجدول شيئًا إن تعذّر التأكد من عدم التكرار
+        sys.exit(f'تعذّر فحص منشورات Buffer الحالية، فلم يُجدول شيء منعًا للتكرار: {e}')
     failed = 0
     for p in sorted(todo, key=lambda p: (p['date'], p.get('time', '09:00'))):
+        key = norm(p['text'])
+        if key in seen[ch[p['platform']]]:
+            done[p['id']] = 'موجود مسبقًا في Buffer'
+            print(f"= {p['platform']} {p['id']}: موجود مسبقًا في Buffer، لم يُكرر")
+            json.dump(done, open(DONE, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+            continue
+        seen[ch[p['platform']]].add(key)
         local = datetime.datetime.fromisoformat(f"{p['date']}T{p.get('time', '09:00')}:00")
         due = local - datetime.timedelta(hours=3)
         due = due.replace(tzinfo=datetime.timezone.utc)
