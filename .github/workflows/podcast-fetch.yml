@@ -1,0 +1,66 @@
+name: جلب حلقات البودكاست
+
+on:
+  push:
+    branches: [main]
+    paths: [podcast/urls.txt]
+  workflow_dispatch:
+  schedule:
+    - cron: '40 23 * * 2'   # فجر الأربعاء بتوقيت الرياض، قبل وكيل المقاطع
+
+permissions:
+  contents: write
+
+concurrency:
+  group: podcast-fetch
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - name: الأدوات
+        run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg >/dev/null
+          pip install -q -U yt-dlp
+      - name: تنزيل الحلقات الجديدة ورفعها إصدارًا
+        env:
+          GH_TOKEN: ${{ github.token }}
+          YT_COOKIES: ${{ secrets.YT_COOKIES }}
+        run: |
+          [ -n "$YT_COOKIES" ] && printf '%s' "$YT_COOKIES" > /tmp/cookies.txt && CK="--cookies /tmp/cookies.txt" || CK=""
+          touch podcast/fetched.txt podcast/failed.txt
+          : > /tmp/vids.txt
+          while read -r url <&3; do
+            url="${url%%#*}"; url="$(echo "$url" | xargs)"; [ -z "$url" ] && continue
+            # قوائم التشغيل والقنوات: أحدث ١٠ حلقات
+            yt-dlp $CK --flat-playlist --playlist-end 10 --print "%(id)s" "$url" </dev/null >> /tmp/vids.txt 2>/dev/null \
+              || echo "$url تعذّر قراءة الرابط $(date -u +%F)" >> podcast/failed.txt
+          done 3< podcast/urls.txt
+          n=0
+          while read -r id <&3; do
+            [ -z "$id" ] && continue
+            grep -q "^$id " podcast/fetched.txt && continue
+            [ $n -ge 4 ] && break   # أربع حلقات على الأكثر في كل تشغيل
+            u="https://www.youtube.com/watch?v=$id"
+            if yt-dlp $CK -f "bv*[height<=720][ext=mp4]+ba[ext=m4a]/b[height<=720]/b" --merge-output-format mp4 \
+                 --write-info-json -o "/tmp/ep/$id.%(ext)s" "$u" </dev/null; then
+              title=$(python3 -c "import json;print(json.load(open('/tmp/ep/$id.info.json'))['title'])")
+              dur=$(python3 -c "import json;print(json.load(open('/tmp/ep/$id.info.json')).get('duration',0))")
+              gh release create "pod-$id" "/tmp/ep/$id.mp4" "/tmp/ep/$id.info.json" \
+                --title "$title" --notes "$u" --latest=false </dev/null || gh release upload "pod-$id" "/tmp/ep/$id.mp4" --clobber </dev/null
+              echo "$id $dur $u $title" >> podcast/fetched.txt
+              rm -f /tmp/ep/$id.*; n=$((n+1))
+            else
+              grep -q "$id" podcast/failed.txt || echo "$u تعذّر التنزيل $(date -u +%F)" >> podcast/failed.txt
+            fi
+          done 3< <(awk '!s[$0]++' /tmp/vids.txt)
+      - name: حفظ السجل
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
+          git add podcast/fetched.txt podcast/failed.txt
+          git diff --cached --quiet || (git commit -m "جلب حلقات البودكاست $(TZ=Asia/Riyadh date +'%Y-%m-%d %H:%M')" && git pull --rebase origin main && git push)
