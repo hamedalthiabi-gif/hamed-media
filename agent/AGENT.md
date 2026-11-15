@@ -160,3 +160,4 @@ queue.json → GitHub Actions (.github/workflows/buffer.yml: عند كل رفع 
 
 ## دروس المشرف
 قواعد يضيفها «الوكيل المشرف» (agent/SUPERVISOR.md) بعد رصد خطأ، حتى لا يتكرر. طبّقها مثل بقية القواعد.
+- 2026-11-15: جلسة التحليل الأسبوعي لا تنتهي دون ملف agent/engagement/weekly/<الأحد>.md؛ إن تعذّر جلب البيانات (حد مهام Zapier أو غياب السر BUFFER_API_KEY) فاكتب فيه السبب سطرًا واذكره في الملخص. (السبب: تشغيل ١٥ نوفمبر انتهى في ٢٥ ثانية بلا تقرير، وZapier بلغ حد مهامه، وengagement-fetch.yml فشل لغياب BUFFER_API_KEY)

@@ -8,7 +8,9 @@
     "trig_01GsUaEt82r1X614PPc8L6dA": "دفتر المهام (شخصي)",
     "trig_01CTwLHfhHbmpW3JzFp623oT": "تذكير مشروع التمويل المؤسسي",
     "trig_01Qx6FW8hE181FXgABVJkyTA": "تذكير مشروع التمويل المؤسسي",
-    "trig_014GBrzwuPHFBbLzaFTWMSGW": "الوكيل المشرف نفسه"
+    "trig_014GBrzwuPHFBbLzaFTWMSGW": "الوكيل المشرف نفسه",
+    "workflow:fetch.yml": "أداة مساعدة يدوية لجلب صفحات، ليست وكيلًا",
+    "workflow:ref-shot.yml": "أداة مساعدة يدوية للقطات مرجعية، ليست وكيلًا"
   },
   "agents": [
     {
@@ -131,6 +133,17 @@
       "instructions": "نص المهمة",
       "role": "يجمع فرص التعلم من المصادر الرسمية ويضيفها اقتراحات في bosla/site/suggestions.json",
       "check": "نجاح التشغيل، صحة JSON، لا تكرار في الاقتراحات"
+    },
+    {
+      "key": "engagement-fetch",
+      "name": "جلب تفاعل Buffer (GitHub Action)",
+      "kind": "action",
+      "workflow": "engagement-fetch.yml",
+      "every": "weekly-sun",
+      "max_gap_hours": 170,
+      "instructions": "agent/buffer_sent.py",
+      "role": "يجلب المنشورات المرسلة وتفاعلها من Buffer API كل أحد قبل التحليل الأسبوعي",
+      "check": "نجاح التشغيل، ملفات agent/engagement/*-raw.json"
     }
   ],
   "retired": {

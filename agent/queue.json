@@ -70,7 +70,8 @@
     "time": "11:00",
     "media": "video/launch-sq.mp4",
     "text": "انطلقنا، الموقع الرسمي متاح الآن:\nhamedalthiabi.com\n#استدامة_العطاء",
-    "identity": "new"
+    "identity": "new",
+    "source": "site-launch"
   },
   {
     "id": "linkedin-2026-11-11-launch",
@@ -79,7 +80,8 @@
     "time": "11:00",
     "media": "video/launch-sq.mp4",
     "text": "انطلقنا، الموقع الرسمي متاح الآن:\nhamedalthiabi.com\n#استدامة_العطاء",
-    "identity": "new"
+    "identity": "new",
+    "source": "site-launch"
   },
   {
     "id": "tiktok-2026-11-11-launch",
@@ -88,7 +90,8 @@
     "time": "11:00",
     "media": "video/launch-916.mp4",
     "text": "انطلقنا، الموقع الرسمي متاح الآن:\nhamedalthiabi.com\n#استدامة_العطاء",
-    "identity": "new"
+    "identity": "new",
+    "source": "site-launch"
   },
   {
     "id": "linkedin-2026-11-18-wed12",
