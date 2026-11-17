@@ -1,0 +1,68 @@
+<!doctype html><html dir="rtl" lang="ar"><head><meta charset="utf-8"><style>
+@font-face{font-family:Ar;src:url(../brand/plex-600.ttf);font-weight:600}
+@font-face{font-family:Ar;src:url(../brand/plex-400.ttf);font-weight:400}
+@font-face{font-family:La;src:url(../brand/plex-latin-400.ttf)}
+:root{--n:#002544;--n2:#0b3a63;--c:#BB6841;--c2:#d0835d;--ink:#1c2a38;--mut:#5d6b78;--bg:#f6f3ef}
+*{margin:0;box-sizing:border-box}html,body{width:1080px;height:1350px;overflow:hidden}
+body{font-family:Ar,La;background:var(--bg);position:relative;color:var(--ink)}
+.b1{position:absolute;width:780px;height:780px;left:-320px;top:-330px;border-radius:50%;background:radial-gradient(circle,#BB68412b,#BB684100 70%)}
+.b2{position:absolute;width:820px;height:820px;right:-380px;bottom:-340px;border-radius:50%;background:radial-gradient(circle,#0025441f,#00254400 70%)}
+.dots{position:absolute;inset:0;background-image:radial-gradient(#00254412 1.6px,transparent 1.6px);background-size:28px 28px;mask-image:linear-gradient(180deg,#000 0,#0000 26%,#0000 80%,#000)}
+.top{position:absolute;top:0;left:0;right:0;height:12px;background:linear-gradient(90deg,var(--n),var(--n2))}
+.bot{position:absolute;bottom:0;left:0;right:0;height:26px;background:linear-gradient(90deg,var(--n),var(--n2))}
+.bot i{position:absolute;left:0;top:0;bottom:0;width:30%;background:var(--c)}
+.logo{position:absolute;top:56px;left:50%;transform:translateX(-50%);width:220px}
+.t1{position:absolute;top:180px;width:100%;text-align:center;font-weight:600;font-size:66px;line-height:1.2;color:var(--n)}
+.t1 em{font-style:normal;color:var(--c)}
+/* المبنى */
+.bld{position:absolute;top:350px;left:90px;width:900px;height:780px}
+.roof{position:absolute;top:0;left:0;width:900px;height:190px}
+.roof svg{width:900px;height:190px}
+.roof b{position:absolute;z-index:3;left:0;top:100px;width:100%;text-align:center;color:#fff;font-size:40px;font-weight:600}
+.beam{position:absolute;top:186px;left:40px;right:40px;height:26px;border-radius:6px;background:linear-gradient(180deg,var(--c2),var(--c))}
+.cols{position:absolute;top:222px;left:40px;right:40px;display:flex;justify-content:space-between}
+.col{width:250px;display:flex;flex-direction:column;align-items:center}
+.cap{width:250px;height:30px;border-radius:8px 8px 4px 4px;background:var(--n)}
+.shaft{width:214px;height:420px;background:linear-gradient(90deg,#fff 0,#fff 14%,#eef0f3 14%,#eef0f3 16%,#fff 16%,#fff 34%,#eef0f3 34%,#eef0f3 36%,#fff 36%,#fff 64%,#eef0f3 64%,#eef0f3 66%,#fff 66%,#fff 84%,#eef0f3 84%,#eef0f3 86%,#fff 86%);
+ box-shadow:0 22px 40px -26px #002544aa;border-left:1.5px solid #0025441a;border-right:1.5px solid #0025441a;display:flex;flex-direction:column;align-items:center;padding-top:44px;position:relative}
+.ic{width:96px;height:96px;border-radius:28px;background:var(--n);display:flex;align-items:center;justify-content:center;box-shadow:0 14px 26px -14px #002544}
+.col:nth-child(2) .ic{background:linear-gradient(150deg,#d0835d,#BB6841 55%,#9c522f)}
+.ic svg{width:50px;height:50px}
+.n{margin-top:26px;width:48px;height:48px;border-radius:50%;border:2.5px solid var(--c);color:var(--c);font-size:26px;font-weight:600;display:flex;align-items:center;justify-content:center}
+.lbl{margin-top:22px;text-align:center;font-size:34px;white-space:nowrap;font-weight:600;color:var(--n);line-height:1.35;padding:0 6px}
+.base{width:250px;height:30px;border-radius:4px 4px 8px 8px;background:var(--n)}
+.steps{position:absolute;top:708px;left:0;right:0;height:22px;border-radius:6px;background:var(--n2)}
+.steps2{position:absolute;top:736px;left:-30px;right:-30px;height:22px;border-radius:6px;background:var(--n)}
+.slog{position:absolute;top:1178px;width:100%;text-align:center;font-size:30px;font-weight:600;color:var(--n)}
+.pill{position:absolute;bottom:50px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:16px;background:#fff;border-radius:999px;padding:10px 32px 10px 12px;box-shadow:0 14px 30px -18px #00254477;border:1.5px solid #0025441c;white-space:nowrap}
+.pill .dot{width:46px;height:46px;border-radius:50%;background:var(--c);display:flex;align-items:center;justify-content:center}
+.pill .dot svg{width:26px;height:26px}
+.pill span{font-family:La,Ar;font-size:28px;color:var(--n);direction:ltr}
+</style></head><body>
+<div class="b1"></div><div class="b2"></div><div class="dots"></div><div class="top"></div>
+<img class="logo" src="../../hamed-site/logo_navy.png">
+<div class="t1">ثلاثة <em>أسس</em> لا يقوم البناء دونها</div>
+
+<div class="bld">
+ <div class="roof"><svg viewBox="0 0 900 190"><defs><linearGradient id="r" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b3a63"/><stop offset="1" stop-color="#002544"/></linearGradient></defs>
+  <path d="M450 6 L890 182 L10 182 Z" fill="url(#r)" stroke="#002544" stroke-width="6" stroke-linejoin="round"/></svg>
+  <b>الاستدامة المالية</b></div>
+ <div class="beam"></div>
+ <div class="cols">
+  <div class="col"><div class="cap"></div><div class="shaft">
+   <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M5 7l-3 7a3.2 3.2 0 0 0 6 0z"/><path d="M19 7l-3 7a3.2 3.2 0 0 0 6 0z"/><path d="M8 21h8"/></svg></div>
+   <div class="n">١</div><div class="lbl">ضبط المصروف<br>والإيراد</div></div><div class="base"></div></div>
+  <div class="col"><div class="cap"></div><div class="shaft">
+   <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 12V3"/><path d="M12 12l7.6 4.8"/><path d="M12 12l-7.6 4.8"/></svg></div>
+   <div class="n">٢</div><div class="lbl">تنويع<br>مصادر الدخل</div></div><div class="base"></div></div>
+  <div class="col"><div class="cap"></div><div class="shaft">
+   <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><path d="M6 16v-3M10 16v-6M14 16V8M18 16V5"/><path d="M5 10l5-4 4 2 5-4"/></svg></div>
+   <div class="n">٣</div><div class="lbl">استقرار<br>النمو</div></div><div class="base"></div></div>
+ </div>
+ <div class="steps"></div><div class="steps2"></div>
+</div>
+
+<div class="slog">استدامة العطاء وأثرٌ يمتد</div>
+<div class="pill"><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></svg></div><span>hamedalthiabi.com</span></div>
+<div class="bot"><i></i></div>
+</body></html>
