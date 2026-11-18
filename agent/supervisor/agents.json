@@ -144,6 +144,17 @@
       "instructions": "agent/buffer_sent.py",
       "role": "يجلب المنشورات المرسلة وتفاعلها من Buffer API كل أحد قبل التحليل الأسبوعي",
       "check": "نجاح التشغيل، ملفات agent/engagement/*-raw.json"
+    },
+    {
+      "key": "buffer-jobs",
+      "name": "مهام Buffer: حذف أو مسودة (GitHub Action)",
+      "kind": "action",
+      "workflow": "buffer-jobs.yml",
+      "every": "on-push (agent/buffer_jobs.json)",
+      "max_gap_hours": null,
+      "instructions": "agent/buffer_jobs.py",
+      "role": "ينفّذ مهام لمرة واحدة من buffer_jobs.json: حذف منشور مجدول في Buffer أو حفظ منشور مسودةً فيه",
+      "check": "نجاح آخر تشغيل، todo فارغ، كل حذف له طلب من تغريد"
     }
   ],
   "retired": {
