@@ -2,7 +2,7 @@
 @font-face{font-family:Ar;src:url(../brand/plex-600.ttf);font-weight:600}
 @font-face{font-family:Ar;src:url(../brand/plex-400.ttf);font-weight:400}
 @font-face{font-family:La;src:url(../brand/plex-latin-400.ttf)}
-:root{--n:#002544;--n2:#0b3a63;--c:#BB6841;--c2:#d0835d;--ink:#1c2a38;--mut:#5d6b78;--bg:#f6f3ef}
+:root{--n:#002544;--n2:#0b3a63;--c:#BB6841;--c2:#d0835d;--ink:#1B2433;--mut:#5E6673;--bg:#F8F5EF}
 *{margin:0;box-sizing:border-box}html,body{width:1080px;height:1350px;overflow:hidden}
 body{font-family:Ar,La;background:var(--bg);position:relative;color:var(--ink)}
 .b1{position:absolute;width:780px;height:780px;left:-320px;top:-330px;border-radius:50%;background:radial-gradient(circle,#BB68412b,#BB684100 70%)}
@@ -17,12 +17,12 @@ body{font-family:Ar,La;background:var(--bg);position:relative;color:var(--ink)}
 
 .t1{top:170px;font-size:72px}
 .sub{position:absolute;top:268px;width:100%;text-align:center;font-size:32px;color:var(--mut)}
-.qm{position:absolute;top:340px;left:50%;transform:translateX(-50%);width:150px;height:150px;border-radius:44px;background:linear-gradient(150deg,#d0835d,#BB6841 55%,#9c522f);display:flex;align-items:center;justify-content:center;box-shadow:0 22px 40px -20px #9c522f}
+.qm{position:absolute;top:340px;left:50%;transform:translateX(-50%);width:150px;height:150px;border-radius:44px;background:linear-gradient(150deg,#d0835d,#BB6841 55%,#BB6841);display:flex;align-items:center;justify-content:center;box-shadow:0 22px 40px -20px #BB6841}
 .qm svg{width:84px;height:84px}
-.opts{position:absolute;top:545px;left:110px;right:110px;display:flex;flex-direction:column;gap:30px}
+.opts{position:absolute;top:590px;left:110px;right:110px;display:flex;flex-direction:column;gap:30px}
 .op{height:126px;background:#fff;border-radius:26px;border:1.5px solid #0025441c;box-shadow:0 18px 34px -24px #002544aa;display:flex;align-items:center;padding:0 34px;gap:28px;position:relative;overflow:hidden}
 .ic{flex:none;width:78px;height:78px;border-radius:22px;background:var(--n);display:flex;align-items:center;justify-content:center}
-.op:nth-child(2) .ic,.op:nth-child(4) .ic{background:linear-gradient(150deg,#d0835d,#BB6841 55%,#9c522f)}
+.op:nth-child(2) .ic,.op:nth-child(4) .ic{background:linear-gradient(150deg,#d0835d,#BB6841 55%,#BB6841)}
 .ic svg{width:42px;height:42px}
 .lbl{flex:1;font-size:40px;font-weight:600;color:var(--n);white-space:nowrap}
 .rad{flex:none;width:50px;height:50px;border-radius:50%;border:3px solid #00254433}
@@ -38,8 +38,6 @@ body{font-family:Ar,La;background:var(--bg);position:relative;color:var(--ink)}
 <div class="t1">ما أكبر <em>تحدٍّ مالي</em> لمنظمتك؟</div>
 <div class="sub">اختر واحدًا، وشاركنا في الردود</div>
 <div class="qm"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"><path d="M8.6 8.8a3.6 3.6 0 1 1 5.2 3.2c-1.1.6-1.8 1.4-1.8 2.7v.6"/><circle cx="12" cy="19" r=".6" fill="#fff"/></svg></div>
-<div class="opts"><div class="op"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2"/></svg></div><div class="lbl">مصدر دخل واحد</div><div class="rad"></div></div><div class="op"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c2.5-6 5-6 7.5 0s5 6 7.5 0 3.5-4 5-2"/></svg></div><div class="lbl">تذبذب الإيراد بين المواسم</div><div class="rad"></div></div><div class="op"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M19 14.8c1.4.9 2.2 2.6 2.5 5.2"/></svg></div><div class="lbl">الاحتفاظ بالمتبرعين</div><div class="rad"></div></div><div class="op"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></div><div class="lbl">تمويل التطوير والتقنية</div><div class="rad"></div></div></div>
-<div class="slog">استدامة العطاء وأثرٌ يمتد</div>
-<div class="pill"><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></svg></div><span>hamedalthiabi.com</span></div>
+<div class="opts"><div class="op"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2"/></svg></div><div class="lbl">مصدر دخل واحد</div><div class="rad"></div></div><div class="op"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c2.5-6 5-6 7.5 0s5 6 7.5 0 3.5-4 5-2"/></svg></div><div class="lbl">موسمية الإيراد</div><div class="rad"></div></div><div class="op"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M19 14.8c1.4.9 2.2 2.6 2.5 5.2"/></svg></div><div class="lbl">الاحتفاظ بالمتبرعين</div><div class="rad"></div></div><div class="op"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></div><div class="lbl">غياب خطة لسنوات</div><div class="rad"></div></div></div>
 <div class="bot"><i></i></div>
 </body></html>
