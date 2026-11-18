@@ -1,11 +1,15 @@
 {
- "todo": [
+ "todo": [],
+ "done": [
   {
-   "draft": "linkedin-2026-11-18-wed12"
+   "draft": "linkedin-2026-11-18-wed12",
+   "result": "6afd1be4fc933ac285bf6bfb",
+   "at": "2026-11-18T03:30:44Z"
   },
   {
-   "delete": "6afb95be4b26315855aa511a"
+   "delete": "6afb95be4b26315855aa511a",
+   "result": "DeletePostSuccess",
+   "at": "2026-11-18T03:30:45Z"
   }
- ],
- "done": []
+ ]
 }
