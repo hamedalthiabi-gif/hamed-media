@@ -1,0 +1,161 @@
+{
+ "Post": [
+  {
+   "name": "id",
+   "type": "PostId",
+   "kind": "SCALAR"
+  },
+  {
+   "name": "allowedActions",
+   "type": "PostAction",
+   "kind": "ENUM"
+  },
+  {
+   "name": "assets",
+   "type": "Asset",
+   "kind": "INTERFACE"
+  },
+  {
+   "name": "author",
+   "type": "Author",
+   "kind": "OBJECT"
+  },
+  {
+   "name": "channel",
+   "type": "Channel",
+   "kind": "OBJECT"
+  },
+  {
+   "name": "channelId",
+   "type": "ChannelId",
+   "kind": "SCALAR"
+  },
+  {
+   "name": "channelService",
+   "type": "Service",
+   "kind": "ENUM"
+  },
+  {
+   "name": "contentItemId",
+   "type": "ContentItemId",
+   "kind": "SCALAR"
+  },
+  {
+   "name": "dueAt",
+   "type": "DateTime",
+   "kind": "SCALAR"
+  },
+  {
+   "name": "error",
+   "type": "PostPublishingError",
+   "kind": "OBJECT"
+  },
+  {
+   "name": "externalLink",
+   "type": "String",
+   "kind": "SCALAR"
+  },
+  {
+   "name": "ideaId",
+   "type": "IdeaId",
+   "kind": "SCALAR"
+  },
+  {
+   "name": "isCustomScheduled",
+   "type": "Boolean",
+   "kind": "SCALAR"
+  },
+  {
+   "name": "metadata",
+   "type": "PostMetadata",
+   "kind": "UNION"
+  },
+  {
+   "name": "metrics",
+   "type": "PostMetric",
+   "kind": "OBJECT"
+  },
+  {
+   "name": "metricsUpdatedAt",
+   "type": "DateTime",
+   "kind": "SCALAR"
+  },
+  {
+   "name": "notificationStatus",
+   "type": "NotificationStatus",
+   "kind": "ENUM"
+  },
+  {
+   "name": "schedulingType",
+   "type": "SchedulingType",
+   "kind": "ENUM"
+  },
+  {
+   "name": "sentAt",
+   "type": "DateTime",
+   "kind": "SCALAR"
+  },
+  {
+   "name": "sharedNow",
+   "type": "Boolean",
+   "kind": "SCALAR"
+  },
+  {
+   "name": "shareMode",
+   "type": "ShareMode",
+   "kind": "ENUM"
+  },
+  {
+   "name": "status",
+   "type": "PostStatus",
+   "kind": "ENUM"
+  },
+  {
+   "name": "tags",
+   "type": "Tag",
+   "kind": "OBJECT"
+  },
+  {
+   "name": "text",
+   "type": "String",
+   "kind": "SCALAR"
+  },
+  {
+   "name": "via",
+   "type": "PostVia",
+   "kind": "ENUM"
+  },
+  {
+   "name": "createdAt",
+   "type": "DateTime",
+   "kind": "SCALAR"
+  },
+  {
+   "name": "updatedAt",
+   "type": "DateTime",
+   "kind": "SCALAR"
+  }
+ ],
+ "stat_fields": [
+  {
+   "name": "metrics",
+   "type": "PostMetric",
+   "kind": "OBJECT"
+  },
+  {
+   "name": "metricsUpdatedAt",
+   "type": "DateTime",
+   "kind": "SCALAR"
+  },
+  {
+   "name": "notificationStatus",
+   "type": "NotificationStatus",
+   "kind": "ENUM"
+  },
+  {
+   "name": "status",
+   "type": "PostStatus",
+   "kind": "ENUM"
+  }
+ ]
+}

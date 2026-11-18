@@ -1,0 +1,1146 @@
+[
+ {
+  "id": "6afbce06797935b975dca4f2",
+  "allowedActions": [
+   "viewPost",
+   "sharePostLink",
+   "copyPostLink",
+   "updatePostTags",
+   "addPostNote",
+   "duplicatePost",
+   "updateShopGridLink"
+  ],
+  "channelId": "6a4bdc5f404834462877580e",
+  "channelService": "tiktok",
+  "contentItemId": null,
+  "dueAt": "2026-11-17T18:00:00.000Z",
+  "externalLink": "https://tiktok.com/@hamedalthiabi/video/7709202524024212757",
+  "ideaId": null,
+  "isCustomScheduled": true,
+  "metricsUpdatedAt": "2026-11-17T03:46:14.126Z",
+  "notificationStatus": null,
+  "schedulingType": "automatic",
+  "sentAt": "2026-11-17T18:04:27.820Z",
+  "sharedNow": false,
+  "shareMode": "customScheduled",
+  "status": "sent",
+  "text": "ثلاثة أسس للاستدامة المالية لأي منظمة غير ربحية: ضبط المصروف والإيراد بسياسات واضحة، وتنويع مصادر الدخل، ونمو الإيرادات كل عام.\nأيّها تحتاجه جمعيتك أكثر؟ 👇\nمقطع من #زبدة_الاستدامة مع مطورون ومؤسسة درب.\n#الاستدامة_المالية #القطاع_غير_الربحي #اكسبلور #fyp #foryou #ترند #تيك_توك_السعودية",
+  "via": "buffer",
+  "createdAt": "2026-11-17T03:46:14.103Z",
+  "updatedAt": "2026-11-17T03:46:14.136Z",
+  "metrics": [
+   {
+    "description": "Also called Likes on TikTok. This shows how many people reacted to your post.",
+    "name": "Reactions",
+    "type": "reactions",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
+    "name": "Comments",
+    "type": "comments",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
+    "name": "Eng. Rate",
+    "type": "engagementRate",
+    "unit": "percentage",
+    "value": 0
+   },
+   {
+    "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
+    "name": "Video Views",
+    "type": "views",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "How many times your post was shared by others. A sign your content is reaching beyond your immediate audience.",
+    "name": "Shares",
+    "type": "shares",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
+    "name": "Reach",
+    "type": "reach",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "The total time people spent watching your video, added up over every view.",
+    "name": "Watch Time (min)",
+    "type": "totalTimeWatched",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "How long people watched your video for on average. Shows how well the video holds attention.",
+    "name": "Avg. Watch Time (sec)",
+    "type": "averageTimeWatched",
+    "unit": "count",
+    "value": 0
+   }
+  ]
+ },
+ {
+  "id": "6aeebb1e87740a041b0e7a82",
+  "allowedActions": [
+   "viewPost",
+   "sharePostLink",
+   "copyPostLink",
+   "updatePostTags",
+   "addPostNote",
+   "duplicatePost",
+   "updateShopGridLink"
+  ],
+  "channelId": "6a4bdc5f404834462877580e",
+  "channelService": "tiktok",
+  "contentItemId": null,
+  "dueAt": "2026-11-10T18:00:00.000Z",
+  "externalLink": "https://tiktok.com/@hamedalthiabi/video/7706605221362879765",
+  "ideaId": null,
+  "isCustomScheduled": true,
+  "metricsUpdatedAt": null,
+  "notificationStatus": null,
+  "schedulingType": "automatic",
+  "sentAt": "2026-11-10T18:06:29.857Z",
+  "sharedNow": false,
+  "shareMode": "customScheduled",
+  "status": "sent",
+  "text": "كيف تسوّق الجمعيات لنفسها؟ 📣\nمقطع من لقاء «القطاع الرابح» على قناة ذا ستيج عن التسويق للقطاع غير الربحي.\nشاهد المقطع وشاركنا رأيك في التعليقات 👇\n#اكسبلور #fyp #foryou #explore #ترند #السعودية #تيك_توك_السعودية #اكسبلور_السعودية #بودكاست #ذا_ستيج #القطاع_غير_الربحي #التسويق_الخيري",
+  "via": "buffer",
+  "createdAt": "2026-11-07T05:46:06.198Z",
+  "updatedAt": "2026-11-07T05:46:47.860Z",
+  "metrics": [
+   {
+    "description": "Also called Likes on TikTok. This shows how many people reacted to your post.",
+    "name": "Reactions",
+    "type": "reactions",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
+    "name": "Comments",
+    "type": "comments",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
+    "name": "Eng. Rate",
+    "type": "engagementRate",
+    "unit": "percentage",
+    "value": 0
+   },
+   {
+    "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
+    "name": "Video Views",
+    "type": "views",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "How many times your post was shared by others. A sign your content is reaching beyond your immediate audience.",
+    "name": "Shares",
+    "type": "shares",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
+    "name": "Reach",
+    "type": "reach",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "The total time people spent watching your video, added up over every view.",
+    "name": "Watch Time (min)",
+    "type": "totalTimeWatched",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "How long people watched your video for on average. Shows how well the video holds attention.",
+    "name": "Avg. Watch Time (sec)",
+    "type": "averageTimeWatched",
+    "unit": "count",
+    "value": 0
+   }
+  ]
+ },
+ {
+  "id": "6aeebb0dd745b0b2760802f8",
+  "allowedActions": [
+   "viewPost",
+   "sharePostLink",
+   "copyPostLink",
+   "updatePostTags",
+   "addPostNote",
+   "duplicatePost",
+   "updateShopGridLink"
+  ],
+  "channelId": "6a4bdc5f404834462877580e",
+  "channelService": "tiktok",
+  "contentItemId": null,
+  "dueAt": "2026-11-08T18:00:00.000Z",
+  "externalLink": "https://www.tiktok.com/@hamedalthiabi/video/7705862514742938888?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+  "ideaId": null,
+  "isCustomScheduled": true,
+  "metricsUpdatedAt": "2026-11-17T17:03:33.319Z",
+  "notificationStatus": null,
+  "schedulingType": "automatic",
+  "sentAt": "2026-11-08T18:03:44.794Z",
+  "sharedNow": false,
+  "shareMode": "customScheduled",
+  "status": "sent",
+  "text": "من أين يأتي تمويل الجمعيات؟ 💡 مقطع من لقاء «القطاع الرابح» على قناة ذا ستيج عن مصادر تمويل القطاع غير الربحي. شاهد المقطع وشاركنا رأيك في التعليقات 👇 #اكسبلور #fyp #foryou #explore #ترند #السعودية #تيك_توك_السعودية #اكسبلور_السعودية #بودكاست #ذا_ستيج #القطاع_غير_الربحي #تمويل_الجمعيات",
+  "via": "buffer",
+  "createdAt": "2026-11-07T05:45:49.637Z",
+  "updatedAt": "2026-11-17T17:03:33.319Z",
+  "metrics": [
+   {
+    "description": "Also called Likes on TikTok. This shows how many people reacted to your post.",
+    "name": "Reactions",
+    "type": "reactions",
+    "unit": "count",
+    "value": 2463
+   },
+   {
+    "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
+    "name": "Comments",
+    "type": "comments",
+    "unit": "count",
+    "value": 2
+   },
+   {
+    "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
+    "name": "Eng. Rate",
+    "type": "engagementRate",
+    "unit": "percentage",
+    "value": 13.92
+   },
+   {
+    "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
+    "name": "Video Views",
+    "type": "views",
+    "unit": "count",
+    "value": 17876
+   },
+   {
+    "description": "How many times your post was shared by others. A sign your content is reaching beyond your immediate audience.",
+    "name": "Shares",
+    "type": "shares",
+    "unit": "count",
+    "value": 24
+   },
+   {
+    "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
+    "name": "Reach",
+    "type": "reach",
+    "unit": "count",
+    "value": 16757
+   },
+   {
+    "description": "The total time people spent watching your video, added up over every view.",
+    "name": "Watch Time (min)",
+    "type": "totalTimeWatched",
+    "unit": "count",
+    "value": 797.15
+   },
+   {
+    "description": "How long people watched your video for on average. Shows how well the video holds attention.",
+    "name": "Avg. Watch Time (sec)",
+    "type": "averageTimeWatched",
+    "unit": "count",
+    "value": 2.54
+   }
+  ]
+ },
+ {
+  "id": "6ae0d394e9ff6d6b5a0d539d",
+  "allowedActions": [
+   "viewPost",
+   "sharePostLink",
+   "copyPostLink",
+   "updatePostTags",
+   "addPostNote",
+   "duplicatePost",
+   "updateShopGridLink"
+  ],
+  "channelId": "6a4bdc5f404834462877580e",
+  "channelService": "tiktok",
+  "contentItemId": null,
+  "dueAt": "2026-11-03T16:00:00.000Z",
+  "externalLink": "https://www.tiktok.com/@hamedalthiabi/video/7703976636445723905?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+  "ideaId": null,
+  "isCustomScheduled": true,
+  "metricsUpdatedAt": "2026-11-17T17:03:33.319Z",
+  "notificationStatus": null,
+  "schedulingType": "automatic",
+  "sentAt": "2026-11-03T16:06:27.753Z",
+  "sharedNow": false,
+  "shareMode": "customScheduled",
+  "status": "sent",
+  "text": "أكبر 4 تحديات تواجه تمويل الجمعيات، بحسب 370 منظمة. أيها تواجهه جمعيتك؟ #تمويل_يدوم #القطاع_غير_الربحي #جمعيات",
+  "via": "buffer",
+  "createdAt": "2026-10-27T16:38:44.918Z",
+  "updatedAt": "2026-11-17T17:03:33.319Z",
+  "metrics": [
+   {
+    "description": "Also called Likes on TikTok. This shows how many people reacted to your post.",
+    "name": "Reactions",
+    "type": "reactions",
+    "unit": "count",
+    "value": 4
+   },
+   {
+    "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
+    "name": "Comments",
+    "type": "comments",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
+    "name": "Eng. Rate",
+    "type": "engagementRate",
+    "unit": "percentage",
+    "value": 1.06
+   },
+   {
+    "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
+    "name": "Video Views",
+    "type": "views",
+    "unit": "count",
+    "value": 377
+   },
+   {
+    "description": "How many times your post was shared by others. A sign your content is reaching beyond your immediate audience.",
+    "name": "Shares",
+    "type": "shares",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
+    "name": "Reach",
+    "type": "reach",
+    "unit": "count",
+    "value": 297
+   },
+   {
+    "description": "The total time people spent watching your video, added up over every view.",
+    "name": "Watch Time (min)",
+    "type": "totalTimeWatched",
+    "unit": "count",
+    "value": 15.47
+   },
+   {
+    "description": "How long people watched your video for on average. Shows how well the video holds attention.",
+    "name": "Avg. Watch Time (sec)",
+    "type": "averageTimeWatched",
+    "unit": "count",
+    "value": 2.5
+   }
+  ]
+ },
+ {
+  "id": "6ae0d3061a05639a840529c7",
+  "allowedActions": [
+   "viewPost",
+   "sharePostLink",
+   "copyPostLink",
+   "updatePostTags",
+   "addPostNote",
+   "duplicatePost",
+   "updateShopGridLink"
+  ],
+  "channelId": "6a4bdc5f404834462877580e",
+  "channelService": "tiktok",
+  "contentItemId": null,
+  "dueAt": "2026-10-30T16:00:00.000Z",
+  "externalLink": "https://www.tiktok.com/@hamedalthiabi/video/7702492662779088149?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+  "ideaId": null,
+  "isCustomScheduled": true,
+  "metricsUpdatedAt": "2026-11-17T17:03:33.319Z",
+  "notificationStatus": null,
+  "schedulingType": "automatic",
+  "sentAt": "2026-10-30T16:06:11.040Z",
+  "sharedNow": false,
+  "shareMode": "customScheduled",
+  "status": "sent",
+  "text": "دراسة على 370 جمعية في أقل من دقيقة: أين يقف تمويل القطاع غير الربحي؟ #تمويل_يدوم #القطاع_غير_الربحي #جمعيات",
+  "via": "buffer",
+  "createdAt": "2026-10-27T16:36:22.826Z",
+  "updatedAt": "2026-11-17T17:03:33.319Z",
+  "metrics": [
+   {
+    "description": "Also called Likes on TikTok. This shows how many people reacted to your post.",
+    "name": "Reactions",
+    "type": "reactions",
+    "unit": "count",
+    "value": 7
+   },
+   {
+    "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
+    "name": "Comments",
+    "type": "comments",
+    "unit": "count",
+    "value": 1
+   },
+   {
+    "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
+    "name": "Eng. Rate",
+    "type": "engagementRate",
+    "unit": "percentage",
+    "value": 2.38
+   },
+   {
+    "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
+    "name": "Video Views",
+    "type": "views",
+    "unit": "count",
+    "value": 462
+   },
+   {
+    "description": "How many times your post was shared by others. A sign your content is reaching beyond your immediate audience.",
+    "name": "Shares",
+    "type": "shares",
+    "unit": "count",
+    "value": 3
+   },
+   {
+    "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
+    "name": "Reach",
+    "type": "reach",
+    "unit": "count",
+    "value": 368
+   },
+   {
+    "description": "The total time people spent watching your video, added up over every view.",
+    "name": "Watch Time (min)",
+    "type": "totalTimeWatched",
+    "unit": "count",
+    "value": 30.6
+   },
+   {
+    "description": "How long people watched your video for on average. Shows how well the video holds attention.",
+    "name": "Avg. Watch Time (sec)",
+    "type": "averageTimeWatched",
+    "unit": "count",
+    "value": 3.94
+   }
+  ]
+ },
+ {
+  "id": "6adef2a782e58fe7d102a632",
+  "allowedActions": [
+   "viewPost",
+   "sharePostLink",
+   "copyPostLink",
+   "updatePostTags",
+   "addPostNote",
+   "duplicatePost",
+   "updateShopGridLink"
+  ],
+  "channelId": "6a4bdc5f404834462877580e",
+  "channelService": "tiktok",
+  "contentItemId": null,
+  "dueAt": "2026-10-26T18:00:00.000Z",
+  "externalLink": "https://www.tiktok.com/@hamedalthiabi/video/7701038548459277588?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+  "ideaId": null,
+  "isCustomScheduled": true,
+  "metricsUpdatedAt": "2026-11-17T17:03:33.319Z",
+  "notificationStatus": null,
+  "schedulingType": "automatic",
+  "sentAt": "2026-10-26T18:03:47.146Z",
+  "sharedNow": false,
+  "shareMode": "customScheduled",
+  "status": "sent",
+  "text": "استدامة الجمعيات أم الشركات؟ 🤔 مقطع من لقاء «القطاع الرابح» على قناة ذا ستيج. شاهد المقطع وشاركنا رأيك في التعليقات 👇 #اكسبلور #fyp #foryou #explore #ترند #السعودية #تيك_توك_السعودية #اكسبلور_السعودية #بودكاست #ذا_ستيج #القطاع_غير_الربحي #الاستدامة_المالية",
+  "via": "buffer",
+  "createdAt": "2026-10-26T06:26:47.941Z",
+  "updatedAt": "2026-11-17T17:03:33.319Z",
+  "metrics": [
+   {
+    "description": "Also called Likes on TikTok. This shows how many people reacted to your post.",
+    "name": "Reactions",
+    "type": "reactions",
+    "unit": "count",
+    "value": 36
+   },
+   {
+    "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
+    "name": "Comments",
+    "type": "comments",
+    "unit": "count",
+    "value": 2
+   },
+   {
+    "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
+    "name": "Eng. Rate",
+    "type": "engagementRate",
+    "unit": "percentage",
+    "value": 1.27
+   },
+   {
+    "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
+    "name": "Video Views",
+    "type": "views",
+    "unit": "count",
+    "value": 3297
+   },
+   {
+    "description": "How many times your post was shared by others. A sign your content is reaching beyond your immediate audience.",
+    "name": "Shares",
+    "type": "shares",
+    "unit": "count",
+    "value": 4
+   },
+   {
+    "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
+    "name": "Reach",
+    "type": "reach",
+    "unit": "count",
+    "value": 2815
+   },
+   {
+    "description": "The total time people spent watching your video, added up over every view.",
+    "name": "Watch Time (min)",
+    "type": "totalTimeWatched",
+    "unit": "count",
+    "value": 522.47
+   },
+   {
+    "description": "How long people watched your video for on average. Shows how well the video holds attention.",
+    "name": "Avg. Watch Time (sec)",
+    "type": "averageTimeWatched",
+    "unit": "count",
+    "value": 9.28
+   }
+  ]
+ },
+ {
+  "id": "6add70eb8178c30434026eda",
+  "allowedActions": [
+   "viewPost",
+   "sharePostLink",
+   "copyPostLink",
+   "updatePostTags",
+   "addPostNote",
+   "duplicatePost",
+   "updateShopGridLink"
+  ],
+  "channelId": "6a4bdc5f404834462877580e",
+  "channelService": "tiktok",
+  "contentItemId": null,
+  "dueAt": "2026-10-25T18:00:00.000Z",
+  "externalLink": "https://www.tiktok.com/@hamedalthiabi/video/7700666683920256308?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+  "ideaId": null,
+  "isCustomScheduled": true,
+  "metricsUpdatedAt": "2026-11-17T17:03:33.319Z",
+  "notificationStatus": null,
+  "schedulingType": "automatic",
+  "sentAt": "2026-10-25T18:02:26.651Z",
+  "sharedNow": false,
+  "shareMode": "customScheduled",
+  "status": "sent",
+  "text": "قد تقدّم أفضل برنامج بأفضل مدرب، ويسعد الناس بالفعاليات والنشاط… ثم لا يبقى لهم أثر. فليس كل مشروع تنموي يحقق الأثر؛ الأثر أن يتحوّل التدريب إلى صنعة وعمل، كقصة الشاب الذي تدرّب على التصوير حتى صار يعمل مع أحد الفنادق. شاهد المقطع من بودكاست «اكتفاء» لتعرف الفرق بين النشاط والأثر. #الأثر #القطاع_غير_الربحي #التنمية",
+  "via": "buffer",
+  "createdAt": "2026-10-25T03:00:59.285Z",
+  "updatedAt": "2026-11-17T17:03:33.319Z",
+  "metrics": [
+   {
+    "description": "Also called Likes on TikTok. This shows how many people reacted to your post.",
+    "name": "Reactions",
+    "type": "reactions",
+    "unit": "count",
+    "value": 27
+   },
+   {
+    "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
+    "name": "Comments",
+    "type": "comments",
+    "unit": "count",
+    "value": 1
+   },
+   {
+    "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
+    "name": "Eng. Rate",
+    "type": "engagementRate",
+    "unit": "percentage",
+    "value": 2.13
+   },
+   {
+    "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
+    "name": "Video Views",
+    "type": "views",
+    "unit": "count",
+    "value": 1457
+   },
+   {
+    "description": "How many times your post was shared by others. A sign your content is reaching beyond your immediate audience.",
+    "name": "Shares",
+    "type": "shares",
+    "unit": "count",
+    "value": 3
+   },
+   {
+    "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
+    "name": "Reach",
+    "type": "reach",
+    "unit": "count",
+    "value": 1243
+   },
+   {
+    "description": "The total time people spent watching your video, added up over every view.",
+    "name": "Watch Time (min)",
+    "type": "totalTimeWatched",
+    "unit": "count",
+    "value": 125.5
+   },
+   {
+    "description": "How long people watched your video for on average. Shows how well the video holds attention.",
+    "name": "Avg. Watch Time (sec)",
+    "type": "averageTimeWatched",
+    "unit": "count",
+    "value": 5.08
+   }
+  ]
+ },
+ {
+  "id": "6ad58cfad9efa870fb0ac062",
+  "allowedActions": [
+   "viewPost",
+   "sharePostLink",
+   "copyPostLink",
+   "updatePostTags",
+   "addPostNote",
+   "duplicatePost",
+   "updateShopGridLink"
+  ],
+  "channelId": "6a4bdc5f404834462877580e",
+  "channelService": "tiktok",
+  "contentItemId": null,
+  "dueAt": "2026-10-19T18:00:00.000Z",
+  "externalLink": "https://www.tiktok.com/@hamedalthiabi/video/7698440820533382452?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+  "ideaId": null,
+  "isCustomScheduled": true,
+  "metricsUpdatedAt": "2026-11-17T17:03:33.319Z",
+  "notificationStatus": null,
+  "schedulingType": "automatic",
+  "sentAt": "2026-10-19T18:03:02.173Z",
+  "sharedNow": false,
+  "shareMode": "customScheduled",
+  "status": "sent",
+  "text": "ما الجمعيات الأهلية؟ ومن يستطيع تأسيسها؟ إن كنت مهتمًا بقضية في الصحة أو التعليم أو الثقافة، فتستطيع مع زملائك أو أصدقائك تأسيس جمعية أهلية عبر المركز الوطني لتنمية القطاع غير الربحي، خلال عشرين يومًا. بدأت الجمعيات الأهلية في المملكة من ١٥٠٠ جمعية، واليوم تجاوزت ٥٠٠٠ جمعية. تابع سلسلة «القطاع الجديد» لتتعرف على أشكال القطاع حلقة بعد حلقة. قريبًا: موعدنا الأربعاء ١١ نوفمبر الساعة ١١ صباحًا. #القطاع_غير_الربحي #القطاع_الجديد #الجمعيات_الأهلية",
+  "via": "buffer",
+  "createdAt": "2026-10-19T03:22:34.069Z",
+  "updatedAt": "2026-11-17T17:03:33.319Z",
+  "metrics": [
+   {
+    "description": "Also called Likes on TikTok. This shows how many people reacted to your post.",
+    "name": "Reactions",
+    "type": "reactions",
+    "unit": "count",
+    "value": 46
+   },
+   {
+    "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
+    "name": "Comments",
+    "type": "comments",
+    "unit": "count",
+    "value": 1
+   },
+   {
+    "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
+    "name": "Eng. Rate",
+    "type": "engagementRate",
+    "unit": "percentage",
+    "value": 1.3
+   },
+   {
+    "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
+    "name": "Video Views",
+    "type": "views",
+    "unit": "count",
+    "value": 4063
+   },
+   {
+    "description": "How many times your post was shared by others. A sign your content is reaching beyond your immediate audience.",
+    "name": "Shares",
+    "type": "shares",
+    "unit": "count",
+    "value": 6
+   },
+   {
+    "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
+    "name": "Reach",
+    "type": "reach",
+    "unit": "count",
+    "value": 3522
+   },
+   {
+    "description": "The total time people spent watching your video, added up over every view.",
+    "name": "Watch Time (min)",
+    "type": "totalTimeWatched",
+    "unit": "count",
+    "value": 368.65
+   },
+   {
+    "description": "How long people watched your video for on average. Shows how well the video holds attention.",
+    "name": "Avg. Watch Time (sec)",
+    "type": "averageTimeWatched",
+    "unit": "count",
+    "value": 5.32
+   }
+  ]
+ },
+ {
+  "id": "6ad4a890e67449fd98063f1a",
+  "allowedActions": [
+   "viewPost",
+   "sharePostLink",
+   "copyPostLink",
+   "updatePostTags",
+   "addPostNote",
+   "duplicatePost",
+   "updateShopGridLink"
+  ],
+  "channelId": "6a4bdc5f404834462877580e",
+  "channelService": "tiktok",
+  "contentItemId": null,
+  "dueAt": "2026-10-18T18:00:00.000Z",
+  "externalLink": "https://www.tiktok.com/@hamedalthiabi/video/7698069323398614278?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+  "ideaId": null,
+  "isCustomScheduled": true,
+  "metricsUpdatedAt": "2026-11-17T17:03:33.319Z",
+  "notificationStatus": null,
+  "schedulingType": "automatic",
+  "sentAt": "2026-10-18T18:01:47.578Z",
+  "sharedNow": false,
+  "shareMode": "customScheduled",
+  "status": "sent",
+  "text": "القطاع غير الربحي بدأ بمبادرات فردية وتبرعات، مثل جمعيات البر وجمعيات تحفيظ القرآن. واليوم تجاوز ٧٠٠٠ منظمة، بين مؤسسات أهلية وجامعات ومستشفيات غير ربحية، وأصبح مساهمًا في التنمية والاقتصاد الوطني. تابع سلسلة «القطاع الجديد» لتتعرف على تفاصيله حلقة بعد حلقة. #القطاع_غير_الربحي #القطاع_الجديد #العمل_الخيري",
+  "via": "buffer",
+  "createdAt": "2026-10-18T11:08:00.614Z",
+  "updatedAt": "2026-11-17T17:03:33.319Z",
+  "metrics": [
+   {
+    "description": "Also called Likes on TikTok. This shows how many people reacted to your post.",
+    "name": "Reactions",
+    "type": "reactions",
+    "unit": "count",
+    "value": 48
+   },
+   {
+    "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
+    "name": "Comments",
+    "type": "comments",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
+    "name": "Eng. Rate",
+    "type": "engagementRate",
+    "unit": "percentage",
+    "value": 1.97
+   },
+   {
+    "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
+    "name": "Video Views",
+    "type": "views",
+    "unit": "count",
+    "value": 2788
+   },
+   {
+    "description": "How many times your post was shared by others. A sign your content is reaching beyond your immediate audience.",
+    "name": "Shares",
+    "type": "shares",
+    "unit": "count",
+    "value": 7
+   },
+   {
+    "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
+    "name": "Reach",
+    "type": "reach",
+    "unit": "count",
+    "value": 2404
+   },
+   {
+    "description": "The total time people spent watching your video, added up over every view.",
+    "name": "Watch Time (min)",
+    "type": "totalTimeWatched",
+    "unit": "count",
+    "value": 234.52
+   },
+   {
+    "description": "How long people watched your video for on average. Shows how well the video holds attention.",
+    "name": "Avg. Watch Time (sec)",
+    "type": "averageTimeWatched",
+    "unit": "count",
+    "value": 4.92
+   }
+  ]
+ },
+ {
+  "id": "6aca0da1bbfa89783e1ec4f5",
+  "allowedActions": [
+   "viewPost",
+   "sharePostLink",
+   "copyPostLink",
+   "updatePostTags",
+   "addPostNote",
+   "duplicatePost",
+   "updateShopGridLink"
+  ],
+  "channelId": "6a4bdc5f404834462877580e",
+  "channelService": "tiktok",
+  "contentItemId": null,
+  "dueAt": "2026-10-11T05:00:00.000Z",
+  "externalLink": "https://www.tiktok.com/@hamedalthiabi/video/7695270598276156690?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+  "ideaId": null,
+  "isCustomScheduled": true,
+  "metricsUpdatedAt": "2026-11-16T23:45:05.875Z",
+  "notificationStatus": null,
+  "schedulingType": "automatic",
+  "sentAt": "2026-10-11T05:02:02.043Z",
+  "sharedNow": false,
+  "shareMode": "customScheduled",
+  "status": "sent",
+  "text": "تدخل الاستثمار بعقلية العمل الاجتماعي… وش ممكن يصير؟ 👀 كيف توازن المنظمة بين رسالتها الاجتماعية وقراراتها الاستثمارية؟ شاهد المقطع، وقل لنا: وين ينتهي دور العاطفة ويبدأ حساب الاستثمار؟ 👇 #اكسبلور #لك #تيك_توك_السعودية #بودكاست #القطاع_غير_الربحي #الاستدامة_المالية",
+  "via": "buffer",
+  "createdAt": "2026-10-10T10:04:17.134Z",
+  "updatedAt": "2026-11-16T23:45:05.875Z",
+  "metrics": [
+   {
+    "description": "Also called Likes on TikTok. This shows how many people reacted to your post.",
+    "name": "Reactions",
+    "type": "reactions",
+    "unit": "count",
+    "value": 10
+   },
+   {
+    "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
+    "name": "Comments",
+    "type": "comments",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
+    "name": "Eng. Rate",
+    "type": "engagementRate",
+    "unit": "percentage",
+    "value": 2.78
+   },
+   {
+    "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
+    "name": "Video Views",
+    "type": "views",
+    "unit": "count",
+    "value": 431
+   },
+   {
+    "description": "How many times your post was shared by others. A sign your content is reaching beyond your immediate audience.",
+    "name": "Shares",
+    "type": "shares",
+    "unit": "count",
+    "value": 2
+   },
+   {
+    "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
+    "name": "Reach",
+    "type": "reach",
+    "unit": "count",
+    "value": 371
+   },
+   {
+    "description": "The total time people spent watching your video, added up over every view.",
+    "name": "Watch Time (min)",
+    "type": "totalTimeWatched",
+    "unit": "count",
+    "value": 38.7
+   },
+   {
+    "description": "How long people watched your video for on average. Shows how well the video holds attention.",
+    "name": "Avg. Watch Time (sec)",
+    "type": "averageTimeWatched",
+    "unit": "count",
+    "value": 5.22
+   }
+  ]
+ },
+ {
+  "id": "6aca0cee391fa203502cffa9",
+  "allowedActions": [
+   "viewPost",
+   "sharePostLink",
+   "copyPostLink",
+   "updatePostTags",
+   "addPostNote",
+   "duplicatePost",
+   "updateShopGridLink"
+  ],
+  "channelId": "6a4bdc5f404834462877580e",
+  "channelService": "tiktok",
+  "contentItemId": null,
+  "dueAt": "2026-10-14T14:00:00.000Z",
+  "externalLink": "https://www.tiktok.com/@hamedalthiabi/video/7696523818654780679?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+  "ideaId": null,
+  "isCustomScheduled": true,
+  "metricsUpdatedAt": "2026-11-16T23:45:05.812Z",
+  "notificationStatus": null,
+  "schedulingType": "automatic",
+  "sentAt": "2026-10-14T14:05:02.289Z",
+  "sharedNow": false,
+  "shareMode": "customScheduled",
+  "status": "sent",
+  "text": "الإسناد الحكومي فرصة للمنظمات غير الربحية… لكن متى يتحوّل إلى تحدٍّ؟ 🤔 قبل التوسّع، اسأل: هل منظمتك جاهزة لتنفيذ المشروع وتحمل التزاماته؟ شاهد المقطع، وشاركنا: وش أهم شيء لازم تتأكد منه المنظمة قبل قبول الإسناد؟ #القطاع_غير_الربحي #الإسناد_الحكومي #إدارة_المشاريع #الاستدامة_المالية #السعودية",
+  "via": "buffer",
+  "createdAt": "2026-10-10T10:01:18.432Z",
+  "updatedAt": "2026-11-16T23:45:05.812Z",
+  "metrics": [
+   {
+    "description": "Also called Likes on TikTok. This shows how many people reacted to your post.",
+    "name": "Reactions",
+    "type": "reactions",
+    "unit": "count",
+    "value": 4
+   },
+   {
+    "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
+    "name": "Comments",
+    "type": "comments",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
+    "name": "Eng. Rate",
+    "type": "engagementRate",
+    "unit": "percentage",
+    "value": 0.83
+   },
+   {
+    "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
+    "name": "Video Views",
+    "type": "views",
+    "unit": "count",
+    "value": 483
+   },
+   {
+    "description": "How many times your post was shared by others. A sign your content is reaching beyond your immediate audience.",
+    "name": "Shares",
+    "type": "shares",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
+    "name": "Reach",
+    "type": "reach",
+    "unit": "count",
+    "value": 379
+   },
+   {
+    "description": "The total time people spent watching your video, added up over every view.",
+    "name": "Watch Time (min)",
+    "type": "totalTimeWatched",
+    "unit": "count",
+    "value": 30.07
+   },
+   {
+    "description": "How long people watched your video for on average. Shows how well the video holds attention.",
+    "name": "Avg. Watch Time (sec)",
+    "type": "averageTimeWatched",
+    "unit": "count",
+    "value": 3.64
+   }
+  ]
+ },
+ {
+  "id": "6aca0767a23ecf0487c7fc65",
+  "allowedActions": [
+   "viewPost",
+   "sharePostLink",
+   "copyPostLink",
+   "updatePostTags",
+   "addPostNote",
+   "duplicatePost",
+   "updateShopGridLink"
+  ],
+  "channelId": "6a4bdc5f404834462877580e",
+  "channelService": "tiktok",
+  "contentItemId": null,
+  "dueAt": "2026-10-12T17:00:00.000Z",
+  "externalLink": "https://www.tiktok.com/@hamedalthiabi/video/7695827970279083285?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+  "ideaId": null,
+  "isCustomScheduled": true,
+  "metricsUpdatedAt": "2026-11-16T23:45:05.726Z",
+  "notificationStatus": null,
+  "schedulingType": "automatic",
+  "sentAt": "2026-10-12T17:03:46.848Z",
+  "sharedNow": false,
+  "shareMode": "customScheduled",
+  "status": "sent",
+  "text": "لو قرأ المتبرع رسالة حملتك… هل يقدر يتخيّل الأثر اللي بيصنعه؟ 💡 قرّب له المشهد، ووضّح دوره، وخله يشعر أنه جزء من القصة. #التسويق #صناعة_المحتوى #تنمية_الموارد #القطاع_غير_الربحي #السعودية",
+  "via": "buffer",
+  "createdAt": "2026-10-10T09:37:43.202Z",
+  "updatedAt": "2026-11-16T23:45:05.726Z",
+  "metrics": [
+   {
+    "description": "Also called Likes on TikTok. This shows how many people reacted to your post.",
+    "name": "Reactions",
+    "type": "reactions",
+    "unit": "count",
+    "value": 11
+   },
+   {
+    "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
+    "name": "Comments",
+    "type": "comments",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
+    "name": "Eng. Rate",
+    "type": "engagementRate",
+    "unit": "percentage",
+    "value": 2.12
+   },
+   {
+    "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
+    "name": "Video Views",
+    "type": "views",
+    "unit": "count",
+    "value": 566
+   },
+   {
+    "description": "How many times your post was shared by others. A sign your content is reaching beyond your immediate audience.",
+    "name": "Shares",
+    "type": "shares",
+    "unit": "count",
+    "value": 1
+   },
+   {
+    "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
+    "name": "Reach",
+    "type": "reach",
+    "unit": "count",
+    "value": 476
+   },
+   {
+    "description": "The total time people spent watching your video, added up over every view.",
+    "name": "Watch Time (min)",
+    "type": "totalTimeWatched",
+    "unit": "count",
+    "value": 32.48
+   },
+   {
+    "description": "How long people watched your video for on average. Shows how well the video holds attention.",
+    "name": "Avg. Watch Time (sec)",
+    "type": "averageTimeWatched",
+    "unit": "count",
+    "value": 3.34
+   }
+  ]
+ },
+ {
+  "id": "6ac1b4a5929e10e248146617",
+  "allowedActions": [
+   "viewPost",
+   "sharePostLink",
+   "copyPostLink",
+   "updatePostTags",
+   "addPostNote",
+   "duplicatePost",
+   "updateShopGridLink"
+  ],
+  "channelId": "6a4bdc5f404834462877580e",
+  "channelService": "tiktok",
+  "contentItemId": null,
+  "dueAt": "2026-10-05T16:30:00.000Z",
+  "externalLink": "https://www.tiktok.com/@hamedalthiabi/video/7693222384609791239?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+  "ideaId": null,
+  "isCustomScheduled": true,
+  "metricsUpdatedAt": "2026-11-16T23:45:05.706Z",
+  "notificationStatus": null,
+  "schedulingType": "automatic",
+  "sentAt": "2026-10-05T16:35:32.414Z",
+  "sharedNow": false,
+  "shareMode": "customScheduled",
+  "status": "sent",
+  "text": "تبرّع لك مرة… وش يخليه يرجع؟ 👀🌱 رحلة المتبرع تبدأ قبل التبرع وتستمر بعده. شاهد مراحلها، واطّلع على دليل «رحلة المتبرع» كاملًا في منصة درب لتراجع تجربة المتبرعين في منظمتك. #رحلة_المتبرع #القطاع_غير_الربحي #درب #السعودية #اكسبلور #fyp",
+  "via": "buffer",
+  "createdAt": "2026-10-04T02:06:28.995Z",
+  "updatedAt": "2026-11-16T23:45:05.706Z",
+  "metrics": [
+   {
+    "description": "Also called Likes on TikTok. This shows how many people reacted to your post.",
+    "name": "Reactions",
+    "type": "reactions",
+    "unit": "count",
+    "value": 9
+   },
+   {
+    "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
+    "name": "Comments",
+    "type": "comments",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
+    "name": "Eng. Rate",
+    "type": "engagementRate",
+    "unit": "percentage",
+    "value": 3.87
+   },
+   {
+    "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
+    "name": "Video Views",
+    "type": "views",
+    "unit": "count",
+    "value": 284
+   },
+   {
+    "description": "How many times your post was shared by others. A sign your content is reaching beyond your immediate audience.",
+    "name": "Shares",
+    "type": "shares",
+    "unit": "count",
+    "value": 2
+   },
+   {
+    "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
+    "name": "Reach",
+    "type": "reach",
+    "unit": "count",
+    "value": 234
+   },
+   {
+    "description": "The total time people spent watching your video, added up over every view.",
+    "name": "Watch Time (min)",
+    "type": "totalTimeWatched",
+    "unit": "count",
+    "value": 17.1
+   },
+   {
+    "description": "How long people watched your video for on average. Shows how well the video holds attention.",
+    "name": "Avg. Watch Time (sec)",
+    "type": "averageTimeWatched",
+    "unit": "count",
+    "value": 3.48
+   }
+  ]
+ }
+]
