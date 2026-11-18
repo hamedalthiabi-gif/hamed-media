@@ -1,0 +1,52 @@
+<!doctype html><html dir="rtl" lang="ar"><head><meta charset="utf-8"><style>
+@font-face{font-family:Ar;src:url(../brand/plex-600.ttf);font-weight:600}
+@font-face{font-family:Ar;src:url(../brand/plex-400.ttf);font-weight:400}
+@font-face{font-family:La;src:url(../brand/plex-latin-400.ttf)}
+:root{--n:#002544;--n2:#0b3a63;--c:#BB6841;--c2:#d0835d;--ink:#1B2433;--mut:#5E6673;--bg:#F8F5EF}
+*{margin:0;box-sizing:border-box}html,body{width:1080px;height:1350px;overflow:hidden}
+body{font-family:Ar,La;background:var(--bg);position:relative;color:var(--ink)}
+.b1{position:absolute;width:780px;height:780px;left:-320px;top:-330px;border-radius:50%;background:radial-gradient(circle,#BB68412b,#BB684100 70%)}
+.b2{position:absolute;width:820px;height:820px;right:-380px;bottom:-340px;border-radius:50%;background:radial-gradient(circle,#0025441f,#00254400 70%)}
+.dots{position:absolute;inset:0;background-image:radial-gradient(#00254412 1.6px,transparent 1.6px);background-size:28px 28px;mask-image:linear-gradient(180deg,#000 0,#0000 26%,#0000 80%,#000)}
+.top{position:absolute;top:0;left:0;right:0;height:12px;background:linear-gradient(90deg,var(--n),var(--n2))}
+.bot{position:absolute;bottom:0;left:0;right:0;height:26px;background:linear-gradient(90deg,var(--n),var(--n2))}
+.bot i{position:absolute;left:0;top:0;bottom:0;width:30%;background:var(--c)}
+.logo{position:absolute;top:56px;left:50%;transform:translateX(-50%);width:220px}
+.t1{position:absolute;top:180px;width:100%;text-align:center;font-weight:600;font-size:66px;line-height:1.2;color:var(--n)}
+.t1 em{font-style:normal;color:var(--c)}
+
+.t1{top:175px;font-size:70px}
+.sub{position:absolute;top:278px;width:100%;text-align:center;font-size:31px;color:var(--mut)}
+.cmp{position:absolute;top:400px;left:80px;right:80px;display:flex;gap:40px;align-items:stretch}
+.cd{flex:1;border-radius:34px;padding:60px 34px 54px;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative}
+.cd.no{background:#fff;border:2px dashed #00254430}
+.cd.yes{background:linear-gradient(160deg,#0b3a63,#002544);box-shadow:0 30px 50px -28px #002544;color:#fff}
+.av{width:150px;height:150px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.no .av{background:#00254412}.yes .av{background:linear-gradient(150deg,#d0835d,#BB6841)}
+.av svg{width:84px;height:84px}
+.cd h3{margin-top:30px;font-size:40px;font-weight:600;line-height:1.35}
+.no h3{color:#00254488}.yes h3{color:#fff}
+.tag{margin-top:26px;font-size:28px;padding:8px 26px;border-radius:999px;font-weight:600}
+.no .tag{background:#00254410;color:#5E6673;text-decoration:line-through}
+.yes .tag{background:#BB6841;color:#fff}
+.mark{position:absolute;top:-28px;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:38px;font-weight:600}
+.no .mark{background:#E3DCCF;color:#5E6673}.yes .mark{background:#BB6841;color:#fff;box-shadow:0 10px 20px -8px #BB6841}
+.arrow{position:absolute;top:660px;left:50%;transform:translateX(-50%);width:76px;height:76px;border-radius:50%;background:#F8F5EF;border:2px solid #BB684155;display:flex;align-items:center;justify-content:center;z-index:3}
+.arrow svg{width:40px;height:40px}
+.steps{position:absolute;top:960px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center}
+.steps i{width:52px;height:12px;border-radius:6px;background:#00254420}
+.steps i.on{background:#BB6841;width:110px}
+.cap{position:absolute;top:1002px;width:100%;text-align:center;font-size:30px;color:var(--n);font-weight:600}
+</style></head><body>
+<div class="b1"></div><div class="b2"></div><div class="dots"></div><div class="top"></div>
+<img class="logo" src="../../hamed-site/logo_navy.png">
+<div class="t1">اجعل <em>المتبرع</em> بطل القصة</div>
+<div class="sub">لا المنظمة</div>
+<div class="cmp">
+ <div class="cd no"><div class="mark">✕</div><div class="av"><svg viewBox="0 0 24 24" fill="none" stroke="#00254477" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6M9 11h.01M15 11h.01"/></svg></div><h3>«نحن» و«منظمتنا»<br>في كل سطر</h3><div class="tag">المتبرع متفرج</div></div>
+ <div class="cd yes"><div class="mark">✓</div><div class="av"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4.2 4.2-6.5 8-6.5s7 2.3 8 6.5"/></svg></div><h3>ما يغيّره عطاؤه<br>في حياة إنسان</h3><div class="tag">المتبرع صانع الفرق</div></div>
+</div>
+<div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="#BB6841" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></div>
+<div class="steps"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="cap">نقطة من عشر نقاط لفحص قصتك قبل نشرها</div>
+<div class="bot"><i></i></div></body></html>
