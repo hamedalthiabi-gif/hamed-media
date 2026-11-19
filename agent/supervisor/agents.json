@@ -226,6 +226,20 @@
       "employee": [
         "geo"
       ]
+    },
+    {
+      "key": "pm-weekly",
+      "name": "منسق المشاريع",
+      "kind": "scheduled",
+      "trigger": "trig_01HsMTm7MhuoewR4Xk47Vn52",
+      "every": "weekly-sat",
+      "max_gap_hours": 170,
+      "instructions": "agent/company/staff/pm.md",
+      "role": "تنبيه أسبوعي بالمتأخر ومواعيد الأسبوع من ملف المتابعة",
+      "check": "نجاح التشغيل",
+      "employee": [
+        "pm"
+      ]
     }
   ],
   "retired": {
