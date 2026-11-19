@@ -11,8 +11,7 @@
       "agents": [
         "supervisor"
       ],
-      "trigger": "trig_014GBrzwuPHFBbLzaFTWMSGW",
-      "person": "بشرى"
+      "trigger": "trig_014GBrzwuPHFBbLzaFTWMSGW"
     },
     {
       "key": "writer",
@@ -24,8 +23,7 @@
       "agents": [
         "content-daily"
       ],
-      "trigger": "trig_012d4438ZFsXyg88sD34gJUj",
-      "person": "سارة"
+      "trigger": "trig_012d4438ZFsXyg88sD34gJUj"
     },
     {
       "key": "qa",
@@ -38,8 +36,7 @@
         "content-daily",
         "supervisor"
       ],
-      "trigger": "",
-      "person": "مها"
+      "trigger": ""
     },
     {
       "key": "designer",
@@ -51,8 +48,7 @@
       "agents": [
         "content-daily"
       ],
-      "trigger": "trig_012d4438ZFsXyg88sD34gJUj",
-      "person": "أمل"
+      "trigger": "trig_012d4438ZFsXyg88sD34gJUj"
     },
     {
       "key": "video",
@@ -65,8 +61,7 @@
         "podcast-clips",
         "podcast-fetch"
       ],
-      "trigger": "trig_016xYSYivjaLyLSCbL644anM",
-      "person": "وعد"
+      "trigger": "trig_016xYSYivjaLyLSCbL644anM"
     },
     {
       "key": "newsletter",
@@ -76,8 +71,7 @@
       "mode": "عند الطلب، وتقترح عددًا شهريًا",
       "card": "agent/company/staff/newsletter.md",
       "agents": [],
-      "trigger": "",
-      "person": "بدرية"
+      "trigger": ""
     },
     {
       "key": "publisher",
@@ -90,8 +84,7 @@
         "buffer",
         "buffer-jobs"
       ],
-      "trigger": "",
-      "person": "منى"
+      "trigger": ""
     },
     {
       "key": "calendar",
@@ -104,8 +97,7 @@
         "sector-events",
         "content-daily"
       ],
-      "trigger": "trig_012cF9RLBYjCWtXtd7GivYH7",
-      "person": "فاطمة"
+      "trigger": "trig_012cF9RLBYjCWtXtd7GivYH7"
     },
     {
       "key": "analyst",
@@ -119,8 +111,7 @@
         "engagement-fetch",
         "site-visits"
       ],
-      "trigger": "trig_01A7y1ZM6iAdvsGb3oxzsQt5",
-      "person": "تهاني"
+      "trigger": "trig_01A7y1ZM6iAdvsGb3oxzsQt5"
     },
     {
       "key": "marketing",
@@ -130,8 +121,7 @@
       "mode": "عند الطلب، ومراجعة أول كل شهر ضمن رسالة المدير التنفيذي",
       "card": "agent/company/staff/marketing.md",
       "agents": [],
-      "trigger": "",
-      "person": "البندري"
+      "trigger": ""
     },
     {
       "key": "geo",
@@ -143,8 +133,7 @@
       "agents": [
         "geo-monthly"
       ],
-      "trigger": "trig_01VjQt2Vckx1aEu5aMcK5cr1",
-      "person": "ريم"
+      "trigger": "trig_01VjQt2Vckx1aEu5aMcK5cr1"
     },
     {
       "key": "tech",
@@ -159,8 +148,7 @@
         "site-backup",
         "search-console"
       ],
-      "trigger": "trig_01UjqCbkjLB3eRfoTrhkpEfY",
-      "person": "مي"
+      "trigger": "trig_01UjqCbkjLB3eRfoTrhkpEfY"
     },
     {
       "key": "bosla-data",
@@ -172,8 +160,7 @@
       "agents": [
         "bosla-content"
       ],
-      "trigger": "trig_013DjJxNsrDr8eczWikuANEA",
-      "person": "نجوى"
+      "trigger": "trig_013DjJxNsrDr8eczWikuANEA"
     },
     {
       "key": "bosla-pub",
@@ -183,8 +170,7 @@
       "mode": "يُفعَّل بعد إنشاء حسابات بوصلة",
       "card": "agent/company/staff/bosla-pub.md",
       "agents": [],
-      "trigger": "",
-      "person": "ضحى"
+      "trigger": ""
     },
     {
       "key": "pm",
@@ -196,8 +182,7 @@
       "agents": [
         "pm-weekly"
       ],
-      "trigger": "trig_01HsMTm7MhuoewR4Xk47Vn52",
-      "person": "أسرار"
+      "trigger": "trig_01HsMTm7MhuoewR4Xk47Vn52"
     },
     {
       "key": "proposals",
@@ -207,8 +192,7 @@
       "mode": "عند الطلب",
       "card": "agent/company/staff/proposals.md",
       "agents": [],
-      "trigger": "",
-      "person": "معالي"
+      "trigger": ""
     },
     {
       "key": "research",
@@ -218,8 +202,7 @@
       "mode": "عند الطلب",
       "card": "agent/company/staff/research.md",
       "agents": [],
-      "trigger": "",
-      "person": "عفاف"
+      "trigger": ""
     }
   ]
 }
