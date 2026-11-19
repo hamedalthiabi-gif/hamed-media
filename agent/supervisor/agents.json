@@ -22,7 +22,13 @@
       "max_gap_hours": 26,
       "instructions": "agent/AGENT.md",
       "role": "يكتب منشورات إكس ولينكدإن وتيك توك ويصممها ويضيفها مسودات إلى queue.json حسب خطة النشر المعتمدة",
-      "check": "مسودات اليوم في queue.json، قواعد AGENT.md، لا تكرار"
+      "check": "مسودات اليوم في queue.json، قواعد AGENT.md، لا تكرار",
+      "employee": [
+        "writer",
+        "qa",
+        "designer",
+        "calendar"
+      ]
     },
     {
       "key": "buffer",
@@ -33,7 +39,10 @@
       "max_gap_hours": 14,
       "instructions": "agent/buffer_publish.py",
       "role": "يجدول المنشورات المعتمدة في Buffer ويسجلها في buffer_scheduled.json",
-      "check": "نجاح التشغيلات، لا منشور مكرر في Buffer، لا منشور معتمد فات موعده"
+      "check": "نجاح التشغيلات، لا منشور مكرر في Buffer، لا منشور معتمد فات موعده",
+      "employee": [
+        "publisher"
+      ]
     },
     {
       "key": "content-analysis",
@@ -44,7 +53,10 @@
       "max_gap_hours": 170,
       "instructions": "agent/AGENT.md",
       "role": "يحلل تفاعل الحسابات كل أحد ويطبّق التحسينات منخفضة المخاطر",
-      "check": "تقرير agent/engagement/weekly/<الأحد>.md، توصيات معتمدة بدليل كافٍ"
+      "check": "تقرير agent/engagement/weekly/<الأحد>.md، توصيات معتمدة بدليل كافٍ",
+      "employee": [
+        "analyst"
+      ]
     },
     {
       "key": "podcast-clips",
@@ -55,7 +67,10 @@
       "max_gap_hours": 170,
       "instructions": "agent/PODCAST_CLIPS.md",
       "role": "ينزّل حلقات البودكاست على اللابتوب ويقصّها مقاطع لتيك توك مسودات",
-      "check": "مقاطع جديدة في Drive أو tiktok/podcast/، سجل podcast_clips.json"
+      "check": "مقاطع جديدة في Drive أو tiktok/podcast/، سجل podcast_clips.json",
+      "employee": [
+        "video"
+      ]
     },
     {
       "key": "podcast-fetch",
@@ -66,7 +81,10 @@
       "max_gap_hours": 170,
       "instructions": ".github/workflows/podcast-fetch.yml",
       "role": "مسار قديم لتنزيل الحلقات في GitHub؛ يوتيوب يحجبه، والبديل وكيل اللابتوب",
-      "check": "podcast/failed.txt (الفشل متوقع ما دام يوتيوب يحجبه)"
+      "check": "podcast/failed.txt (الفشل متوقع ما دام يوتيوب يحجبه)",
+      "employee": [
+        "video"
+      ]
     },
     {
       "key": "site-visits",
@@ -77,7 +95,10 @@
       "max_gap_hours": 170,
       "instructions": "نص المهمة",
       "role": "تقرير أسبوعي عن الزوار واهتماماتهم واقتراحات تحسين الموقع",
-      "check": "نجاح التشغيل"
+      "check": "نجاح التشغيل",
+      "employee": [
+        "analyst"
+      ]
     },
     {
       "key": "site-deploy",
@@ -88,7 +109,10 @@
       "max_gap_hours": null,
       "instructions": ".github/workflows/hamed-site-deploy.yml",
       "role": "ينشر الموقع عند كل تعديل",
-      "check": "نجاح آخر تشغيل، وفتح hamedalthiabi.com"
+      "check": "نجاح آخر تشغيل، وفتح hamedalthiabi.com",
+      "employee": [
+        "tech"
+      ]
     },
     {
       "key": "site-backup",
@@ -99,7 +123,10 @@
       "max_gap_hours": null,
       "instructions": ".github/workflows/hamed-site-backup.yml",
       "role": "نسخة احتياطية من الموقع",
-      "check": "نجاح آخر تشغيل"
+      "check": "نجاح آخر تشغيل",
+      "employee": [
+        "tech"
+      ]
     },
     {
       "key": "sector-events",
@@ -110,7 +137,10 @@
       "max_gap_hours": 745,
       "instructions": "نص المهمة",
       "role": "يضيف شهريًا الفعاليات المعتمدة إلى جدول فعاليات الموقع",
-      "check": "نجاح التشغيل"
+      "check": "نجاح التشغيل",
+      "employee": [
+        "calendar"
+      ]
     },
     {
       "key": "search-console",
@@ -121,7 +151,11 @@
       "max_gap_hours": null,
       "instructions": "نص المهمة",
       "role": "مراجعة فهرسة الموقع وأدائه في البحث (مرة واحدة)",
-      "check": "نجاح التشغيل"
+      "check": "نجاح التشغيل",
+      "employee": [
+        "tech",
+        "geo"
+      ]
     },
     {
       "key": "bosla-content",
@@ -132,7 +166,10 @@
       "max_gap_hours": 170,
       "instructions": "نص المهمة",
       "role": "يجمع فرص التعلم من المصادر الرسمية ويضيفها اقتراحات في bosla/site/suggestions.json",
-      "check": "نجاح التشغيل، صحة JSON، لا تكرار في الاقتراحات"
+      "check": "نجاح التشغيل، صحة JSON، لا تكرار في الاقتراحات",
+      "employee": [
+        "bosla-data"
+      ]
     },
     {
       "key": "engagement-fetch",
@@ -143,7 +180,10 @@
       "max_gap_hours": 170,
       "instructions": "agent/buffer_sent.py",
       "role": "يجلب المنشورات المرسلة وتفاعلها من Buffer API كل أحد قبل التحليل الأسبوعي",
-      "check": "نجاح التشغيل، ملفات agent/engagement/*-raw.json"
+      "check": "نجاح التشغيل، ملفات agent/engagement/*-raw.json",
+      "employee": [
+        "analyst"
+      ]
     },
     {
       "key": "buffer-jobs",
@@ -154,7 +194,38 @@
       "max_gap_hours": null,
       "instructions": "agent/buffer_jobs.py",
       "role": "ينفّذ مهام لمرة واحدة من buffer_jobs.json: حذف منشور مجدول في Buffer أو حفظ منشور مسودةً فيه",
-      "check": "نجاح آخر تشغيل، todo فارغ، كل حذف له طلب من تغريد"
+      "check": "نجاح آخر تشغيل، todo فارغ، كل حذف له طلب من تغريد",
+      "employee": [
+        "publisher"
+      ]
+    },
+    {
+      "key": "site-engineer",
+      "name": "مهندس المواقع والأمان",
+      "kind": "scheduled",
+      "trigger": "trig_01UjqCbkjLB3eRfoTrhkpEfY",
+      "every": "weekly-mon",
+      "max_gap_hours": 170,
+      "instructions": "agent/company/staff/tech.md",
+      "role": "يفحص موقعي حامد وبوصلة أسبوعيًا ويقترح الإصلاحات دون تعديل",
+      "check": "تقرير agent/company/reports/tech-<التاريخ>.md",
+      "employee": [
+        "tech"
+      ]
+    },
+    {
+      "key": "geo-monthly",
+      "name": "أخصائي الظهور في الذكاء الاصطناعي",
+      "kind": "scheduled",
+      "trigger": "trig_01VjQt2Vckx1aEu5aMcK5cr1",
+      "every": "monthly-2",
+      "max_gap_hours": 745,
+      "instructions": "agent/company/staff/geo.md",
+      "role": "يقيس شهريًا ظهور حامد في البحث والذكاء الاصطناعي ويقترح ٣ تحسينات",
+      "check": "تقرير agent/company/reports/geo-<الشهر>.md",
+      "employee": [
+        "geo"
+      ]
     }
   ],
   "retired": {

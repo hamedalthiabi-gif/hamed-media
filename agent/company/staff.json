@@ -1,0 +1,206 @@
+{
+  "_note": "سجل موظفي شركة حامد الذيابي (وكلاء الذكاء الاصطناعي). المفتاح agents يربط الموظف بالوكلاء في agent/supervisor/agents.json.",
+  "staff": [
+    {
+      "key": "ceo",
+      "name": "المدير التنفيذي",
+      "dept": "الإدارة العليا",
+      "status": "قائم (الوكيل المشرف)",
+      "mode": "مجدول يوميًا 9:17 م",
+      "card": "agent/company/staff/ceo.md",
+      "agents": [
+        "supervisor"
+      ],
+      "trigger": "trig_014GBrzwuPHFBbLzaFTWMSGW"
+    },
+    {
+      "key": "writer",
+      "name": "كاتب المحتوى",
+      "dept": "إدارة المحتوى",
+      "status": "قائم",
+      "mode": "ضمن وكيل المحتوى اليومي",
+      "card": "agent/company/staff/writer.md",
+      "agents": [
+        "content-daily"
+      ],
+      "trigger": "trig_012d4438ZFsXyg88sD34gJUj"
+    },
+    {
+      "key": "qa",
+      "name": "المدقق ومراقب الجودة",
+      "dept": "إدارة المحتوى",
+      "status": "جديد",
+      "mode": "خطوة إلزامية قبل كل نشر، ويطبّقها المدير التنفيذي يوميًا",
+      "card": "agent/company/staff/qa.md",
+      "agents": [
+        "content-daily",
+        "supervisor"
+      ],
+      "trigger": ""
+    },
+    {
+      "key": "designer",
+      "name": "المصمم",
+      "dept": "إدارة المحتوى",
+      "status": "قائم",
+      "mode": "ضمن وكيل المحتوى اليومي",
+      "card": "agent/company/staff/designer.md",
+      "agents": [
+        "content-daily"
+      ],
+      "trigger": "trig_012d4438ZFsXyg88sD34gJUj"
+    },
+    {
+      "key": "video",
+      "name": "محرر الفيديو",
+      "dept": "إدارة المحتوى",
+      "status": "قائم (وكيل مقاطع البودكاست)",
+      "mode": "مجدول أسبوعيًا الثلاثاء 12:47 م من اللابتوب",
+      "card": "agent/company/staff/video.md",
+      "agents": [
+        "podcast-clips",
+        "podcast-fetch"
+      ],
+      "trigger": "trig_016xYSYivjaLyLSCbL644anM"
+    },
+    {
+      "key": "newsletter",
+      "name": "محرر النشرة",
+      "dept": "إدارة المحتوى",
+      "status": "جزئي، صار موظفًا مستقلًا",
+      "mode": "عند الطلب، وتقترح عددًا شهريًا",
+      "card": "agent/company/staff/newsletter.md",
+      "agents": [],
+      "trigger": ""
+    },
+    {
+      "key": "publisher",
+      "name": "مسؤول الجدولة والنشر",
+      "dept": "إدارة النشر والتحليل",
+      "status": "قائم",
+      "mode": "آلي (GitHub Actions) مرتين يوميًا وعند كل تعديل",
+      "card": "agent/company/staff/publisher.md",
+      "agents": [
+        "buffer",
+        "buffer-jobs"
+      ],
+      "trigger": ""
+    },
+    {
+      "key": "calendar",
+      "name": "مسؤول التقويم الشهري",
+      "dept": "إدارة النشر والتحليل",
+      "status": "قائم",
+      "mode": "مجدول أول كل شهر",
+      "card": "agent/company/staff/calendar.md",
+      "agents": [
+        "sector-events",
+        "content-daily"
+      ],
+      "trigger": "trig_012cF9RLBYjCWtXtd7GivYH7"
+    },
+    {
+      "key": "analyst",
+      "name": "محلل الأداء",
+      "dept": "إدارة النشر والتحليل",
+      "status": "قائم",
+      "mode": "مجدول كل أحد 7:37 ص",
+      "card": "agent/company/staff/analyst.md",
+      "agents": [
+        "content-analysis",
+        "engagement-fetch",
+        "site-visits"
+      ],
+      "trigger": "trig_01A7y1ZM6iAdvsGb3oxzsQt5"
+    },
+    {
+      "key": "marketing",
+      "name": "مدير التسويق والحملات",
+      "dept": "إدارة التسويق",
+      "status": "جديد",
+      "mode": "عند الطلب، ومراجعة أول كل شهر ضمن رسالة المدير التنفيذي",
+      "card": "agent/company/staff/marketing.md",
+      "agents": [],
+      "trigger": ""
+    },
+    {
+      "key": "geo",
+      "name": "أخصائي الظهور في الذكاء الاصطناعي",
+      "dept": "إدارة التسويق",
+      "status": "قائم كمهمة، صار موظفًا مجدولًا",
+      "mode": "مجدول يوم ٢ من كل شهر",
+      "card": "agent/company/staff/geo.md",
+      "agents": [
+        "geo-monthly"
+      ],
+      "trigger": "trig_01VjQt2Vckx1aEu5aMcK5cr1"
+    },
+    {
+      "key": "tech",
+      "name": "مهندس المواقع والأمان",
+      "dept": "إدارة التقنية",
+      "status": "جديد",
+      "mode": "مجدول كل اثنين",
+      "card": "agent/company/staff/tech.md",
+      "agents": [
+        "site-engineer",
+        "site-deploy",
+        "site-backup",
+        "search-console"
+      ],
+      "trigger": "trig_01UjqCbkjLB3eRfoTrhkpEfY"
+    },
+    {
+      "key": "bosla-data",
+      "name": "جامع البيانات",
+      "dept": "إدارة بوصلة",
+      "status": "قائم",
+      "mode": "مجدول كل أحد 7:44 ص",
+      "card": "agent/company/staff/bosla-data.md",
+      "agents": [
+        "bosla-content"
+      ],
+      "trigger": "trig_013DjJxNsrDr8eczWikuANEA"
+    },
+    {
+      "key": "bosla-pub",
+      "name": "ناشر حسابات بوصلة",
+      "dept": "إدارة بوصلة",
+      "status": "جديد، غير مفعّل",
+      "mode": "يُفعَّل بعد إنشاء حسابات بوصلة",
+      "card": "agent/company/staff/bosla-pub.md",
+      "agents": [],
+      "trigger": ""
+    },
+    {
+      "key": "pm",
+      "name": "منسق المشاريع",
+      "dept": "إدارة المشاريع والأعمال",
+      "status": "جديد",
+      "mode": "عند الطلب",
+      "card": "agent/company/staff/pm.md",
+      "agents": [],
+      "trigger": ""
+    },
+    {
+      "key": "proposals",
+      "name": "كاتب العروض",
+      "dept": "إدارة المشاريع والأعمال",
+      "status": "جديد",
+      "mode": "عند الطلب",
+      "card": "agent/company/staff/proposals.md",
+      "agents": [],
+      "trigger": ""
+    },
+    {
+      "key": "research",
+      "name": "الباحث العلمي",
+      "dept": "إدارة المشاريع والأعمال",
+      "status": "جديد",
+      "mode": "عند الطلب",
+      "card": "agent/company/staff/research.md",
+      "agents": [],
+      "trigger": ""
+    }
+  ]
+}
