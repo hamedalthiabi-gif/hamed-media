@@ -240,6 +240,20 @@
       "employee": [
         "pm"
       ]
+    },
+    {
+      "key": "pm-weekly",
+      "name": "منسق المشاريع — تنبيه أسبوعي",
+      "kind": "scheduled",
+      "trigger": "trig_0112G91hpeTtF1bvPWgySPCo",
+      "every": "weekly-sat",
+      "max_gap_hours": 170,
+      "instructions": "نص المهمة",
+      "role": "ينبّه تغريد كل سبت بالمتأخر ومستحق الأسبوع والمبالغ بانتظار التحصيل من ملف المتابعة",
+      "check": "نجاح التشغيل",
+      "employee": [
+        "pm"
+      ]
     }
   ],
   "retired": {

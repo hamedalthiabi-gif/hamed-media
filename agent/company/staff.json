@@ -177,12 +177,12 @@
       "name": "منسق المشاريع",
       "dept": "إدارة المشاريع والأعمال",
       "status": "جديد",
-      "mode": "مجدول كل سبت 9:11 ص",
+      "mode": "مجدول كل سبت 8:41 ص",
       "card": "agent/company/staff/pm.md",
       "agents": [
         "pm-weekly"
       ],
-      "trigger": "trig_01HsMTm7MhuoewR4Xk47Vn52"
+      "trigger": "trig_0112G91hpeTtF1bvPWgySPCo"
     },
     {
       "key": "proposals",
