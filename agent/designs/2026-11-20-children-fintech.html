@@ -1,0 +1,72 @@
+<!doctype html><html dir="rtl" lang="ar"><head><meta charset="utf-8"><style>
+@font-face{font-family:Ar;src:url(../brand/plex-600.ttf);font-weight:600}
+@font-face{font-family:Ar;src:url(../brand/plex-400.ttf);font-weight:400}
+@font-face{font-family:La;src:url(../brand/plex-latin-400.ttf)}
+:root{--n:#002544;--n2:#0b3a63;--c:#BB6841;--c2:#d0835d;--ink:#1c2a38;--mut:#5d6b78;--bg:#f6f3ef}
+*{margin:0;box-sizing:border-box}html,body{width:1080px;height:1350px;overflow:hidden}
+body{font-family:Ar,La;background:var(--bg);position:relative;color:var(--ink)}
+.b1{position:absolute;width:820px;height:820px;right:-360px;top:-360px;border-radius:50%;background:radial-gradient(circle,#BB684122,#BB684100 70%)}
+.b2{position:absolute;width:760px;height:760px;left:-340px;bottom:-320px;border-radius:50%;background:radial-gradient(circle,#0025441c,#00254400 70%)}
+.dots{position:absolute;inset:0;background-image:radial-gradient(#00254414 1.6px,transparent 1.6px);background-size:36px 36px;mask-image:linear-gradient(180deg,#000,#0000 34%)}
+.top{position:absolute;top:0;left:0;right:0;height:12px;background:linear-gradient(90deg,var(--n),var(--n2))}
+.bot{position:absolute;bottom:0;left:0;right:0;height:26px;background:linear-gradient(90deg,var(--n),var(--n2))}
+.bot i{position:absolute;right:0;top:0;bottom:0;width:30%;background:var(--c)}
+.logo{position:absolute;top:56px;right:80px;width:210px}
+.tag{position:absolute;top:66px;left:80px;font-size:24px;font-weight:600;color:#fff;background:var(--c);border-radius:999px;padding:9px 26px;display:flex;gap:12px;align-items:center}
+.tag b{font-family:La,Ar;font-weight:400}
+.title{position:absolute;top:196px;right:80px;left:80px;font-weight:600;font-size:70px;color:var(--n);line-height:1.22}
+.title em{font-style:normal;color:var(--c)}
+.sub{position:absolute;top:388px;right:80px;left:80px;font-size:30px;color:var(--mut);line-height:1.5}
+/* hub diagram */
+.hub{position:absolute;top:470px;left:0;right:0;height:640px}
+.hub svg.lines{position:absolute;inset:0;width:1080px;height:640px}
+.core{position:absolute;left:390px;top:170px;width:300px;height:300px;border-radius:50%;
+ background:radial-gradient(circle at 35% 30%,#0f4a7c,#002544 62%,#001a31);box-shadow:0 40px 80px -36px #002544ee,0 0 0 14px #00254412,0 0 0 30px #00254409;
+ display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center}
+.core svg{width:70px;height:70px;margin-bottom:10px}
+.core b{font-size:38px;font-weight:600;line-height:1.2}
+.core span{font-size:23px;color:#ffffffb8;margin-top:6px}
+.node{position:absolute;width:340px;background:#fff;border-radius:30px;padding:26px 28px 24px;border:1.5px solid #0025441a;box-shadow:0 22px 46px -28px #002544aa}
+.node .ic{width:70px;height:70px;border-radius:22px;background:linear-gradient(150deg,#d0835d,#BB6841);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 24px -12px #BB6841}
+.node .ic svg{width:38px;height:38px}
+.node h3{font-size:34px;font-weight:600;color:var(--n);margin-top:16px;line-height:1.25}
+.node p{font-size:24px;color:var(--mut);margin-top:8px;line-height:1.45}
+.n1{right:70px;top:0}
+.n2{left:70px;top:0}
+.n3{left:370px;top:530px;width:340px;display:none}
+.slog{position:absolute;top:1180px;width:100%;text-align:center;font-size:29px;font-weight:600;color:var(--c)}
+.url{position:absolute;bottom:62px;width:100%;text-align:center;font-family:La,Ar;font-size:27px;color:var(--n);direction:ltr}
+</style></head><body>
+<div class="b1"></div><div class="b2"></div><div class="dots"></div><div class="top"></div>
+<img class="logo" src="../../hamed-site/logo_navy.png">
+<div class="tag">اليوم العالمي للطفل <b>·</b> ٢٠ نوفمبر</div>
+<div class="title">كيف تستدام<br><em>جمعيات الأطفال</em>؟</div>
+<div class="sub">برامجها تمتد سنوات، فيلزمها دخل يمتد معها</div>
+<div class="hub">
+ <svg class="lines" viewBox="0 0 1080 640" fill="none">
+  <path d="M640 300 C 720 270, 780 260, 840 258" stroke="#BB6841" stroke-width="3" stroke-dasharray="2 12" stroke-linecap="round"/>
+  <path d="M440 300 C 360 270, 300 260, 240 258" stroke="#BB6841" stroke-width="3" stroke-dasharray="2 12" stroke-linecap="round"/>
+  <path d="M540 470 L 540 530" stroke="#BB6841" stroke-width="3" stroke-dasharray="2 12" stroke-linecap="round"/>
+  <circle cx="840" cy="258" r="9" fill="#BB6841"/><circle cx="240" cy="258" r="9" fill="#BB6841"/>
+ </svg>
+ <div class="core">
+  <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-9"/><path d="M12 12c0-4 3-6 7-6 0 4-3 6-7 6z"/><path d="M12 14c0-3-2.5-5-6-5 0 3 2.5 5 6 5z"/><path d="M7 21h10"/></svg>
+  <b>استدامة<br>مالية</b>
+ </div>
+ <div class="node n1">
+  <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M9 15l2 2 4-4"/></svg></div>
+  <h3>دخل أكثر انتظامًا</h3><p>التبرع الشهري الآلي يدعم التخطيط المالي لما بعد العام</p>
+ </div>
+ <div class="node n2">
+  <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></div>
+  <h3>تكلفة تشغيل أقل</h3><p>أتمتة معالجة التبرعات وإصدار الإيصالات</p>
+ </div>
+</div>
+<div style="position:absolute;top:1004px;left:370px;width:340px;background:#fff;border-radius:30px;padding:22px 28px;border:1.5px solid #0025441a;box-shadow:0 22px 46px -28px #002544aa;display:flex;gap:20px;align-items:center">
+  <div style="width:70px;height:70px;flex:none;border-radius:22px;background:linear-gradient(150deg,#d0835d,#BB6841);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 24px -12px #BB6841"><svg style="width:38px;height:38px" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/><path d="M2 8c1.5 1.5 1.5 6.5 0 8M22 8c-1.5 1.5-1.5 6.5 0 8"/></svg></div>
+  <div><h3 style="font-size:34px;font-weight:600;color:var(--n);line-height:1.25">وصول أوسع</h3><p style="font-size:24px;color:var(--mut);margin-top:4px;line-height:1.4">التبرع عبر الجوال</p></div>
+</div>
+<div class="slog">استدامة العطاء وأثرٌ يمتد</div>
+<div class="url">hamedalthiabi.com/publications</div>
+<div class="bot"><i></i></div>
+</body></html>
