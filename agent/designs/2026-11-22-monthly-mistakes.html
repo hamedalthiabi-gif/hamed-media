@@ -1,0 +1,47 @@
+<!doctype html><html dir="rtl" lang="ar"><head><meta charset="utf-8"><style>
+@font-face{font-family:Ar;src:url(../brand/plex-600.ttf);font-weight:600}
+@font-face{font-family:Ar;src:url(../brand/plex-400.ttf);font-weight:400}
+@font-face{font-family:La;src:url(../brand/plex-latin-400.ttf)}
+:root{--n:#002544;--n2:#0b3a63;--c:#BB6841;--c2:#d0835d;--mut:#c4cfdb}
+*{margin:0;box-sizing:border-box}html,body{width:1080px;height:1350px;overflow:hidden}
+body{font-family:Ar,La;background:radial-gradient(ellipse at 80% 0%,#0f4a7c,#002544 55%,#001a31);position:relative;color:#fff}
+.grid{position:absolute;inset:0;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:54px 54px;mask-image:linear-gradient(180deg,#000,#0000 45%)}
+.logo{position:absolute;top:60px;right:80px;width:210px}
+.title{position:absolute;top:180px;right:80px;left:80px;font-weight:600;font-size:68px;line-height:1.25}
+.title em{font-style:normal;color:var(--c2)}
+/* donor drop leaking */
+.drop{position:absolute;left:86px;top:470px;width:260px;height:640px}
+.list{position:absolute;right:80px;top:450px;width:640px;display:flex;flex-direction:column;gap:22px}
+.it{display:flex;align-items:center;gap:24px;background:#ffffff0d;border:1.5px solid #ffffff1c;border-radius:26px;padding:22px 26px}
+.it .n{width:62px;height:62px;flex:none;border-radius:50%;background:linear-gradient(150deg,var(--c2),var(--c));display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:600;box-shadow:0 10px 22px -10px #BB6841}
+.it b{font-size:32px;font-weight:600;line-height:1.3}
+.slog{position:absolute;top:1190px;width:100%;text-align:center;font-size:29px;font-weight:600;color:var(--c2)}
+.url{position:absolute;bottom:62px;width:100%;text-align:center;font-family:La,Ar;font-size:27px;color:#ffffffcc;direction:ltr}
+.bot{position:absolute;bottom:0;left:0;right:0;height:22px;background:var(--c)}
+</style></head><body>
+<div class="grid"></div>
+<img class="logo" src="../../hamed-site/logo_white.png">
+<div class="title">خمسة أخطاء<br>تُفقدك <em>المتبرع الشهري</em></div>
+<svg class="drop" viewBox="0 0 260 640" fill="none">
+ <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d0835d"/><stop offset="1" stop-color="#BB6841"/></linearGradient></defs>
+ <rect x="40" y="20" width="180" height="300" rx="34" stroke="#ffffff55" stroke-width="4"/>
+ <rect x="48" y="140" width="164" height="172" rx="28" fill="url(#g)" opacity=".92"/>
+ <path d="M48 160 q40 -18 82 0 t82 0" stroke="#ffffff66" stroke-width="3"/>
+ <circle cx="130" cy="312" r="8" fill="#001a31" stroke="#ffffff55" stroke-width="3"/>
+ <path d="M130 340c0 0-16 22-16 34a16 16 0 0 0 32 0c0-12-16-34-16-34z" fill="#d0835d"/>
+ <path d="M130 410c0 0-12 16-12 25a12 12 0 0 0 24 0c0-9-12-25-12-25z" fill="#d0835d" opacity=".75"/>
+ <path d="M130 466c0 0-9 12-9 19a9 9 0 0 0 18 0c0-7-9-19-9-19z" fill="#d0835d" opacity=".5"/>
+ <ellipse cx="130" cy="560" rx="90" ry="16" fill="#BB684133"/>
+ <ellipse cx="130" cy="560" rx="50" ry="8" fill="#BB684155"/>
+</svg>
+<div class="list">
+ <div class="it"><div class="n">١</div><b>إيصال بارد بدل الشكر</b></div>
+ <div class="it"><div class="n">٢</div><b>بطاقة تنتهي صلاحيتها</b></div>
+ <div class="it"><div class="n">٣</div><b>نداءات تُثقله</b></div>
+ <div class="it"><div class="n">٤</div><b>تخمين دوافعه بدل سؤاله</b></div>
+ <div class="it"><div class="n">٥</div><b>صمت طوال العام</b></div>
+</div>
+<div class="slog">استدامة العطاء وأثرٌ يمتد</div>
+<div class="url">hamedalthiabi.com/publications</div>
+<div class="bot"></div>
+</body></html>
