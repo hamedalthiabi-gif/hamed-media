@@ -1,10 +1,5 @@
 {
- "todo": [
-  {
-   "delete": "6b026768cc364169c125f5ff",
-   "why": "x-2026-11-22: تغيير الرابط إلى ملف الإصدار"
-  }
- ],
+ "todo": [],
  "done": [
   {
    "draft": "linkedin-2026-11-18-wed12",
@@ -15,6 +10,12 @@
    "delete": "6afb95be4b26315855aa511a",
    "result": "DeletePostSuccess",
    "at": "2026-11-18T03:30:45Z"
+  },
+  {
+   "delete": "6b026768cc364169c125f5ff",
+   "why": "x-2026-11-22: تغيير الرابط إلى ملف الإصدار",
+   "result": "DeletePostSuccess",
+   "at": "2026-11-22T04:35:52Z"
   }
  ]
 }
