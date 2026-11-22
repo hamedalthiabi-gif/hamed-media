@@ -1,10 +1,5 @@
 {
- "todo": [
-  {
-   "delete": "6b027139846b0ee9075d2904",
-   "why": "x-2026-11-22: الرابط إلى #pubs/pub15"
-  }
- ],
+ "todo": [],
  "done": [
   {
    "draft": "linkedin-2026-11-18-wed12",
@@ -21,6 +16,12 @@
    "why": "x-2026-11-22: تغيير الرابط إلى ملف الإصدار",
    "result": "DeletePostSuccess",
    "at": "2026-11-22T04:35:52Z"
+  },
+  {
+   "delete": "6b027139846b0ee9075d2904",
+   "why": "x-2026-11-22: الرابط إلى #pubs/pub15",
+   "result": "DeletePostSuccess",
+   "at": "2026-11-22T04:43:09Z"
   }
  ]
 }
