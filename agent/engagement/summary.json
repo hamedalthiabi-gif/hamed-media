@@ -1,532 +1,1110 @@
 {
  "linkedin": {
   "صباح ٨–١١ص": {
-   "posts": 12,
-   "avg": 5,
-   "median": 2,
+   "posts": 16,
+   "avg": 24,
+   "median": 22,
    "items": [
     {
-     "at": "2026-10-30 09:01",
+     "at": "2026-11-16 08:40",
+     "score": 12,
+     "stats": {
+      "reactions": 11,
+      "comments": 1,
+      "eng. rate": 2.14,
+      "impressions": 560,
+      "reach": 332
+     },
+     "type": null,
+     "text": "مقال شهر نوفمبر  من نشرة «الاستدامة المالية» نوضح لماذا يجب "
+    },
+    {
+     "at": "2026-11-12 10:10",
      "score": 6,
      "stats": {
-      "likes": 0,
-      "comments": 6
+      "reactions": 6,
+      "comments": 0,
+      "eng. rate": 1.92,
+      "impressions": 313,
+      "reach": 166,
+      "video views": 64,
+      "watch time (min)": 12.52,
+      "unique viewers": 55
      },
-     "type": "picture",
-     "text": "سؤال سألناه 370 منظمة غير ربحية في دراستنا مع  ‏‏@Omar Alkha"
+     "type": null,
+     "text": "القيم نفسها\n   بتعبيرٍ جديد.\n\nهويتنا 🔸🔹\n‫{hashtag|#|استدامة_"
+    },
+    {
+     "at": "2026-11-06 09:00",
+     "score": 24,
+     "stats": {
+      "reactions": 24,
+      "comments": 0,
+      "eng. rate": 2.19,
+      "impressions": 1096,
+      "reach": 738
+     },
+     "type": null,
+     "text": "خمس أدوات تمويل مبتكرة تتجه إليها المنظمات غير الربحية، ترصد"
+    },
+    {
+     "at": "2026-11-04 09:00",
+     "score": 9,
+     "stats": {
+      "reactions": 9,
+      "comments": 0,
+      "eng. rate": 2.27,
+      "impressions": 396,
+      "reach": 269
+     },
+     "type": null,
+     "text": "سؤال لكل مجلس إدارة منظمة:\n\nلو توقفت إيراداتكم غدًا، فكم شهر"
+    },
+    {
+     "at": "2026-11-02 09:00",
+     "score": 26,
+     "stats": {
+      "reactions": 25,
+      "comments": 1,
+      "eng. rate": 2.32,
+      "impressions": 1123,
+      "reach": 700
+     },
+     "type": null,
+     "text": "ما الذي يمنع الجمعيات من الوصول إلى الاستدامة المالية؟\n\nسألن"
+    },
+    {
+     "at": "2026-10-31 09:01",
+     "score": 27,
+     "stats": {
+      "reactions": 23,
+      "comments": 4,
+      "eng. rate": 0.96,
+      "impressions": 2800,
+      "reach": 1907
+     },
+     "type": null,
+     "text": "التبرع المقيد يبني مشروعًا، والتبرع غير المقيد يُبقي المنظمة"
     },
     {
      "at": "2026-10-28 09:33",
-     "score": 9,
+     "score": 38,
      "stats": {
-      "likes": 0,
-      "comments": 9
+      "reactions": 29,
+      "comments": 9,
+      "eng. rate": 1.8,
+      "impressions": 2109,
+      "reach": 1246
      },
-     "type": "link",
+     "type": null,
      "text": "يسعدني أن أشارككم نشر دراستنا المحكّمة «تطوير أدوات تمويل مب"
     },
     {
-     "at": "2026-10-26 10:00",
-     "score": 2,
+     "at": "2026-10-30 09:01",
+     "score": 40,
      "stats": {
-      "likes": 0,
-      "comments": 2
+      "reactions": 34,
+      "comments": 6,
+      "eng. rate": 1.55,
+      "impressions": 2575,
+      "reach": 1627
      },
-     "type": "picture",
+     "type": null,
+     "text": "سؤال سألناه 370 منظمة غير ربحية في دراستنا مع  ‏‏@Omar Alkha"
+    },
+    {
+     "at": "2026-10-26 10:00",
+     "score": 19,
+     "stats": {
+      "reactions": 17,
+      "comments": 2,
+      "eng. rate": 2.41,
+      "impressions": 789,
+      "reach": 514
+     },
+     "type": null,
      "text": "أشارككم مقالي المنشور على منصة Hive Mind، ضمن سلسلة «خارطة ط"
     },
     {
      "at": "2026-10-21 09:00",
-     "score": 6,
+     "score": 27,
      "stats": {
-      "likes": 0,
-      "comments": 6
+      "reactions": 21,
+      "comments": 6,
+      "eng. rate": 2.2,
+      "impressions": 1230,
+      "reach": 777
      },
-     "type": "picture",
+     "type": null,
      "text": "ستة أنواع من المتبرعين، وحملتك الموحّدة تخاطب غالبًا نوعًا و"
+    },
+    {
+     "at": "2026-10-15 09:37",
+     "score": 86,
+     "stats": {
+      "reactions": 74,
+      "comments": 12,
+      "eng. rate": 2.75,
+      "impressions": 3124,
+      "reach": 1961
+     },
+     "type": null,
+     "text": "I’m delighted to announce the signing of an agreement to pub"
     },
     {
      "at": "2026-10-19 09:00",
      "score": 0,
      "stats": {
-      "likes": 0,
+      "reactions": 0,
       "comments": 0
      },
-     "type": "picture",
+     "type": null,
      "text": "قريبًا.\n\nموعدنا الأربعاء ١١ نوفمبر ٢٠٢٦، الساعة ١١ صباحًا.\n\n"
     },
     {
      "at": "2026-10-18 10:42",
-     "score": 1,
+     "score": 13,
      "stats": {
-      "likes": 0,
-      "comments": 1
+      "reactions": 12,
+      "comments": 1,
+      "eng. rate": 2.09,
+      "impressions": 622,
+      "reach": 374
      },
-     "type": "picture",
+     "type": null,
      "text": "أغلب الحملات الخيرية تُجيب عن سؤال واحد: ماذا سيتغير في حياة"
     },
     {
-     "at": "2026-10-15 09:37",
-     "score": 12,
-     "stats": {
-      "likes": 0,
-      "comments": 12
-     },
-     "type": "picture",
-     "text": "I’m delighted to announce the signing of an agreement to pub"
-    },
-    {
-     "at": "2026-10-14 09:01",
-     "score": 2,
-     "stats": {
-      "likes": 0,
-      "comments": 2
-     },
-     "type": "picture",
-     "text": "بعد سنوات في الاستدامة المالية، تعلّمت أن سؤال: «كيف نزيد ال"
-    },
-    {
      "at": "2026-10-13 09:12",
-     "score": 0,
+     "score": 19,
      "stats": {
-      "likes": 0,
-      "comments": 0
+      "reactions": 19,
+      "comments": 0,
+      "eng. rate": 1.6,
+      "impressions": 1188,
+      "reach": 779
      },
-     "type": "text",
+     "type": null,
      "text": "سعداء بصدور «دليل المسؤولية الاجتماعية للشركات في المملكة ال"
     },
     {
      "at": "2026-10-11 09:17",
-     "score": 1,
+     "score": 20,
      "stats": {
-      "likes": 0,
-      "comments": 1
+      "reactions": 19,
+      "comments": 1,
+      "eng. rate": 2.18,
+      "impressions": 919,
+      "reach": 570
      },
-     "type": "text",
+     "type": null,
      "text": "كيف تبني المنظمات الصغيرة استدامتها وتقلّل اعتمادها على التب"
     },
     {
-     "at": "2026-10-07 09:00",
-     "score": 0,
+     "at": "2026-10-14 09:01",
+     "score": 25,
      "stats": {
-      "likes": 0,
-      "comments": 0
+      "reactions": 23,
+      "comments": 2,
+      "eng. rate": 2.62,
+      "impressions": 953,
+      "reach": 614
      },
-     "type": "picture",
-     "text": "كيف ترتفع إيرادات منظمة ٤٠%… ويزداد إرهاقها المالي؟\n\nلنفترض "
-    },
-    {
-     "at": "2026-10-04 09:55",
-     "score": 22,
-     "stats": {
-      "likes": 0,
-      "comments": 22
-     },
-     "type": "picture",
-     "text": "Fifteen days in Silicon Valley… and one question I brought h"
+     "type": null,
+     "text": "بعد سنوات في الاستدامة المالية، تعلّمت أن سؤال: «كيف نزيد ال"
     }
    ]
   },
   "ظهر ١١ص–٢م": {
-   "posts": 2,
-   "avg": 0,
-   "median": 0,
+   "posts": 7,
+   "avg": 14,
+   "median": 9,
    "items": [
+    {
+     "at": "2026-11-11 11:11",
+     "score": 54,
+     "stats": {
+      "reactions": 37,
+      "comments": 17,
+      "eng. rate": 0.52,
+      "impressions": 10468,
+      "reach": 7971,
+      "video views": 2673,
+      "watch time (min)": 332.8,
+      "unique viewers": 2606
+     },
+     "type": null,
+     "text": "اليوم بحمد الله، 11/11، تنطلق هويتنا الجديدة 🔸🔹\n\nهويةٌ تعبّر"
+    },
+    {
+     "at": "2026-11-10 12:18",
+     "score": 4,
+     "stats": {
+      "reactions": 4,
+      "comments": 0,
+      "eng. rate": 1.86,
+      "impressions": 215,
+      "reach": 112,
+      "video views": 56,
+      "watch time (min)": 7.96,
+      "unique viewers": 47
+     },
+     "type": null,
+     "text": "11/11/2026\n11:11 am 🔸🔹"
+    },
+    {
+     "at": "2026-11-08 12:15",
+     "score": 7,
+     "stats": {
+      "reactions": 7,
+      "comments": 0,
+      "eng. rate": 1.42,
+      "impressions": 494,
+      "reach": 267,
+      "video views": 170,
+      "watch time (min)": 27.61,
+      "unique viewers": 146
+     },
+     "type": null,
+     "text": "‏قـريـبـًا 👀\n‏      انتـظـرونــا…"
+    },
+    {
+     "at": "2026-11-01 12:00",
+     "score": 13,
+     "stats": {
+      "reactions": 13,
+      "comments": 0,
+      "eng. rate": 1.32,
+      "impressions": 988,
+      "reach": 630
+     },
+     "type": null,
+     "text": "أبرز ملتقيات القطاع غير الربحي وأيامه العالمية في نوفمبر، في"
+    },
+    {
+     "at": "2026-10-31 13:00",
+     "score": 9,
+     "stats": {
+      "reactions": 9,
+      "comments": 0,
+      "eng. rate": 1.64,
+      "impressions": 549,
+      "reach": 363
+     },
+     "type": null,
+     "text": "نتيجة سؤالنا: لو توقفت التبرعات اليوم، كم شهرًا تصمد المنظمة"
+    },
+    {
+     "at": "2026-11-03 13:02",
+     "score": 9,
+     "stats": {
+      "reactions": 9,
+      "comments": 0,
+      "eng. rate": 1.79,
+      "impressions": 503,
+      "reach": 343
+     },
+     "type": null,
+     "text": "خلاصة دراستنا في صورة واحدة.\n\nبلغت النتيجة العامة لمحاور الد"
+    },
     {
      "at": "2026-10-29 13:01",
      "score": 0,
      "stats": {
-      "likes": 0,
+      "reactions": 0,
       "comments": 0
      },
-     "type": "picture",
+     "type": null,
      "text": "من نتائج دراستنا مع @omaralkhairi على 370 منظمة غير ربحية:\n3"
+    }
+   ]
+  },
+  "مساء ٦–٩م": {
+   "posts": 2,
+   "avg": 12,
+   "median": 12,
+   "items": [
+    {
+     "at": "2026-11-06 18:22",
+     "score": 24,
+     "stats": {
+      "reactions": 18,
+      "comments": 6,
+      "eng. rate": 2.81,
+      "impressions": 853,
+      "reach": 541
+     },
+     "type": null,
+     "text": "خمس أدوات تمويل مبتكرة تتجه إليها المنظمات غير الربحية، ترصد"
     },
     {
-     "at": "2026-10-05 11:32",
+     "at": "2026-11-04 18:21",
      "score": 0,
      "stats": {
-      "likes": 0,
+      "reactions": 0,
       "comments": 0
      },
-     "type": "link",
-     "text": "View my verified achievement from @SAP."
+     "type": null,
+     "text": "سؤال لكل مجلس إدارة جمعية:\n\nلو توقفت إيراداتكم غدًا، فكم شهر"
+    }
+   ]
+  },
+  "عصر ٢–٦م": {
+   "posts": 2,
+   "avg": 21,
+   "median": 21,
+   "items": [
+    {
+     "at": "2026-11-05 15:36",
+     "score": 21,
+     "stats": {
+      "reactions": 18,
+      "comments": 3,
+      "eng. rate": 0.74,
+      "impressions": 2829,
+      "reach": 1858
+     },
+     "type": null,
+     "text": "لقد مرت ساعتين سريعاً كنت مميزا أخي هيثم ومتألق لم استطع الت"
+    },
+    {
+     "at": "2026-11-04 14:01",
+     "score": 21,
+     "stats": {
+      "reactions": 21,
+      "comments": 0,
+      "eng. rate": 2.33,
+      "impressions": 901,
+      "reach": 533
+     },
+     "type": null,
+     "text": "في ١٦ شريحة: خلاصة دراستنا  عن تطوير أدوات تمويل مبتكرة لتعز"
     }
    ]
   }
  },
  "tiktok": {
-  "مساء ٦–٩م": {
-   "posts": 3,
-   "avg": 323,
-   "median": 261,
-   "items": [
-    {
-     "at": "2026-10-30 19:06",
-     "score": 187,
-     "stats": {
-      "likes": 7,
-      "comments": 1,
-      "views": 179
-     },
-     "type": "video",
-     "text": "دراسة على 370 جمعية (موشن)"
-    },
-    {
-     "at": "2026-10-12 20:03",
-     "score": 521,
-     "stats": {
-      "likes": 10,
-      "comments": 0,
-      "views": 511
-     },
-     "type": "video",
-     "text": "رسالة الحملة"
-    },
-    {
-     "at": "2026-10-05 19:35",
-     "score": 261,
-     "stats": {
-      "likes": 8,
-      "comments": 0,
-      "views": 253
-     },
-     "type": "video",
-     "text": "رحلة المتبرع"
-    }
-   ]
-  },
   "ليل ٩–١٢م": {
-   "posts": 4,
-   "avg": 2448,
-   "median": 2620,
+   "posts": 8,
+   "avg": 339,
+   "median": 37,
    "items": [
+    {
+     "at": "2026-11-20 21:04",
+     "score": 7,
+     "stats": {
+      "reactions": 6,
+      "comments": 1,
+      "eng. rate": 3.57,
+      "video views": 196,
+      "shares": 0,
+      "reach": 0,
+      "watch time (min)": 17,
+      "avg. watch time (sec)": 4.72
+     },
+     "type": null,
+     "text": "ليس كل مشروع تنموي يحقق الأثر!\nفما الذي يصنع الفرق؟ شاهد للن"
+    },
+    {
+     "at": "2026-11-17 21:04",
+     "score": 24,
+     "stats": {
+      "reactions": 21,
+      "comments": 0,
+      "eng. rate": 1.92,
+      "video views": 1253,
+      "shares": 3,
+      "reach": 997,
+      "watch time (min)": 138.65,
+      "avg. watch time (sec)": 6.08
+     },
+     "type": null,
+     "text": "ثلاثة أسس للاستدامة المالية لأي منظمة غير ربحية: ضبط المصروف"
+    },
+    {
+     "at": "2026-11-10 21:06",
+     "score": 0,
+     "stats": {
+      "reactions": 0,
+      "comments": 0,
+      "eng. rate": 0,
+      "video views": 0,
+      "shares": 0,
+      "reach": 0,
+      "watch time (min)": 0,
+      "avg. watch time (sec)": 0
+     },
+     "type": null,
+     "text": "كيف تسوّق الجمعيات لنفسها؟ 📣\nمقطع من لقاء «القطاع الرابح» عل"
+    },
+    {
+     "at": "2026-11-08 21:03",
+     "score": 2492,
+     "stats": {
+      "reactions": 2465,
+      "comments": 2,
+      "eng. rate": 13.73,
+      "video views": 18146,
+      "shares": 25,
+      "reach": 17419,
+      "watch time (min)": 846.93,
+      "avg. watch time (sec)": 2.58
+     },
+     "type": null,
+     "text": "من أين يأتي تمويل الجمعيات؟ 💡 مقطع من لقاء «القطاع الرابح» ع"
+    },
     {
      "at": "2026-10-26 21:03",
-     "score": 2711,
+     "score": 43,
      "stats": {
-      "likes": 27,
+      "reactions": 37,
       "comments": 2,
-      "views": 2682
+      "eng. rate": 1.27,
+      "video views": 3373,
+      "shares": 4,
+      "reach": 2920,
+      "watch time (min)": 547.55,
+      "avg. watch time (sec)": 9.34
      },
-     "type": "video",
-     "text": "ذا ستيج: استدامة الجمعيات أم الشركات"
+     "type": null,
+     "text": "استدامة الجمعيات أم الشركات؟ 🤔 مقطع من لقاء «القطاع الرابح» "
     },
     {
      "at": "2026-10-25 21:02",
-     "score": 1143,
+     "score": 31,
      "stats": {
-      "likes": 24,
+      "reactions": 27,
       "comments": 1,
-      "views": 1118
+      "eng. rate": 2.09,
+      "video views": 1483,
+      "shares": 3,
+      "reach": 1273,
+      "watch time (min)": 128.17,
+      "avg. watch time (sec)": 5.05
      },
-     "type": "video",
-     "text": "اكتفاء: النشاط والأثر"
+     "type": null,
+     "text": "قد تقدّم أفضل برنامج بأفضل مدرب، ويسعد الناس بالفعاليات والن"
     },
     {
      "at": "2026-10-19 21:03",
-     "score": 3408,
+     "score": 57,
      "stats": {
-      "likes": 38,
+      "reactions": 50,
       "comments": 1,
-      "views": 3369
+      "eng. rate": 1.37,
+      "video views": 4152,
+      "shares": 6,
+      "reach": 3606,
+      "watch time (min)": 380.07,
+      "avg. watch time (sec)": 5.33
      },
-     "type": "video",
-     "text": "القطاع الجديد: الجمعيات الأهلية"
+     "type": null,
+     "text": "ما الجمعيات الأهلية؟ ومن يستطيع تأسيسها؟ إن كنت مهتمًا بقضية"
     },
     {
      "at": "2026-10-18 21:01",
-     "score": 2529,
+     "score": 55,
      "stats": {
-      "likes": 42,
+      "reactions": 48,
       "comments": 0,
-      "views": 2487
+      "eng. rate": 1.95,
+      "video views": 2825,
+      "shares": 7,
+      "reach": 2457,
+      "watch time (min)": 239.33,
+      "avg. watch time (sec)": 4.9
      },
-     "type": "video",
-     "text": "القطاع الجديد: البداية"
+     "type": null,
+     "text": "القطاع غير الربحي بدأ بمبادرات فردية وتبرعات، مثل جمعيات الب"
+    }
+   ]
+  },
+  "مساء ٦–٩م": {
+   "posts": 3,
+   "avg": 9,
+   "median": 11,
+   "items": [
+    {
+     "at": "2026-11-03 19:06",
+     "score": 4,
+     "stats": {
+      "reactions": 4,
+      "comments": 0,
+      "eng. rate": 0.95,
+      "video views": 422,
+      "shares": 0,
+      "reach": 352,
+      "watch time (min)": 17.38,
+      "avg. watch time (sec)": 2.39
+     },
+     "type": null,
+     "text": "أكبر 4 تحديات تواجه تمويل الجمعيات، بحسب 370 منظمة. أيها توا"
+    },
+    {
+     "at": "2026-10-30 19:06",
+     "score": 11,
+     "stats": {
+      "reactions": 7,
+      "comments": 1,
+      "eng. rate": 2.16,
+      "video views": 509,
+      "shares": 3,
+      "reach": 418,
+      "watch time (min)": 32.43,
+      "avg. watch time (sec)": 3.67
+     },
+     "type": null,
+     "text": "دراسة على 370 جمعية في أقل من دقيقة: أين يقف تمويل القطاع غي"
+    },
+    {
+     "at": "2026-10-12 20:03",
+     "score": 12,
+     "stats": {
+      "reactions": 11,
+      "comments": 0,
+      "eng. rate": 2.07,
+      "video views": 581,
+      "shares": 1,
+      "reach": 494,
+      "watch time (min)": 33.45,
+      "avg. watch time (sec)": 3.3
+     },
+     "type": null,
+     "text": "لو قرأ المتبرع رسالة حملتك… هل يقدر يتخيّل الأثر اللي بيصنعه"
+    }
+   ]
+  },
+  "صباح ٨–١١ص": {
+   "posts": 1,
+   "avg": 12,
+   "median": 12,
+   "items": [
+    {
+     "at": "2026-10-11 08:02",
+     "score": 12,
+     "stats": {
+      "reactions": 10,
+      "comments": 0,
+      "eng. rate": 2.72,
+      "video views": 441,
+      "shares": 2,
+      "reach": 386,
+      "watch time (min)": 38.92,
+      "avg. watch time (sec)": 5.02
+     },
+     "type": null,
+     "text": "تدخل الاستثمار بعقلية العمل الاجتماعي… وش ممكن يصير؟ 👀 كيف ت"
     }
    ]
   },
   "عصر ٢–٦م": {
    "posts": 1,
-   "avg": 420,
-   "median": 420,
+   "avg": 4,
+   "median": 4,
    "items": [
     {
      "at": "2026-10-14 17:05",
-     "score": 420,
+     "score": 4,
      "stats": {
-      "likes": 3,
+      "reactions": 4,
       "comments": 0,
-      "views": 417
+      "eng. rate": 0.81,
+      "video views": 495,
+      "shares": 0,
+      "reach": 396,
+      "watch time (min)": 30.3,
+      "avg. watch time (sec)": 3.53
      },
-     "type": "video",
-     "text": "الإسناد الحكومي"
-    }
-   ]
-  },
-  "صباح ٨–١١ص": {
-   "posts": 1,
-   "avg": 394,
-   "median": 394,
-   "items": [
-    {
-     "at": "2026-10-11 08:02",
-     "score": 394,
-     "stats": {
-      "likes": 9,
-      "comments": 0,
-      "views": 385
-     },
-     "type": "video",
-     "text": "الاستثمار والعمل الاجتماعي"
+     "type": null,
+     "text": "الإسناد الحكومي فرصة للمنظمات غير الربحية… لكن متى يتحوّل إل"
     }
    ]
   }
  },
  "x": {
-  "صباح ٨–١١ص": {
-   "posts": 11,
-   "avg": 2331,
-   "median": 1617,
+  "عصر ٢–٦م": {
+   "posts": 4,
+   "avg": 11,
+   "median": 6,
    "items": [
     {
-     "at": "2026-10-30 10:52",
-     "score": 850,
+     "at": "2026-11-20 15:11",
+     "score": 33,
      "stats": {
-      "retweets": 1,
-      "mentions": 0,
-      "clicks": 9,
-      "reach": 810,
-      "likes": 3
+      "reactions": 31,
+      "comments": 1,
+      "eng. rate": 12.03,
+      "reposts": 1,
+      "impressions": 4354,
+      "clicks": 45
      },
-     "type": "picture",
+     "type": null,
+     "text": "تفكّر جمعيتك بتأسيس وحدة للاستثمار الاجتماعي؟ ابدأ بتقييم جا"
+    },
+    {
+     "at": "2026-11-20 15:10",
+     "score": 0,
+     "stats": {
+      "reactions": 0,
+      "comments": 0,
+      "eng. rate": 3.5,
+      "reposts": 0,
+      "impressions": 143,
+      "clicks": 1
+     },
+     "type": null,
+     "text": "تفكّر جمعيتك بتأسيس وحدة للاستثمار الاجتماعي؟ ابدأ بتقييم جا"
+    },
+    {
+     "at": "2026-11-16 16:14",
+     "score": 9,
+     "stats": {
+      "reactions": 8,
+      "comments": 0,
+      "eng. rate": 5.29,
+      "reposts": 1,
+      "impressions": 869,
+      "clicks": 0
+     },
+     "type": null,
+     "text": "كل ريال مرهون بمشروع، ولا دخل حرّ يغطي البنية المؤسسية.\nهكذا"
+    },
+    {
+     "at": "2026-11-12 16:35",
+     "score": 2,
+     "stats": {
+      "reactions": 0,
+      "comments": 1,
+      "eng. rate": 8.23,
+      "reposts": 1,
+      "impressions": 814,
+      "clicks": 5
+     },
+     "type": null,
+     "text": "يسعدني أن أكون ضيفًا في الجلسة الثانية من «قهوة الاستدامة»، "
+    }
+   ]
+  },
+  "صباح ٨–١١ص": {
+   "posts": 15,
+   "avg": 24,
+   "median": 16,
+   "items": [
+    {
+     "at": "2026-11-20 09:30",
+     "score": 3,
+     "stats": {
+      "reactions": 3,
+      "comments": 0,
+      "eng. rate": 4.07,
+      "reposts": 0,
+      "impressions": 565,
+      "clicks": 2
+     },
+     "type": null,
+     "text": "برامج جمعيات الأطفال تمتد سنوات، فهل يمتد دخلها معها؟\nفي #ال"
+    },
+    {
+     "at": "2026-11-18 09:30",
+     "score": 16,
+     "stats": {
+      "reactions": 15,
+      "comments": 0,
+      "eng. rate": 7.39,
+      "reposts": 1,
+      "impressions": 1381,
+      "clicks": 21
+     },
+     "type": null,
+     "text": "في أقوى قصص جمع التبرعات، البطل ليس المنظمة، بل المتبرع.\nقبل"
+    },
+    {
+     "at": "2026-11-17 09:30",
+     "score": 18,
+     "stats": {
+      "reactions": 15,
+      "comments": 0,
+      "eng. rate": 6.47,
+      "reposts": 3,
+      "impressions": 1699,
+      "clicks": 26
+     },
+     "type": null,
+     "text": "قبل أن تخطط لعام منظمتك، قِس أين تقف اليوم.\n«مؤشر الصمود الم"
+    },
+    {
+     "at": "2026-11-12 10:08",
+     "score": 2,
+     "stats": {
+      "reactions": 0,
+      "comments": 0,
+      "eng. rate": 0.9,
+      "reposts": 2,
+      "impressions": 779,
+      "clicks": 0
+     },
+     "type": null,
+     "text": "القيم نفسها\n بتعبيرٍ جديد.\n\nهويتنا 🔸🔹\n#استدامة_العطاء\n#القطا"
+    },
+    {
+     "at": "2026-11-06 09:30",
+     "score": 61,
+     "stats": {
+      "reactions": 50,
+      "comments": 0,
+      "eng. rate": 10.18,
+      "reposts": 11,
+      "impressions": 3930,
+      "clicks": 37
+     },
+     "type": null,
+     "text": "5 أدوات تمويل مبتكرة تتجه إليها الجمعيات، من دراستنا مع @oma"
+    },
+    {
+     "at": "2026-11-03 09:30",
+     "score": 4,
+     "stats": {
+      "reactions": 3,
+      "comments": 0,
+      "eng. rate": 4.71,
+      "reposts": 1,
+      "impressions": 806,
+      "clicks": 1
+     },
+     "type": null,
+     "text": "الدراسة في صورة واحدة: خمسة محاور، ونتيجة عامة 77.2%.\nوعي مت"
+    },
+    {
+     "at": "2026-10-31 09:30",
+     "score": 31,
+     "stats": {
+      "reactions": 29,
+      "comments": 0,
+      "eng. rate": 8.52,
+      "reposts": 2,
+      "impressions": 4084,
+      "clicks": 36
+     },
+     "type": null,
+     "text": "لدى 47% من الجمعيات، لا تتجاوز التبرعات غير المقيدة 5% من إج"
+    },
+    {
+     "at": "2026-10-30 10:52",
+     "score": 5,
+     "stats": {
+      "reactions": 4,
+      "comments": 0,
+      "eng. rate": 6.37,
+      "reposts": 1,
+      "impressions": 1021,
+      "clicks": 10
+     },
+     "type": null,
      "text": "لو توقفت التبرعات اليوم، كم شهرًا تستطيع جمعيتك تغطية نفقاته"
+    },
+    {
+     "at": "2026-10-28 09:30",
+     "score": 71,
+     "stats": {
+      "reactions": 54,
+      "comments": 4,
+      "eng. rate": 11.81,
+      "reposts": 13,
+      "impressions": 6105,
+      "clicks": 143
+     },
+     "type": null,
+     "text": "بفضل الله، نُشرت دراستنا مع @omaralkhairi «تطوير أدوات تمويل"
     },
     {
      "at": "2026-10-30 09:30",
      "score": 0,
      "stats": {
-      "retweets": 0,
-      "mentions": 0,
-      "clicks": 0,
-      "reach": 0,
-      "likes": 0
+      "reactions": 0,
+      "comments": 0,
+      "eng. rate": 0,
+      "reposts": 0,
+      "impressions": 0,
+      "clicks": 0
      },
-     "type": "picture",
+     "type": null,
      "text": "لو توقفت التبرعات اليوم، كم شهرًا تستطيع جمعيتك تغطية نفقاته"
     },
     {
-     "at": "2026-10-28 09:30",
-     "score": 6464,
-     "stats": {
-      "retweets": 13,
-      "mentions": 0,
-      "clicks": 135,
-      "reach": 5804,
-      "likes": 53
-     },
-     "type": "picture",
-     "text": "بفضل الله، نُشرت دراستنا مع @omaralkhairi «تطوير أدوات تمويل"
-    },
-    {
      "at": "2026-10-26 09:15",
-     "score": 3766,
+     "score": 45,
      "stats": {
-      "retweets": 4,
-      "mentions": 0,
-      "clicks": 42,
-      "reach": 3346,
-      "likes": 38
+      "reactions": 39,
+      "comments": 2,
+      "eng. rate": 12.26,
+      "reposts": 4,
+      "impressions": 3498,
+      "clicks": 51
      },
-     "type": "picture",
+     "type": null,
      "text": "ماذا تغيّر بفضل دعمك؟\nتقارير كثيرة تسرد إنجازات المنظمة وتنس"
     },
     {
      "at": "2026-10-13 09:10",
-     "score": 4447,
+     "score": 31,
      "stats": {
-      "retweets": 8,
-      "mentions": 0,
-      "clicks": 0,
-      "reach": 4157,
-      "likes": 21
+      "reactions": 22,
+      "comments": 1,
+      "eng. rate": 2.13,
+      "reposts": 8,
+      "impressions": 4169,
+      "clicks": 0
      },
-     "type": "link",
+     "type": null,
      "text": "صدر الإصدار الأول من «دليل المسؤولية الاجتماعية للشركات في ا"
     },
     {
      "at": "2026-10-13 09:01",
-     "score": 1617,
+     "score": 15,
      "stats": {
-      "retweets": 3,
-      "mentions": 0,
-      "clicks": 14,
-      "reach": 1467,
-      "likes": 12
+      "reactions": 12,
+      "comments": 0,
+      "eng. rate": 3.86,
+      "reposts": 3,
+      "impressions": 1476,
+      "clicks": 14
      },
-     "type": "video",
+     "type": null,
      "text": "هل يرى المتبرع دوره في رسالة حملتك؟\n\n«دليل الطلب الغامر» يسا"
     },
     {
      "at": "2026-10-11 09:30",
-     "score": 3480,
+     "score": 49,
      "stats": {
-      "retweets": 7,
-      "mentions": 0,
-      "clicks": 0,
-      "reach": 2990,
-      "likes": 42
+      "reactions": 42,
+      "comments": 0,
+      "eng. rate": 12.91,
+      "reposts": 7,
+      "impressions": 2990,
+      "clicks": 0
      },
-     "type": "picture",
+     "type": null,
      "text": "كيف تبني المنظمات الصغيرة استدامتها دون الاعتماد على التبرعا"
     },
     {
      "at": "2026-10-08 10:33",
-     "score": 1209,
+     "score": 5,
      "stats": {
-      "retweets": 1,
-      "mentions": 0,
-      "clicks": 13,
-      "reach": 1159,
-      "likes": 4
+      "reactions": 4,
+      "comments": 0,
+      "eng. rate": 5,
+      "reposts": 1,
+      "impressions": 1159,
+      "clicks": 13
      },
-     "type": "picture",
+     "type": null,
      "text": "قبل اختيار قصة لحملتك، حدّد هدفك:\n\n🔹 لطلب التبرع: حاجة قائمة"
-    },
-    {
-     "at": "2026-10-06 09:53",
-     "score": 2708,
-     "stats": {
-      "retweets": 3,
-      "mentions": 0,
-      "clicks": 23,
-      "reach": 2498,
-      "likes": 18
-     },
-     "type": "video",
-     "text": "كيف تتحول التقنية المالية إلى فرصة لتنمية التبرعات واستدامته"
-    },
-    {
-     "at": "2026-10-06 09:51",
-     "score": 161,
-     "stats": {
-      "retweets": 0,
-      "mentions": 0,
-      "clicks": 0,
-      "reach": 161,
-      "likes": 0
-     },
-     "type": "video",
-     "text": "كيف تتحول التقنية المالية إلى فرصة لتنمية التبرعات واستدامته"
-    },
-    {
-     "at": "2026-10-04 09:00",
-     "score": 942,
-     "stats": {
-      "retweets": 0,
-      "mentions": 0,
-      "clicks": 7,
-      "reach": 912,
-      "likes": 3
-     },
-     "type": "video",
-     "text": "تبرّع مرة… كيف تكسب استمراره؟ 🌱\n\nمن التعارف إلى الثقة، ومن أ"
     }
    ]
   },
   "ظهر ١١ص–٢م": {
-   "posts": 4,
-   "avg": 1617,
-   "median": 1645,
+   "posts": 10,
+   "avg": 27,
+   "median": 10,
    "items": [
     {
-     "at": "2026-10-29 13:01",
-     "score": 2139,
+     "at": "2026-11-11 11:11",
+     "score": 130,
      "stats": {
-      "retweets": 3,
-      "mentions": 0,
-      "clicks": 0,
-      "reach": 1979,
-      "likes": 13
+      "reactions": 76,
+      "comments": 21,
+      "eng. rate": 8.21,
+      "reposts": 33,
+      "impressions": 9491,
+      "clicks": 184
      },
-     "type": "picture",
+     "type": null,
+     "text": "اليوم بحمد الله، 11/11، تنطلق هويتنا الجديدة 🔸🔹\n\nهويةٌ تعبّر"
+    },
+    {
+     "at": "2026-11-10 12:14",
+     "score": 7,
+     "stats": {
+      "reactions": 6,
+      "comments": 0,
+      "eng. rate": 3.04,
+      "reposts": 1,
+      "impressions": 1710,
+      "clicks": 0
+     },
+     "type": null,
+     "text": "11/11/2026 - 11:11am 🔶🔷\n#القطاع_غير_الربحي"
+    },
+    {
+     "at": "2026-11-08 11:51",
+     "score": 0,
+     "stats": {
+      "reactions": 0,
+      "comments": 0,
+      "eng. rate": 0.92,
+      "reposts": 0,
+      "impressions": 757,
+      "clicks": 0
+     },
+     "type": null,
+     "text": "قـريـبـًا 👀\n انتـظـرونــا…"
+    },
+    {
+     "at": "2026-11-01 12:00",
+     "score": 53,
+     "stats": {
+      "reactions": 47,
+      "comments": 1,
+      "eng. rate": 18.89,
+      "reposts": 5,
+      "impressions": 7333,
+      "clicks": 3
+     },
+     "type": null,
+     "text": "أبرز ملتقيات القطاع غير الربحي وأيامه العالمية في نوفمبر.\nاح"
+    },
+    {
+     "at": "2026-10-31 13:00",
+     "score": 5,
+     "stats": {
+      "reactions": 4,
+      "comments": 0,
+      "eng. rate": 4.77,
+      "reposts": 1,
+      "impressions": 1510,
+      "clicks": 9
+     },
+     "type": null,
+     "text": "نتيجة سؤالنا: كم شهرًا تصمد الجمعية لو توقفت التبرعات؟\nإجابة"
+    },
+    {
+     "at": "2026-11-02 13:01",
+     "score": 10,
+     "stats": {
+      "reactions": 5,
+      "comments": 1,
+      "eng. rate": 8.23,
+      "reposts": 4,
+      "impressions": 1495,
+      "clicks": 9
+     },
+     "type": null,
+     "text": "أكبر 4 تحديات تواجه تمويل الجمعيات، بحسب 370 منظمة:\n١. محدود"
+    },
+    {
+     "at": "2026-10-29 13:01",
+     "score": 16,
+     "stats": {
+      "reactions": 13,
+      "comments": 0,
+      "eng. rate": 5.93,
+      "reposts": 3,
+      "impressions": 2143,
+      "clicks": 0
+     },
+     "type": null,
      "text": "39% من الجمعيات لا تملك أي احتياطي مالي لمواجهة الأزمات.\n\nأز"
     },
     {
      "at": "2026-10-22 12:37",
-     "score": 2179,
+     "score": 25,
      "stats": {
-      "retweets": 4,
-      "mentions": 0,
-      "clicks": 29,
-      "reach": 1939,
-      "likes": 20
+      "reactions": 21,
+      "comments": 0,
+      "eng. rate": 6.19,
+      "reposts": 4,
+      "impressions": 2002,
+      "clicks": 32
      },
-     "type": "picture",
+     "type": null,
      "text": "الشكر ليس سطرًا في ختام الحملة، بل بداية العلاقة.\nفكّر فيه م"
     },
     {
      "at": "2026-10-21 13:14",
-     "score": 1151,
+     "score": 10,
      "stats": {
-      "retweets": 1,
-      "mentions": 0,
-      "clicks": 0,
-      "reach": 1071,
-      "likes": 7
+      "reactions": 8,
+      "comments": 1,
+      "eng. rate": 2.12,
+      "reposts": 1,
+      "impressions": 1134,
+      "clicks": 0
      },
-     "type": "link",
+     "type": null,
      "text": "أشارككم مقالي المنشور على منصة Hive Mind حول دور #الذكاء_الا"
     },
     {
      "at": "2026-10-20 11:46",
-     "score": 998,
+     "score": 10,
      "stats": {
-      "retweets": 2,
-      "mentions": 0,
-      "clicks": 8,
-      "reach": 898,
-      "likes": 8
+      "reactions": 8,
+      "comments": 0,
+      "eng. rate": 5.19,
+      "reposts": 2,
+      "impressions": 945,
+      "clicks": 11
      },
-     "type": "picture",
+     "type": null,
      "text": "💡 المتبرع الشهري يلتزم حين يفهم لماذا يستمر، لا لأنك طلبت.\nث"
+    }
+   ]
+  },
+  "مساء ٦–٩م": {
+   "posts": 1,
+   "avg": 0,
+   "median": 0,
+   "items": [
+    {
+     "at": "2026-11-06 18:22",
+     "score": 0,
+     "stats": {
+      "reactions": 0,
+      "comments": 0,
+      "eng. rate": 0,
+      "reposts": 0,
+      "impressions": 0,
+      "clicks": 0
+     },
+     "type": null,
+     "text": "5 أدوات تمويل مبتكرة تتجه إليها الجمعيات، من دراستنا مع @oma"
     }
    ]
   },
   "ليل ٩–١٢م": {
    "posts": 2,
-   "avg": 358,
-   "median": 358,
+   "avg": 2,
+   "median": 2,
    "items": [
     {
      "at": "2026-10-21 21:01",
      "score": 0,
      "stats": {
-      "retweets": 0,
-      "mentions": 0,
-      "clicks": 0,
-      "reach": 0,
-      "likes": 0
+      "reactions": 0,
+      "comments": 0,
+      "eng. rate": 0,
+      "reposts": 0,
+      "impressions": 0,
+      "clicks": 0
      },
-     "type": "picture",
+     "type": null,
      "text": "سؤال لكل منظمة: ماذا تفعلون بعد وصول التبرع؟\n\nهل يتلقى المتب"
     },
     {
      "at": "2026-10-18 21:00",
-     "score": 715,
+     "score": 3,
      "stats": {
-      "retweets": 1,
-      "mentions": 0,
-      "clicks": 0,
-      "reach": 685,
-      "likes": 2
+      "reactions": 2,
+      "comments": 0,
+      "eng. rate": 3.32,
+      "reposts": 1,
+      "impressions": 723,
+      "clicks": 0
      },
-     "type": "picture",
+     "type": null,
      "text": "حملتك تُظهر أثر التبرع على المستفيد، فهل تُظهر عائده على الم"
     }
    ]
   }
  },
- "updated": "2026-11-01T04:38:29.952617+00:00"
+ "updated": "2026-11-22T04:39:57.753334+00:00"
 }

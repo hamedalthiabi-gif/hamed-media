@@ -2,7 +2,7 @@
 # المصدر: إجراء Zapier «Buffer → New Sent Item» (buffer_new_sent_item) لكل قناة، تُحفظ نتيجته كما هي في
 #   agent/engagement/<المنصة>-raw.json   (المنصة: x أو linkedin أو tiktok)
 # ثم: python3 agent/engagement.py  → يكتب agent/engagement/summary.json ويطبع متوسط التفاعل لكل فترة نشر.
-# مقياس الترتيب: إكس = الوصول (reach) + ١٠×(إعجاب+إعادة نشر)، لينكدإن وتيك توك = التعليقات والإعجابات المتاحة.
+# مقياس الترتيب: مجموع التفاعل (تفاعلات + تعليقات + إعادة نشر + مشاركات)، لا المشاهدات.
 import json, os, datetime, statistics, glob
 D = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'engagement')
 SLOTS = [(5, 8, 'فجر/مبكر ٥–٨ص'), (8, 11, 'صباح ٨–١١ص'), (11, 14, 'ظهر ١١ص–٢م'), (14, 18, 'عصر ٢–٦م'),
@@ -10,9 +10,9 @@ SLOTS = [(5, 8, 'فجر/مبكر ٥–٨ص'), (8, 11, 'صباح ٨–١١ص'), (
 
 
 def score(platform, s):
-    if platform == 'x':
-        return s.get('reach', 0) + 10 * (s.get('likes', 0) + s.get('retweets', 0))
-    return sum(v for v in s.values() if isinstance(v, (int, float)))
+    # التفاعل = إعجابات/تفاعلات + تعليقات + إعادة نشر + مشاركات (صيغة Buffer API الحالية، مع الحقول القديمة)
+    keys = ('reactions', 'likes', 'comments', 'reposts', 'retweets', 'shares')
+    return sum(s.get(k, 0) for k in keys if isinstance(s.get(k, 0), (int, float)))
 
 
 def slot(h):
