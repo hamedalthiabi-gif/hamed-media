@@ -1,5 +1,299 @@
 [
  {
+  "id": "6b0038f1c21d6801c695fc43",
+  "allowedActions": [
+   "viewPost",
+   "sharePostLink",
+   "copyPostLink",
+   "updatePostTags",
+   "addPostNote",
+   "updateShopGridLink"
+  ],
+  "channelId": "6a4bdb9c4048344628775568",
+  "channelService": "twitter",
+  "contentItemId": null,
+  "dueAt": "2026-11-20T12:11:20.000Z",
+  "externalLink": "https://x.com/381671037/status/2123751040948310325",
+  "ideaId": null,
+  "isCustomScheduled": true,
+  "metricsUpdatedAt": "2026-11-21T17:09:33.404Z",
+  "notificationStatus": null,
+  "schedulingType": "automatic",
+  "sentAt": "2026-11-20T12:11:20.000Z",
+  "sharedNow": false,
+  "shareMode": "customScheduled",
+  "status": "sent",
+  "text": "تفكّر جمعيتك بتأسيس وحدة للاستثمار الاجتماعي؟ ابدأ بتقييم جاهزيتها.\n\nبرنامج «رَكيز» يؤهّل جمعيتك لتأسيس الوحدة وحوكمتها وتشغيلها خلال ٦ أسابيع.\n\n📅 التدريب الحضوري ١–٣ ديسمبر ٢٠٢٦\n🎁 خصم ١٥٪ لأي منظمة بكود HM1\n\nسجّل جمعيتك 👇\nhttps://t.co/qwLg248jCx\nوليصلك كل ما يهم القطاع تابع",
+  "via": "network",
+  "createdAt": "2026-11-20T12:11:20.000Z",
+  "updatedAt": "2026-11-21T17:09:33.404Z",
+  "metrics": [
+   {
+    "description": "Also called Likes on X. This shows how many people reacted to your post.",
+    "name": "Reactions",
+    "type": "reactions",
+    "unit": "count",
+    "value": 31
+   },
+   {
+    "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
+    "name": "Comments",
+    "type": "comments",
+    "unit": "count",
+    "value": 1
+   },
+   {
+    "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
+    "name": "Eng. Rate",
+    "type": "engagementRate",
+    "unit": "percentage",
+    "value": 12.03
+   },
+   {
+    "description": "Also called Retweets on X. This shows how many times your post was reposted by others. A sign your content is reaching beyond your immediate audience.",
+    "name": "Reposts",
+    "type": "reposts",
+    "unit": "count",
+    "value": 1
+   },
+   {
+    "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
+    "name": "Impressions",
+    "type": "impressions",
+    "unit": "count",
+    "value": 4354
+   },
+   {
+    "description": "How many times people clicked on your post or link. Shows when your content drives action beyond the channel it's on.",
+    "name": "Clicks",
+    "type": "clicks",
+    "unit": "count",
+    "value": 45
+   }
+  ]
+ },
+ {
+  "id": "6b0038d149f075abaf0c3121",
+  "allowedActions": [
+   "viewPost",
+   "sharePostLink",
+   "copyPostLink",
+   "updatePostTags",
+   "addPostNote",
+   "updateShopGridLink"
+  ],
+  "channelId": "6a4bdb9c4048344628775568",
+  "channelService": "twitter",
+  "contentItemId": null,
+  "dueAt": "2026-11-20T12:10:48.000Z",
+  "externalLink": "https://x.com/381671037/status/2123750906306945487",
+  "ideaId": null,
+  "isCustomScheduled": true,
+  "metricsUpdatedAt": "2026-11-21T17:09:33.405Z",
+  "notificationStatus": null,
+  "schedulingType": "automatic",
+  "sentAt": "2026-11-20T12:10:48.000Z",
+  "sharedNow": false,
+  "shareMode": "customScheduled",
+  "status": "sent",
+  "text": "تفكّر جمعيتك بتأسيس وحدة للاستثمار الاجتماعي؟ ابدأ بتقييم جاهزيتها.\n\nبرنامج «رَكيز» يؤهّل جمعيتك لتأسيس الوحدة وحوكمتها وتشغيلها خلال ٦ أسابيع.\n\n📅 التدريب الحضوري ١–٣ ديسمبر ٢٠٢٦\n🎁 خصم ١٥٪ لأي منظمة بكود HM1\n\nسجّل جمعيتك 👇\nhttps://t.co/qwLg248jCx\nوليصلك كل ما يهم القطاع تابع",
+  "via": "network",
+  "createdAt": "2026-11-20T12:10:48.000Z",
+  "updatedAt": "2026-11-21T17:09:33.405Z",
+  "metrics": [
+   {
+    "description": "Also called Likes on X. This shows how many people reacted to your post.",
+    "name": "Reactions",
+    "type": "reactions",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
+    "name": "Comments",
+    "type": "comments",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
+    "name": "Eng. Rate",
+    "type": "engagementRate",
+    "unit": "percentage",
+    "value": 3.5
+   },
+   {
+    "description": "Also called Retweets on X. This shows how many times your post was reposted by others. A sign your content is reaching beyond your immediate audience.",
+    "name": "Reposts",
+    "type": "reposts",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
+    "name": "Impressions",
+    "type": "impressions",
+    "unit": "count",
+    "value": 143
+   },
+   {
+    "description": "How many times people clicked on your post or link. Shows when your content drives action beyond the channel it's on.",
+    "name": "Clicks",
+    "type": "clicks",
+    "unit": "count",
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "6affd815738ce4635f8b8651",
+  "allowedActions": [
+   "viewPost",
+   "sharePostLink",
+   "copyPostLink",
+   "updatePostTags",
+   "addPostNote",
+   "duplicatePost",
+   "updateShopGridLink"
+  ],
+  "channelId": "6a4bdb9c4048344628775568",
+  "channelService": "twitter",
+  "contentItemId": null,
+  "dueAt": "2026-11-20T06:30:00.000Z",
+  "externalLink": "https://x.com/381671037/status/2123665195071336624",
+  "ideaId": null,
+  "isCustomScheduled": true,
+  "metricsUpdatedAt": "2026-11-21T17:09:33.405Z",
+  "notificationStatus": null,
+  "schedulingType": "automatic",
+  "sentAt": "2026-11-20T06:30:13.280Z",
+  "sharedNow": false,
+  "shareMode": "customScheduled",
+  "status": "sent",
+  "text": "برامج جمعيات الأطفال تمتد سنوات، فهل يمتد دخلها معها؟\nفي #اليوم_العالمي_للطفل: دخل أكثر انتظامًا، وتكلفة أقل، ووصول أوسع.\nثلاثة مسارات تقنية في بحثنا «فنتك التبرعات»، أولها التبرع الشهري الآلي:\nhttps://hamedalthiabi.com/publications/?utm_source=x&utm_medium=social&utm_campaign=site-content\n#الاستدامة_المالية #القطاع_غير_الربحي",
+  "via": "buffer",
+  "createdAt": "2026-11-20T05:18:13.940Z",
+  "updatedAt": "2026-11-21T17:09:33.405Z",
+  "metrics": [
+   {
+    "description": "Also called Likes on X. This shows how many people reacted to your post.",
+    "name": "Reactions",
+    "type": "reactions",
+    "unit": "count",
+    "value": 3
+   },
+   {
+    "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
+    "name": "Comments",
+    "type": "comments",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
+    "name": "Eng. Rate",
+    "type": "engagementRate",
+    "unit": "percentage",
+    "value": 4.07
+   },
+   {
+    "description": "Also called Retweets on X. This shows how many times your post was reposted by others. A sign your content is reaching beyond your immediate audience.",
+    "name": "Reposts",
+    "type": "reposts",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
+    "name": "Impressions",
+    "type": "impressions",
+    "unit": "count",
+    "value": 565
+   },
+   {
+    "description": "How many times people clicked on your post or link. Shows when your content drives action beyond the channel it's on.",
+    "name": "Clicks",
+    "type": "clicks",
+    "unit": "count",
+    "value": 2
+   }
+  ]
+ },
+ {
+  "id": "6afd263bf38e9cc54861d01e",
+  "allowedActions": [
+   "viewPost",
+   "sharePostLink",
+   "copyPostLink",
+   "updatePostTags",
+   "addPostNote",
+   "duplicatePost",
+   "updateShopGridLink"
+  ],
+  "channelId": "6a4bdb9c4048344628775568",
+  "channelService": "twitter",
+  "contentItemId": null,
+  "dueAt": "2026-11-18T06:30:00.000Z",
+  "externalLink": "https://x.com/381671037/status/2122940391209017590",
+  "ideaId": null,
+  "isCustomScheduled": true,
+  "metricsUpdatedAt": "2026-11-21T17:09:33.405Z",
+  "notificationStatus": null,
+  "schedulingType": "automatic",
+  "sentAt": "2026-11-18T06:30:06.579Z",
+  "sharedNow": false,
+  "shareMode": "customScheduled",
+  "status": "sent",
+  "text": "في أقوى قصص جمع التبرعات، البطل ليس المنظمة، بل المتبرع.\nقبل نشر قصتك القادمة، احذف كل «نحن» و«منظمتنا» لا ضرورة لها، واجعل المتبرع صانع الفرق لا متفرجًا.\nهذه نقطة من عشر في دليلنا «اختبار نبض القصة»:\nhttps://hamedalthiabi.com/publications/?utm_source=x&utm_medium=social&utm_campaign=site-content\n#جمع_التبرعات #القطاع_غير_الربحي",
+  "via": "buffer",
+  "createdAt": "2026-11-18T04:14:51.250Z",
+  "updatedAt": "2026-11-21T17:09:33.405Z",
+  "metrics": [
+   {
+    "description": "Also called Likes on X. This shows how many people reacted to your post.",
+    "name": "Reactions",
+    "type": "reactions",
+    "unit": "count",
+    "value": 15
+   },
+   {
+    "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
+    "name": "Comments",
+    "type": "comments",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
+    "name": "Eng. Rate",
+    "type": "engagementRate",
+    "unit": "percentage",
+    "value": 7.39
+   },
+   {
+    "description": "Also called Retweets on X. This shows how many times your post was reposted by others. A sign your content is reaching beyond your immediate audience.",
+    "name": "Reposts",
+    "type": "reposts",
+    "unit": "count",
+    "value": 1
+   },
+   {
+    "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
+    "name": "Impressions",
+    "type": "impressions",
+    "unit": "count",
+    "value": 1381
+   },
+   {
+    "description": "How many times people clicked on your post or link. Shows when your content drives action beyond the channel it's on.",
+    "name": "Clicks",
+    "type": "clicks",
+    "unit": "count",
+    "value": 21
+   }
+  ]
+ },
+ {
   "id": "6afb259037f32fd42a37ac6e",
   "allowedActions": [
    "viewPost",
@@ -17,7 +311,7 @@
   "externalLink": "https://x.com/381671037/status/2122578027221516356",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T21:08:52.129Z",
+  "metricsUpdatedAt": "2026-11-21T17:09:33.405Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-11-17T06:30:12.200Z",
@@ -27,14 +321,14 @@
   "text": "قبل أن تخطط لعام منظمتك، قِس أين تقف اليوم.\n«مؤشر الصمود المالي» أداة مجانية في موقعنا: عشرة أسئلة، ودرجة من ١٠٠، وتقرير يصل إلى بريدك.\nجرّبه مع فريقك:\nhttps://hamedalthiabi.com/services/?utm_source=x&utm_medium=social&utm_campaign=site-content#readiness\n#الاستدامة_المالية #القطاع_غير_الربحي",
   "via": "buffer",
   "createdAt": "2026-11-16T15:47:28.179Z",
-  "updatedAt": "2026-11-17T21:08:52.129Z",
+  "updatedAt": "2026-11-21T17:09:33.405Z",
   "metrics": [
    {
     "description": "Also called Likes on X. This shows how many people reacted to your post.",
     "name": "Reactions",
     "type": "reactions",
     "unit": "count",
-    "value": 9
+    "value": 15
    },
    {
     "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
@@ -48,28 +342,28 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 5.67
+    "value": 6.47
    },
    {
     "description": "Also called Retweets on X. This shows how many times your post was reposted by others. A sign your content is reaching beyond your immediate audience.",
     "name": "Reposts",
     "type": "reposts",
     "unit": "count",
-    "value": 1
+    "value": 3
    },
    {
     "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 1112
+    "value": 1699
    },
    {
     "description": "How many times people clicked on your post or link. Shows when your content drives action beyond the channel it's on.",
     "name": "Clicks",
     "type": "clicks",
     "unit": "count",
-    "value": 16
+    "value": 26
    }
   ]
  },
@@ -90,7 +384,7 @@
   "externalLink": "https://x.com/381671037/status/2122317473399882204",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T21:08:52.129Z",
+  "metricsUpdatedAt": "2026-11-21T17:09:33.405Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-11-16T13:14:51.000Z",
@@ -100,7 +394,7 @@
   "text": "كل ريال مرهون بمشروع، ولا دخل حرّ يغطي البنية المؤسسية.\nهكذا تنفّذ المنظمة بكفاءة لكنها لا تنمو.\n\nفي مقالنا: لماذا يجب أن يكون الدخل غير المقيّد أولوية استراتيجية، وما النسبة التي نوصي بها؟ ⬇️\n#الاستدامة_المالية #القطاع_غير_الربحي",
   "via": "network",
   "createdAt": "2026-11-16T13:14:51.000Z",
-  "updatedAt": "2026-11-17T21:08:52.129Z",
+  "updatedAt": "2026-11-21T17:09:33.405Z",
   "metrics": [
    {
     "description": "Also called Likes on X. This shows how many people reacted to your post.",
@@ -121,7 +415,7 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 5.16
+    "value": 5.29
    },
    {
     "description": "Also called Retweets on X. This shows how many times your post was reposted by others. A sign your content is reaching beyond your immediate audience.",
@@ -135,7 +429,7 @@
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 737
+    "value": 869
    },
    {
     "description": "How many times people clicked on your post or link. Shows when your content drives action beyond the channel it's on.",
@@ -163,7 +457,7 @@
   "externalLink": "https://x.com/381671037/status/2120873067635151167",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T21:08:52.129Z",
+  "metricsUpdatedAt": "2026-11-21T17:09:33.405Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-11-12T13:35:17.000Z",
@@ -173,7 +467,7 @@
   "text": "يسعدني أن أكون ضيفًا في الجلسة الثانية من «قهوة الاستدامة»، بتنظيم من @motawiroon و@darb__sa في حوار حول «نموذج الاستدامة المالية» مع الزميلين د. محمد العنزي وأ. إبراهيم الوهيبي.\n\n🗓 السبت 14 نوفمبر | 12:00 ظهرًا\n\n📍 الرياض – مقهى ميدرا: https://t.co/to8twUqVzM\n\n🔴 البث المباشر:",
   "via": "network",
   "createdAt": "2026-11-12T13:35:17.000Z",
-  "updatedAt": "2026-11-17T21:08:52.129Z",
+  "updatedAt": "2026-11-21T17:09:33.405Z",
   "metrics": [
    {
     "description": "Also called Likes on X. This shows how many people reacted to your post.",
@@ -194,7 +488,7 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 8.49
+    "value": 8.23
    },
    {
     "description": "Also called Retweets on X. This shows how many times your post was reposted by others. A sign your content is reaching beyond your immediate audience.",
@@ -208,7 +502,7 @@
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 766
+    "value": 814
    },
    {
     "description": "How many times people clicked on your post or link. Shows when your content drives action beyond the channel it's on.",
@@ -236,7 +530,7 @@
   "externalLink": "https://x.com/381671037/status/2120775656749367474",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T21:08:52.129Z",
+  "metricsUpdatedAt": "2026-11-21T17:09:33.405Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-11-12T07:08:13.000Z",
@@ -246,7 +540,7 @@
   "text": "القيم نفسها\n بتعبيرٍ جديد.\n\nهويتنا 🔸🔹\n#استدامة_العطاء\n#القطاع_غير_الربحي",
   "via": "network",
   "createdAt": "2026-11-12T07:08:13.000Z",
-  "updatedAt": "2026-11-17T21:08:52.129Z",
+  "updatedAt": "2026-11-21T17:09:33.405Z",
   "metrics": [
    {
     "description": "Also called Likes on X. This shows how many people reacted to your post.",
@@ -267,7 +561,7 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 0.94
+    "value": 0.9
    },
    {
     "description": "Also called Retweets on X. This shows how many times your post was reposted by others. A sign your content is reaching beyond your immediate audience.",
@@ -281,7 +575,7 @@
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 743
+    "value": 779
    },
    {
     "description": "How many times people clicked on your post or link. Shows when your content drives action beyond the channel it's on.",
@@ -310,7 +604,7 @@
   "externalLink": "https://x.com/381671037/status/2120429098476482743",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T21:08:52.129Z",
+  "metricsUpdatedAt": "2026-11-21T17:09:33.405Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-11-11T08:11:07.598Z",
@@ -320,7 +614,7 @@
   "text": "اليوم بحمد الله، 11/11، تنطلق هويتنا الجديدة 🔸🔹\n\nهويةٌ تعبّر عن قيمنا: الاستدامة، والأثر، والوضوح، والمعرفة العملية.\n\nومعها نُطلق مرجعًا للقطاع غير الربحي:\nموقعٌ إلكتروني يجمع إصداراتنا، ومحتوانا المعرفي، وأدلتنا، ودوراتنا في مكانٍ واحد، لكل من يعمل على استدامة منظمته.⬇️\n\nhttps://hamedalthiabi.com/\n\nعشرون عامًا ونحن في الميدان..\nواليوم صار للميدان عنوان.\n\n#استدامة_العطاء وأثرٌ يمتد\n\n#القطاع_غير_الربحي\n\n\n",
   "via": "buffer",
   "createdAt": "2026-11-11T02:19:03.518Z",
-  "updatedAt": "2026-11-17T21:08:52.129Z",
+  "updatedAt": "2026-11-21T17:09:33.405Z",
   "metrics": [
    {
     "description": "Also called Likes on X. This shows how many people reacted to your post.",
@@ -341,7 +635,7 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 8.25
+    "value": 8.21
    },
    {
     "description": "Also called Retweets on X. This shows how many times your post was reposted by others. A sign your content is reaching beyond your immediate audience.",
@@ -355,14 +649,14 @@
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 9410
+    "value": 9491
    },
    {
     "description": "How many times people clicked on your post or link. Shows when your content drives action beyond the channel it's on.",
     "name": "Clicks",
     "type": "clicks",
     "unit": "count",
-    "value": 183
+    "value": 184
    }
   ]
  },
@@ -383,7 +677,7 @@
   "externalLink": "https://x.com/381671037/status/2120082651520614617",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T21:08:52.129Z",
+  "metricsUpdatedAt": "2026-11-21T17:09:33.405Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-11-10T09:14:28.000Z",
@@ -393,7 +687,7 @@
   "text": "11/11/2026 - 11:11am 🔶🔷\n#القطاع_غير_الربحي",
   "via": "network",
   "createdAt": "2026-11-10T09:14:28.000Z",
-  "updatedAt": "2026-11-17T21:08:52.129Z",
+  "updatedAt": "2026-11-21T17:09:33.405Z",
   "metrics": [
    {
     "description": "Also called Likes on X. This shows how many people reacted to your post.",
@@ -414,7 +708,7 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 3.08
+    "value": 3.04
    },
    {
     "description": "Also called Retweets on X. This shows how many times your post was reposted by others. A sign your content is reaching beyond your immediate audience.",
@@ -428,7 +722,7 @@
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 1691
+    "value": 1710
    },
    {
     "description": "How many times people clicked on your post or link. Shows when your content drives action beyond the channel it's on.",
@@ -456,7 +750,7 @@
   "externalLink": "https://x.com/381671037/status/2119352071401140367",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T21:08:52.129Z",
+  "metricsUpdatedAt": "2026-11-21T17:09:33.405Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-11-08T08:51:24.000Z",
@@ -466,7 +760,7 @@
   "text": "قـريـبـًا 👀\n انتـظـرونــا…",
   "via": "network",
   "createdAt": "2026-11-08T08:51:24.000Z",
-  "updatedAt": "2026-11-17T21:08:52.129Z",
+  "updatedAt": "2026-11-21T17:09:33.405Z",
   "metrics": [
    {
     "description": "Also called Likes on X. This shows how many people reacted to your post.",
@@ -487,7 +781,7 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 0.94
+    "value": 0.92
    },
    {
     "description": "Also called Retweets on X. This shows how many times your post was reposted by others. A sign your content is reaching beyond your immediate audience.",
@@ -501,7 +795,7 @@
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 743
+    "value": 757
    },
    {
     "description": "How many times people clicked on your post or link. Shows when your content drives action beyond the channel it's on.",
@@ -604,7 +898,7 @@
   "externalLink": "https://x.com/381671037/status/2118591740621865178",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T21:08:52.129Z",
+  "metricsUpdatedAt": "2026-11-21T17:09:33.405Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-11-06T06:30:07.436Z",
@@ -614,7 +908,7 @@
   "text": "5 أدوات تمويل مبتكرة تتجه إليها الجمعيات، من دراستنا مع @omaralkhairi:\n١. التمويل الجماعي\n٢. الصكوك الوقفية\n٣. التمويل القائم على النتائج\n٤. الشراكات الاستثمارية\n٥. المتاجر الإلكترونية\nو82% من المنظمات ترى أنها تقلل الاعتماد على التبرع الموسمي.\nhttps://rssj.ncss.gov.sa/index.php/rssj/article/view/257/116\n#تمويل_يدوم",
   "via": "buffer",
   "createdAt": "2026-11-06T03:21:25.546Z",
-  "updatedAt": "2026-11-17T21:08:52.129Z",
+  "updatedAt": "2026-11-21T17:09:33.405Z",
   "metrics": [
    {
     "description": "Also called Likes on X. This shows how many people reacted to your post.",
@@ -635,7 +929,7 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 10.14
+    "value": 10.18
    },
    {
     "description": "Also called Retweets on X. This shows how many times your post was reposted by others. A sign your content is reaching beyond your immediate audience.",
@@ -649,14 +943,14 @@
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 3897
+    "value": 3930
    },
    {
     "description": "How many times people clicked on your post or link. Shows when your content drives action beyond the channel it's on.",
     "name": "Clicks",
     "type": "clicks",
     "unit": "count",
-    "value": 36
+    "value": 37
    }
   ]
  },
@@ -678,7 +972,7 @@
   "externalLink": "https://x.com/381671037/status/2116817668980253087",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T21:08:52.129Z",
+  "metricsUpdatedAt": "2026-11-20T18:09:22.904Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-11-01T09:00:35.990Z",
@@ -688,7 +982,7 @@
   "text": "أبرز ملتقيات القطاع غير الربحي وأيامه العالمية في نوفمبر.\nاحفظ التقويم، وخطّط لحضور منظمتك.\n#القطاع_غير_الربحي #العمل_الخيري",
   "via": "buffer",
   "createdAt": "2026-10-31T09:34:05.856Z",
-  "updatedAt": "2026-11-17T21:08:52.129Z",
+  "updatedAt": "2026-11-20T18:09:22.904Z",
   "metrics": [
    {
     "description": "Also called Likes on X. This shows how many people reacted to your post.",
@@ -709,7 +1003,7 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 18.88
+    "value": 18.89
    },
    {
     "description": "Also called Retweets on X. This shows how many times your post was reposted by others. A sign your content is reaching beyond your immediate audience.",
@@ -723,7 +1017,7 @@
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 7310
+    "value": 7333
    },
    {
     "description": "How many times people clicked on your post or link. Shows when your content drives action beyond the channel it's on.",
@@ -752,7 +1046,7 @@
   "externalLink": "https://x.com/381671037/status/2116470338888294634",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T21:08:52.129Z",
+  "metricsUpdatedAt": "2026-11-19T19:09:15.352Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-10-31T10:00:25.866Z",
@@ -762,7 +1056,7 @@
   "text": "نتيجة سؤالنا: كم شهرًا تصمد الجمعية لو توقفت التبرعات؟\nإجابة 370 منظمة:\n١. أقل من 3 أشهر: 19%\n٢. من 4 إلى 6 أشهر: 29%\n٣. من 7 إلى 12 شهرًا: 22%\n٤. أكثر من سنة: 16%\nو14% لا تغطي نفقاتها أصلًا.\nمن دراستنا مع @omaralkhairi\nhttps://rssj.ncss.gov.sa/index.php/rssj/article/view/257/116\n#تمويل_يدوم",
   "via": "buffer",
   "createdAt": "2026-10-31T03:58:23.156Z",
-  "updatedAt": "2026-11-17T21:08:52.129Z",
+  "updatedAt": "2026-11-19T19:09:15.352Z",
   "metrics": [
    {
     "description": "Also called Likes on X. This shows how many people reacted to your post.",
@@ -783,7 +1077,7 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 4.73
+    "value": 4.77
    },
    {
     "description": "Also called Retweets on X. This shows how many times your post was reposted by others. A sign your content is reaching beyond your immediate audience.",
@@ -797,14 +1091,14 @@
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 1502
+    "value": 1510
    },
    {
     "description": "How many times people clicked on your post or link. Shows when your content drives action beyond the channel it's on.",
     "name": "Clicks",
     "type": "clicks",
     "unit": "count",
-    "value": 8
+    "value": 9
    }
   ]
  },
@@ -826,7 +1120,7 @@
   "externalLink": "https://x.com/381671037/status/2117504581944975494",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T21:08:52.129Z",
+  "metricsUpdatedAt": "2026-11-21T17:09:33.405Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-11-03T06:30:08.667Z",
@@ -836,7 +1130,7 @@
   "text": "الدراسة في صورة واحدة: خمسة محاور، ونتيجة عامة 77.2%.\nوعي متقدم بالاستدامة المالية، وحاجة إلى تمكين وأدوات أحدث.\nمن دراستنا مع @omaralkhairi\nhttps://rssj.ncss.gov.sa/index.php/rssj/article/view/257/116\n#تمويل_يدوم",
   "via": "buffer",
   "createdAt": "2026-10-30T12:59:56.855Z",
-  "updatedAt": "2026-11-17T21:08:52.129Z",
+  "updatedAt": "2026-11-21T17:09:33.405Z",
   "metrics": [
    {
     "description": "Also called Likes on X. This shows how many people reacted to your post.",
@@ -857,7 +1151,7 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 4.29
+    "value": 4.71
    },
    {
     "description": "Also called Retweets on X. This shows how many times your post was reposted by others. A sign your content is reaching beyond your immediate audience.",
@@ -871,14 +1165,14 @@
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 792
+    "value": 806
    },
    {
     "description": "How many times people clicked on your post or link. Shows when your content drives action beyond the channel it's on.",
     "name": "Clicks",
     "type": "clicks",
     "unit": "count",
-    "value": 0
+    "value": 1
    }
   ]
  },
@@ -900,7 +1194,7 @@
   "externalLink": "https://x.com/381671037/status/2117195394710909417",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T21:08:52.129Z",
+  "metricsUpdatedAt": "2026-11-21T17:09:33.405Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-11-02T10:01:32.726Z",
@@ -910,7 +1204,7 @@
   "text": "أكبر 4 تحديات تواجه تمويل الجمعيات، بحسب 370 منظمة:\n١. محدودية تنوع المصادر 86%\n٢. المنافسة على الموارد نفسها 86%\n٣. ضعف الكفاءات المالية والإدارية 84%\n٤. قلة الوعي بالأدوات المبتكرة 84%\nأيها تواجهه جمعيتك؟\nمن دراستنا مع @omaralkhairi\nhttps://rssj.ncss.gov.sa/index.php/rssj/article/view/257/116\n#تمويل_يدوم",
   "via": "buffer",
   "createdAt": "2026-10-30T12:59:43.209Z",
-  "updatedAt": "2026-11-17T21:08:52.129Z",
+  "updatedAt": "2026-11-21T17:09:33.405Z",
   "metrics": [
    {
     "description": "Also called Likes on X. This shows how many people reacted to your post.",
@@ -931,7 +1225,7 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 8.29
+    "value": 8.23
    },
    {
     "description": "Also called Retweets on X. This shows how many times your post was reposted by others. A sign your content is reaching beyond your immediate audience.",
@@ -945,7 +1239,7 @@
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 1483
+    "value": 1495
    },
    {
     "description": "How many times people clicked on your post or link. Shows when your content drives action beyond the channel it's on.",
@@ -974,7 +1268,7 @@
   "externalLink": "https://x.com/381671037/status/2116417410542579856",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T21:08:52.129Z",
+  "metricsUpdatedAt": "2026-11-19T19:09:15.352Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-10-31T06:30:06.752Z",
@@ -984,7 +1278,7 @@
   "text": "لدى 47% من الجمعيات، لا تتجاوز التبرعات غير المقيدة 5% من إجمالي التبرعات.\n\nالتبرع المقيد يبني مشروعًا، وغير المقيد يُبقي الجمعية قائمة.\nمن دراستنا مع @omaralkhairi\nhttps://rssj.ncss.gov.sa/index.php/rssj/article/view/257/116\n#تمويل_يدوم #القطاع_غير_الربحي",
   "via": "buffer",
   "createdAt": "2026-10-30T12:59:13.782Z",
-  "updatedAt": "2026-11-17T21:08:52.129Z",
+  "updatedAt": "2026-11-19T19:09:15.352Z",
   "metrics": [
    {
     "description": "Also called Likes on X. This shows how many people reacted to your post.",
@@ -1005,7 +1299,7 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 8.54
+    "value": 8.52
    },
    {
     "description": "Also called Retweets on X. This shows how many times your post was reposted by others. A sign your content is reaching beyond your immediate audience.",
@@ -1019,7 +1313,7 @@
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 4077
+    "value": 4084
    },
    {
     "description": "How many times people clicked on your post or link. Shows when your content drives action beyond the channel it's on.",
@@ -1047,7 +1341,7 @@
   "externalLink": "https://x.com/381671037/status/2116075739602690077",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T21:08:52.129Z",
+  "metricsUpdatedAt": "2026-11-18T20:09:05.569Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-10-30T07:52:25.000Z",
@@ -1057,7 +1351,7 @@
   "text": "لو توقفت التبرعات اليوم، كم شهرًا تستطيع جمعيتك تغطية نفقاتها التشغيلية؟\n\nشاركونا إجابتكم في الردود.\nرابط الدراسة :\n\nhttps://t.co/PsvwAblec8\n\n#تمويل_يدوم\n#القطاع_غير_الربحي \n#تنمية_موارد",
   "via": "network",
   "createdAt": "2026-10-30T07:52:25.000Z",
-  "updatedAt": "2026-11-17T21:08:52.129Z",
+  "updatedAt": "2026-11-18T20:09:05.569Z",
   "metrics": [
    {
     "description": "Also called Likes on X. This shows how many people reacted to your post.",
@@ -1078,7 +1372,7 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 6.38
+    "value": 6.37
    },
    {
     "description": "Also called Retweets on X. This shows how many times your post was reposted by others. A sign your content is reaching beyond your immediate audience.",
@@ -1092,7 +1386,7 @@
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 1019
+    "value": 1021
    },
    {
     "description": "How many times people clicked on your post or link. Shows when your content drives action beyond the channel it's on.",
@@ -2059,226 +2353,6 @@
     "type": "clicks",
     "unit": "count",
     "value": 13
-   }
-  ]
- },
- {
-  "id": "6ac49af81ca1a0ca79deaf64",
-  "allowedActions": [
-   "viewPost",
-   "sharePostLink",
-   "copyPostLink",
-   "updatePostTags",
-   "addPostNote",
-   "updateShopGridLink"
-  ],
-  "channelId": "6a4bdb9c4048344628775568",
-  "channelService": "twitter",
-  "contentItemId": null,
-  "dueAt": "2026-10-06T06:53:35.000Z",
-  "externalLink": "https://x.com/381671037/status/2107363623693644048",
-  "ideaId": null,
-  "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-10-25T21:04:53.692Z",
-  "notificationStatus": null,
-  "schedulingType": "automatic",
-  "sentAt": "2026-10-06T06:53:35.000Z",
-  "sharedNow": false,
-  "shareMode": "customScheduled",
-  "status": "sent",
-  "text": "كيف تتحول التقنية المالية إلى فرصة لتنمية التبرعات واستدامتها؟\n\nأبرز أفكار دراسة «فنتك التبرعات»، حول توظيف الابتكار والتحول الرقمي لتعزيز الاستدامة المالية للمنظمات غير الربحية.\n\nشاهدوا الفيديو 👇وللاطلّاع على الدراسة كاملة يمكنك تحميلها عبر درب :\n\nhttps://t.co/DbeZPYfK6A",
-  "via": "network",
-  "createdAt": "2026-10-06T06:53:35.000Z",
-  "updatedAt": "2026-10-25T21:04:53.692Z",
-  "metrics": [
-   {
-    "description": "Also called Likes on X. This shows how many people reacted to your post.",
-    "name": "Reactions",
-    "type": "reactions",
-    "unit": "count",
-    "value": 18
-   },
-   {
-    "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
-    "name": "Comments",
-    "type": "comments",
-    "unit": "count",
-    "value": 0
-   },
-   {
-    "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
-    "name": "Eng. Rate",
-    "type": "engagementRate",
-    "unit": "percentage",
-    "value": 3.44
-   },
-   {
-    "description": "Also called Retweets on X. This shows how many times your post was reposted by others. A sign your content is reaching beyond your immediate audience.",
-    "name": "Reposts",
-    "type": "reposts",
-    "unit": "count",
-    "value": 3
-   },
-   {
-    "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
-    "name": "Impressions",
-    "type": "impressions",
-    "unit": "count",
-    "value": 2498
-   },
-   {
-    "description": "How many times people clicked on your post or link. Shows when your content drives action beyond the channel it's on.",
-    "name": "Clicks",
-    "type": "clicks",
-    "unit": "count",
-    "value": 23
-   }
-  ]
- },
- {
-  "id": "6ac49a835bf002c8ede10b56",
-  "allowedActions": [
-   "viewPost",
-   "sharePostLink",
-   "copyPostLink",
-   "updatePostTags",
-   "addPostNote",
-   "updateShopGridLink"
-  ],
-  "channelId": "6a4bdb9c4048344628775568",
-  "channelService": "twitter",
-  "contentItemId": null,
-  "dueAt": "2026-10-06T06:51:37.000Z",
-  "externalLink": "https://x.com/381671037/status/2107363130061779114",
-  "ideaId": null,
-  "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-10-25T21:04:53.692Z",
-  "notificationStatus": null,
-  "schedulingType": "automatic",
-  "sentAt": "2026-10-06T06:51:37.000Z",
-  "sharedNow": false,
-  "shareMode": "customScheduled",
-  "status": "sent",
-  "text": "كيف تتحول التقنية المالية إلى فرصة لتنمية التبرعات واستدامتها؟\n\nأبرز أفكار دراسة «فنتك التبرعات»، حول توظيف الابتكار والتحول الرقمي لتعزيز الاستدامة المالية للمنظمات غير الربحية.\n\nشاهدوا الفيديو 👇\n#القطاع_غير_الربحي #الاستدامة_المالية",
-  "via": "network",
-  "createdAt": "2026-10-06T06:51:37.000Z",
-  "updatedAt": "2026-10-25T21:04:53.692Z",
-  "metrics": [
-   {
-    "description": "Also called Likes on X. This shows how many people reacted to your post.",
-    "name": "Reactions",
-    "type": "reactions",
-    "unit": "count",
-    "value": 0
-   },
-   {
-    "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
-    "name": "Comments",
-    "type": "comments",
-    "unit": "count",
-    "value": 0
-   },
-   {
-    "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
-    "name": "Eng. Rate",
-    "type": "engagementRate",
-    "unit": "percentage",
-    "value": 1.24
-   },
-   {
-    "description": "Also called Retweets on X. This shows how many times your post was reposted by others. A sign your content is reaching beyond your immediate audience.",
-    "name": "Reposts",
-    "type": "reposts",
-    "unit": "count",
-    "value": 0
-   },
-   {
-    "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
-    "name": "Impressions",
-    "type": "impressions",
-    "unit": "count",
-    "value": 161
-   },
-   {
-    "description": "How many times people clicked on your post or link. Shows when your content drives action beyond the channel it's on.",
-    "name": "Clicks",
-    "type": "clicks",
-    "unit": "count",
-    "value": 0
-   }
-  ]
- },
- {
-  "id": "6ac1b3e1ca8206e9abaa1ce8",
-  "allowedActions": [
-   "viewPost",
-   "sharePostLink",
-   "copyPostLink",
-   "updatePostTags",
-   "addPostNote",
-   "duplicatePost",
-   "updateShopGridLink"
-  ],
-  "channelId": "6a4bdb9c4048344628775568",
-  "channelService": "twitter",
-  "contentItemId": null,
-  "dueAt": "2026-10-04T06:00:00.000Z",
-  "externalLink": "https://x.com/381671037/status/2106625420724408513",
-  "ideaId": null,
-  "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-10-23T23:04:32.828Z",
-  "notificationStatus": null,
-  "schedulingType": "automatic",
-  "sentAt": "2026-10-04T06:00:14.450Z",
-  "sharedNow": false,
-  "shareMode": "customScheduled",
-  "status": "sent",
-  "text": "تبرّع مرة… كيف تكسب استمراره؟ 🌱\n\nمن التعارف إلى الثقة، ومن أول تبرع إلى شراكة دائمة؛ كل مرحلة في #رحلة_المتبرع تستحق الاهتمام.\n\nشاهد ملخص الرحلة في الموشن، واطّلع على الدليل كاملًا عبر منصة درب 👇\n\nhttps://darb-hub.com/ar/pdf-files/%d8%b1%d8%ad%d9%84%d8%a9-%d8%a7%d9%84%d9%85%d8%aa%d8%a8%d8%b1%d8%b9/\n",
-  "via": "buffer",
-  "createdAt": "2026-10-04T02:03:13.625Z",
-  "updatedAt": "2026-10-23T23:04:32.828Z",
-  "metrics": [
-   {
-    "description": "Also called Likes on X. This shows how many people reacted to your post.",
-    "name": "Reactions",
-    "type": "reactions",
-    "unit": "count",
-    "value": 3
-   },
-   {
-    "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
-    "name": "Comments",
-    "type": "comments",
-    "unit": "count",
-    "value": 0
-   },
-   {
-    "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
-    "name": "Eng. Rate",
-    "type": "engagementRate",
-    "unit": "percentage",
-    "value": 3.73
-   },
-   {
-    "description": "Also called Retweets on X. This shows how many times your post was reposted by others. A sign your content is reaching beyond your immediate audience.",
-    "name": "Reposts",
-    "type": "reposts",
-    "unit": "count",
-    "value": 0
-   },
-   {
-    "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
-    "name": "Impressions",
-    "type": "impressions",
-    "unit": "count",
-    "value": 912
-   },
-   {
-    "description": "How many times people clicked on your post or link. Shows when your content drives action beyond the channel it's on.",
-    "name": "Clicks",
-    "type": "clicks",
-    "unit": "count",
-    "value": 7
    }
   ]
  }

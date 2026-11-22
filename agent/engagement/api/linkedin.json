@@ -16,7 +16,7 @@
   "externalLink": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7527968839582564352",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T20:30:33.570Z",
+  "metricsUpdatedAt": "2026-11-22T00:17:30.037Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-11-16T05:40:34.359Z",
@@ -26,42 +26,42 @@
   "text": "مقال شهر نوفمبر  من نشرة «الاستدامة المالية» نوضح لماذا يجب أن يكون الدخل غير المقيّد أولوية استراتيجية، وما النسبة التي نوصي بها، وكيف ترفعها منظمتك ربعًا بعد ربع.\nقراءة ممتعة 📝\n{hashtag|#|الاستدامة_المالية} {hashtag|#|القطاع_غير_الربحي} {hashtag|#|الدخل_غير_المقيد}",
   "via": "network",
   "createdAt": "2026-11-16T05:40:34.359Z",
-  "updatedAt": "2026-11-17T20:30:33.570Z",
+  "updatedAt": "2026-11-22T00:17:30.037Z",
   "metrics": [
    {
     "description": "How many people reacted to your post. Includes Like, Celebrate, Support, and more.",
     "name": "Reactions",
     "type": "reactions",
     "unit": "count",
-    "value": 9
+    "value": 11
    },
    {
     "description": "The number of comments your post received (including nested replies). Shows when your post is starting conversations, not just getting seen.",
     "name": "Comments",
     "type": "comments",
     "unit": "count",
-    "value": 0
+    "value": 1
    },
    {
     "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 2.03
+    "value": 2.14
    },
    {
     "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 444
+    "value": 560
    },
    {
     "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 263
+    "value": 332
    }
   ]
  },
@@ -82,7 +82,7 @@
   "externalLink": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7526541966617210880",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T20:30:33.637Z",
+  "metricsUpdatedAt": "2026-11-22T00:17:30.037Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-11-12T07:10:50.639Z",
@@ -92,14 +92,14 @@
   "text": "القيم نفسها\n   بتعبيرٍ جديد.\n\nهويتنا 🔸🔹\n‫{hashtag|#|استدامة_العطاء}‬\n‫{hashtag|#|القطاع_غير_الربحي}‬",
   "via": "network",
   "createdAt": "2026-11-12T07:10:41.411Z",
-  "updatedAt": "2026-11-17T20:30:33.637Z",
+  "updatedAt": "2026-11-22T00:17:30.037Z",
   "metrics": [
    {
     "description": "How many people reacted to your post. Includes Like, Celebrate, Support, and more.",
     "name": "Reactions",
     "type": "reactions",
     "unit": "count",
-    "value": 5
+    "value": 6
    },
    {
     "description": "The number of comments your post received (including nested replies). Shows when your post is starting conversations, not just getting seen.",
@@ -113,42 +113,42 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 1.82
+    "value": 1.92
    },
    {
     "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 275
+    "value": 313
    },
    {
     "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 140
+    "value": 166
    },
    {
     "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
     "name": "Video Views",
     "type": "views",
     "unit": "count",
-    "value": 57
+    "value": 64
    },
    {
     "description": "Total time watched in minutes",
     "name": "Watch Time (min)",
     "type": "totalTimeWatched",
     "unit": "count",
-    "value": 11.36
+    "value": 12.52
    },
    {
     "description": "Unique Viewers",
     "name": "Unique Viewers",
     "type": "viewers",
     "unit": "count",
-    "value": 48
+    "value": 55
    }
   ]
  },
@@ -170,7 +170,7 @@
   "externalLink": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7526194849696501760",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T20:30:33.585Z",
+  "metricsUpdatedAt": "2026-11-22T00:17:30.037Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-11-11T08:11:22.656Z",
@@ -180,14 +180,14 @@
   "text": "اليوم بحمد الله، 11/11، تنطلق هويتنا الجديدة 🔸🔹\n\nهويةٌ تعبّر عن قيمنا: الاستدامة، والأثر، والوضوح، والمعرفة العملية.\n\nومعها نُطلق مرجعًا للقطاع غير الربحي:\nموقعٌ إلكتروني يجمع إصداراتنا، ومحتوانا المعرفي، وأدلتنا، ودوراتنا في مكانٍ واحد، لكل من يعمل على استدامة منظمته.⬇️\n\nhttps://hamedalthiabi.com/\n\nعشرون عامًا ونحن في الميدان..\nواليوم صار للميدان عنوان.\n\n{hashtag|#|استدامة_العطاء} وأثرٌ يمتد\n\n{hashtag|#|القطاع_غير_الربحي}",
   "via": "buffer",
   "createdAt": "2026-11-11T02:20:25.232Z",
-  "updatedAt": "2026-11-17T20:30:33.585Z",
+  "updatedAt": "2026-11-22T00:17:30.037Z",
   "metrics": [
    {
     "description": "How many people reacted to your post. Includes Like, Celebrate, Support, and more.",
     "name": "Reactions",
     "type": "reactions",
     "unit": "count",
-    "value": 36
+    "value": 37
    },
    {
     "description": "The number of comments your post received (including nested replies). Shows when your post is starting conversations, not just getting seen.",
@@ -201,42 +201,42 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 0.51
+    "value": 0.52
    },
    {
     "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 10372
+    "value": 10468
    },
    {
     "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 7910
+    "value": 7971
    },
    {
     "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
     "name": "Video Views",
     "type": "views",
     "unit": "count",
-    "value": 2643
+    "value": 2673
    },
    {
     "description": "Total time watched in minutes",
     "name": "Watch Time (min)",
     "type": "totalTimeWatched",
     "unit": "count",
-    "value": 329.98
+    "value": 332.8
    },
    {
     "description": "Unique Viewers",
     "name": "Unique Viewers",
     "type": "viewers",
     "unit": "count",
-    "value": 2579
+    "value": 2606
    }
   ]
  },
@@ -257,7 +257,7 @@
   "externalLink": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7525849214451597312",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T20:30:33.541Z",
+  "metricsUpdatedAt": "2026-11-22T00:17:30.038Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-11-10T09:18:06.856Z",
@@ -267,7 +267,7 @@
   "text": "11/11/2026\n11:11 am 🔸🔹",
   "via": "network",
   "createdAt": "2026-11-10T09:17:56.409Z",
-  "updatedAt": "2026-11-17T20:30:33.541Z",
+  "updatedAt": "2026-11-22T00:17:30.038Z",
   "metrics": [
    {
     "description": "How many people reacted to your post. Includes Like, Celebrate, Support, and more.",
@@ -288,42 +288,42 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 1.96
+    "value": 1.86
    },
    {
     "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 204
+    "value": 215
    },
    {
     "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 104
+    "value": 112
    },
    {
     "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
     "name": "Video Views",
     "type": "views",
     "unit": "count",
-    "value": 54
+    "value": 56
    },
    {
     "description": "Total time watched in minutes",
     "name": "Watch Time (min)",
     "type": "totalTimeWatched",
     "unit": "count",
-    "value": 7.69
+    "value": 7.96
    },
    {
     "description": "Unique Viewers",
     "name": "Unique Viewers",
     "type": "viewers",
     "unit": "count",
-    "value": 45
+    "value": 47
    }
   ]
  },
@@ -344,7 +344,7 @@
   "externalLink": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7525123880596832256",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T20:30:33.504Z",
+  "metricsUpdatedAt": "2026-11-22T00:17:30.038Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-11-08T09:15:49.687Z",
@@ -354,7 +354,7 @@
   "text": "‏قـريـبـًا 👀\n‏      انتـظـرونــا…",
   "via": "network",
   "createdAt": "2026-11-08T09:15:43.364Z",
-  "updatedAt": "2026-11-17T20:30:33.504Z",
+  "updatedAt": "2026-11-22T00:17:30.038Z",
   "metrics": [
    {
     "description": "How many people reacted to your post. Includes Like, Celebrate, Support, and more.",
@@ -375,42 +375,42 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 1.44
+    "value": 1.42
    },
    {
     "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 485
+    "value": 494
    },
    {
     "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 262
+    "value": 267
    },
    {
     "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
     "name": "Video Views",
     "type": "views",
     "unit": "count",
-    "value": 167
+    "value": 170
    },
    {
     "description": "Total time watched in minutes",
     "name": "Watch Time (min)",
     "type": "totalTimeWatched",
     "unit": "count",
-    "value": 27.49
+    "value": 27.61
    },
    {
     "description": "Unique Viewers",
     "name": "Unique Viewers",
     "type": "viewers",
     "unit": "count",
-    "value": 144
+    "value": 146
    }
   ]
  },
@@ -432,7 +432,7 @@
   "externalLink": "https://www.linkedin.com/feed/update/urn:li:share:7524491336352415744",
   "ideaId": null,
   "isCustomScheduled": false,
-  "metricsUpdatedAt": "2026-11-17T20:30:33.589Z",
+  "metricsUpdatedAt": "2026-11-22T00:17:30.038Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-11-06T15:22:13.385Z",
@@ -442,7 +442,7 @@
   "text": "خمس أدوات تمويل مبتكرة تتجه إليها المنظمات غير الربحية، ترصدها دراستنا مع @omaralkhairi وتوصي بها:\n\n١. التمويل الجماعي عبر المنصات الرقمية\n٢. الصكوك الوقفية\n٣. التمويل القائم على النتائج\n٤. الشراكات الاستثمارية مع القطاع الخاص\n٥. المتاجر الإلكترونية\n\nو82% من المنظمات ترى أن هذه الأدوات تعزز استقلالها المالي وتقلل اعتمادها على التبرعات الموسمية، لكن تطبيقها ما زال محدودًا.\n\nوتوصي الدراسة بإنشاء وحدة للتمويل المبتكر داخل كل منظمة، تتولى تصميم هذه الأدوات وتجربتها.\n\nأيّ هذه الأدوات جرّبتها منظمتكم؟\n\nالدراسة كاملة: https://lnkd.in/dcvRDhsM\n{hashtag|#|تمويل_يدوم} {hashtag|#|التمويل_المبتكر} {hashtag|#|القطاع_غير_الربحي}",
   "via": "buffer",
   "createdAt": "2026-11-06T15:21:51.342Z",
-  "updatedAt": "2026-11-17T20:30:33.589Z",
+  "updatedAt": "2026-11-22T00:17:30.038Z",
   "metrics": [
    {
     "description": "How many people reacted to your post. Includes Like, Celebrate, Support, and more.",
@@ -456,28 +456,28 @@
     "name": "Comments",
     "type": "comments",
     "unit": "count",
-    "value": 5
+    "value": 6
    },
    {
     "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 2.83
+    "value": 2.81
    },
    {
     "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 812
+    "value": 853
    },
    {
     "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 510
+    "value": 541
    }
   ]
  },
@@ -499,7 +499,7 @@
   "externalLink": "https://www.linkedin.com/feed/update/urn:li:share:7524349973702811648",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T20:30:33.555Z",
+  "metricsUpdatedAt": "2026-11-22T00:17:30.038Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-11-06T06:00:29.923Z",
@@ -509,14 +509,14 @@
   "text": "خمس أدوات تمويل مبتكرة تتجه إليها المنظمات غير الربحية، ترصدها دراستنا مع @omaralkhairi وتوصي بها:\n\n١. التمويل الجماعي عبر المنصات الرقمية\n٢. الصكوك الوقفية\n٣. التمويل القائم على النتائج\n٤. الشراكات الاستثمارية مع القطاع الخاص\n٥. المتاجر الإلكترونية\n\nو82% من المنظمات ترى أن هذه الأدوات تعزز استقلالها المالي وتقلل اعتمادها على التبرعات الموسمية، لكن تطبيقها ما زال محدودًا.\n\nوتوصي الدراسة بإنشاء وحدة للتمويل المبتكر داخل كل منظمة، تتولى تصميم هذه الأدوات وتجربتها.\n\nأيّ هذه الأدوات جرّبتها منظمتكم؟\n\nالدراسة كاملة: https://lnkd.in/dcvRDhsM\n{hashtag|#|تمويل_يدوم} {hashtag|#|التمويل_المبتكر} {hashtag|#|القطاع_غير_الربحي}",
   "via": "buffer",
   "createdAt": "2026-11-06T03:21:19.514Z",
-  "updatedAt": "2026-11-17T20:30:33.555Z",
+  "updatedAt": "2026-11-22T00:17:30.038Z",
   "metrics": [
    {
     "description": "How many people reacted to your post. Includes Like, Celebrate, Support, and more.",
     "name": "Reactions",
     "type": "reactions",
     "unit": "count",
-    "value": 22
+    "value": 24
    },
    {
     "description": "The number of comments your post received (including nested replies). Shows when your post is starting conversations, not just getting seen.",
@@ -530,21 +530,21 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 2.12
+    "value": 2.19
    },
    {
     "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 1037
+    "value": 1096
    },
    {
     "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 699
+    "value": 738
    }
   ]
  },
@@ -565,7 +565,7 @@
   "externalLink": "https://www.linkedin.com/feed/update/urn:li:share:7524087274754473984",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T20:30:33.456Z",
+  "metricsUpdatedAt": "2026-11-22T00:17:30.038Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-11-05T12:36:37.222Z",
@@ -575,7 +575,7 @@
   "text": "لقد مرت ساعتين سريعاً كنت مميزا أخي هيثم ومتألق لم استطع التعليق كثيرا فقد كنت مستمعاً ومستمتعاً, وقد كنت خير ناصح أمين. \nاشكرك على هذه الجلسة المعرفية الدسمة 🙏",
   "via": "network",
   "createdAt": "2026-11-05T12:36:37.222Z",
-  "updatedAt": "2026-11-17T20:30:33.456Z",
+  "updatedAt": "2026-11-22T00:17:30.038Z",
   "metrics": [
    {
     "description": "How many people reacted to your post. Includes Like, Celebrate, Support, and more.",
@@ -596,21 +596,21 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 0.78
+    "value": 0.74
    },
    {
     "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 2693
+    "value": 2829
    },
    {
     "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 1771
+    "value": 1858
    }
   ]
  },
@@ -678,7 +678,7 @@
   "externalLink": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7523700893595238400",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T20:30:33.548Z",
+  "metricsUpdatedAt": "2026-11-22T00:17:30.038Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-11-04T11:01:17.167Z",
@@ -688,14 +688,14 @@
   "text": "في ١٦ شريحة: خلاصة دراستنا  عن تطوير أدوات تمويل مبتكرة لتعزيز الاستدامة المالية للمنظمات غير الربحية، المنشورة في مجلة البحوث والدراسات الاجتماعية.\n\n{hashtag|#|تمويل_يدوم} {hashtag|#|القطاع_غير_الربحي} {hashtag|#|الاستدامة_المالية}",
   "via": "buffer",
   "createdAt": "2026-11-04T05:27:30.311Z",
-  "updatedAt": "2026-11-17T20:30:33.548Z",
+  "updatedAt": "2026-11-22T00:17:30.038Z",
   "metrics": [
    {
     "description": "How many people reacted to your post. Includes Like, Celebrate, Support, and more.",
     "name": "Reactions",
     "type": "reactions",
     "unit": "count",
-    "value": 20
+    "value": 21
    },
    {
     "description": "The number of comments your post received (including nested replies). Shows when your post is starting conversations, not just getting seen.",
@@ -709,21 +709,21 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 2.38
+    "value": 2.33
    },
    {
     "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 839
+    "value": 901
    },
    {
     "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 504
+    "value": 533
    }
   ]
  },
@@ -745,7 +745,7 @@
   "externalLink": "https://www.linkedin.com/feed/update/urn:li:share:7523625229215027200",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T20:30:33.588Z",
+  "metricsUpdatedAt": "2026-11-22T00:17:30.038Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-11-04T06:00:37.425Z",
@@ -755,7 +755,7 @@
   "text": "سؤال لكل مجلس إدارة منظمة:\n\nلو توقفت إيراداتكم غدًا، فكم شهرًا تستطيعون الاستمرار؟\n\nهذا الرقم هو «فترة تغطية الاحتياطي التشغيلي».\n\nوالممارسة الشائعة في القطاع أن يغطي الاحتياطي من ثلاثة إلى ستة أشهر من المصروفات التشغيلية.\n\nوفي تجربتي مع المنظمات، كثير منها بلا احتياطي يُذكر، والسبب الأشيع: «كل ريال يدخل يجب أن يُصرف على المستفيدين فورًا».\n\nمنطق نبيل، لكنه خطِر استراتيجيًا.\n\nفالمنظمة بلا احتياطي على بُعد أزمة واحدة من التوقف، وحين تتوقف يخسر المستفيدون الخدمة كلها لا بعضها.\n\nالاحتياطي ليس ترفًا، بل حماية لاستمرار الرسالة.\n\nقاعدة بسيطة للبدء: خصّصوا من ٣ إلى ٥٪ من كل دخل غير مقيّد للاحتياطي، وستصلون تدريجيًا إلى حد الأمان.\n\n\n\n{hashtag|#|الاحتياطي_التشغيلي} {hashtag|#|الحوكمة_المالية} {hashtag|#|الاستدامة_المالية} {hashtag|#|الجمعيات_الأهلية}",
   "via": "buffer",
   "createdAt": "2026-11-04T03:21:38.417Z",
-  "updatedAt": "2026-11-17T20:30:33.588Z",
+  "updatedAt": "2026-11-22T00:17:30.038Z",
   "metrics": [
    {
     "description": "How many people reacted to your post. Includes Like, Celebrate, Support, and more.",
@@ -776,21 +776,21 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 2.34
+    "value": 2.27
    },
    {
     "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 384
+    "value": 396
    },
    {
     "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 266
+    "value": 269
    }
   ]
  },
@@ -812,7 +812,7 @@
   "externalLink": "https://www.linkedin.com/feed/update/urn:li:share:7522583448650452992",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T20:30:33.591Z",
+  "metricsUpdatedAt": "2026-11-22T00:17:30.038Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-11-01T09:00:57.634Z",
@@ -822,7 +822,7 @@
   "text": "أبرز ملتقيات القطاع غير الربحي وأيامه العالمية في نوفمبر، في تقويم واحد.\n\n{hashtag|#|القطاع_غير_الربحي} {hashtag|#|تنمية_الموارد} {hashtag|#|العمل_الخيري}",
   "via": "buffer",
   "createdAt": "2026-10-31T09:33:59.502Z",
-  "updatedAt": "2026-11-17T20:30:33.591Z",
+  "updatedAt": "2026-11-22T00:17:30.038Z",
   "metrics": [
    {
     "description": "How many people reacted to your post. Includes Like, Celebrate, Support, and more.",
@@ -843,21 +843,21 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 1.33
+    "value": 1.32
    },
    {
     "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 979
+    "value": 988
    },
    {
     "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 628
+    "value": 630
    }
   ]
  },
@@ -879,7 +879,7 @@
   "externalLink": "https://www.linkedin.com/feed/update/urn:li:share:7522236114317840384",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T20:30:33.562Z",
+  "metricsUpdatedAt": "2026-11-22T00:17:30.038Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-10-31T10:00:46.631Z",
@@ -889,14 +889,14 @@
   "text": "نتيجة سؤالنا: لو توقفت التبرعات اليوم، كم شهرًا تصمد المنظمة؟\n\nإجابة 370 منظمة غير ربحية في دراستنا مع @omaralkhairi:\n١. أقل من 3 أشهر: 19%\n٢. من 4 إلى 6 أشهر: 29%\n٣. من 7 إلى 12 شهرًا: 22%\n٤. أكثر من سنة: 16%\nو14% لا تستطيع تغطية نفقاتها التشغيلية أصلًا.\n\nأي أن نحو ثلث المنظمات لا تصمد أكثر من 3 أشهر. كيف جاءت إجابة منظمتكم مقارنة بها؟\n\nالدراسة كاملة: https://lnkd.in/dcvRDhsM\n{hashtag|#|تمويل_يدوم} {hashtag|#|الاستدامة_المالية}",
   "via": "buffer",
   "createdAt": "2026-10-31T03:58:17.590Z",
-  "updatedAt": "2026-11-17T20:30:33.562Z",
+  "updatedAt": "2026-11-22T00:17:30.038Z",
   "metrics": [
    {
     "description": "How many people reacted to your post. Includes Like, Celebrate, Support, and more.",
     "name": "Reactions",
     "type": "reactions",
     "unit": "count",
-    "value": 8
+    "value": 9
    },
    {
     "description": "The number of comments your post received (including nested replies). Shows when your post is starting conversations, not just getting seen.",
@@ -910,21 +910,21 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 1.6
+    "value": 1.64
    },
    {
     "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 501
+    "value": 549
    },
    {
     "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 342
+    "value": 363
    }
   ]
  },
@@ -946,7 +946,7 @@
   "externalLink": "https://www.linkedin.com/feed/update/urn:li:share:7523323683885436928",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T20:30:33.551Z",
+  "metricsUpdatedAt": "2026-11-22T00:17:30.038Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-11-03T10:02:23.354Z",
@@ -956,7 +956,7 @@
   "text": "خلاصة دراستنا في صورة واحدة.\n\nبلغت النتيجة العامة لمحاور الدراسة الخمسة 77.2%، وتصدّر محور «سبل تعزيز الاستدامة المالية» بـ92%، وجاء محور «أدوات التمويل التقليدية» في المرتبة الأخيرة بـ68%.\n\nالقراءة: المنظمات تعرف الطريق جيدًا، وتحتاج إلى تمكين مؤسسي وأدوات أحدث لتسلكه.\n\nاحفظ الصورة وشاركها مع فريقك.\n\nالدراسة كاملة: https://lnkd.in/dcvRDhsM\n{hashtag|#|تمويل_يدوم} {hashtag|#|الاستدامة_المالية} {hashtag|#|القطاع_غير_الربحي}",
   "via": "buffer",
   "createdAt": "2026-10-30T12:59:51.769Z",
-  "updatedAt": "2026-11-17T20:30:33.551Z",
+  "updatedAt": "2026-11-22T00:17:30.038Z",
   "metrics": [
    {
     "description": "How many people reacted to your post. Includes Like, Celebrate, Support, and more.",
@@ -977,21 +977,21 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 1.85
+    "value": 1.79
    },
    {
     "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 486
+    "value": 503
    },
    {
     "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 337
+    "value": 343
    }
   ]
  },
@@ -1013,7 +1013,7 @@
   "externalLink": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7522900547595669507",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T20:30:33.500Z",
+  "metricsUpdatedAt": "2026-11-22T00:17:30.038Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-11-02T06:00:59.815Z",
@@ -1023,14 +1023,14 @@
   "text": "ما الذي يمنع الجمعيات من الوصول إلى الاستدامة المالية؟\n\nسألنا 370 منظمة غير ربحية، فجاءت أكبر أربعة تحديات:\n١. محدودية تنوع مصادر التمويل (86%)\n٢. المنافسة العالية بين الجمعيات على الموارد نفسها (86%)\n٣. ضعف الكفاءات المالية والإدارية (84%)\n٤. قلة وعي المجتمع بأدوات التمويل المبتكرة (84%)\n\nاللافت أن صعوبة المواءمة مع المتطلبات التنظيمية جاءت أقل حدة (74%)، أي أن العائق الأكبر داخل المنظمات لا خارجها.\n\nأيّ هذه التحديات أقرب إلى واقع منظمتكم؟\nمن دراستنا مع @omaralkhairi\n\nالدراسة كاملة: https://lnkd.in/dcvRDhsM\n{hashtag|#|تمويل_يدوم} {hashtag|#|القطاع_غير_الربحي} {hashtag|#|تنمية_الموارد}",
   "via": "buffer",
   "createdAt": "2026-10-30T12:59:34.833Z",
-  "updatedAt": "2026-11-17T20:30:33.500Z",
+  "updatedAt": "2026-11-22T00:17:30.038Z",
   "metrics": [
    {
     "description": "How many people reacted to your post. Includes Like, Celebrate, Support, and more.",
     "name": "Reactions",
     "type": "reactions",
     "unit": "count",
-    "value": 24
+    "value": 25
    },
    {
     "description": "The number of comments your post received (including nested replies). Shows when your post is starting conversations, not just getting seen.",
@@ -1044,21 +1044,21 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 2.29
+    "value": 2.32
    },
    {
     "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 1091
+    "value": 1123
    },
    {
     "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 687
+    "value": 700
    }
   ]
  },
@@ -1080,7 +1080,7 @@
   "externalLink": "https://www.linkedin.com/feed/update/urn:li:share:7522175796648599552",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T20:30:33.599Z",
+  "metricsUpdatedAt": "2026-11-22T00:17:30.038Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-10-31T06:01:05.825Z",
@@ -1090,14 +1090,14 @@
   "text": "التبرع المقيد يبني مشروعًا، والتبرع غير المقيد يُبقي المنظمة قائمة.\n\nفي دراستنا مع @omaralkhairi، لدى 47% من الجمعيات لا تتجاوز التبرعات غير المقيدة 5% من إجمالي تبرعاتها. أي أن الرواتب والتشغيل والتطوير تُموَّل من هامش ضيق جدًا.\n\nوتوصي الدراسة ببناء ثقافة التبرع غير المقيد، عبر إثبات كفاءة الإدارة والشفافية في استخدام الموارد.\n\nكيف تشرح منظمتكم للداعم قيمة التبرع غير المقيد؟\n\nالدراسة كاملة: https://lnkd.in/dcvRDhsM\n{hashtag|#|تمويل_يدوم} {hashtag|#|تنمية_الموارد} {hashtag|#|القطاع_غير_الربحي}",
   "via": "buffer",
   "createdAt": "2026-10-30T12:59:06.122Z",
-  "updatedAt": "2026-11-17T20:30:33.599Z",
+  "updatedAt": "2026-11-22T00:17:30.038Z",
   "metrics": [
    {
     "description": "How many people reacted to your post. Includes Like, Celebrate, Support, and more.",
     "name": "Reactions",
     "type": "reactions",
     "unit": "count",
-    "value": 22
+    "value": 23
    },
    {
     "description": "The number of comments your post received (including nested replies). Shows when your post is starting conversations, not just getting seen.",
@@ -1111,21 +1111,21 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 0.94
+    "value": 0.96
    },
    {
     "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 2774
+    "value": 2800
    },
    {
     "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 1897
+    "value": 1907
    }
   ]
  },
@@ -1146,7 +1146,7 @@
   "externalLink": "https://www.linkedin.com/feed/update/urn:li:share:7521060829891366913",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T20:30:33.582Z",
+  "metricsUpdatedAt": "2026-11-22T00:17:30.038Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-10-28T06:33:52.716Z",
@@ -1156,7 +1156,7 @@
   "text": "يسعدني أن أشارككم نشر دراستنا المحكّمة «تطوير أدوات تمويل مبتكرة لتعزيز الاستدامة المالية للمنظمات غير الربحية» في مجلة البحوث والدراسات الاجتماعية، ضمن أول إصدار خاص بالقطاع غير الربحي، الصادر عن المركز الوطني للدراسات والبحوث الاجتماعية، بالشراكة مع ‏‏@Omar Alkhayri - @عمر @الخيري‏‏  \n\nشملت الدراسة 370 منظمة غير ربحية في 13 منطقة بالمملكة، وحللت واقع تمويلها عبر خمسة محاور: الاستدامة المالية، وأدوات التمويل التقليدية، والأدوات المبتكرة، والتحديات، وسبل تعزيز الاستدامة.\n\n.\n\nرابط الدراسة: https://lnkd.in/dcvRDhsM\n\n{hashtag|#|تمويل_يدوم} {hashtag|#|القطاع_غير_الربحي} {hashtag|#|الاستدامة_المالية}",
   "via": "network",
   "createdAt": "2026-10-28T04:10:36.858Z",
-  "updatedAt": "2026-11-17T20:30:33.582Z",
+  "updatedAt": "2026-11-22T00:17:30.038Z",
   "metrics": [
    {
     "description": "How many people reacted to your post. Includes Like, Celebrate, Support, and more.",
@@ -1177,21 +1177,21 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 1.82
+    "value": 1.8
    },
    {
     "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 2088
+    "value": 2109
    },
    {
     "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 1242
+    "value": 1246
    }
   ]
  },
@@ -1213,7 +1213,7 @@
   "externalLink": "https://www.linkedin.com/feed/update/urn:li:share:7521813468795248640",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T20:30:33.580Z",
+  "metricsUpdatedAt": "2026-11-22T00:17:30.038Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-10-30T06:01:20.125Z",
@@ -1223,7 +1223,7 @@
   "text": "سؤال سألناه 370 منظمة غير ربحية في دراستنا مع  ‏‏@Omar Alkhayri - @عمر @الخيري‏‏   ونطرحه عليكم:\n\nلو توقفت التبرعات اليوم، كم شهرًا تستطيع منظمتكم تغطية نفقاتها التشغيلية؟\n\n١. أقل من 3 أشهر\n٢. من 4 إلى 6 أشهر\n٣. من 7 إلى 12 شهرًا\n٤. أكثر من سنة\n\nشاركونا  إجابتكم في التعليقات\nرابط الدراسة :\nhttps://lnkd.in/dcvRDhsM\n{hashtag|#|تمويل_يدوم} {hashtag|#|القطاع_غير_الربحي} {hashtag|#|تنمية_الموارد}",
   "via": "buffer",
   "createdAt": "2026-10-27T16:36:03.060Z",
-  "updatedAt": "2026-11-17T20:30:33.580Z",
+  "updatedAt": "2026-11-22T00:17:30.038Z",
   "metrics": [
    {
     "description": "How many people reacted to your post. Includes Like, Celebrate, Support, and more.",
@@ -1244,21 +1244,21 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 1.57
+    "value": 1.55
    },
    {
     "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 2544
+    "value": 2575
    },
    {
     "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 1617
+    "value": 1627
    }
   ]
  },
@@ -1326,7 +1326,7 @@
   "externalLink": "https://www.linkedin.com/feed/update/urn:li:share:7520378864603127808",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T20:30:33.560Z",
+  "metricsUpdatedAt": "2026-11-22T00:17:30.038Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-10-26T07:00:43.976Z",
@@ -1336,7 +1336,7 @@
   "text": "أشارككم مقالي المنشور على منصة Hive Mind، ضمن سلسلة «خارطة طريق الذكاء الاصطناعي المسؤول لمنظمات القطاع غير الربحي»:\n«كيف يدعم الذكاء الاصطناعي رحلة المانح في منظمتك غير الربحية؟»\n\nتشير دراسة إلى أن تكلفة استقطاب مانح جديد قد تصل إلى خمسة أضعاف تكلفة الاحتفاظ بمانح حالي. ولذلك فالسؤال الأهم ليس كيف نصل إلى مانحين جدد فحسب، بل كيف نحافظ على من معنا.\n\nيقترح المقال أربع خطوات عملية لتوظيف الذكاء الاصطناعي في رحلة المانح:\n١. رسم نقاط تفاعل المانح، من أول تعرّف على المنظمة حتى تقارير الأثر.\n٢. تصنيف المانحين وفق اهتماماتهم، كالتعليم والصحة وتنمية الشباب.\n٣. تخصيص رسائل الشكر وتحديثات الأثر، مع مراجعة الفريق لها قبل الإرسال.\n٤. متابعة مستوى التفاعل، مع احترام تفضيلات المانح في الخصوصية والتواصل.\n\nويتناول المقال كذلك المؤشرات المبكرة لتوقف المانح عن العطاء، مثل انخفاض فتح الرسائل وتعثر الدفعات الشهرية، وكيف تُبنى عليها حملات استعادة المانحين.\n\nوتبقى الخصوصية حاضرة في كل خطوة؛ فبعض المانحين يفضّلون ألا يُعلن عن عطائهم، ورحلة المانح ينبغي أن تُصمَّم وفق توقعاته الحقيقية، لا وفق افتراضات المنظمة.\n\nأيّ هذه الخطوات بدأت منظمتكم في تطبيقها؟\n\n📖 المقال كاملًا:\nhttps://lnkd.in/dHythJ4R\n\n{hashtag|#|الذكاء_الاصطناعي} {hashtag|#|رحلة_المانح} {hashtag|#|القطاع_غير_الربحي} {hashtag|#|تنمية_الموارد} {hashtag|#|تجربة_المتبرع}",
   "via": "buffer",
   "createdAt": "2026-10-26T06:16:36.546Z",
-  "updatedAt": "2026-11-17T20:30:33.560Z",
+  "updatedAt": "2026-11-22T00:17:30.038Z",
   "metrics": [
    {
     "description": "How many people reacted to your post. Includes Like, Celebrate, Support, and more.",
@@ -1357,21 +1357,21 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 2.51
+    "value": 2.41
    },
    {
     "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 758
+    "value": 789
    },
    {
     "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 509
+    "value": 514
    }
   ]
  },
@@ -1393,7 +1393,7 @@
   "externalLink": "https://www.linkedin.com/feed/update/urn:li:share:7518551761276530688",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T20:30:33.563Z",
+  "metricsUpdatedAt": "2026-11-21T20:33:33.053Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-10-21T06:00:28.343Z",
@@ -1403,7 +1403,7 @@
   "text": "ستة أنواع من المتبرعين، وحملتك الموحّدة تخاطب غالبًا نوعًا واحدًا منهم.\n\nمعظم خطط التسويق الخيري التي أراجعها تتعامل مع «المتبرع» كأنه شخص واحد بدافع واحد.\n\nوالواقع أن المتبرعين في مجتمعنا يتوزعون على ست فئات سلوكية، لكل منها دافع مختلف:\n\n١. المتبرع الديني: دافعه الأجر، ويستجيب لمواسم الخير كرمضان والعشر الأواخر.\n٢. المتبرع العاطفي: تحرّكه القصة الفردية والحملات الإنسانية.\n٣. المتبرع المؤسسي: قراره مرتبط بمصلحة جهته، ويحتاج ملفًا احترافيًا وعرض قيمة واضحًا.\n٤. المستثمر الاجتماعي: يريد أن يرى الأثر بالأرقام والمؤشرات.\n٥. المتبرع الاجتماعي: دافعه الانتماء والتقدير، ويستجيب للفعاليات والتكريم.\n٦. المتبرع الإرثي: يريد أثرًا دائمًا، ويستجيب للأوقاف والصدقات الجارية.\n\nحين تطلق حملة واحدة للجميع، تشاهدها الفئات الأخرى دون أن تشعر أنها مدعوّة.\n\nالحل: صنّف قاعدة بيانات متبرعيك على هذا الأساس، وصمّم لكل فئة رسالتها ومنتجها.\n\nأيّ فئة تخدمها حملاتكم الحالية أكثر من غيرها؟\n\n{hashtag|#|تنمية_الموارد} {hashtag|#|سلوك_المتبرع} {hashtag|#|التسويق_الخيري} {hashtag|#|القطاع_غير_الربحي}",
   "via": "buffer",
   "createdAt": "2026-10-21T03:22:11.794Z",
-  "updatedAt": "2026-11-17T20:30:33.563Z",
+  "updatedAt": "2026-11-21T20:33:33.053Z",
   "metrics": [
    {
     "description": "How many people reacted to your post. Includes Like, Celebrate, Support, and more.",
@@ -1431,14 +1431,14 @@
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 1225
+    "value": 1230
    },
    {
     "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 776
+    "value": 777
    }
   ]
  },
@@ -1459,7 +1459,7 @@
   "externalLink": "https://www.linkedin.com/feed/update/urn:li:share:7516093595238617088",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T20:30:33.535Z",
+  "metricsUpdatedAt": "2026-11-21T20:33:33.089Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-10-15T06:37:21.264Z",
@@ -1469,7 +1469,7 @@
   "text": "I’m delighted to announce the signing of an agreement to publish my second book, Institutional Funding, sponsored by the Mother of Badr Al Rajhi Charitable Foundation.\n\nThis project brings together a knowledge resource, training packages, and complementary products to help nonprofit leaders and fundraising professionals turn knowledge into practice and strengthen their organizations’ financial sustainability.\n\nMy sincere thanks to the Foundation for supporting this project and investing in knowledge that serves the nonprofit sector.\n\nI look forward to sharing more as the project takes shape.\n\nيسعدني أن أشارككم خبر توقيع اتفاقية إصدار كتابي الثاني «التمويل المؤسسي»، برعاية مؤسسة والدة بدر الراجحي الأهلية.\n\nمشروع معرفي وتطبيقي متكامل يجمع بين كتاب وحقائب تدريبية ومنتجات مساندة؛ لمساعدة قيادات المنظمات غير الربحية والعاملين في تنمية الموارد المالية على تحويل المعرفة إلى ممارسات تعزّز الاستدامة المالية لمنظماتهم.\n\nخالص الشكر للمؤسسة على رعايتها وثقتها، وإيمانها بأهمية الاستثمار في المعرفة لخدمة القطاع غير الربحي.\n\nأتطلع إلى مشاركتكم مراحل هذا المشروع ومخرجاته خلال الفترة المقبلة.\n\n{hashtag|#|التمويل_المؤسسي} {hashtag|#|الاستدامة_المالية} {hashtag|#|القطاع_غير_الربحي}\n#Nonprofit #FinancialSustainability",
   "via": "network",
   "createdAt": "2026-10-14T11:12:35.484Z",
-  "updatedAt": "2026-11-17T20:30:33.535Z",
+  "updatedAt": "2026-11-21T20:33:33.089Z",
   "metrics": [
    {
     "description": "How many people reacted to your post. Includes Like, Celebrate, Support, and more.",
@@ -1490,21 +1490,21 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 2.76
+    "value": 2.75
    },
    {
     "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 3121
+    "value": 3124
    },
    {
     "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 1959
+    "value": 1961
    }
   ]
  },
@@ -1572,7 +1572,7 @@
   "externalLink": "https://www.linkedin.com/feed/update/urn:li:share:7517490339293876224",
   "ideaId": null,
   "isCustomScheduled": false,
-  "metricsUpdatedAt": "2026-11-17T20:30:33.577Z",
+  "metricsUpdatedAt": "2026-11-21T20:33:33.066Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-10-18T07:42:45.723Z",
@@ -1582,7 +1582,7 @@
   "text": "أغلب الحملات الخيرية تُجيب عن سؤال واحد: ماذا سيتغير في حياة المستفيد؟\n\nوهذا مهم، لكنه نصف الصورة.\n\nفالتسويق الخيري يبدأ بتحديد حاجات المتبرع ورغباته، وقد تكون التصدق، أو البحث عن البركة في المال، أو الأجر في الآخرة. ولذلك ينبغي أن يكون العائد على المتبرع ظاهرًا في رسالتك، لا العائد على المستفيد فقط.\n\nحين يرى المتبرع ما يعود عليه هو، يصبح التبرع قرارًا أقرب إليه، لا مجرد استجابة لنداء.\n\nراجع آخر حملة أطلقتها منظمتك: هل كان العائد على المتبرع واضحًا فيها؟\n\nوفي دليل «التسويق للمنظمات غير الربحية» ثمانية عناصر يحتاجها مزيجك التسويقي، قد يكون غياب أحدها سبب تعثّر حملتك القادمة.\n{hashtag|#|التسويق_الخيري} {hashtag|#|القطاع_غير_الربحي} {hashtag|#|تنمية_الموارد}",
   "via": "buffer",
   "createdAt": "2026-10-18T07:42:23.421Z",
-  "updatedAt": "2026-11-17T20:30:33.577Z",
+  "updatedAt": "2026-11-21T20:33:33.066Z",
   "metrics": [
    {
     "description": "How many people reacted to your post. Includes Like, Celebrate, Support, and more.",
@@ -1603,21 +1603,21 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 2.1
+    "value": 2.09
    },
    {
     "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 618
+    "value": 622
    },
    {
     "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 373
+    "value": 374
    }
   ]
  },
@@ -1638,7 +1638,7 @@
   "externalLink": "https://www.linkedin.com/feed/update/urn:li:share:7515655709800280064",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T20:30:33.642Z",
+  "metricsUpdatedAt": "2026-11-21T20:33:33.094Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-10-13T06:12:35.531Z",
@@ -1648,7 +1648,7 @@
   "text": "سعداء بصدور «دليل المسؤولية الاجتماعية للشركات في المملكة العربية السعودية»، ثمرة شراكة مؤسسة درب الاستدامة الأهلية مع إيوان، ونأمل أن يسهم في بناء شراكات مجتمعية فاعلة ومستدامة.\n\n{hashtag|#|المسؤولية_الاجتماعية} {hashtag|#|الشراكات_المجتمعية}",
   "via": "network",
   "createdAt": "2026-10-13T06:12:35.531Z",
-  "updatedAt": "2026-11-17T20:30:33.642Z",
+  "updatedAt": "2026-11-21T20:33:33.094Z",
   "metrics": [
    {
     "description": "How many people reacted to your post. Includes Like, Celebrate, Support, and more.",
@@ -1676,7 +1676,7 @@
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 1186
+    "value": 1188
    },
    {
     "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
@@ -1704,7 +1704,7 @@
   "externalLink": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7514932211947745280",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T20:30:33.549Z",
+  "metricsUpdatedAt": "2026-11-21T20:33:33.076Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-10-11T06:17:40.115Z",
@@ -1714,7 +1714,7 @@
   "text": "كيف تبني المنظمات الصغيرة استدامتها وتقلّل اعتمادها على التبرعات؟\n\nفي هذا المقال، خمس ركائز لمنهجية «نمو»، وخطوات عملية تبدأ بإمكانات بسيطة وتؤسس لموارد أكثر استدامة.\n\nأيّ هذه الركائز تمثّل الأولوية لمنظمتك؟\n\n{hashtag|#|الاستدامة_المالية}\n{hashtag|#|تنمية_الموارد}\n{hashtag|#|القطاع_غير_الربحي}\n{hashtag|#|منهجية_نمو}",
   "via": "network",
   "createdAt": "2026-10-11T06:17:40.115Z",
-  "updatedAt": "2026-11-17T20:30:33.549Z",
+  "updatedAt": "2026-11-21T20:33:33.076Z",
   "metrics": [
    {
     "description": "How many people reacted to your post. Includes Like, Celebrate, Support, and more.",
@@ -1735,21 +1735,21 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 2.19
+    "value": 2.18
    },
    {
     "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 915
+    "value": 919
    },
    {
     "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 568
+    "value": 570
    }
   ]
  },
@@ -1771,7 +1771,7 @@
   "externalLink": "https://www.linkedin.com/feed/update/urn:li:share:7516015239944007680",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T20:30:33.575Z",
+  "metricsUpdatedAt": "2026-11-21T20:33:33.090Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-10-14T06:01:14.716Z",
@@ -1781,7 +1781,7 @@
   "text": "بعد سنوات في الاستدامة المالية، تعلّمت أن سؤال: «كيف نزيد الإيراد؟» ضروري… لكنه لا يكفي.\n\nالسؤال الذي يجب أن يرافقه:\n«كيف نبني تمويلًا أكثر استقرارًا، ونقلّل تأثّرنا بتغيّر مصادره؟».\n\nالفرق يظهر في الاستراتيجية كاملةً.\n\nحين ننشغل بزيادة الإيراد وحدها، قد ندخل في دائرة:\n— حملات أكثر\n— مستهدفات أعلى\n— ضغط متواصل على فريق تنمية الموارد\n— تمويل الاحتياج الحالي، دون بناء قدرة على مواجهة القادم\n\nوحين نجمع بين نمو الإيرادات والمرونة المالية، نعمل على:\n— تطوير علاقات تمويل طويلة الأجل\n— بناء احتياطيات تشغيلية\n— تنمية إيرادات مرنة في استخدامها\n— دراسة أوقاف واستثمارات تناسب قدرات المنظمة\n— تطوير منتجات وخدمات مدفوعة ذات جدوى، تخدم رسالتها\n\nهذه الخيارات تحتاج إدارة وموازنة للمخاطر؛ فامتلاك أصل لا يضمن استقرار عائده، وإطلاق خدمة مدفوعة لا يضمن ربحيتها.\n\nالاستدامة تظهر في قدرتنا على الاستمرار حين يتأخر التمويل، أو يتراجع مصدر رئيسي، أو تتغيّر الظروف.\n\nزيادة الإيراد تدعم عملنا اليوم.\nوبناء المرونة المالية يحمي قدرتنا على مواصلته غدًا.\n\n{hashtag|#|الاستدامة_المالية} {hashtag|#|القيادة} {hashtag|#|الجمعيات_الأهلية} {hashtag|#|تنمية_الموارد}",
   "via": "buffer",
   "createdAt": "2026-10-10T09:32:14.151Z",
-  "updatedAt": "2026-11-17T20:30:33.575Z",
+  "updatedAt": "2026-11-21T20:33:33.090Z",
   "metrics": [
    {
     "description": "How many people reacted to your post. Includes Like, Celebrate, Support, and more.",
@@ -1802,139 +1802,6 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 2.63
-   },
-   {
-    "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
-    "name": "Impressions",
-    "type": "impressions",
-    "unit": "count",
-    "value": 951
-   },
-   {
-    "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
-    "name": "Reach",
-    "type": "reach",
-    "unit": "count",
-    "value": 614
-   }
-  ]
- },
- {
-  "id": "6ac8e7e4b5e6af2bb09db8bd",
-  "allowedActions": [
-   "viewPost",
-   "sharePostLink",
-   "copyPostLink",
-   "updatePostTags",
-   "addPostNote",
-   "updateShopGridLink"
-  ],
-  "channelId": "6a4bdb7040483446287754cf",
-  "channelService": "linkedin",
-  "contentItemId": null,
-  "dueAt": "2026-10-05T08:32:03.309Z",
-  "externalLink": "https://www.linkedin.com/feed/update/urn:li:share:7512791703788105728",
-  "ideaId": null,
-  "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T20:30:33.553Z",
-  "notificationStatus": null,
-  "schedulingType": "automatic",
-  "sentAt": "2026-10-05T08:32:03.309Z",
-  "sharedNow": false,
-  "shareMode": "customScheduled",
-  "status": "sent",
-  "text": "View my verified achievement from @SAP.",
-  "via": "network",
-  "createdAt": "2026-10-05T08:32:03.309Z",
-  "updatedAt": "2026-11-17T20:30:33.553Z",
-  "metrics": [
-   {
-    "description": "How many people reacted to your post. Includes Like, Celebrate, Support, and more.",
-    "name": "Reactions",
-    "type": "reactions",
-    "unit": "count",
-    "value": 11
-   },
-   {
-    "description": "The number of comments your post received (including nested replies). Shows when your post is starting conversations, not just getting seen.",
-    "name": "Comments",
-    "type": "comments",
-    "unit": "count",
-    "value": 0
-   },
-   {
-    "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
-    "name": "Eng. Rate",
-    "type": "engagementRate",
-    "unit": "percentage",
-    "value": 2.32
-   },
-   {
-    "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
-    "name": "Impressions",
-    "type": "impressions",
-    "unit": "count",
-    "value": 474
-   },
-   {
-    "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
-    "name": "Reach",
-    "type": "reach",
-    "unit": "count",
-    "value": 267
-   }
-  ]
- },
- {
-  "id": "6ac5c8065ea17db2bf6d3aaa",
-  "allowedActions": [
-   "viewPost",
-   "sharePostLink",
-   "copyPostLink",
-   "updatePostTags",
-   "addPostNote",
-   "duplicatePost",
-   "updateShopGridLink"
-  ],
-  "channelId": "6a4bdb7040483446287754cf",
-  "channelService": "linkedin",
-  "contentItemId": null,
-  "dueAt": "2026-10-07T06:00:00.000Z",
-  "externalLink": "https://www.linkedin.com/feed/update/urn:li:share:7513478366071603201",
-  "ideaId": null,
-  "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T20:30:33.508Z",
-  "notificationStatus": null,
-  "schedulingType": "automatic",
-  "sentAt": "2026-10-07T06:00:36.636Z",
-  "sharedNow": false,
-  "shareMode": "customScheduled",
-  "status": "sent",
-  "text": "كيف ترتفع إيرادات منظمة ٤٠%… ويزداد إرهاقها المالي؟\n\nلنفترض أن ٩٢% من إيراداتها مقيّدة بمشاريع محدّدة، بينما لا يتجاوز الدخل غير المقيّد ٨%.\n\nقد تبدو الإيرادات كبيرة، لكن الأموال المتاحة لاحتياجات المنظمة العامة محدودة.\n\nفالتمويل المقيّد قد يغطي موظفي المشروع وتكاليفه، لكنه لا يتيح بالضرورة:\n— توظيف موظف تحتاجه المنظمة خارج المشاريع المموّلة.\n— تحسين رواتب الكادر الحالي.\n— تطوير الأنظمة المالية والإدارية.\n— مواجهة مصروف طارئ.\n\nالمشكلة ليست في التمويل المقيّد بحد ذاته، بل في مدى تغطيته للتكلفة الفعلية، وتوازن مصادر دخل المنظمة.\n\nثلاث خطوات يمكن أن تساعد:\n\n١. مراجعة اتفاقيات التمويل، والتفاوض في الاتفاقيات الجديدة على تغطية التكلفة الكاملة للمشروع، بما فيها نصيبه من التكاليف الإدارية والمشتركة.\n\n٢. بناء مصادر للدخل غير المقيّد: تبرعات شهرية لدعم أعمال المنظمة عمومًا، ورعايات تسمح اتفاقياتها بذلك، وصافي عوائد خدمات تتوافق مع رسالة المنظمة.\n\n٣. وضع هدف يناسب احتياجات المنظمة؛ مثل رفع نسبة الدخل غير المقيّد من ٨% إلى ٢٥% خلال ١٨ شهرًا، مع متابعة كفايته لتغطية التشغيل وبناء احتياطي للطوارئ. هذه نسبة مستهدفة للمثال، وليست معيارًا ثابتًا لكل منظمة.\n\nنمو الإيرادات وحده لا يضمن الاستدامة؛ المرونة المالية جزء أساسي منها.\n\nكم نسبة دخلكم غير المقيّد؟ وهل تكفي لتغطية احتياجات المنظمة التي لا يمولها أحد؟\n{hashtag|#|الاستدامة_المالية} {hashtag|#|المنظمات_غير_الربحية} {hashtag|#|تنمية_الموارد_المالية} {hashtag|#|الدخل_غير_المقيد}",
-  "via": "buffer",
-  "createdAt": "2026-10-07T04:18:14.294Z",
-  "updatedAt": "2026-11-17T20:30:33.508Z",
-  "metrics": [
-   {
-    "description": "How many people reacted to your post. Includes Like, Celebrate, Support, and more.",
-    "name": "Reactions",
-    "type": "reactions",
-    "unit": "count",
-    "value": 13
-   },
-   {
-    "description": "The number of comments your post received (including nested replies). Shows when your post is starting conversations, not just getting seen.",
-    "name": "Comments",
-    "type": "comments",
-    "unit": "count",
-    "value": 0
-   },
-   {
-    "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
-    "name": "Eng. Rate",
-    "type": "engagementRate",
-    "unit": "percentage",
     "value": 2.62
    },
    {
@@ -1942,80 +1809,14 @@
     "name": "Impressions",
     "type": "impressions",
     "unit": "count",
-    "value": 496
+    "value": 953
    },
    {
     "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 328
-   }
-  ]
- },
- {
-  "id": "6ac1f9085f4ca2e6c1641036",
-  "allowedActions": [
-   "viewPost",
-   "sharePostLink",
-   "copyPostLink",
-   "updatePostTags",
-   "addPostNote",
-   "updateShopGridLink"
-  ],
-  "channelId": "6a4bdb7040483446287754cf",
-  "channelService": "linkedin",
-  "contentItemId": null,
-  "dueAt": "2026-10-04T06:55:31.022Z",
-  "externalLink": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7512405020856700928",
-  "ideaId": null,
-  "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T20:30:33.573Z",
-  "notificationStatus": null,
-  "schedulingType": "automatic",
-  "sentAt": "2026-10-04T06:55:31.022Z",
-  "sharedNow": false,
-  "shareMode": "customScheduled",
-  "status": "sent",
-  "text": "Fifteen days in Silicon Valley… and one question I brought home.\n\nToday, I’m pleased to share my graduation from the MDLP program at the SAP Institute for Product and Engineering in California, following a journey that brought together technology, leadership, ideas, and humanitarian work.\n\nI expected to return with new tools and technologies. I came back with a deeper conviction: Technology amplifies an organization’s capabilities, but people determine its direction.\n\nThree ideas have stayed with me:\n\n1️⃣ Leadership is not what you know, but what you practice.\nThe gap between knowing leadership principles and putting them into practice is the real challenge ‏‏@Chris Yeh‏‏ . A leader who stops learning begins to fall behind ‏‏@Ferose V R‏‏ \n\n2️⃣ AI without compassion… is incomplete progress.\nI heard from Kailash Satyarthi, Nobel Peace Prize laureate, about keeping human dignity and the protection of the most vulnerable at the heart of technological progress. This is central to our work in the nonprofit sector.\n\n3️⃣ From success to significance.\nThe shift from personal achievement to serving and empowering others is the true test of leadership—a theme explored by ‏‏@Ferose V R‏‏  \n\nThe program’s themes spanned:\n\n▪️ Conscious leadership  Jane Chen, empathy, and building trust ‏‏@Jamil Zaki‏‏  \n\n▪️ AI and the future of software and enterprises: SAP Autonomous Enterprise ‏‏@Will Sakaguchi‏‏  , SAP Joule\n‏‏@Eric Solberg‏‏  the future of SaaS \n\n‏‏@Raja Rajamannar‏‏  , and research and innovation at SAP ‏‏@Alexander Schaefer‏‏  \n▪️ Cultural change and building movements within organizations ‏‏@Ferose V R  \n\n▪️ Artful Design at Stanford University ‏‏@Ge Wang‏‏  .\n\n▪️ The formative experiences of Martin Luther King Jr.  (Lerone Martin), and the power of books and libraries ‏‏@Dorothy Lazard‏‏    \n\n▪️ Leadership conversations with ‏‏@Ahmed Al-Faifi‏‏   and ‏Nabil K. Al Dabal‏ ‏\n\n▪️ Practices of silence and reflective journaling that taught me the value of pausing amid a busy world.\n\nI return to my work in the nonprofit sector carrying one question:\nHow do we turn this learning into better decisions, stronger organizations, and an impact people can feel in their lives?\n\nThank you to the Institute team, speakers, and fellow participants for the knowledge and conversations they brought to this journey.\n\n#MDLP #SAP #Leadership #Nonprofit #ArtificialIntelligence #SAPBeyondCode #SAPBeyondBoundaries",
-  "via": "network",
-  "createdAt": "2026-10-04T06:55:31.022Z",
-  "updatedAt": "2026-11-17T20:30:33.573Z",
-  "metrics": [
-   {
-    "description": "How many people reacted to your post. Includes Like, Celebrate, Support, and more.",
-    "name": "Reactions",
-    "type": "reactions",
-    "unit": "count",
-    "value": 114
-   },
-   {
-    "description": "The number of comments your post received (including nested replies). Shows when your post is starting conversations, not just getting seen.",
-    "name": "Comments",
-    "type": "comments",
-    "unit": "count",
-    "value": 22
-   },
-   {
-    "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
-    "name": "Eng. Rate",
-    "type": "engagementRate",
-    "unit": "percentage",
-    "value": 4.59
-   },
-   {
-    "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
-    "name": "Impressions",
-    "type": "impressions",
-    "unit": "count",
-    "value": 2964
-   },
-   {
-    "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
-    "name": "Reach",
-    "type": "reach",
-    "unit": "count",
-    "value": 1684
+    "value": 614
    }
   ]
  }

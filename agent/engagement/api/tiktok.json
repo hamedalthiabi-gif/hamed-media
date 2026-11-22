@@ -1,6 +1,6 @@
 [
  {
-  "id": "6afbce06797935b975dca4f2",
+  "id": "6affd816738ce4635f8b867d",
   "allowedActions": [
    "viewPost",
    "sharePostLink",
@@ -13,49 +13,49 @@
   "channelId": "6a4bdc5f404834462877580e",
   "channelService": "tiktok",
   "contentItemId": null,
-  "dueAt": "2026-11-17T18:00:00.000Z",
-  "externalLink": "https://tiktok.com/@hamedalthiabi/video/7709202524024212757",
+  "dueAt": "2026-11-20T18:00:00.000Z",
+  "externalLink": "https://tiktok.com/@hamedalthiabi/video/7710315709695364370",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T03:46:14.126Z",
+  "metricsUpdatedAt": "2026-11-21T13:07:34.915Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
-  "sentAt": "2026-11-17T18:04:27.820Z",
+  "sentAt": "2026-11-20T18:04:20.520Z",
   "sharedNow": false,
   "shareMode": "customScheduled",
   "status": "sent",
-  "text": "ثلاثة أسس للاستدامة المالية لأي منظمة غير ربحية: ضبط المصروف والإيراد بسياسات واضحة، وتنويع مصادر الدخل، ونمو الإيرادات كل عام.\nأيّها تحتاجه جمعيتك أكثر؟ 👇\nمقطع من #زبدة_الاستدامة مع مطورون ومؤسسة درب.\n#الاستدامة_المالية #القطاع_غير_الربحي #اكسبلور #fyp #foryou #ترند #تيك_توك_السعودية",
+  "text": "ليس كل مشروع تنموي يحقق الأثر!\nفما الذي يصنع الفرق؟ شاهد للنهاية 👇\nمقطع من حلقتنا في بودكاست «اكتفاء» لتمكين الأسر.\nرؤى وأدوات أسبوعية في قناتنا على واتساب: https://whatsapp.com/channel/0029VaDG6R49Gv7Okjpy860R\n#الأثر #القطاع_غير_الربحي #اكسبلور #fyp #foryou #ترند #تيك_توك_السعودية",
   "via": "buffer",
-  "createdAt": "2026-11-17T03:46:14.103Z",
-  "updatedAt": "2026-11-17T03:46:14.136Z",
+  "createdAt": "2026-11-20T05:18:14.611Z",
+  "updatedAt": "2026-11-21T13:07:34.915Z",
   "metrics": [
    {
     "description": "Also called Likes on TikTok. This shows how many people reacted to your post.",
     "name": "Reactions",
     "type": "reactions",
     "unit": "count",
-    "value": 0
+    "value": 6
    },
    {
     "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
     "name": "Comments",
     "type": "comments",
     "unit": "count",
-    "value": 0
+    "value": 1
    },
    {
     "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 0
+    "value": 3.57
    },
    {
     "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
     "name": "Video Views",
     "type": "views",
     "unit": "count",
-    "value": 0
+    "value": 196
    },
    {
     "description": "How many times your post was shared by others. A sign your content is reaching beyond your immediate audience.",
@@ -76,14 +76,102 @@
     "name": "Watch Time (min)",
     "type": "totalTimeWatched",
     "unit": "count",
-    "value": 0
+    "value": 17
    },
    {
     "description": "How long people watched your video for on average. Shows how well the video holds attention.",
     "name": "Avg. Watch Time (sec)",
     "type": "averageTimeWatched",
     "unit": "count",
+    "value": 4.72
+   }
+  ]
+ },
+ {
+  "id": "6afbce06797935b975dca4f2",
+  "allowedActions": [
+   "viewPost",
+   "sharePostLink",
+   "copyPostLink",
+   "updatePostTags",
+   "addPostNote",
+   "duplicatePost",
+   "updateShopGridLink"
+  ],
+  "channelId": "6a4bdc5f404834462877580e",
+  "channelService": "tiktok",
+  "contentItemId": null,
+  "dueAt": "2026-11-17T18:00:00.000Z",
+  "externalLink": "https://www.tiktok.com/@hamedalthiabi/video/7709202524024212757?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+  "ideaId": null,
+  "isCustomScheduled": true,
+  "metricsUpdatedAt": "2026-11-21T13:07:34.915Z",
+  "notificationStatus": null,
+  "schedulingType": "automatic",
+  "sentAt": "2026-11-17T18:04:27.820Z",
+  "sharedNow": false,
+  "shareMode": "customScheduled",
+  "status": "sent",
+  "text": "ثلاثة أسس للاستدامة المالية لأي منظمة غير ربحية: ضبط المصروف والإيراد بسياسات واضحة، وتنويع مصادر الدخل، ونمو الإيرادات كل عام. أيّها تحتاجه جمعيتك أكثر؟ 👇 مقطع من #زبدة_الاستدامة مع مطورون ومؤسسة درب. #الاستدامة_المالية #القطاع_غير_الربحي #اكسبلور #fyp #foryou #ترند #تيك_توك_السعودية",
+  "via": "buffer",
+  "createdAt": "2026-11-17T03:46:14.103Z",
+  "updatedAt": "2026-11-21T13:07:34.915Z",
+  "metrics": [
+   {
+    "description": "Also called Likes on TikTok. This shows how many people reacted to your post.",
+    "name": "Reactions",
+    "type": "reactions",
+    "unit": "count",
+    "value": 21
+   },
+   {
+    "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
+    "name": "Comments",
+    "type": "comments",
+    "unit": "count",
     "value": 0
+   },
+   {
+    "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
+    "name": "Eng. Rate",
+    "type": "engagementRate",
+    "unit": "percentage",
+    "value": 1.92
+   },
+   {
+    "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
+    "name": "Video Views",
+    "type": "views",
+    "unit": "count",
+    "value": 1253
+   },
+   {
+    "description": "How many times your post was shared by others. A sign your content is reaching beyond your immediate audience.",
+    "name": "Shares",
+    "type": "shares",
+    "unit": "count",
+    "value": 3
+   },
+   {
+    "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
+    "name": "Reach",
+    "type": "reach",
+    "unit": "count",
+    "value": 997
+   },
+   {
+    "description": "The total time people spent watching your video, added up over every view.",
+    "name": "Watch Time (min)",
+    "type": "totalTimeWatched",
+    "unit": "count",
+    "value": 138.65
+   },
+   {
+    "description": "How long people watched your video for on average. Shows how well the video holds attention.",
+    "name": "Avg. Watch Time (sec)",
+    "type": "averageTimeWatched",
+    "unit": "count",
+    "value": 6.08
    }
   ]
  },
@@ -193,7 +281,7 @@
   "externalLink": "https://www.tiktok.com/@hamedalthiabi/video/7705862514742938888?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T17:03:33.319Z",
+  "metricsUpdatedAt": "2026-11-21T13:07:34.915Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-11-08T18:03:44.794Z",
@@ -203,14 +291,14 @@
   "text": "من أين يأتي تمويل الجمعيات؟ 💡 مقطع من لقاء «القطاع الرابح» على قناة ذا ستيج عن مصادر تمويل القطاع غير الربحي. شاهد المقطع وشاركنا رأيك في التعليقات 👇 #اكسبلور #fyp #foryou #explore #ترند #السعودية #تيك_توك_السعودية #اكسبلور_السعودية #بودكاست #ذا_ستيج #القطاع_غير_الربحي #تمويل_الجمعيات",
   "via": "buffer",
   "createdAt": "2026-11-07T05:45:49.637Z",
-  "updatedAt": "2026-11-17T17:03:33.319Z",
+  "updatedAt": "2026-11-21T13:07:34.915Z",
   "metrics": [
    {
     "description": "Also called Likes on TikTok. This shows how many people reacted to your post.",
     "name": "Reactions",
     "type": "reactions",
     "unit": "count",
-    "value": 2463
+    "value": 2465
    },
    {
     "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
@@ -224,42 +312,42 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 13.92
+    "value": 13.73
    },
    {
     "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
     "name": "Video Views",
     "type": "views",
     "unit": "count",
-    "value": 17876
+    "value": 18146
    },
    {
     "description": "How many times your post was shared by others. A sign your content is reaching beyond your immediate audience.",
     "name": "Shares",
     "type": "shares",
     "unit": "count",
-    "value": 24
+    "value": 25
    },
    {
     "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 16757
+    "value": 17419
    },
    {
     "description": "The total time people spent watching your video, added up over every view.",
     "name": "Watch Time (min)",
     "type": "totalTimeWatched",
     "unit": "count",
-    "value": 797.15
+    "value": 846.93
    },
    {
     "description": "How long people watched your video for on average. Shows how well the video holds attention.",
     "name": "Avg. Watch Time (sec)",
     "type": "averageTimeWatched",
     "unit": "count",
-    "value": 2.54
+    "value": 2.58
    }
   ]
  },
@@ -281,7 +369,7 @@
   "externalLink": "https://www.tiktok.com/@hamedalthiabi/video/7703976636445723905?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T17:03:33.319Z",
+  "metricsUpdatedAt": "2026-11-21T13:07:34.915Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-11-03T16:06:27.753Z",
@@ -291,7 +379,7 @@
   "text": "أكبر 4 تحديات تواجه تمويل الجمعيات، بحسب 370 منظمة. أيها تواجهه جمعيتك؟ #تمويل_يدوم #القطاع_غير_الربحي #جمعيات",
   "via": "buffer",
   "createdAt": "2026-10-27T16:38:44.918Z",
-  "updatedAt": "2026-11-17T17:03:33.319Z",
+  "updatedAt": "2026-11-21T13:07:34.915Z",
   "metrics": [
    {
     "description": "Also called Likes on TikTok. This shows how many people reacted to your post.",
@@ -312,14 +400,14 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 1.06
+    "value": 0.95
    },
    {
     "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
     "name": "Video Views",
     "type": "views",
     "unit": "count",
-    "value": 377
+    "value": 422
    },
    {
     "description": "How many times your post was shared by others. A sign your content is reaching beyond your immediate audience.",
@@ -333,21 +421,21 @@
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 297
+    "value": 352
    },
    {
     "description": "The total time people spent watching your video, added up over every view.",
     "name": "Watch Time (min)",
     "type": "totalTimeWatched",
     "unit": "count",
-    "value": 15.47
+    "value": 17.38
    },
    {
     "description": "How long people watched your video for on average. Shows how well the video holds attention.",
     "name": "Avg. Watch Time (sec)",
     "type": "averageTimeWatched",
     "unit": "count",
-    "value": 2.5
+    "value": 2.39
    }
   ]
  },
@@ -369,7 +457,7 @@
   "externalLink": "https://www.tiktok.com/@hamedalthiabi/video/7702492662779088149?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T17:03:33.319Z",
+  "metricsUpdatedAt": "2026-11-21T13:07:34.915Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-10-30T16:06:11.040Z",
@@ -379,7 +467,7 @@
   "text": "دراسة على 370 جمعية في أقل من دقيقة: أين يقف تمويل القطاع غير الربحي؟ #تمويل_يدوم #القطاع_غير_الربحي #جمعيات",
   "via": "buffer",
   "createdAt": "2026-10-27T16:36:22.826Z",
-  "updatedAt": "2026-11-17T17:03:33.319Z",
+  "updatedAt": "2026-11-21T13:07:34.915Z",
   "metrics": [
    {
     "description": "Also called Likes on TikTok. This shows how many people reacted to your post.",
@@ -400,14 +488,14 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 2.38
+    "value": 2.16
    },
    {
     "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
     "name": "Video Views",
     "type": "views",
     "unit": "count",
-    "value": 462
+    "value": 509
    },
    {
     "description": "How many times your post was shared by others. A sign your content is reaching beyond your immediate audience.",
@@ -421,21 +509,21 @@
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 368
+    "value": 418
    },
    {
     "description": "The total time people spent watching your video, added up over every view.",
     "name": "Watch Time (min)",
     "type": "totalTimeWatched",
     "unit": "count",
-    "value": 30.6
+    "value": 32.43
    },
    {
     "description": "How long people watched your video for on average. Shows how well the video holds attention.",
     "name": "Avg. Watch Time (sec)",
     "type": "averageTimeWatched",
     "unit": "count",
-    "value": 3.94
+    "value": 3.67
    }
   ]
  },
@@ -457,7 +545,7 @@
   "externalLink": "https://www.tiktok.com/@hamedalthiabi/video/7701038548459277588?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T17:03:33.319Z",
+  "metricsUpdatedAt": "2026-11-21T13:07:34.915Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-10-26T18:03:47.146Z",
@@ -467,14 +555,14 @@
   "text": "استدامة الجمعيات أم الشركات؟ 🤔 مقطع من لقاء «القطاع الرابح» على قناة ذا ستيج. شاهد المقطع وشاركنا رأيك في التعليقات 👇 #اكسبلور #fyp #foryou #explore #ترند #السعودية #تيك_توك_السعودية #اكسبلور_السعودية #بودكاست #ذا_ستيج #القطاع_غير_الربحي #الاستدامة_المالية",
   "via": "buffer",
   "createdAt": "2026-10-26T06:26:47.941Z",
-  "updatedAt": "2026-11-17T17:03:33.319Z",
+  "updatedAt": "2026-11-21T13:07:34.915Z",
   "metrics": [
    {
     "description": "Also called Likes on TikTok. This shows how many people reacted to your post.",
     "name": "Reactions",
     "type": "reactions",
     "unit": "count",
-    "value": 36
+    "value": 37
    },
    {
     "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
@@ -495,7 +583,7 @@
     "name": "Video Views",
     "type": "views",
     "unit": "count",
-    "value": 3297
+    "value": 3373
    },
    {
     "description": "How many times your post was shared by others. A sign your content is reaching beyond your immediate audience.",
@@ -509,21 +597,21 @@
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 2815
+    "value": 2920
    },
    {
     "description": "The total time people spent watching your video, added up over every view.",
     "name": "Watch Time (min)",
     "type": "totalTimeWatched",
     "unit": "count",
-    "value": 522.47
+    "value": 547.55
    },
    {
     "description": "How long people watched your video for on average. Shows how well the video holds attention.",
     "name": "Avg. Watch Time (sec)",
     "type": "averageTimeWatched",
     "unit": "count",
-    "value": 9.28
+    "value": 9.34
    }
   ]
  },
@@ -545,7 +633,7 @@
   "externalLink": "https://www.tiktok.com/@hamedalthiabi/video/7700666683920256308?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T17:03:33.319Z",
+  "metricsUpdatedAt": "2026-11-21T13:07:34.915Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-10-25T18:02:26.651Z",
@@ -555,7 +643,7 @@
   "text": "قد تقدّم أفضل برنامج بأفضل مدرب، ويسعد الناس بالفعاليات والنشاط… ثم لا يبقى لهم أثر. فليس كل مشروع تنموي يحقق الأثر؛ الأثر أن يتحوّل التدريب إلى صنعة وعمل، كقصة الشاب الذي تدرّب على التصوير حتى صار يعمل مع أحد الفنادق. شاهد المقطع من بودكاست «اكتفاء» لتعرف الفرق بين النشاط والأثر. #الأثر #القطاع_غير_الربحي #التنمية",
   "via": "buffer",
   "createdAt": "2026-10-25T03:00:59.285Z",
-  "updatedAt": "2026-11-17T17:03:33.319Z",
+  "updatedAt": "2026-11-21T13:07:34.915Z",
   "metrics": [
    {
     "description": "Also called Likes on TikTok. This shows how many people reacted to your post.",
@@ -576,14 +664,14 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 2.13
+    "value": 2.09
    },
    {
     "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
     "name": "Video Views",
     "type": "views",
     "unit": "count",
-    "value": 1457
+    "value": 1483
    },
    {
     "description": "How many times your post was shared by others. A sign your content is reaching beyond your immediate audience.",
@@ -597,21 +685,21 @@
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 1243
+    "value": 1273
    },
    {
     "description": "The total time people spent watching your video, added up over every view.",
     "name": "Watch Time (min)",
     "type": "totalTimeWatched",
     "unit": "count",
-    "value": 125.5
+    "value": 128.17
    },
    {
     "description": "How long people watched your video for on average. Shows how well the video holds attention.",
     "name": "Avg. Watch Time (sec)",
     "type": "averageTimeWatched",
     "unit": "count",
-    "value": 5.08
+    "value": 5.05
    }
   ]
  },
@@ -633,7 +721,7 @@
   "externalLink": "https://www.tiktok.com/@hamedalthiabi/video/7698440820533382452?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T17:03:33.319Z",
+  "metricsUpdatedAt": "2026-11-20T12:28:06.416Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-10-19T18:03:02.173Z",
@@ -643,14 +731,14 @@
   "text": "ما الجمعيات الأهلية؟ ومن يستطيع تأسيسها؟ إن كنت مهتمًا بقضية في الصحة أو التعليم أو الثقافة، فتستطيع مع زملائك أو أصدقائك تأسيس جمعية أهلية عبر المركز الوطني لتنمية القطاع غير الربحي، خلال عشرين يومًا. بدأت الجمعيات الأهلية في المملكة من ١٥٠٠ جمعية، واليوم تجاوزت ٥٠٠٠ جمعية. تابع سلسلة «القطاع الجديد» لتتعرف على أشكال القطاع حلقة بعد حلقة. قريبًا: موعدنا الأربعاء ١١ نوفمبر الساعة ١١ صباحًا. #القطاع_غير_الربحي #القطاع_الجديد #الجمعيات_الأهلية",
   "via": "buffer",
   "createdAt": "2026-10-19T03:22:34.069Z",
-  "updatedAt": "2026-11-17T17:03:33.319Z",
+  "updatedAt": "2026-11-20T12:28:06.416Z",
   "metrics": [
    {
     "description": "Also called Likes on TikTok. This shows how many people reacted to your post.",
     "name": "Reactions",
     "type": "reactions",
     "unit": "count",
-    "value": 46
+    "value": 50
    },
    {
     "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
@@ -664,14 +752,14 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 1.3
+    "value": 1.37
    },
    {
     "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
     "name": "Video Views",
     "type": "views",
     "unit": "count",
-    "value": 4063
+    "value": 4152
    },
    {
     "description": "How many times your post was shared by others. A sign your content is reaching beyond your immediate audience.",
@@ -685,21 +773,21 @@
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 3522
+    "value": 3606
    },
    {
     "description": "The total time people spent watching your video, added up over every view.",
     "name": "Watch Time (min)",
     "type": "totalTimeWatched",
     "unit": "count",
-    "value": 368.65
+    "value": 380.07
    },
    {
     "description": "How long people watched your video for on average. Shows how well the video holds attention.",
     "name": "Avg. Watch Time (sec)",
     "type": "averageTimeWatched",
     "unit": "count",
-    "value": 5.32
+    "value": 5.33
    }
   ]
  },
@@ -721,7 +809,7 @@
   "externalLink": "https://www.tiktok.com/@hamedalthiabi/video/7698069323398614278?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-17T17:03:33.319Z",
+  "metricsUpdatedAt": "2026-11-20T12:28:06.407Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-10-18T18:01:47.578Z",
@@ -731,7 +819,7 @@
   "text": "القطاع غير الربحي بدأ بمبادرات فردية وتبرعات، مثل جمعيات البر وجمعيات تحفيظ القرآن. واليوم تجاوز ٧٠٠٠ منظمة، بين مؤسسات أهلية وجامعات ومستشفيات غير ربحية، وأصبح مساهمًا في التنمية والاقتصاد الوطني. تابع سلسلة «القطاع الجديد» لتتعرف على تفاصيله حلقة بعد حلقة. #القطاع_غير_الربحي #القطاع_الجديد #العمل_الخيري",
   "via": "buffer",
   "createdAt": "2026-10-18T11:08:00.614Z",
-  "updatedAt": "2026-11-17T17:03:33.319Z",
+  "updatedAt": "2026-11-20T12:28:06.407Z",
   "metrics": [
    {
     "description": "Also called Likes on TikTok. This shows how many people reacted to your post.",
@@ -752,14 +840,14 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 1.97
+    "value": 1.95
    },
    {
     "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
     "name": "Video Views",
     "type": "views",
     "unit": "count",
-    "value": 2788
+    "value": 2825
    },
    {
     "description": "How many times your post was shared by others. A sign your content is reaching beyond your immediate audience.",
@@ -773,21 +861,21 @@
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 2404
+    "value": 2457
    },
    {
     "description": "The total time people spent watching your video, added up over every view.",
     "name": "Watch Time (min)",
     "type": "totalTimeWatched",
     "unit": "count",
-    "value": 234.52
+    "value": 239.33
    },
    {
     "description": "How long people watched your video for on average. Shows how well the video holds attention.",
     "name": "Avg. Watch Time (sec)",
     "type": "averageTimeWatched",
     "unit": "count",
-    "value": 4.92
+    "value": 4.9
    }
   ]
  },
@@ -809,7 +897,7 @@
   "externalLink": "https://www.tiktok.com/@hamedalthiabi/video/7695270598276156690?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-16T23:45:05.875Z",
+  "metricsUpdatedAt": "2026-11-20T12:28:06.302Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-10-11T05:02:02.043Z",
@@ -819,7 +907,7 @@
   "text": "تدخل الاستثمار بعقلية العمل الاجتماعي… وش ممكن يصير؟ 👀 كيف توازن المنظمة بين رسالتها الاجتماعية وقراراتها الاستثمارية؟ شاهد المقطع، وقل لنا: وين ينتهي دور العاطفة ويبدأ حساب الاستثمار؟ 👇 #اكسبلور #لك #تيك_توك_السعودية #بودكاست #القطاع_غير_الربحي #الاستدامة_المالية",
   "via": "buffer",
   "createdAt": "2026-10-10T10:04:17.134Z",
-  "updatedAt": "2026-11-16T23:45:05.875Z",
+  "updatedAt": "2026-11-20T12:28:06.302Z",
   "metrics": [
    {
     "description": "Also called Likes on TikTok. This shows how many people reacted to your post.",
@@ -840,14 +928,14 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 2.78
+    "value": 2.72
    },
    {
     "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
     "name": "Video Views",
     "type": "views",
     "unit": "count",
-    "value": 431
+    "value": 441
    },
    {
     "description": "How many times your post was shared by others. A sign your content is reaching beyond your immediate audience.",
@@ -861,21 +949,21 @@
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 371
+    "value": 386
    },
    {
     "description": "The total time people spent watching your video, added up over every view.",
     "name": "Watch Time (min)",
     "type": "totalTimeWatched",
     "unit": "count",
-    "value": 38.7
+    "value": 38.92
    },
    {
     "description": "How long people watched your video for on average. Shows how well the video holds attention.",
     "name": "Avg. Watch Time (sec)",
     "type": "averageTimeWatched",
     "unit": "count",
-    "value": 5.22
+    "value": 5.02
    }
   ]
  },
@@ -897,7 +985,7 @@
   "externalLink": "https://www.tiktok.com/@hamedalthiabi/video/7696523818654780679?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-16T23:45:05.812Z",
+  "metricsUpdatedAt": "2026-11-20T12:28:06.432Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-10-14T14:05:02.289Z",
@@ -907,7 +995,7 @@
   "text": "الإسناد الحكومي فرصة للمنظمات غير الربحية… لكن متى يتحوّل إلى تحدٍّ؟ 🤔 قبل التوسّع، اسأل: هل منظمتك جاهزة لتنفيذ المشروع وتحمل التزاماته؟ شاهد المقطع، وشاركنا: وش أهم شيء لازم تتأكد منه المنظمة قبل قبول الإسناد؟ #القطاع_غير_الربحي #الإسناد_الحكومي #إدارة_المشاريع #الاستدامة_المالية #السعودية",
   "via": "buffer",
   "createdAt": "2026-10-10T10:01:18.432Z",
-  "updatedAt": "2026-11-16T23:45:05.812Z",
+  "updatedAt": "2026-11-20T12:28:06.432Z",
   "metrics": [
    {
     "description": "Also called Likes on TikTok. This shows how many people reacted to your post.",
@@ -928,14 +1016,14 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 0.83
+    "value": 0.81
    },
    {
     "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
     "name": "Video Views",
     "type": "views",
     "unit": "count",
-    "value": 483
+    "value": 495
    },
    {
     "description": "How many times your post was shared by others. A sign your content is reaching beyond your immediate audience.",
@@ -949,21 +1037,21 @@
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 379
+    "value": 396
    },
    {
     "description": "The total time people spent watching your video, added up over every view.",
     "name": "Watch Time (min)",
     "type": "totalTimeWatched",
     "unit": "count",
-    "value": 30.07
+    "value": 30.3
    },
    {
     "description": "How long people watched your video for on average. Shows how well the video holds attention.",
     "name": "Avg. Watch Time (sec)",
     "type": "averageTimeWatched",
     "unit": "count",
-    "value": 3.64
+    "value": 3.53
    }
   ]
  },
@@ -985,7 +1073,7 @@
   "externalLink": "https://www.tiktok.com/@hamedalthiabi/video/7695827970279083285?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
   "ideaId": null,
   "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-16T23:45:05.726Z",
+  "metricsUpdatedAt": "2026-11-20T12:28:06.393Z",
   "notificationStatus": null,
   "schedulingType": "automatic",
   "sentAt": "2026-10-12T17:03:46.848Z",
@@ -995,7 +1083,7 @@
   "text": "لو قرأ المتبرع رسالة حملتك… هل يقدر يتخيّل الأثر اللي بيصنعه؟ 💡 قرّب له المشهد، ووضّح دوره، وخله يشعر أنه جزء من القصة. #التسويق #صناعة_المحتوى #تنمية_الموارد #القطاع_غير_الربحي #السعودية",
   "via": "buffer",
   "createdAt": "2026-10-10T09:37:43.202Z",
-  "updatedAt": "2026-11-16T23:45:05.726Z",
+  "updatedAt": "2026-11-20T12:28:06.393Z",
   "metrics": [
    {
     "description": "Also called Likes on TikTok. This shows how many people reacted to your post.",
@@ -1016,14 +1104,14 @@
     "name": "Eng. Rate",
     "type": "engagementRate",
     "unit": "percentage",
-    "value": 2.12
+    "value": 2.07
    },
    {
     "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
     "name": "Video Views",
     "type": "views",
     "unit": "count",
-    "value": 566
+    "value": 581
    },
    {
     "description": "How many times your post was shared by others. A sign your content is reaching beyond your immediate audience.",
@@ -1037,109 +1125,21 @@
     "name": "Reach",
     "type": "reach",
     "unit": "count",
-    "value": 476
+    "value": 494
    },
    {
     "description": "The total time people spent watching your video, added up over every view.",
     "name": "Watch Time (min)",
     "type": "totalTimeWatched",
     "unit": "count",
-    "value": 32.48
+    "value": 33.45
    },
    {
     "description": "How long people watched your video for on average. Shows how well the video holds attention.",
     "name": "Avg. Watch Time (sec)",
     "type": "averageTimeWatched",
     "unit": "count",
-    "value": 3.34
-   }
-  ]
- },
- {
-  "id": "6ac1b4a5929e10e248146617",
-  "allowedActions": [
-   "viewPost",
-   "sharePostLink",
-   "copyPostLink",
-   "updatePostTags",
-   "addPostNote",
-   "duplicatePost",
-   "updateShopGridLink"
-  ],
-  "channelId": "6a4bdc5f404834462877580e",
-  "channelService": "tiktok",
-  "contentItemId": null,
-  "dueAt": "2026-10-05T16:30:00.000Z",
-  "externalLink": "https://www.tiktok.com/@hamedalthiabi/video/7693222384609791239?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-  "ideaId": null,
-  "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-11-16T23:45:05.706Z",
-  "notificationStatus": null,
-  "schedulingType": "automatic",
-  "sentAt": "2026-10-05T16:35:32.414Z",
-  "sharedNow": false,
-  "shareMode": "customScheduled",
-  "status": "sent",
-  "text": "تبرّع لك مرة… وش يخليه يرجع؟ 👀🌱 رحلة المتبرع تبدأ قبل التبرع وتستمر بعده. شاهد مراحلها، واطّلع على دليل «رحلة المتبرع» كاملًا في منصة درب لتراجع تجربة المتبرعين في منظمتك. #رحلة_المتبرع #القطاع_غير_الربحي #درب #السعودية #اكسبلور #fyp",
-  "via": "buffer",
-  "createdAt": "2026-10-04T02:06:28.995Z",
-  "updatedAt": "2026-11-16T23:45:05.706Z",
-  "metrics": [
-   {
-    "description": "Also called Likes on TikTok. This shows how many people reacted to your post.",
-    "name": "Reactions",
-    "type": "reactions",
-    "unit": "count",
-    "value": 9
-   },
-   {
-    "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
-    "name": "Comments",
-    "type": "comments",
-    "unit": "count",
-    "value": 0
-   },
-   {
-    "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
-    "name": "Eng. Rate",
-    "type": "engagementRate",
-    "unit": "percentage",
-    "value": 3.87
-   },
-   {
-    "description": "How many times your video was watched. Helps you understand how much attention your video content gets.",
-    "name": "Video Views",
-    "type": "views",
-    "unit": "count",
-    "value": 284
-   },
-   {
-    "description": "How many times your post was shared by others. A sign your content is reaching beyond your immediate audience.",
-    "name": "Shares",
-    "type": "shares",
-    "unit": "count",
-    "value": 2
-   },
-   {
-    "description": "How many unique people saw your post. Unlike impressions, each person is only counted once. Gives you a sense of how far your content spread.",
-    "name": "Reach",
-    "type": "reach",
-    "unit": "count",
-    "value": 234
-   },
-   {
-    "description": "The total time people spent watching your video, added up over every view.",
-    "name": "Watch Time (min)",
-    "type": "totalTimeWatched",
-    "unit": "count",
-    "value": 17.1
-   },
-   {
-    "description": "How long people watched your video for on average. Shows how well the video holds attention.",
-    "name": "Avg. Watch Time (sec)",
-    "type": "averageTimeWatched",
-    "unit": "count",
-    "value": 3.48
+    "value": 3.3
    }
   ]
  }
