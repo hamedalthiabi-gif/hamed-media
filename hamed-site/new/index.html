@@ -1360,7 +1360,7 @@ const fchips=[...document.querySelectorAll('.fchip')];
 fchips.forEach(c=>c.addEventListener('click',()=>{fchips.forEach(x=>x.setAttribute('aria-pressed',x===c));document.querySelectorAll('.prod').forEach(p=>p.hidden=!(c.dataset.g==='all'||p.dataset.g===c.dataset.g))}));
 
 const pagesEl=[...document.querySelectorAll('.page')];
-function route(){const h=location.hash.slice(1);const target=pagesEl.find(p=>p.dataset.page===h)?h:'home';pagesEl.forEach(p=>p.hidden=p.dataset.page!==target);document.querySelectorAll('[data-nav]').forEach(a=>{if(a.dataset.nav===target)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});window.scrollTo(0,0)}
+function route(){const h=location.hash.slice(1).split('/')[0];const target=pagesEl.find(p=>p.dataset.page===h)?h:'home';pagesEl.forEach(p=>p.hidden=p.dataset.page!==target);document.querySelectorAll('[data-nav]').forEach(a=>{if(a.dataset.nav===target)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});window.scrollTo(0,0)}
 window.addEventListener('hashchange',route);route();
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
@@ -1634,4 +1634,10 @@ if(!out.length)return empty();box.innerHTML=out.map(card).join('')}).catch(empty
   }
   render();
 })();
-;document.addEventListener('click',function(e){var a=e.target.closest('a[href="#readiness-go"]');if(!a)return;e.preventDefault();document.getElementById('readiness').scrollIntoView({behavior:'smooth',block:'start'})});</script></body></html>
+;document.addEventListener('click',function(e){var a=e.target.closest('a[href="#readiness-go"]');if(!a)return;e.preventDefault();document.getElementById('readiness').scrollIntoView({behavior:'smooth',block:'start'})});</script><script id="pub-deeplink">(function(){
+  function go(){var m=location.hash.match(/^#pubs\/(pub\d+)$/);if(!m)return;
+    var b=document.querySelector('.read-pub[data-pdf="pubs/'+m[1]+'.pdf"]');if(!b)return;
+    b.scrollIntoView({block:'center'});if(window.pdfjsLib)b.click();}
+  window.addEventListener('hashchange',function(){setTimeout(go,0)});
+  if(document.readyState==='complete')go();else window.addEventListener('load',go,{once:true});
+})();</script></body></html>

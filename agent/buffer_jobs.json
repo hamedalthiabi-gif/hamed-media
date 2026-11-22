@@ -1,5 +1,10 @@
 {
- "todo": [],
+ "todo": [
+  {
+   "delete": "6b027139846b0ee9075d2904",
+   "why": "x-2026-11-22: الرابط إلى #pubs/pub15"
+  }
+ ],
  "done": [
   {
    "draft": "linkedin-2026-11-18-wed12",

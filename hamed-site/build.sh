@@ -9,3 +9,4 @@ node cal.js new/index.html
 node v4.js new/index.html
 node hcal.js new/index.html
 node readiness.js new/index.html
+node deeplink.js new/index.html
