@@ -1,5 +1,79 @@
 [
  {
+  "id": "6b02738c846b0ee9075dc023",
+  "allowedActions": [
+   "viewPost",
+   "sharePostLink",
+   "copyPostLink",
+   "updatePostTags",
+   "addPostNote",
+   "duplicatePost",
+   "updateShopGridLink"
+  ],
+  "channelId": "6a4bdb9c4048344628775568",
+  "channelService": "twitter",
+  "contentItemId": null,
+  "dueAt": "2026-11-22T06:30:00.000Z",
+  "externalLink": "https://x.com/381671037/status/2124389998753399026",
+  "ideaId": null,
+  "isCustomScheduled": true,
+  "metricsUpdatedAt": "2026-11-22T06:30:29.133Z",
+  "notificationStatus": null,
+  "schedulingType": "automatic",
+  "sentAt": "2026-11-22T06:30:19.960Z",
+  "sharedNow": false,
+  "shareMode": "customScheduled",
+  "status": "sent",
+  "text": "خمسة أخطاء تُفقدك المتبرع الشهري:\nإيصال بارد بدل الشكر، وبطاقة تنتهي صلاحيتها، ونداءات تُثقله، وتخمين دوافعه بدل سؤاله، وصمت طوال العام.\nوتفاديها في دليلنا «الدعم المستدام»:\nhttps://hamedalthiabi.com/pubs/pub15.pdf?utm_source=x&utm_medium=social&utm_campaign=site-content\n#التبرع_الشهري #الاستدامة_المالية",
+  "via": "buffer",
+  "createdAt": "2026-11-22T04:46:04.729Z",
+  "updatedAt": "2026-11-22T06:30:29.133Z",
+  "metrics": [
+   {
+    "description": "Also called Likes on X. This shows how many people reacted to your post.",
+    "name": "Reactions",
+    "type": "reactions",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
+    "name": "Comments",
+    "type": "comments",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
+    "name": "Eng. Rate",
+    "type": "engagementRate",
+    "unit": "percentage",
+    "value": 0
+   },
+   {
+    "description": "Also called Retweets on X. This shows how many times your post was reposted by others. A sign your content is reaching beyond your immediate audience.",
+    "name": "Reposts",
+    "type": "reposts",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
+    "name": "Impressions",
+    "type": "impressions",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "How many times people clicked on your post or link. Shows when your content drives action beyond the channel it's on.",
+    "name": "Clicks",
+    "type": "clicks",
+    "unit": "count",
+    "value": 0
+   }
+  ]
+ },
+ {
   "id": "6b0038f1c21d6801c695fc43",
   "allowedActions": [
    "viewPost",
@@ -2280,79 +2354,6 @@
     "type": "clicks",
     "unit": "count",
     "value": 0
-   }
-  ]
- },
- {
-  "id": "6ac74763c534b47a29d02017",
-  "allowedActions": [
-   "viewPost",
-   "sharePostLink",
-   "copyPostLink",
-   "updatePostTags",
-   "addPostNote",
-   "updateShopGridLink"
-  ],
-  "channelId": "6a4bdb9c4048344628775568",
-  "channelService": "twitter",
-  "contentItemId": null,
-  "dueAt": "2026-10-08T07:33:46.000Z",
-  "externalLink": "https://x.com/381671037/status/2108098510688059572",
-  "ideaId": null,
-  "isCustomScheduled": true,
-  "metricsUpdatedAt": "2026-10-27T19:05:13.848Z",
-  "notificationStatus": null,
-  "schedulingType": "automatic",
-  "sentAt": "2026-10-08T07:33:46.000Z",
-  "sharedNow": false,
-  "shareMode": "customScheduled",
-  "status": "sent",
-  "text": "قبل اختيار قصة لحملتك، حدّد هدفك:\n\n🔹 لطلب التبرع: حاجة قائمة ودور واضح للمتبرع.\n🔹 لتقرير الأثر: تغيير تحقق بفضل الدعم.\n\nأيّهما أصعب في منظمتك: قصة الاحتياج أم قصة الأثر؟\n\n📖 للمزيد: دليل «اكتشاف القصص التي تجمع تبرعات أكثر».\n\n#تنمية_الموارد #القطاع_غير_الربحي",
-  "via": "network",
-  "createdAt": "2026-10-08T07:33:46.000Z",
-  "updatedAt": "2026-10-27T19:05:13.848Z",
-  "metrics": [
-   {
-    "description": "Also called Likes on X. This shows how many people reacted to your post.",
-    "name": "Reactions",
-    "type": "reactions",
-    "unit": "count",
-    "value": 4
-   },
-   {
-    "description": "The number of comments your post received. Shows when your post is starting conversations, not just getting seen.",
-    "name": "Comments",
-    "type": "comments",
-    "unit": "count",
-    "value": 0
-   },
-   {
-    "description": "The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.",
-    "name": "Eng. Rate",
-    "type": "engagementRate",
-    "unit": "percentage",
-    "value": 5
-   },
-   {
-    "description": "Also called Retweets on X. This shows how many times your post was reposted by others. A sign your content is reaching beyond your immediate audience.",
-    "name": "Reposts",
-    "type": "reposts",
-    "unit": "count",
-    "value": 1
-   },
-   {
-    "description": "How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.",
-    "name": "Impressions",
-    "type": "impressions",
-    "unit": "count",
-    "value": 1159
-   },
-   {
-    "description": "How many times people clicked on your post or link. Shows when your content drives action beyond the channel it's on.",
-    "name": "Clicks",
-    "type": "clicks",
-    "unit": "count",
-    "value": 13
    }
   ]
  }

@@ -1,5 +1,51 @@
 [
  {
+  "id": "6b02756d846b0ee9075e3017",
+  "allowedActions": [
+   "viewPost",
+   "sharePostLink",
+   "copyPostLink",
+   "updatePostTags",
+   "addPostNote",
+   "duplicatePost",
+   "updateShopGridLink"
+  ],
+  "channelId": "6a4bdb7040483446287754cf",
+  "channelService": "linkedin",
+  "contentItemId": null,
+  "dueAt": "2026-11-22T06:00:00.000Z",
+  "externalLink": "https://www.linkedin.com/feed/update/urn:li:share:7530148167196246016",
+  "ideaId": null,
+  "isCustomScheduled": true,
+  "metricsUpdatedAt": "2026-11-22T04:54:05.709Z",
+  "notificationStatus": null,
+  "schedulingType": "automatic",
+  "sentAt": "2026-11-22T06:00:26.991Z",
+  "sharedNow": false,
+  "shareMode": "customScheduled",
+  "status": "sent",
+  "text": "قاعدة المتبرعين الشهريين: من خيار في نموذج التبرع إلى برنامج مؤسسي\n\nتضيف منظمات غير ربحية كثيرة خيار التبرع الشهري إلى منصاتها، ثم تنتظر أن تنمو قاعدته تلقائيًا. غير أن الخيار وحده لا يبني قاعدة؛ فالمتبرع الشهري يلتزم دون مقابل فوري، ويستمر بقدر ما يرى من قيمة التزامه.\n\nوفي دليلنا «الدعم المستدام: كيف تبني قاعدة متبرعيك الشهريين» خمس ممارسات عملية لبنائها:\n\n١. وضوح الدعوة\nزر مخصص للتبرع الشهري في الصفحة الرئيسة، وتجربة تبرع ميسّرة بأقل عدد من الخطوات.\n\n٢. صياغة الطلب\nيُعرض التبرع الشهري توزيعًا للمبلغ نفسه على العام؛ فمن يتبرع بـ١٢٠٠ ريال مرة واحدة يُدعى إلى ١٠٠ ريال شهريًا، لا إلى تكرار المبلغ كل شهر.\n\n٣. انتظام التحصيل\nالاقتطاع الشهري من الحساب البنكي أثبت من البطاقة، فبيانات البطاقات تتغير بانتهاء صلاحيتها أو فقدانها، فيتوقف التبرع دون قرار من المتبرع.\n\n٤. إدارة العلاقة\nشريحة مستقلة للمتبرعين الشهريين ببرنامج ذي هوية مميزة، ورسالة شكر فورية بدل الإيصال المعتاد، وسبع نقاط تواصل ذات معنى في العام على الأقل.\n\n٥. توقيت الحملة\nإطلاق حملة التحويل إلى التبرع الشهري مطلع العام، حين يعيد كثيرون تقييم ميزانياتهم، بسلسلة من خمس رسائل لمن تبرعوا مرة واحدة خلال العام المنصرم.\n\nوالنتيجة دخل منتظم يتيح للمنظمة تخطيطًا أفضل، واستجابة أسرع، وأداءً أكثر اتساقًا.\n\nويختم الدليل بقائمة تحقق من سبع خطوات، يقيس بها فريق تنمية الموارد جاهزية برنامجه. اقرؤوه كاملًا في موقعنا:\nhttps://hamedalthiabi.com/pubs/pub15.pdf?utm_source=linkedin&utm_medium=social&utm_campaign=site-content\n\nإن كنت مهتمًا بالقطاع غير الربحي، فقناتنا على واتساب تعرض كل ما يخصه:\nhttps://whatsapp.com/channel/0029VaDG6R49Gv7Okjpy860R\n\n#التبرع_الشهري #الاستدامة_المالية #القطاع_غير_الربحي #تنمية_الموارد",
+  "via": "buffer",
+  "createdAt": "2026-11-22T04:54:05.700Z",
+  "updatedAt": "2026-11-22T04:54:05.715Z",
+  "metrics": [
+   {
+    "description": "How many people reacted to your post. Includes Like, Celebrate, Support, and more.",
+    "name": "Reactions",
+    "type": "reactions",
+    "unit": "count",
+    "value": 0
+   },
+   {
+    "description": "The number of comments your post received (including nested replies). Shows when your post is starting conversations, not just getting seen.",
+    "name": "Comments",
+    "type": "comments",
+    "unit": "count",
+    "value": 0
+   }
+  ]
+ },
+ {
   "id": "6afb67d37c12bb3ee4e913e8",
   "allowedActions": [
    "viewPost",
