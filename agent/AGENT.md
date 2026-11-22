@@ -200,6 +200,8 @@ queue.json → GitHub Actions (.github/workflows/buffer.yml: عند كل رفع 
 احتياطي: مهمة «جدولة المنشورات في Buffer» (٦:٢٠ص و٦:٢٠م) عبر موصل Zapier (إجراء Add to Queue، طريقة Schedule Post)، ولا تكرر ما سُجّل
 → المنصات في موعد كل منشور. المجدول يُسجَّل في agent/buffer_scheduled.json حتى لا يتكرر.
 قنوات Buffer (المنظمة 6a4bdb54a23c84347c8879d3): لينكدإن 6a4bdb7040483446287754cf، إكس 6a4bdb9c4048344628775568، تيك توك 6a4bdc5f404834462877580e.
+تعديل منشور مجدول: احذف معرّفه من buffer_scheduled.json وأضف {"delete": "<معرّف Buffer>"} إلى agent/buffer_jobs.json وارفع، ثم تحقّق بعد دقيقتين:
+إن سُجّل «موجود مسبقًا في Buffer» (المقارنة بأول ٦٠ حرفًا، وقد تسبق الجدولةُ الحذفَ) فاحذف هذا السجل وشغّل buffer.yml يدويًا.
 الوسائط تُرسل برابط raw.githubusercontent.com/hamedalthiabi-gif/hamed-media/main/<media>. خلاصات RSS لم تعد مستخدمة.
 
 ## دروس المشرف
