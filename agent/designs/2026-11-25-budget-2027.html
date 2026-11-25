@@ -5,58 +5,53 @@
 :root{--n:#002544;--n2:#0b3a63;--c:#BB6841;--p:#E9A57F;--ink:#1c2a38;--mut:#5d6b78;--bg:#f6f3ef}
 *{margin:0;box-sizing:border-box}html,body{width:1080px;height:1350px;overflow:hidden}
 body{font-family:Ar,La;background:var(--bg);position:relative;color:var(--ink)}
-.hero{position:absolute;top:0;left:0;right:0;height:560px;background:linear-gradient(160deg,var(--n) 0%,var(--n2) 100%);overflow:hidden}
-.hero:before{content:"";position:absolute;width:700px;height:700px;left:-260px;top:-300px;border-radius:50%;background:radial-gradient(circle,#BB684140,#BB684100 70%)}
-.grid{position:absolute;inset:0;background-image:linear-gradient(#ffffff0a 1px,transparent 1px),linear-gradient(90deg,#ffffff0a 1px,transparent 1px);background-size:54px 54px}
-.logo{position:absolute;top:52px;right:80px;width:200px}
-.tag{position:absolute;top:60px;left:80px;font-size:24px;font-weight:600;color:var(--p);border:2px solid var(--p);border-radius:999px;padding:7px 24px}
-.title{position:absolute;top:160px;right:80px;left:80px;font-weight:600;font-size:60px;color:#fff;line-height:1.3}
-.title em{font-style:normal;color:var(--p)}
-.stats{position:absolute;top:340px;right:80px;left:80px;display:flex;gap:20px}
-.s{flex:1;background:#ffffff12;border:1.5px solid #ffffff26;border-radius:24px;padding:22px 24px;color:#fff}
-.s b{display:block;font-size:46px;font-weight:600;line-height:1.1}
-.s small{display:block;font-size:22px;color:#E9A57F;margin-top:4px;font-weight:600}
-.s span{display:block;font-size:22px;color:#c9d1dc;margin-top:8px}
-.s.hl{background:var(--c);border-color:var(--c)}
-.s.hl small{color:#fff}.s.hl span{color:#fff}
-.dir{position:absolute;top:590px;right:80px;left:80px}
-.dir h3{font-size:28px;color:var(--c);font-weight:600;margin-bottom:16px}
-.dir .row{display:flex;gap:20px}
-.dir .d{flex:1;background:#fff;border:1.5px solid #0025441f;border-radius:22px;padding:20px 24px;display:flex;gap:16px;align-items:center;box-shadow:0 16px 30px -24px #002544aa;font-size:27px;font-weight:600;color:var(--n);line-height:1.35}
-.dir .d svg{flex:none;width:48px;height:48px}
-.rec{position:absolute;top:790px;right:80px;left:80px}
-.rec h3{font-size:28px;color:var(--c);font-weight:600;margin-bottom:16px}
-.rg{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.r{background:#fff;border-radius:22px;padding:22px 24px;display:flex;gap:18px;align-items:center;border:1.5px solid #0025441f}
-.r i{flex:none;width:56px;height:56px;border-radius:16px;background:var(--n);color:#fff;font-style:normal;font-size:28px;font-weight:600;display:flex;align-items:center;justify-content:center}
-.r b{font-size:29px;font-weight:600;color:var(--n);line-height:1.3}
-.fact{position:absolute;top:1100px;right:80px;left:80px;border-right:6px solid var(--c);background:#BB684114;border-radius:16px;padding:16px 26px;font-size:26px;color:var(--n);font-weight:600}.fact b{color:var(--c);font-size:34px}
-.slog{position:absolute;top:1222px;width:100%;text-align:center;font-size:27px;font-weight:600;color:var(--c)}
+.b1{position:absolute;width:900px;height:900px;left:-430px;top:-430px;border-radius:50%;background:radial-gradient(circle,#BB684122,#BB684100 70%)}
+.top{position:absolute;top:0;left:0;right:0;height:12px;background:linear-gradient(90deg,var(--n),var(--n2))}
+.logo{position:absolute;top:56px;right:80px;width:200px}
+.tag{position:absolute;top:64px;left:80px;font-size:24px;font-weight:600;color:var(--c);border:2px solid var(--c);border-radius:999px;padding:7px 24px}
+.title{position:absolute;top:170px;right:80px;left:80px;font-weight:600;font-size:62px;color:var(--n);line-height:1.28}
+.title em{font-style:normal;color:var(--c)}
+.sub{position:absolute;top:348px;right:82px;left:80px;font-size:29px;color:var(--mut)}
+.grid{position:absolute;top:420px;right:80px;left:80px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.t{background:#fff;border:1.5px solid #0025441c;border-radius:26px;padding:26px 30px;box-shadow:0 18px 34px -28px #002544aa;display:flex;gap:20px;align-items:flex-start}
+.t .ic{flex:none;width:62px;height:62px;border-radius:18px;background:#BB684117;display:flex;align-items:center;justify-content:center}
+.t .ic svg{width:34px;height:34px}
+.t b{display:block;font-size:50px;font-weight:600;color:var(--n);line-height:1.1}
+.t b small{font-size:27px;color:var(--c);margin-right:6px}
+.t span{display:block;font-size:24px;color:var(--mut);margin-top:8px;line-height:1.45}
+.t.dn b{color:var(--c)}
+.recs{position:absolute;top:836px;right:80px;left:80px;display:flex;gap:16px}
+.recs div{flex:1;white-space:nowrap;border-radius:20px;border:1.5px dashed #BB684170;padding:20px 14px;font-size:23px;font-weight:600;color:var(--n);line-height:1.4;display:flex;gap:12px;align-items:center}
+.recs i{flex:none;width:40px;height:40px;border-radius:12px;background:var(--n);color:#fff;font-style:normal;font-size:22px;display:flex;align-items:center;justify-content:center}
+.sum{position:absolute;top:990px;right:80px;left:80px;background:linear-gradient(160deg,var(--n),var(--n2));border-radius:28px;padding:30px 40px;color:#fff;overflow:hidden}
+.sum:after{content:"";position:absolute;left:-60px;bottom:-90px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,#BB684155,#BB684100 70%)}
+.sum h4{font-size:23px;color:var(--p);font-weight:600;margin-bottom:8px}
+.sum p{font-size:33px;font-weight:600;line-height:1.5;position:relative}
+.src{position:absolute;top:1212px;left:80px;font-size:19px;color:var(--mut)}
+.slog{position:absolute;top:1206px;right:80px;font-size:26px;font-weight:600;color:var(--c)}
 .url{position:absolute;bottom:50px;width:100%;text-align:center;font-family:La,Ar;font-size:24px;color:var(--n);direction:ltr}
 .bot{position:absolute;bottom:0;left:0;right:0;height:24px;background:linear-gradient(90deg,var(--n),var(--n2))}
 .bot i{position:absolute;right:0;top:0;bottom:0;width:30%;background:var(--c)}
 </style></head><body>
-<div class="hero"><div class="grid"></div></div>
-<img class="logo" src="../../hamed-site/logo_white.png">
-<div class="tag">ميزانية ٢٠٢٧</div>
-<div class="title">ماذا تعني الميزانية<br>لـ<em>القطاع غير الربحي</em>؟</div>
-<div class="stats">
- <div class="s"><b>١٫٣٩٢</b><small>تريليون ريال</small><span>إجمالي النفقات</span></div>
- <div class="s hl"><b>٢٥٦</b><small>مليار ريال</small><span>الصحة والتنمية الاجتماعية</span></div>
- <div class="s"><b>١٩٠٫٦</b><small>مليار ريال</small><span>العجز المتوقع</span></div>
+<div class="b1"></div><div class="top"></div>
+<img class="logo" src="../../hamed-site/logo_navy.png">
+<div class="tag">قراءة في ميزانية المواطن</div>
+<div class="title">ميزانية ٢٠٢٧<br>ماذا تعني <em>للقطاع غير الربحي</em>؟</div>
+<div class="sub">الدولة تضبط إنفاقها.. وتراهن على شراكة القطاع غير الربحي</div>
+<div class="grid">
+ <div class="t"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#BB6841" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-7"/><path d="M12 14c0-4.5 3.3-7.5 8-7.5 0 4.5-3.3 7.5-8 7.5zM12 16c0-3.4-2.6-5.6-6.2-5.6 0 3.4 2.6 5.6 6.2 5.6z"/></svg></div><div><b>+١٨٫٩<small>مليار ريال</small></b><span>مشاريع تنموية غير ربحية عبر برنامج «سخاء» في ٢٠٢٦</span></div></div>
+ <div class="t"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#BB6841" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M16 14.2c2.8.3 5 2.6 5 5.8"/></svg></div><div><b>+٢<small>مليون متطوع</small></b><span>مستهدف ٢٠٢٧، من ١٫٣٧ مليون في منتصف ٢٠٢٦</span></div></div>
+ <div class="t"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#BB6841" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5.5" r="2.5"/><circle cx="5" cy="17.5" r="2.5"/><circle cx="19" cy="17.5" r="2.5"/><path d="M10.6 7.7 6.4 15.3M13.4 7.7l4.2 7.6M7.5 17.5h9"/></svg></div><div><b>٤٣<small>جمعية تعاونية</small></b><span>لكل مليون مواطن، مستهدف ٢٠٢٧</span></div></div>
+ <div class="t dn"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#BB6841" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6l7 7 4-4 7 7"/><path d="M21 11v5h-5"/></svg></div><div><b>−٣٪<small>الإنفاق العام</small></b><span>من ١٤٣٦ إلى ١٣٩٢ مليار ريال</span></div></div>
 </div>
-<div class="dir"><h3>اتجاهان يمسّان الجمعيات</h3><div class="row">
- <div class="d"><svg viewBox="0 0 24 24" fill="none" stroke="#BB6841" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17a8 8 0 1 1 16 0"/><path d="M12 17l4-5"/><circle cx="12" cy="17" r="1.2" fill="#BB6841"/></svg>رفع كفاءة الإنفاق وربطه بالأثر</div>
- <div class="d"><svg viewBox="0 0 24 24" fill="none" stroke="#BB6841" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="0.8" fill="#BB6841"/></svg>الدعم للفئات الأكثر استحقاقًا</div>
-</div></div>
-<div class="rec"><h3>أربع توصيات لجمعيتك</h3><div class="rg">
- <div class="r"><i>١</i><b>نوّع مصادر دخلك</b></div>
- <div class="r"><i>٢</i><b>ابنِ احتياطيًا تشغيليًا</b></div>
- <div class="r"><i>٣</i><b>قِس أثرك وتكلفته</b></div>
- <div class="r"><i>٤</i><b>شراكات أثر مع القطاع الخاص</b></div>
-</div></div>
-<div class="fact"><b>نحو الثلث</b> من المنظمات في دراستنا لا تصمد أكثر من ٣ أشهر لو توقفت التبرعات</div>
+<div class="recs">
+ <div><i>١</i>مشاريع جاهزة للتمويل</div>
+ <div><i>٢</i>تطوع مؤسسي مستدام</div>
+ <div><i>٣</i>تنويع الدخل</div>
+</div>
+<div class="sum"><h4>الخلاصة</h4><p>الجمعيات التي تبني استدامتها المالية الآن، لا التي تنتظر الدعم، هي من ستقود المرحلة القادمة.</p></div>
 <div class="slog">استدامة العطاء وأثرٌ يمتد</div>
+<div class="src">المصدر: ميزانية المواطن ٢٠٢٧، وزارة المالية</div>
 <div class="url">hamedalthiabi.com</div>
 <div class="bot"><i></i></div>
 </body></html>
