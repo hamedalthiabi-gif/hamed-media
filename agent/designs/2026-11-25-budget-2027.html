@@ -5,40 +5,48 @@
 :root{--n:#002544;--c:#BB6841;--p:#E9A57F;--cr:#F8F5EF;--ln:#E3DCCF;--mu:#5E6673;--pa:#C9D1DC}
 *{margin:0;box-sizing:border-box}html,body{width:1080px;height:1350px;overflow:hidden}
 body{font-family:Ar,La;background:var(--cr);position:relative;color:var(--n)}
-.hero{position:absolute;top:0;left:0;right:0;height:540px;background:var(--n);overflow:hidden}
-.dia{position:absolute;width:420px;height:420px;background:var(--c);transform:rotate(45deg);left:-250px;top:270px}
-.dia2{position:absolute;width:420px;height:420px;border:2px solid #E9A57F55;transform:rotate(45deg);left:-190px;top:215px}
-.logo{position:absolute;top:58px;right:80px;width:200px}
-.eye{position:absolute;top:70px;left:80px;font-size:23px;font-weight:600;color:var(--p);display:flex;align-items:center;gap:12px}
-.eye i,.k i{display:inline-block;width:12px;height:12px;background:var(--c);transform:rotate(45deg)}
-.eye i{background:var(--p)}
-.title{position:absolute;top:175px;right:80px;width:760px;font-weight:600;font-size:64px;color:#fff;line-height:1.3}
+.hero{position:absolute;top:0;left:0;right:0;height:600px;background:var(--n);overflow:hidden}
+.dia{position:absolute;width:360px;height:360px;background:var(--c);transform:rotate(45deg);left:-230px;top:400px}
+.dia2{position:absolute;width:360px;height:360px;border:2px solid #E9A57F50;transform:rotate(45deg);left:-170px;top:350px}
+.logo{position:absolute;top:60px;right:80px;width:190px}
+.blogo{position:absolute;top:44px;left:80px;width:200px;opacity:.95}
+.sep{position:absolute;top:58px;left:304px;width:1.5px;height:96px;background:#ffffff30}
+.eye{position:absolute;top:208px;right:80px;font-size:23px;font-weight:600;color:var(--p);display:flex;align-items:center;gap:12px}
+.eye i{display:inline-block;width:12px;height:12px;background:var(--p);transform:rotate(45deg)}
+.title{position:absolute;top:250px;right:80px;left:80px;font-weight:600;font-size:66px;color:#fff;line-height:1.28}
 .title em{font-style:normal;color:var(--p)}
-.lead{position:absolute;top:405px;right:80px;width:660px;font-size:27px;color:var(--pa);line-height:1.6}
-.cols{position:absolute;top:580px;right:80px;left:80px;display:flex;font-size:21px;font-weight:600;color:var(--mu);letter-spacing:0}
-.cols span:first-child{width:540px}
-.k{display:inline-flex;align-items:center;gap:10px}
-.row{position:absolute;right:80px;left:80px;height:150px;display:flex;align-items:stretch;border-top:1.5px solid var(--ln)}
-.q{width:540px;padding:0 28px 0 24px;display:flex;align-items:center;font-size:26px;line-height:1.5;color:var(--n);position:relative}
-.q:before{content:"";position:absolute;right:0;top:24px;bottom:24px;width:5px;background:var(--n)}
-.arr{width:70px;display:flex;align-items:center;justify-content:center}
-.m{flex:1;display:flex;align-items:center;font-size:29px;font-weight:600;color:var(--c);line-height:1.4}
-.sum{position:absolute;top:1100px;right:80px;left:80px;background:var(--n);padding:30px 40px 30px 150px;color:#fff;font-size:31px;font-weight:600;line-height:1.5}
-.sum b{color:var(--p);font-weight:600}
-.sum .d{position:absolute;left:44px;top:50%;width:62px;height:62px;margin-top:-31px;background:var(--c);transform:rotate(45deg)}
-.foot{position:absolute;bottom:44px;right:80px;left:80px;display:flex;justify-content:space-between;align-items:center}
-.slog{font-size:25px;font-weight:600;color:var(--c)}
-.url{font-family:La,Ar;font-size:23px;color:var(--n);direction:ltr}
+.stats{position:absolute;top:452px;right:80px;left:260px;display:flex;border-top:1.5px solid #ffffff26;padding-top:24px}
+.s{flex:1;padding-left:20px}
+.s+.s{border-right:1.5px solid #ffffff26;padding-right:24px}
+.s b{display:block;font-size:44px;font-weight:600;color:#fff;line-height:1.1}
+.s b small{font-size:22px;color:var(--p);margin-right:6px}
+.s span{display:block;font-size:20px;color:var(--pa);margin-top:6px}
+.sec{position:absolute;right:80px;left:80px;font-size:22px;font-weight:600;color:var(--c);display:flex;align-items:center;gap:12px}
+.sec i{display:inline-block;width:12px;height:12px;background:var(--c);transform:rotate(45deg)}
+.row{position:absolute;right:80px;left:80px;display:flex;gap:28px;align-items:flex-start;padding:22px 0;border-bottom:1.5px solid var(--ln)}
+.row .n{flex:none;width:58px;height:58px;background:var(--n);color:#fff;font-size:26px;font-weight:600;display:flex;align-items:center;justify-content:center}
+.row h4{font-size:30px;font-weight:600;color:var(--n);line-height:1.3}
+.row p{font-size:23px;color:var(--mu);margin-top:6px;line-height:1.5}
+.sum{position:absolute;top:1128px;right:80px;left:80px;background:var(--c);padding:26px 36px;color:#fff;font-size:29px;font-weight:600;line-height:1.5}
+.foot{position:absolute;bottom:36px;right:80px;left:80px;display:flex;justify-content:space-between;align-items:center}
+.slog{font-size:24px;font-weight:600;color:var(--c)}
+.url{font-family:La,Ar;font-size:22px;color:var(--n);direction:ltr}
+.src{position:absolute;top:1262px;right:80px;font-size:17px;color:var(--mu)}
 </style></head><body>
 <div class="hero"><div class="dia2"></div><div class="dia"></div></div>
 <img class="logo" src="../../hamed-site/logo_white.png">
-<div class="eye"><i></i>قراءة في بيان ميزانية ٢٠٢٧</div>
-<div class="title">ماذا يقول بيان الميزانية<br>لـ<em>القطاع غير الربحي</em>؟</div>
-<div class="lead">نفقات ١٣٩٢ مليار ريال، وثلاث عبارات في بيان ولي العهد ترسم طريق الجمعيات في العام القادم.</div>
-<div class="cols"><span class="k"><i></i>قال البيان</span><span class="k" style="margin-right:70px"><i></i>ويعني لجمعيتك</span></div>
-<div class="row" style="top:625px"><div class="q">«تعزيز فاعلية منظومة الدعم والحماية الاجتماعية وتوجيه إنفاقها إلى الفئات الأكثر حاجة»</div><div class="arr"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#BB6841" stroke-width="2" stroke-linecap="square"><path d="M20 12H5M11 6l-6 6 6 6"/></svg></div><div class="m">وجّه برامجك بدقة، وكمّل الدعم الحكومي لا تكرّره</div></div>
-<div class="row" style="top:775px"><div class="q">«زيادة كفاءة الإنفاق وقياس نتائجها»</div><div class="arr"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#BB6841" stroke-width="2" stroke-linecap="square"><path d="M20 12H5M11 6l-6 6 6 6"/></svg></div><div class="m">اعرف تكلفة كل برنامج ونتيجته قبل أن تُسأل عنها</div></div>
-<div class="row" style="top:925px;border-bottom:1.5px solid var(--ln)"><div class="q">«نعظّم أثر الرؤية في حياة الإنسان»</div><div class="arr"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#BB6841" stroke-width="2" stroke-linecap="square"><path d="M20 12H5M11 6l-6 6 6 6"/></svg></div><div class="m">تحدّث بلغة الأثر، فالتمويل يتجه إلى ما يثبت أثره</div></div>
-<div class="sum">الجمعيات التي تبني استدامتها المالية الآن، <b>لا التي تنتظر الدعم</b>، هي من ستقود المرحلة القادمة.<span class="d"></span></div>
+<img class="blogo" src="../brand/budget2027_logo_white.png">
+<div class="eye"><i></i>قراءة في الميزانية العامة للدولة</div>
+<div class="title">ماذا تعني ميزانية ٢٠٢٧<br>لل<em>قطاع غير الربحي</em>؟</div>
+<div class="stats">
+ <div class="s"><b>١٫٣٩٢<small>تريليون ريال</small></b><span>النفقات المعتمدة</span></div>
+ <div class="s"><b>٢٥٦<small>مليار ريال</small></b><span>الصحة والتنمية الاجتماعية</span></div>
+ <div class="s"><b>+١٫٧<small>مليون</small></b><span>متطوع في ٢٠٢٥</span></div>
+</div>
+<div class="sec" style="top:640px"><i></i>ثلاث دلالات للجمعيات</div>
+<div class="row" style="top:680px"><span class="n">١</span><div><h4>القطاع والتطوع حاضران في وثائق الميزانية</h4><p>بوصفهما من المكونات الأساسية للمجتمع، مع نمو التطوع المتسارع</p></div></div>
+<div class="row" style="top:828px"><span class="n">٢</span><div><h4>الدعم يتجه إلى الأكثر حاجة</h4><p>وقيمة الجمعية في التكامل مع منظومة الحماية الاجتماعية</p></div></div>
+<div class="row" style="top:976px"><span class="n">٣</span><div><h4>الكفاءة وقياس النتائج معيار التمويل</h4><p>الأولوية للبرامج التي تعرف تكلفتها وتثبت أثرها</p></div></div>
+<div class="sum">الجمعيات التي تبني استدامتها المالية الآن، لا التي تنتظر الدعم، هي من ستقود المرحلة القادمة.</div>
 <div class="foot"><span class="slog">استدامة العطاء وأثرٌ يمتد</span><span class="url">hamedalthiabi.com</span></div>
 </body></html>
