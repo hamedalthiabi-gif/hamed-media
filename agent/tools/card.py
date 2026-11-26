@@ -25,7 +25,8 @@ def make(title,tag,out,W=1080,H=1350):
     ft=F(600,40); tw=d.textlength(tag,font=ft,direction='rtl'); by=y0+total+50
     d.rectangle([W//2-tw/2-30,by,W//2+tw/2+30,by+76],fill=CORAL)
     d.text((W//2,by+38),tag,font=ft,fill=CREAM,anchor='mm',direction='rtl')
+    d.text((W//2,H-205),'استدامة العطاء وأثرٌ يمتد',font=F(600,36),fill=(225,160,125),anchor='mm',direction='rtl')
     fl=ImageFont.truetype(B+'plex-latin-400.ttf',32)
-    d.text((W//2,H-150),'hamedalthiabi.com',font=fl,fill=(200,205,215),anchor='mm')
+    d.text((W//2,H-145),'hamedalthiabi.com',font=fl,fill=(200,205,215),anchor='mm')
     im.save(out)
 if __name__=='__main__': make(sys.argv[1],sys.argv[2],sys.argv[3])
