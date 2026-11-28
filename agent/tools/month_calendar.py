@@ -2,6 +2,7 @@
 # python3 agent/tools/month_calendar.py data.json out.png
 # data.json: {"month": 11, "year": 2026, "identity": "old"|"new", "ramadan": false,
 #   "events": [{"date": "٢ نوفمبر", "from": 2, "to": 2, "name": "ملتقى ...", "place": "الرياض، ..."}],   (حتى ٨)
+#   "season": اختياري لتجاوز لمسة الشهر (autumn|winter|spring|summer)،
 #   "days":   [{"date": "١٦ نوفمبر", "from": 16, "name": "اليوم الدولي للتسامح"}]}                       (حتى ٦)
 # from/to أرقام لاتينية لتلوين الأيام في التقويم المصغر.
 # الهوية: old حتى أكتوبر/نوفمبر ٢٠٢٦، new من ديسمبر ٢٠٢٦. الخط لا يدعم الأرقام اللاتينية و«-»: اكتب الأرقام عربية و«إلى».
@@ -85,10 +86,10 @@ def crescent(size, col, bg):
     return im
 
 
-def decorate(im, month, ident, ramadan):
+def decorate(im, month, ident, ramadan, season=None):
     W, H = im.size; rnd = random.Random(month * 31 + (1 if ident == 'new' else 0))
     lay = Image.new('RGBA', (W, H), (0, 0, 0, 0))
-    s = SEASON[month]
+    s = season or SEASON[month]
     spots = [(-40, 330), (W - 150, 300), (W - 120, 900), (-50, 1250), (W - 170, 1560), (30, 1700), (W // 2 + 260, 60), (60, 60)]
     for i, (x, y) in enumerate(spots):
         sz = rnd.randint(110, 190)
@@ -148,7 +149,7 @@ def minical(im, data, C, y0, y1):
 def make(data, out, W=1080, H=1920):
     ident = data.get('identity', 'old'); C = ID[ident]; month = int(data['month'])
     im = Image.new('RGBA', (W, H), C['bg'] + (255,))
-    decorate(im, month, ident, data.get('ramadan', False))
+    decorate(im, month, ident, data.get('ramadan', False), data.get('season'))
     d = ImageDraw.Draw(im)
     # الترويسة: الشعار يسارًا وشارة الشهر يمينًا
     lg = Image.open(B + C['logo']).convert('RGBA'); lw = 330 if ident == 'old' else 360
