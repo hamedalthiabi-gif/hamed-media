@@ -23,13 +23,16 @@ def leaf(x, y, s, rot, col, op=1):
 def touches(kind):
     # لمسة نوفمبر: غصن خريفي يتدلّى من مثلث الشهر، وأوراق تتساقط على الهامشين حتى التذييل
     if kind != 'autumn': return ''
-    C1, C2, C3 = '#b96740', '#d89a5a', '#8f4a2c'
+    C1, C2, C3, C4 = '#c46a3a', '#e0a35a', '#9a4a28', '#d4893f'
     br = ('<svg class="lf" style="left:170px;top:225px;width:300px;height:200px" viewBox="0 0 300 200">'
           '<path d="M10 10 C70 30 120 60 170 100 C200 125 235 140 280 150" stroke="#002544" stroke-width="3" fill="none" stroke-linecap="round" opacity=".55"/></svg>')
-    L = [(186, 222, 52, 70, C2), (244, 262, 46, -20, C1), (300, 300, 54, 115, C3), (360, 326, 44, 30, C2), (420, 352, 36, 150, C1),
-         (36, 1080, 64, -25, C1), (90, 1300, 44, 50, C2), (30, 1490, 56, 160, C3), (980, 1120, 50, 35, C2), (950, 1380, 66, -60, C1),
-         (990, 1600, 42, 80, C3), (500, 1748, 34, 120, C2), (420, 1772, 28, -40, C1), (585, 1765, 30, 30, C3)]
-    return br + ''.join(leaf(x, y, sz, r, c) for x, y, sz, r, c in L)
+    L = [(186, 222, 56, 70, C2), (240, 258, 50, -20, C1), (296, 296, 60, 115, C3), (356, 322, 48, 30, C4), (416, 350, 40, 150, C1),
+         (20, 1040, 78, -25, C1), (88, 1150, 50, 50, C4), (14, 1290, 62, 160, C3), (70, 1420, 44, -70, C2), (24, 1560, 70, 20, C4),
+         (978, 1060, 58, 35, C2), (940, 1200, 80, -60, C1), (996, 1350, 46, 80, C3), (950, 1500, 64, 130, C4),
+         (860, 1640, 96, -35, C1), (950, 1680, 70, 40, C2), (900, 1760, 52, 110, C3), (800, 1720, 44, -80, C4),
+         (520, 1752, 34, 120, C2), (450, 1776, 28, -40, C1)]
+    wm = '<svg class="wm" style="left:250px;top:1080px;width:580px;height:580px;transform:rotate(-20deg)" viewBox="0 0 100 100"><path d="M50 3 C80 20 86 60 50 97 C14 60 20 20 50 3Z" fill="#b96740"/></svg>'
+    return wm + br + ''.join(leaf(x, y, sz, r, c) for x, y, sz, r, c in L)
 
 
 def dots(n=4):
@@ -69,24 +72,25 @@ def html(d):
     else:
         for k in range(0, len(days), 3):
             body += row(days[k:k + 3], 1240 + (k // 3) * 330)
-    body += touches(d.get('touch'))
+    body = touches(d.get('touch')) + body
     f = lambda w, fn: f"@font-face{{font-family:P;font-weight:{w};src:url(data:font/ttf;base64,{b64(os.path.join(KIT, fn))})}}"
     return f'''<!doctype html><html dir="rtl"><head><meta charset="utf-8"><style>
 @font-face{{font-family:L;unicode-range:U+0020-007F,U+2013;src:url(data:font/ttf;base64,{b64(os.path.join(KIT, 'avenir-800.ttf'))})}}
 {f(400, 'IBMPlexArabic-Regular.ttf')}{f(600, 'IBMPlexArabic-SemiBold.ttf')}{f(700, 'IBMPlexArabic-Bold.ttf')}
 *{{margin:0;padding:0;box-sizing:border-box}}
 html{{width:1080px;height:1920px;overflow:hidden}}
-body{{width:1080px;height:1920px;background:#fff;font-family:L,P;color:{NAVY};position:relative;overflow:hidden}}
-.frame{{position:absolute;inset:0;border:3px solid {NAVY}}}
+body{{width:1080px;height:1920px;background:radial-gradient(ellipse 70% 40% at 88% 6%,#f9e2c6 0,rgba(249,226,198,0) 70%),radial-gradient(ellipse 80% 45% at 8% 100%,#f5d6b4 0,rgba(245,214,180,0) 70%),#fbf5ec;font-family:L,P;color:{NAVY};position:relative;overflow:hidden}}
+.frame{{position:absolute;inset:0;border:3px solid {NAVY};z-index:5;pointer-events:none}}
+.wm{{position:absolute;opacity:.08}}
 .corner{{position:absolute;left:0;top:0;width:330px;height:360px;background:{COP};clip-path:polygon(0 0,100% 0,100% 30%,22% 100%,0 100%)}}
-.corner{{clip-path:polygon(0 0,74% 0,100% 33%,24% 100%,0 72%)}}
+.corner{{clip-path:polygon(0 0,74% 0,100% 33%,24% 100%,0 72%);background:linear-gradient(150deg,#cf8352,#a9562d);box-shadow:inset 0 0 0 1px rgba(255,255,255,.2)}}
 .ml{{position:absolute;left:22px;top:118px;width:250px;white-space:nowrap;text-align:center;font-weight:700;font-size:36px;color:#fff}}
 .logo{{position:absolute;right:62px;top:66px;width:360px}}
 h2{{position:absolute;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:30px;font-weight:700;font-size:44px;line-height:1}}
 .dots{{display:inline-flex;align-items:center;gap:9px}} .dots i{{display:block;background:{COP}}}
 .dm{{width:20px;height:20px;transform:rotate(45deg)}} .ci{{width:25px;height:25px;border-radius:50%}}
 .lf{{position:absolute}}\n.dw{{position:absolute;display:flex;align-items:center;justify-content:center}}
-.d{{position:absolute;inset:14.6%;background:{COP};transform:rotate(45deg)}}
+.d{{position:absolute;inset:14.6%;background:linear-gradient(135deg,#d08350 0%,#b96740 55%,#9e5230 100%);transform:rotate(45deg);box-shadow:0 16px 30px rgba(140,70,35,.28);outline:2px solid rgba(255,240,222,.55);outline-offset:-10px}}
 .t{{position:relative;text-align:center;width:60%;line-height:1.26;color:#fff}}
 .t b{{display:block;font-size:33px;font-weight:700;margin-bottom:3px}}
 .nm{{font-size:22px;font-weight:400}} .pl{{font-size:19px;margin-top:3px;font-weight:600}}
