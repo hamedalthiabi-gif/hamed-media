@@ -23,7 +23,7 @@ def leaf(x, y, s, rot, col, op=1):
 def touches(kind):
     # لمسة نوفمبر: غصن خريفي يتدلّى من مثلث الشهر، وأوراق تتساقط على الهامشين حتى التذييل
     if kind != 'autumn': return ''
-    C1, C2, C3, C4 = '#c46a3a', '#e0a35a', '#9a4a28', '#d4893f'
+    C1, C2, C3, C4 = COP, NAVY, COP, '#2b2f3b'  # ألوان الهوية فقط: نحاسي وكحلي وفحمي
     br = ('<svg class="lf" style="left:170px;top:225px;width:300px;height:200px" viewBox="0 0 300 200">'
           '<path d="M10 10 C70 30 120 60 170 100 C200 125 235 140 280 150" stroke="#002544" stroke-width="3" fill="none" stroke-linecap="round" opacity=".55"/></svg>')
     L = [(186, 222, 56, 70, C2), (240, 258, 50, -20, C1), (296, 296, 60, 115, C3), (356, 322, 48, 30, C4), (416, 350, 40, 150, C1),
@@ -79,18 +79,18 @@ def html(d):
 {f(400, 'IBMPlexArabic-Regular.ttf')}{f(600, 'IBMPlexArabic-SemiBold.ttf')}{f(700, 'IBMPlexArabic-Bold.ttf')}
 *{{margin:0;padding:0;box-sizing:border-box}}
 html{{width:1080px;height:1920px;overflow:hidden}}
-body{{width:1080px;height:1920px;background:radial-gradient(ellipse 70% 40% at 88% 6%,#f9e2c6 0,rgba(249,226,198,0) 70%),radial-gradient(ellipse 80% 45% at 8% 100%,#f5d6b4 0,rgba(245,214,180,0) 70%),#fbf5ec;font-family:L,P;color:{NAVY};position:relative;overflow:hidden}}
+body{{width:1080px;height:1920px;background:#f8f5ef;font-family:L,P;color:{NAVY};position:relative;overflow:hidden}}
 .frame{{position:absolute;inset:0;border:3px solid {NAVY};z-index:5;pointer-events:none}}
 .wm{{position:absolute;opacity:.08}}
 .corner{{position:absolute;left:0;top:0;width:330px;height:360px;background:{COP};clip-path:polygon(0 0,100% 0,100% 30%,22% 100%,0 100%)}}
-.corner{{clip-path:polygon(0 0,74% 0,100% 33%,24% 100%,0 72%);background:linear-gradient(150deg,#cf8352,#a9562d);box-shadow:inset 0 0 0 1px rgba(255,255,255,.2)}}
+.corner{{clip-path:polygon(0 0,74% 0,100% 33%,24% 100%,0 72%);background:{COP}}}
 .ml{{position:absolute;left:22px;top:118px;width:250px;white-space:nowrap;text-align:center;font-weight:700;font-size:36px;color:#fff}}
 .logo{{position:absolute;right:62px;top:66px;width:360px}}
 h2{{position:absolute;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:30px;font-weight:700;font-size:44px;line-height:1}}
 .dots{{display:inline-flex;align-items:center;gap:9px}} .dots i{{display:block;background:{COP}}}
 .dm{{width:20px;height:20px;transform:rotate(45deg)}} .ci{{width:25px;height:25px;border-radius:50%}}
 .lf{{position:absolute}}\n.dw{{position:absolute;display:flex;align-items:center;justify-content:center}}
-.d{{position:absolute;inset:14.6%;background:linear-gradient(135deg,#d08350 0%,#b96740 55%,#9e5230 100%);transform:rotate(45deg);box-shadow:0 16px 30px rgba(140,70,35,.28);outline:2px solid rgba(255,240,222,.55);outline-offset:-10px}}
+.d{{position:absolute;inset:14.6%;background:{COP};transform:rotate(45deg);box-shadow:0 16px 30px rgba(140,70,35,.28);outline:2px solid rgba(248,245,239,.6);outline-offset:-10px}}
 .t{{position:relative;text-align:center;width:60%;line-height:1.26;color:#fff}}
 .t b{{display:block;font-size:33px;font-weight:700;margin-bottom:3px}}
 .nm{{font-size:22px;font-weight:400}} .pl{{font-size:19px;margin-top:3px;font-weight:600}}
