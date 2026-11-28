@@ -14,25 +14,50 @@ NAVY, COP = '#002544', '#b96740'
 DS = 322  # قطر المعيّن
 
 
-def leaf(x, y, s, rot, col, op=1):
-    return (f'<svg class="lf" style="left:{x}px;top:{y}px;width:{s}px;height:{s}px;transform:rotate({rot}deg);opacity:{op}" viewBox="0 0 100 100">'
-            f'<path d="M50 3 C80 20 86 60 50 97 C14 60 20 20 50 3Z" fill="{col}"/>'
-            f'<path d="M50 8 L50 97 M50 32 L63 22 M50 32 L37 22 M50 50 L66 38 M50 50 L34 38 M50 68 L63 58 M50 68 L37 58" stroke="#fff" stroke-opacity=".55" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>')
+MAPLE = ('M50 97 L50 80 C41 83 31 85 21 87 L25 77 L7 67 L15 62 L5 45 L20 47 L23 38 L36 51 L32 22 L42 28 L50 5 '
+         'L58 28 L68 22 L64 51 L77 38 L80 47 L95 45 L85 62 L93 67 L75 77 L79 87 C69 85 59 83 50 80 Z')
+OAK = ('M50 97 L50 86 C44 86 40 82 41 77 C34 79 29 75 32 69 C25 69 22 63 27 58 C20 56 20 49 26 46 C21 41 24 34 31 34 '
+       'C29 27 34 22 40 25 C40 17 46 12 50 6 C54 12 60 17 60 25 C66 22 71 27 69 34 C76 34 79 41 74 46 C80 49 80 56 73 58 '
+       'C78 63 75 69 68 69 C71 75 66 79 59 77 C60 82 56 86 50 86 Z')
+SHADES = [('#cf8a5c', '#b96740', '#8a4526'), ('#c47548', '#a85a35', '#7a3b20'), ('#d99a6c', '#b96740', '#94502c'), ('#b96740', '#9a5130', '#6e341c')]
+DEFS = (
+    '<svg width="0" height="0" style="position:absolute"><defs>'
+    '<filter id="tex" x="-10%" y="-10%" width="120%" height="120%">'
+    '<feTurbulence type="fractalNoise" baseFrequency="1.6" numOctaves="3" seed="4" result="n"/>'
+    '<feDiffuseLighting in="n" surfaceScale="1.2" lighting-color="#fff" result="l"><feDistantLight azimuth="235" elevation="55"/></feDiffuseLighting>'
+    '<feComposite in="l" in2="SourceGraphic" operator="in" result="li"/>'
+    '<feBlend in="SourceGraphic" in2="li" mode="multiply" result="m"/>'
+    '<feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="9" result="w"/>'
+    '<feDisplacementMap in="m" in2="w" scale="3.5" xChannelSelector="R" yChannelSelector="G" result="d"/>'
+    '<feDropShadow dx="3" dy="7" stdDeviation="5" flood-color="#3a1f10" flood-opacity=".28"/></filter>'
+    + ''.join(f'<radialGradient id="g{i}" cx="38%" cy="35%" r="75%"><stop offset="0" stop-color="{a}"/><stop offset=".55" stop-color="{b}"/><stop offset="1" stop-color="{c}"/></radialGradient>' for i, (a, b, c) in enumerate(SHADES))
+    + '</defs></svg>')
+
+
+def leaf(x, y, s, rot, k, kind='maple', blur=0):
+    path = MAPLE if kind == 'maple' else OAK
+    a, b, c = SHADES[k % len(SHADES)]
+    veins = ('M50 96 L50 9 M50 79 L23 40 M50 79 L77 40 M50 79 L12 64 M50 79 L88 64 M36 60 L30 50 M64 60 L70 50' if kind == 'maple'
+             else 'M50 96 L50 9 M50 70 L33 63 M50 70 L67 63 M50 55 L29 46 M50 55 L71 46 M50 40 L34 31 M50 40 L66 31 M50 27 L43 20 M50 27 L57 20')
+    bl = f';filter:blur({blur}px)' if blur else ''
+    return (f'<svg class="lf" style="left:{x}px;top:{y}px;width:{s}px;height:{s}px;transform:rotate({rot}deg){bl}" viewBox="0 0 100 100">'
+            f'<g filter="url(#tex)"><path d="{path}" fill="url(#g{k % len(SHADES)})"/>'
+            f'<path d="{veins}" stroke="{c}" stroke-opacity=".75" stroke-width="1.3" fill="none" stroke-linecap="round"/>'
+            f'<path d="{veins}" stroke="{a}" stroke-opacity=".5" stroke-width=".5" fill="none" transform="translate(.7 .3)"/>'
+            f'<path d="M50 97 L50 100" stroke="{c}" stroke-width="2"/></g></svg>')
 
 
 def touches(kind):
-    # لمسة نوفمبر: غصن خريفي يتدلّى من مثلث الشهر، وأوراق تتساقط على الهامشين حتى التذييل
+    # لمسة نوفمبر: أوراق خريف واقعية بدرجات النحاسي من الهوية، على الهوامش فقط
     if kind != 'autumn': return ''
-    C1, C2, C3, C4 = COP, NAVY, COP, '#2b2f3b'  # ألوان الهوية فقط: نحاسي وكحلي وفحمي
-    br = ('<svg class="lf" style="left:170px;top:225px;width:300px;height:200px" viewBox="0 0 300 200">'
-          '<path d="M10 10 C70 30 120 60 170 100 C200 125 235 140 280 150" stroke="#002544" stroke-width="3" fill="none" stroke-linecap="round" opacity=".55"/></svg>')
-    L = [(186, 222, 56, 70, C2), (240, 258, 50, -20, C1), (296, 296, 60, 115, C3), (356, 322, 48, 30, C4), (416, 350, 40, 150, C1),
-         (20, 1040, 78, -25, C1), (88, 1150, 50, 50, C4), (14, 1290, 62, 160, C3), (70, 1420, 44, -70, C2), (24, 1560, 70, 20, C4),
-         (978, 1060, 58, 35, C2), (940, 1200, 80, -60, C1), (996, 1350, 46, 80, C3), (950, 1500, 64, 130, C4),
-         (860, 1640, 96, -35, C1), (950, 1680, 70, 40, C2), (900, 1760, 52, 110, C3), (800, 1720, 44, -80, C4),
-         (520, 1752, 34, 120, C2), (450, 1776, 28, -40, C1)]
-    wm = '<svg class="wm" style="left:250px;top:1080px;width:580px;height:580px;transform:rotate(-20deg)" viewBox="0 0 100 100"><path d="M50 3 C80 20 86 60 50 97 C14 60 20 20 50 3Z" fill="#b96740"/></svg>'
-    return wm + br + ''.join(leaf(x, y, sz, r, c) for x, y, sz, r, c in L)
+    L = [  # x, y, size, rot, shade, kind, blur
+        (196, 236, 92, 25, 0, 'maple', 0), (276, 300, 64, -40, 1, 'oak', 0), (150, 330, 54, 75, 2, 'maple', 1.2),
+        (-34, 1010, 150, -20, 1, 'maple', 0), (40, 1200, 70, 60, 2, 'oak', 0), (-20, 1370, 96, 140, 3, 'maple', 0),
+        (60, 1530, 56, -70, 0, 'oak', 1.5), (-10, 1640, 110, 15, 2, 'maple', 0),
+        (960, 1000, 120, 40, 0, 'maple', 0), (990, 1190, 66, -30, 3, 'oak', 1), (930, 1330, 92, 110, 1, 'maple', 0),
+        (980, 1500, 70, -80, 2, 'oak', 0), (850, 1600, 150, -25, 0, 'maple', 0), (970, 1700, 96, 60, 3, 'maple', 0),
+        (760, 1720, 60, 130, 1, 'oak', 1.5), (520, 1760, 42, -20, 2, 'maple', 2)]
+    return DEFS + ''.join(leaf(*l) for l in L)
 
 
 def dots(n=4):
